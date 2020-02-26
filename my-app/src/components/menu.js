@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { Input, Menu } from 'semantic-ui-react'
 import Card from './pet-card.js'
+import ReactDOM from 'react-dom';
+
 
 export default class MenuExampleSecondary extends Component {
   state = { activeItem: 'home' }
@@ -24,7 +26,7 @@ export default class MenuExampleSecondary extends Component {
           active={activeItem === 'friends'}
           onClick={this.handleItemClick}
         />
-          <Menu.Item
+          <Menu.Item 
           name='Historia leczenia'
           active={activeItem === 'friends'}
           onClick={this.handleItemClick}
@@ -58,4 +60,3 @@ export default class MenuExampleSecondary extends Component {
     )
   }
 }
-

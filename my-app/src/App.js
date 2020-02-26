@@ -4,6 +4,11 @@ import './App.css';
 import Menu from './components/menu';
 import ReactDOM from "react-dom";
 
+const styleLink = document.createElement("link");
+styleLink.rel = "stylesheet";
+styleLink.href = "https://cdn.jsdelivr.net/npm/semantic-ui/dist/semantic.min.css";
+document.head.appendChild(styleLink);
+
 function App() {
   return (
     <div className="App">
@@ -18,16 +23,6 @@ PetCare App        </p>
     </div>
   );
 }
-const styleLink = document.createElement("link");
-styleLink.rel = "stylesheet";
-styleLink.href = "https://cdn.jsdelivr.net/npm/semantic-ui/dist/semantic.min.css";
-document.head.appendChild(styleLink);
 
-ReactDOM.render(
-  <App>
-    <Menu />
-  </App>,
-  document.getElementById("root")
-);
 
 export default App;
