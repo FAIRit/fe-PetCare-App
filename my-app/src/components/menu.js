@@ -29,6 +29,16 @@ export default class MenuExampleSecondary extends Component {
           active={activeItem === 'friends'}
           onClick={this.handleItemClick}
         />
+         <Menu.Item
+          name='Lekarze'
+          active={activeItem === 'friends'}
+          onClick={this.handleItemClick}
+        />
+           <Menu.Item
+          name='Wyniki badań'
+          active={activeItem === 'friends'}
+          onClick={this.handleItemClick}
+        />
           <Menu.Item
           name='Diagramy'
           active={activeItem === 'friends'}
