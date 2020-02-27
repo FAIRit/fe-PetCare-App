@@ -1,9 +1,10 @@
 import React from 'react';
-
+import Link from './Link';
 function recharts()
 {
     return (
-        <div><p>tu będą diagramy</p></div>
+        <div><p>tu będą diagramy</p>
+        <Link></Link></div>
     )}
 
     export default  recharts;

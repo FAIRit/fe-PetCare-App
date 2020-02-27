@@ -1,7 +1,10 @@
 import React from 'react'
 import { Image, List } from 'semantic-ui-react'
+import Link from './Link'
+
 
 const ListExampleCelled = () => (
+  <div>
   <List celled>
     <List.Item>
     <Image avatar src='https://cdn3.vectorstock.com/i/1000x1000/01/92/sick-heartbeat-healthy-medicine-bottle-pills-vector-14360192.jpg' />
@@ -72,6 +75,8 @@ Lek, tabletki      </List.Content>
       </List.Content>
     </List.Item>
   </List>
+  <Link></Link>
+  </div>
 )
 
 export default ListExampleCelled

@@ -1,5 +1,6 @@
 import React from 'react'
 import { Button, Header, Image, Modal } from 'semantic-ui-react'
+import Link from './Link'
 
 const ModalModalExample = () => (
   <Modal trigger={<Button>Karta pacjenta</Button>}>
@@ -14,6 +15,7 @@ const ModalModalExample = () => (
         <p>Przebyte choroby:</p>
         <p>Inne ważne informacje:</p>
         <p>Dane kontaktowe opiekuna:</p>
+        <Link></Link>
       </Modal.Description>
     </Modal.Content>
   </Modal>

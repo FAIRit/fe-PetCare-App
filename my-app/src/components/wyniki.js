@@ -1,7 +1,10 @@
 import React from 'react'
 import { Table } from 'semantic-ui-react'
+import Link from './Link'
+
 
 const TableExampleFixed = () => (
+  <div>
   <Table fixed>
     <Table.Header>
       <Table.Row>
@@ -39,6 +42,9 @@ const TableExampleFixed = () => (
       </Table.Row>
     </Table.Body>
   </Table>
+      <Link></Link>
+      </div>
+
 )
 
 export default TableExampleFixed
