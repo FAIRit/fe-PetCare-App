@@ -1,8 +1,17 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Menu from './components/menu';
-import ReactDOM from "react-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
+import Leki from './components/leki'
+import Calendar from './components/Calendar'
+import Doctors from './components/doctors'
+import History from './components/History'
+import Diagramy from './components/Diagramy'
+
 
 const styleLink = document.createElement("link");
 styleLink.rel = "stylesheet";
@@ -11,16 +20,29 @@ document.head.appendChild(styleLink);
 
 function App() {
   return (
-    <div className="App">
-<Menu/>
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-PetCare App        </p>
-        
-      </header>
+      <Router>
+        <div className="App">
+          <Menu />
 
-    </div>
+          <Switch>
+            <Route path="/Leki">
+              <Leki />
+            </Route>
+            <Route path="/Calendar">
+            <Calendar/>
+            </Route>
+            <Route path="/doctors">
+            <Doctors/>
+            </Route>
+            <Route path="/History">
+            <History/>
+            </Route>
+            <Route path="/Diagramy">
+            <Diagramy/>
+            </Route>
+          </Switch>
+        </div>
+      </Router>
   );
 }
 

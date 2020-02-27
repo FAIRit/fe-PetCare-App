@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
 import { Input, Menu } from 'semantic-ui-react'
-import Card from './pet-card.js'
-import ReactDOM from 'react-dom';
-
+import Card from './petCard.js'
+import {Link} from 'react-router-dom'
 
 export default class MenuExampleSecondary extends Component {
   state = { activeItem: 'home' }
@@ -14,24 +13,24 @@ export default class MenuExampleSecondary extends Component {
 
     return (
       <Menu secondary>
-            <Card></Card>
+            <Card></Card> 
 
-        <Menu.Item
+   <Menu.Item  as ={Link} to='./leki'
           name='Leki'
           active={activeItem === 'messages'}
           onClick={this.handleItemClick}
         />
-        <Menu.Item
+        <Menu.Item  as ={Link} to='./Calendar'
           name='Kalendarz'
           active={activeItem === 'friends'}
           onClick={this.handleItemClick}
         />
-          <Menu.Item 
+          <Menu.Item as ={Link} to='./History'
           name='Historia leczenia'
           active={activeItem === 'friends'}
           onClick={this.handleItemClick}
         />
-         <Menu.Item
+         <Menu.Item  as ={Link} to='./doctors'
           name='Lekarze'
           active={activeItem === 'friends'}
           onClick={this.handleItemClick}
@@ -42,7 +41,7 @@ export default class MenuExampleSecondary extends Component {
           onClick={this.handleItemClick}
         />
           <Menu.Item
-          name='Diagramy'
+          name='Diagramy' as ={Link} to='./Diagramy'
           active={activeItem === 'friends'}
           onClick={this.handleItemClick}
         />
@@ -56,6 +55,7 @@ export default class MenuExampleSecondary extends Component {
             onClick={this.handleItemClick}
           />
         </Menu.Menu>
+
       </Menu>
     )
   }
