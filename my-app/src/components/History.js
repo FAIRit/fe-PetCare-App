@@ -5,9 +5,11 @@ const TableExampleFixed = () => (
   <Table fixed>
     <Table.Header>
       <Table.Row>
-        <Table.HeaderCell>Name</Table.HeaderCell>
-        <Table.HeaderCell>Status</Table.HeaderCell>
-        <Table.HeaderCell>Description</Table.HeaderCell>
+      <Table.HeaderCell>Data</Table.HeaderCell>
+        <Table.HeaderCell>Lekarz</Table.HeaderCell>
+        <Table.HeaderCell>Informacja o stanie pacjenta</Table.HeaderCell>
+        <Table.HeaderCell>Diagnoza</Table.HeaderCell>
+        <Table.HeaderCell>Zalecenia</Table.HeaderCell>
       </Table.Row>
     </Table.Header>
 

@@ -35,12 +35,12 @@ export default class MenuExampleSecondary extends Component {
           active={activeItem === 'friends'}
           onClick={this.handleItemClick}
         />
-           <Menu.Item
+           <Menu.Item as ={Link} to='./wyniki'
           name='Wyniki badań'
           active={activeItem === 'friends'}
           onClick={this.handleItemClick}
         />
-          <Menu.Item
+          <Menu.Item as ={Link} to='./Diagramy'
           name='Diagramy' as ={Link} to='./Diagramy'
           active={activeItem === 'friends'}
           onClick={this.handleItemClick}

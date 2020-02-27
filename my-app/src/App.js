@@ -11,6 +11,7 @@ import Calendar from './components/Calendar'
 import Doctors from './components/doctors'
 import History from './components/History'
 import Diagramy from './components/Diagramy'
+import Wyniki from './components/wyniki'
 
 
 const styleLink = document.createElement("link");
@@ -36,6 +37,9 @@ function App() {
             </Route>
             <Route path="/History">
             <History/>
+            </Route>
+            <Route path="/wyniki">
+            <Wyniki/>
             </Route>
             <Route path="/Diagramy">
             <Diagramy/>
