@@ -72,6 +72,13 @@ Lek, tabletki      </List.Content>
     <List.Item>
     <Image avatar src='https://cdn3.vectorstock.com/i/1000x1000/01/92/sick-heartbeat-healthy-medicine-bottle-pills-vector-14360192.jpg' />
       <List.Content>
+        <List.Header>Nifuroksazyd</List.Header>
+        Lek, tabletki
+      </List.Content>
+    </List.Item>
+    <List.Item>
+    <Image avatar src='https://cdn3.vectorstock.com/i/1000x1000/01/92/sick-heartbeat-healthy-medicine-bottle-pills-vector-14360192.jpg' />
+      <List.Content>
         <List.Header>Płyn ringera</List.Header>
        Roztwór
       </List.Content>
