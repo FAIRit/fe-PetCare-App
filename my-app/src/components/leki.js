@@ -6,7 +6,7 @@ import Link from './Link'
 const ListExampleCelled = () => (
   <div>
 
-  <container class="medicines">
+  <container className="medicines">
   <List celled>
     <List.Item>
     <Image avatar src='https://cdn3.vectorstock.com/i/1000x1000/01/92/sick-heartbeat-healthy-medicine-bottle-pills-vector-14360192.jpg' />
