@@ -1,6 +1,9 @@
 import React from 'react'
 import { List } from 'semantic-ui-react'
 import Link from './Link'
+import Form from './NewFormMedicines'
+
+
 const ListExampleCelled = () => (
   <div>
 
@@ -71,6 +74,8 @@ morfologia    </List.Content>
     </List.Item>
   </List></container>
   <Link></Link>
+  <p>Dodaj nowy wynik</p>
+  <Form></Form>
   </div>
 )
 

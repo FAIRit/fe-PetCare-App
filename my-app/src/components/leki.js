@@ -1,11 +1,11 @@
 import React from 'react'
 import { Image, List } from 'semantic-ui-react'
 import Link from './Link'
+import Form from './NewFormMedicines'
 
 
 const ListExampleCelled = () => (
-  <div>
-
+  <>
   <container className="medicines">
   <List celled>
     <List.Item>
@@ -77,8 +77,14 @@ Lek, tabletki      </List.Content>
       </List.Content>
     </List.Item>
   </List></container>
+  <>
   <Link></Link>
-  </div>
-)
+  </>
+  <br/>
+  <p>Dodaj nowy lek:</p>
+
+    <Form>
+</Form>
+</>)
 
 export default ListExampleCelled
