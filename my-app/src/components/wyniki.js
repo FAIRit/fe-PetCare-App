@@ -73,6 +73,7 @@ morfologia    </List.Content>
         <List.Header>Monocyty</List.Header>
         rozmaz krwi obwodowej     
       </List.Content>
+      <List.Header>*Wynik, jednostka, wartości referencyjne*</List.Header>
     </List.Item>
   </List></container>
   <Link></Link>
