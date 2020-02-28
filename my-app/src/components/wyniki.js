@@ -4,7 +4,7 @@ import Link from './Link'
 const ListExampleCelled = () => (
   <div>
 
-  <container class="medicines">
+  <container className="medicines">
   <List celled>
     <List.Item>
       <List.Content>
