@@ -1,6 +1,8 @@
 import React from 'react'
 import { Table } from 'semantic-ui-react'
 import Link from './Link'
+import Form from './NewForm'
+
 
 
 const TableExampleFixed = () => (
@@ -8,7 +10,9 @@ const TableExampleFixed = () => (
   <Table fixed>
     <Table.Header>
       <Table.Row>
-      <Table.HeaderCell>Data</Table.HeaderCell>
+      <Table.HeaderCell>Data przyjecia</Table.HeaderCell>
+      <Table.HeaderCell>Data wypisu</Table.HeaderCell>
+      <Table.HeaderCell>Lecznica</Table.HeaderCell>
         <Table.HeaderCell>Lekarz</Table.HeaderCell>
         <Table.HeaderCell>Informacja o stanie pacjenta</Table.HeaderCell>
         <Table.HeaderCell>Diagnoza</Table.HeaderCell>
@@ -18,32 +22,45 @@ const TableExampleFixed = () => (
 
     <Table.Body>
       <Table.Row>
-        <Table.Cell>John</Table.Cell>
-        <Table.Cell>Approved</Table.Cell>
-        <Table.Cell>
-          John is an interesting boy but sometimes you don't really have enough
-          room to describe everything you'd like
+        <Table.Cell>12.12.2019</Table.Cell>
+        <Table.Cell>05.02.2020</Table.Cell>
+
+        <Table.Cell>Przychodnia VetCare Gdynia, ul. Abrahama</Table.Cell>
+        <Table.Cell> /wielu lekarzy/</Table.Cell>
+        <Table.Cell> Kot wolnożyjący, wiek około 12 lat, znaleziony w Gdyni. Niewykastrowany, historia zdrowia nieznana.
+        Temperatura 40 st. C. Kot nie utrzymuje się samodzielnie na łapach, usypia na stole.
+        Widoczny duży strup na uchu nieznanego pochodzenia. Po zdjęciu strupa z ucha stwierdzono marwicę - konieczna amputacja 
+        i pobranie materiału do badań. Kot zatrzymany na obserwacji.
         </Table.Cell>
+        <Table.Cell> Nowotwor złośliwy - kostniakomięsak - w lewym uchu.
+          Przewlekła niewydolność nerek, stan zapalny pęcherza,
+        piasek w pęcherzu, nieprawidłowe wartości prób wątrobowych, anemia. Prawdopodobnie na skutek przebytego 
+        wypadku komunikacyjnego uszkodzenie kręgosłupa (nieleczone, samozrośnięte), uszkodzenie nerwów dna miednicy oraz złamany ogon.</Table.Cell>
+        <Table.Cell>Kot zatrzymany na obserwacji w lecznicy. Ucho do amputacji. Konieczne dodatkowe badania</Table.Cell>
+       
       </Table.Row>
       <Table.Row>
-        <Table.Cell>Jamie</Table.Cell>
-        <Table.Cell>Approved</Table.Cell>
+        <Table.Cell>07.02.2020</Table.Cell>
+        <Table.Cell></Table.Cell>
+
+        <Table.Cell>Przychodnia CrisVet Gdynia, ul. Warszawska</Table.Cell>
+        <Table.Cell>dr Agnieszka Antczak</Table.Cell>
+
         <Table.Cell>
-          Jamie is a kind girl but sometimes you don't really have enough room
-          to describe everything you'd like
+          Kot opuścił lecznicę VetCare 05.02.2020, po długim leczeniu. Kot choruje na przewlekłą niewydolność nerek.
+          Po zmianie otoczenia przestał oddawać mocz.
         </Table.Cell>
-      </Table.Row>
-      <Table.Row>
-        <Table.Cell>Jill</Table.Cell>
-        <Table.Cell>Denied</Table.Cell>
         <Table.Cell>
-          Jill is an alright girl but sometimes you don't really have enough
-          room to describe everything you'd like
+         W badaniu USG powiększony pęcherz, stan zapalny pęcherza.
+        </Table.Cell>
+        <Table.Cell>
+          Antybiotykoteriapia, podłączenie cewnika. Przewidywany około tygodniowy pobyt w lecznicy.
         </Table.Cell>
       </Table.Row>
     </Table.Body>
   </Table>
   <Link></Link>
+  
   </div>
 )
 

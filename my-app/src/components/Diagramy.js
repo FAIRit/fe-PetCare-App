@@ -1,26 +1,24 @@
 import React from 'react';
 import Link from './Link';
-function recharts()
-{
-    return (
-        <div><p>tu będą diagramy</p>
-        <Link></Link></div>
-    )}
+import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip } from 'recharts';
 
-    export default  recharts;
-
-/*import { LineChart, Line, CartesianGrid, XAxis, YAxis } from 'recharts';
-const data = [{name: 'Page A', uv: 400, pv: 2400, amt: 2400}, ...];
-
-const renderLineChart = (
-  <LineChart width={600} height={300} data={data} margin={{ top: 5, right: 20, bottom: 5, left: 0 }}>
-    <Line type="monotone" dataKey="uv" stroke="#8884d8" />
-    <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
-    <XAxis dataKey="name" />
-    <YAxis />
-  </LineChart>
-);
+const data =[{name: 'Page A', uv: 400, pv: 2400, amt: 2400}];
 
 
-export default renderLineChart;
-*/
+const rechart = () => (
+
+<LineChart
+  width={400}
+  height={400}
+  data={data}
+  margin={{ top: 5, right: 20, left: 10, bottom: 5 }}
+>
+  <XAxis dataKey="name" />
+  <Tooltip />
+  <CartesianGrid stroke="#f5f5f5" />
+  <Line type="monotone" dataKey="uv" stroke="#ff7300" yAxisId={0} />
+  <Line type="monotone" dataKey="pv" stroke="#387908" yAxisId={1} />
+</LineChart>
+  )
+
+export default rechart;

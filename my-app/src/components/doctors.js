@@ -1,7 +1,9 @@
 import React from 'react'
 import { Icon, Label, Menu, Table } from 'semantic-ui-react'
+import Form from './NewForm'
 
 const TableExamplePagination = () => (
+  <>
   <Table celled>
     <Table.Header>
       <Table.Row>
@@ -13,21 +15,19 @@ const TableExamplePagination = () => (
 
     <Table.Body>
       <Table.Row>
-        <Table.Cell>
-          <Label ribbon>First</Label>
-        </Table.Cell>
-        <Table.Cell>Cell</Table.Cell>
-        <Table.Cell>Cell</Table.Cell>
+        <Table.Cell>/-/</Table.Cell>
+        <Table.Cell>/-/</Table.Cell>
+        <Table.Cell>Przychodnia weterynaryjna VetCare, Gdynia</Table.Cell>
       </Table.Row>
       <Table.Row>
-        <Table.Cell>Cell</Table.Cell>
-        <Table.Cell>Cell</Table.Cell>
-        <Table.Cell>Cell</Table.Cell>
+        <Table.Cell>Agnieszka</Table.Cell>
+        <Table.Cell>Antczak</Table.Cell>
+        <Table.Cell>Przychodnia weterynaryjna CrisVet, Gdynia</Table.Cell>
       </Table.Row>
       <Table.Row>
-        <Table.Cell>Cell</Table.Cell>
-        <Table.Cell>Cell</Table.Cell>
-        <Table.Cell>Cell</Table.Cell>
+        <Table.Cell>imię</Table.Cell>
+        <Table.Cell>nazwisko</Table.Cell>
+        <Table.Cell>przychodnia</Table.Cell>
       </Table.Row>
     </Table.Body>
 
@@ -50,6 +50,10 @@ const TableExamplePagination = () => (
       </Table.Row>
     </Table.Footer>
   </Table>
+  <br/>
+  <p>Dodaj nowego lekarza:</p>
+  <Form></Form>
+  </>
 )
 
 export default TableExamplePagination
