@@ -61,7 +61,6 @@ const TableExampleFixed = () => (
       </Table.Row>
     </Table.Body>
   </Table>
-  <Table colSpan='3'>
           <Menu floated='right' pagination>
             <Menu.Item as='a' icon>
               <Icon name='chevron left' />
@@ -74,7 +73,6 @@ const TableExampleFixed = () => (
               <Icon name='chevron right' />
             </Menu.Item>
           </Menu>
-        </Table>
   <Link></Link>
   
   </div>

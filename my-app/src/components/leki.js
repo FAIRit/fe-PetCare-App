@@ -96,8 +96,7 @@ Lek, tabletki      </List.Content>
       <List.Header>Dawkowanie:</List.Header>
     </List.Item>
   </List>
-
-        <Table colSpan='3'>
+     
           <Menu floated='right' pagination>
             <Menu.Item as='a' icon>
               <Icon name='chevron left' />
@@ -110,8 +109,6 @@ Lek, tabletki      </List.Content>
               <Icon name='chevron right' />
             </Menu.Item>
           </Menu>
-        </Table>
-      
   <Link></Link>
   <br/>
   <p className="medicines">Dodaj nowy lek:</p>
