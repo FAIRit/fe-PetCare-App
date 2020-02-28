@@ -31,7 +31,7 @@ const TableExamplePagination = () => (
       </Table.Row>
     </Table.Body>
   </Table>
-  <p class="doctors">Dodaj nowego lekarza:</p>
+  <p className="doctors">Dodaj nowego lekarza:</p>
 
 <div className="doctors">  
   <Form></Form>

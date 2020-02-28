@@ -8,8 +8,7 @@ import Dropdown from './Dropdown'
 
 const ListExampleCelled = () => (
   <>
-
-  <container className="medicines">
+  <div className="medicines">
   <List celled>
     <List.Item>
       <List.Content>
@@ -75,7 +74,7 @@ morfologia    </List.Content>
       </List.Content>
       <List.Header>*Wynik, jednostka, wartości referencyjne*</List.Header>
     </List.Item>
-  </List></container>
+  </List></div>
   <Link></Link>
   <div className="wyniki">
   <p>Dodaj nowy wynik</p>

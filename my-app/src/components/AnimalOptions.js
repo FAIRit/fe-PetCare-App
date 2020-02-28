@@ -5,9 +5,9 @@ import {
 } from 'semantic-ui-react'
 
 const options = [
-  { key: '', text: 'Kot', value: 'animal' },
-  { key: '', text: 'Pies', value: 'animal' },
-  { key: '', text: 'Chomik', value: 'animal' },
+  { key: 'a', text: 'Kot', value: 'animal' },
+  { key: 'b', text: 'Pies', value: 'animal' },
+  { key: 'c', text: 'Chomik', value: 'animal' },
 ]
 
 class FormExampleFieldControl extends Component {
