@@ -81,8 +81,7 @@ Lek, tabletki      </List.Content>
   <Link></Link>
   </>
   <br/>
-  <p>Dodaj nowy lek:</p>
-
+  <p class="medicines">Dodaj nowy lek:</p>
     <Form>
 </Form>
 </>)

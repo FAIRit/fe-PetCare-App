@@ -50,9 +50,11 @@ const TableExamplePagination = () => (
       </Table.Row>
     </Table.Footer>
   </Table>
-  <br/>
-  <p>Dodaj nowego lekarza:</p>
+  <p class="doctors">Dodaj nowego lekarza:</p>
+
+<div className="doctors">  
   <Form></Form>
+  </div>
   </>
 )
 

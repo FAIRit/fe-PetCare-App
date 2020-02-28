@@ -18,5 +18,15 @@ margin-bottom:10px;}
 
 .wyniki{
   text-align:left;
+}
 
+div.doctors{
+  display:flex;
+}
+p.doctors{
+  text-align:left;
+}
+
+p.medicines{
+  text-align:left;
 }
