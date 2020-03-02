@@ -13,36 +13,36 @@ export default class MenuExampleSecondary extends Component {
 
     return (
       <Menu secondary>
-            <Card></Card> 
+           <Card></Card>
 
    <Menu.Item  as ={Link} to='./leki'
           name='Leki'
-          active={activeItem === 'messages'}
+          active={activeItem === 'Leki'}
           onClick={this.handleItemClick}
         />
         <Menu.Item  as ={Link} to='./Calendar'
           name='Kalendarz'
-          active={activeItem === 'friends'}
+          active={activeItem === 'Kalendarz'}
           onClick={this.handleItemClick}
         />
           <Menu.Item as ={Link} to='./History'
           name='Historia leczenia'
-          active={activeItem === 'friends'}
+          active={activeItem === 'Historia leczenia'}
           onClick={this.handleItemClick}
         />
          <Menu.Item  as ={Link} to='./doctors'
           name='Lekarze'
-          active={activeItem === 'friends'}
+          active={activeItem === 'Lekarze'}
           onClick={this.handleItemClick}
         />
            <Menu.Item as ={Link} to='./wyniki'
           name='Wyniki badań'
-          active={activeItem === 'friends'}
+          active={activeItem === 'Wyniki badań'}
           onClick={this.handleItemClick}
         />
           <Menu.Item as ={Link} to='./Diagramy'
           name='Diagramy' as ={Link} to='./Diagramy'
-          active={activeItem === 'friends'}
+          active={activeItem === 'Diagramy'}
           onClick={this.handleItemClick}
         />
         <Menu.Menu position='right'>
