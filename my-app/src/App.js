@@ -6,12 +6,12 @@ import {
   Switch,
   Route,
 } from "react-router-dom";
-import Leki from './components/leki'
+import Medicines from './components/Medicines'
 import Calendar from './components/Calendar'
 import Doctors from './components/doctors'
 import History from './components/History'
-import Diagramy from './components/Diagramy'
-import Wyniki from './components/wyniki'
+import Diagrams from './components/Diagrams'
+import Results from './components/Results'
 
 
 const styleLink = document.createElement("link");
@@ -27,7 +27,7 @@ function App() {
 
           <Switch>
             <Route path="/Leki">
-              <Leki />
+              <Medicines />
             </Route>
             <Route path="/Calendar">
             <Calendar/>
@@ -39,10 +39,10 @@ function App() {
             <History/>
             </Route>
             <Route path="/wyniki">
-            <Wyniki/>
+            <Results/>
             </Route>
             <Route path="/Diagramy">
-            <Diagramy/>
+            <Diagrams/>
             </Route>
           </Switch>
         </div>

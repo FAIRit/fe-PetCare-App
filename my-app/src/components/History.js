@@ -1,7 +1,6 @@
 import React from 'react'
 import { Table } from 'semantic-ui-react'
 import Link from './Link'
-import Form from './NewForm'
 import { Icon, Menu } from 'semantic-ui-react'
 
 
