@@ -12,7 +12,8 @@ const ListExampleCelled = () => (
     <List.Item>
     <Image avatar src='https://cdn3.vectorstock.com/i/1000x1000/01/92/sick-heartbeat-healthy-medicine-bottle-pills-vector-14360192.jpg' />
       <List.Content>
-        <List.Header>Gasprid</List.Header>
+        <List.Header>
+>Gasprid</List.Header>
 Lek, tabletki      </List.Content>
 <List.Header>Dawkowanie:</List.Header>
     </List.Item>
