@@ -1,8 +1,8 @@
 import React from 'react'
 import { List } from 'semantic-ui-react'
-import Link from './Link'
+//import Link from './Link'
 import Form from './NewFormMedicines'
-import Dropdown from './Dropdown'
+//import Dropdown from './Dropdown'
 
 
 
@@ -75,12 +75,10 @@ morfologia    </List.Content>
       <List.Header>*Wynik, jednostka, wartości referencyjne*</List.Header>
     </List.Item>
   </List></div>
-  <Link></Link>
   <div className="results">
   <p>Dodaj nowy wynik</p>
   <Form></Form>
-  <p>Zapisz plik</p>
-  <Dropdown></Dropdown></div>
+  </div>
   </>
 )
 

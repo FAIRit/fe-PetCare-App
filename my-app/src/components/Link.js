@@ -1,4 +1,4 @@
-import React from 'react'
+/*import React from 'react'
 import { Input } from 'semantic-ui-react'
 
 const InputExampleActionLabeledButton = () => (
@@ -14,3 +14,4 @@ const InputExampleActionLabeledButton = () => (
 )
 
 export default InputExampleActionLabeledButton
+*/
