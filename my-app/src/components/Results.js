@@ -76,7 +76,7 @@ morfologia    </List.Content>
     </List.Item>
   </List></div>
   <Link></Link>
-  <div className="wyniki">
+  <div className="results">
   <p>Dodaj nowy wynik</p>
   <Form></Form>
   <p>Zapisz plik</p>
