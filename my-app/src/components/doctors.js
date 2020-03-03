@@ -1,10 +1,18 @@
-import React from 'react'
+import React, { useEffect, useState } from "react";
 import {Table } from 'semantic-ui-react'
 import Form from './NewForm'
+import {getData} from '../services/doctors'
 
-const TableExamplePagination = () => (
-  <>
-  <Table celled>
+const TableExamplePagination = () => {
+  const [data, setData] = useState([]);
+  useEffect(() => {
+    getData()
+      .then(data => setData(data));
+    },[])
+     
+  return (
+    <>
+    <Table celled>
     <Table.Header>
       <Table.Row>
         <Table.HeaderCell>Imię</Table.HeaderCell>
@@ -15,7 +23,8 @@ const TableExamplePagination = () => (
 
     <Table.Body>
       <Table.Row>
-        <Table.Cell>/-/</Table.Cell>
+        <Table.Cell
+>/-/</Table.Cell>
         <Table.Cell>/-/</Table.Cell>
         <Table.Cell>Przychodnia weterynaryjna VetCare, Gdynia</Table.Cell>
       </Table.Row>
@@ -37,6 +46,6 @@ const TableExamplePagination = () => (
   <Form></Form>
   </div>
   </>
-)
+)};
 
 export default TableExamplePagination
