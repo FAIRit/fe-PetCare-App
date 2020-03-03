@@ -1,6 +1,5 @@
 import React from 'react'
 import { Image, List } from 'semantic-ui-react'
-//import Link from './Link'
 import Form from './NewFormMedicines'
 import { Icon, Menu, Table } from 'semantic-ui-react'
 

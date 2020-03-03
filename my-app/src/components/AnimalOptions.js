@@ -1,4 +1,4 @@
-/*import React, { Component } from 'react'
+import React, { Component } from 'react'
 import {
   Form,
   Select,
@@ -32,4 +32,4 @@ class FormExampleFieldControl extends Component {
   }
 }
 
-export default FormExampleFieldControl*/
+export default FormExampleFieldControl

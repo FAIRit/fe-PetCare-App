@@ -23,7 +23,7 @@ const TableExamplePagination = () => {
 
     <Table.Body>
       <Table.Row>
-        <Table.Cell
+        <Table.Cell 
 >/-/</Table.Cell>
         <Table.Cell>/-/</Table.Cell>
         <Table.Cell>Przychodnia weterynaryjna VetCare, Gdynia</Table.Cell>

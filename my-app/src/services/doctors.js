@@ -4,7 +4,7 @@ export const getData = () => Promise.resolve([
     surname:'-\\-',
     vet_clinic:'Przychodnia weterynaryjna VetCare, Gdynia',
 
-},
+    },
 { id: 1, 
     firstname: 'Agnieszka',
 surname:'Antczak',

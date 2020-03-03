@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip } from 'recharts';
 
-//const data =[{name: 'Page A', uv: 400, pv: 2400, amt: 2400}];
 import { getData } from "../services/data";
 
 const Rechart = () => {
