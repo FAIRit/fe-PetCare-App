@@ -29,6 +29,11 @@ p.doctors{
 
 p.medicines{
   text-align:left;
+}
+.ui.fixed.table{
+  padding:10px;
+}
 
-
+.ui.table{
+  padding:10px;
 }
