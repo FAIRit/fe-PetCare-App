@@ -14,7 +14,7 @@ code {
 
 .medicines{
 text-align:left;
-margin-bottom:10px;}
+padding:10px;}
 
 .results{
   text-align:left;
@@ -22,9 +22,11 @@ margin-bottom:10px;}
 
 div.doctors{
   display:flex;
+  padding:10px;
 }
 p.doctors{
   text-align:left;
+  padding:10px;
 }
 
 p.medicines{
@@ -35,5 +37,8 @@ p.medicines{
 }
 
 .ui.table{
+  padding:10px;
+}
+.ui.form{
   padding:10px;
 }

@@ -47,7 +47,7 @@ const ListExampleCelled = () => {
             </Menu.Item>
           </Menu>
   <br/>
-  <p className="medicines">Dodaj nowy lek:</p>
+   <p className="medicines">Dodaj nowy lek:</p>
     <Form>
 </Form></div>
 )};
