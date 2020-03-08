@@ -35,7 +35,7 @@ export default class addData extends Component {
         <form className="App" onSubmit={this.onSubmit}>
         <List items={this.state.items} />
 
-          <input value={this.state.term} onChange={this.onChange} Placeholder="enter task" />
+          <input value={this.state.term} onChange={this.onChange} placeholder="enter task" />
           <button>Zapisz</button>
         </form>
       
