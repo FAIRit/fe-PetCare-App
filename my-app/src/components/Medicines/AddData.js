@@ -29,8 +29,7 @@ export default class addData extends Component {
         <List items={this.state.items} />
 <p>Dodaj nowy lek:</p>
           <input value={this.state.term} onChange={this.onChange}/>
-          <button>Zapisz</button>
-        </form>
+          <button type="submit">Zapisz</button>        </form>
       </div>
       
     );

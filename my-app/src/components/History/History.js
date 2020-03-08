@@ -30,36 +30,17 @@ const TableExampleFixed = () => {
       </Table.Row>
     </Table.Header>
 
-    <Table.Body>
-      <Table.Row>
-        <Table.Cell>{data.map(item => <p key={item.id}>{item.admission_date}</p>)}</Table.Cell>
-        <Table.Cell>{data.map(item => <p key={item.id}>{item.discharge_date}</p>)}</Table.Cell>
-
-        <Table.Cell>{data.map(item => <p key={item.id}>{item.vet}</p>)}</Table.Cell>
-        <Table.Cell>{data.map(item => <p key={item.id}>{item.doctor}</p>)}</Table.Cell>
-        <Table.Cell> {data.map(item => <p key={item.id}>{item.patients_condition}</p>)}
+    <Table.Body>{data.map(item => { return <Table.Row key={item.id}>
+<Table.Cell><p key={item.id}>{item.admission_date}</p></Table.Cell>
+             <Table.Cell><p key={item.id}>{item.discharge_date}</p></Table.Cell>
+             <Table.Cell><p key={item.id}>{item.vet}</p></Table.Cell>
+        <Table.Cell><p key={item.id}>{item.doctor}</p></Table.Cell>
+        <Table.Cell><p key={item.id}>{item.patients_condition}</p>
         </Table.Cell>
-        <Table.Cell> {data.map(item => <p key={item.id}>{item.diagnosis}</p>)}</Table.Cell>
-        <Table.Cell>{data.map(item => <p key={item.id}>{item.recommendations}</p>)}</Table.Cell>
-       
-      </Table.Row>
-     
-   <Table.Row>
-        <Table.Cell>07.02.2020</Table.Cell>
-        <Table.Cell></Table.Cell>
-
-        <Table.Cell>Przychodnia CrisVet Gdynia, ul. Warszawska</Table.Cell>
-        <Table.Cell>dr Agnieszka Antczak</Table.Cell>
-
-        <Table.Cell>
-          example
-        </Table.Cell>
-        <Table.Cell>
-example        </Table.Cell>
-        <Table.Cell>
-example        </Table.Cell>
-      </Table.Row>
-    </Table.Body>
+        <Table.Cell><p key={item.id}>{item.diagnosis}</p></Table.Cell>
+        <Table.Cell><p key={item.id}>{item.recommendations}</p></Table.Cell>
+ </Table.Row>})}
+             </Table.Body>
   </Table>
  <Data> </Data>
           <Menu floated='right' pagination>

@@ -27,7 +27,7 @@ export const getData = () => Promise.resolve([
         discharge_date: '05.032020',
         vet: 'Przychodnia VetCentrum Gdynia, ul. Chylońska 230',
         doctor: 'Sylwana Rzepczyk',
-        patients_condition: 'Kot osowiały, od 03.02 oddaje zmniejszone ilości moczu, wygryzł sobie sierść na lewym boku',
+        patients_condition: 'Kot osowiały, od wieczora 03.03 oddaje zmniejszone ilości moczu, wygryzł sobie sierść na lewym boku',
         diagnosis: 'W usg powiekszony pęcherz, po stanie sierści widać, że w przeszłości musiał mieć pasożyty (z badania pod mikroskopem wychodzi, że są martwe), stan trzustki zły, mocz niejednorodny, nerki w stanie terminalnym lub zapalnym (konieczne dodatkowe badania), szmery w sercu - konieczne echo serca',
         recommendations:'Podano lek rozkurczowy, pobrano krew do badań, pacjent wypisany do domu, konieczność powrotu 05.02 na ponowne usg'
 
@@ -51,6 +51,6 @@ export const getData = () => Promise.resolve([
         doctor: 'Sylwana Rzepczyk',
         patients_condition: 'Kot oddaje mocz przy pomocy cewnika, jednak w badaniu pęcherz jest nadal znacznie powiększony. Zwierzę jest znacznie bardziej aktywne niż w poprzednich dniach',
         diagnosis: 'Prawdopodobny stan zapalny pęcherza i nerek, oczekujemy na wyniki badań moczu. Wynik badań mocznika i leukocytów powyżej skali',
-        recommendations:'Podano znieczulenie miejscowe ze względu na serce. Ponownie wszyto cewnik, spuszczono mocz. Kot z cewnikiem i kołnierzem, zgodnie z decyzją opiekunki, został wypuszczony do domu. Konieczny powrót do lecznicy 09.02 na kroplówkę i konktrolę stanu pęcherza. 09.02 powinny wpłynąć częściowe wyniki badań moczu. Wprowadzono antybiotyk i cześciowo zmieniono sposób dotychczasowego leczenia.'
+        recommendations:'Podano jedynie znieczulenie miejscowe ze względu na serce. Ponownie wszyto cewnik, spuszczono mocz. Kot z cewnikiem i kołnierzem, zgodnie z decyzją opiekunki, został wypuszczony do domu. Konieczny powrót do lecznicy 09.02 na kroplówkę i konktrolę stanu pęcherza. 09.02 powinny wpłynąć częściowe wyniki badań moczu. Wprowadzono antybiotyk i cześciowo zmieniono sposób dotychczasowego leczenia.'
 
      }   ]); 

@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { Image, List } from 'semantic-ui-react'
-import { Icon, Menu } from 'semantic-ui-react'
+import { Table, Menu, Icon} from 'semantic-ui-react'
 import { getData } from '../../services/medicines'
 import Data from './AddData'
 
 
 
-const ListExampleCelled = () => {
+const TableExampleFixed = () => {
   const [data, setData] = useState([]);
   useEffect(() => {
     getData()
@@ -14,25 +13,48 @@ const ListExampleCelled = () => {
   }, [])
 
   return (
-    <div >
-    <List celled className="medicines">
-      <List.Item>
-      <Image avatar src='https://cdn3.vectorstock.com/i/1000x1000/01/92/sick-heartbeat-healthy-medicine-bottle-pills-vector-14360192.jpg' />
-        <List.Content>
-        <List.Header> { data.map(item => <p key={item.id}> Nazwa:{item.name} <br/>Rodzaj:{item.type} <br/>Dawkowanie:{item.dosage}</p>) }
-</List.Header>
- </List.Content>
-<List.Header></List.Header>
-    </List.Item>
-    <List.Item>
-      <List.Content>
-      <List.Header> 
-</List.Header>
- </List.Content>
-<List.Header></List.Header>
-    </List.Item>
-  </List>
-  <Data className="new-medicines"></Data>
-</div>
-)};
- export default ListExampleCelled;
+  <div>
+  <Table fixed>
+    <Table.Header>
+      <Table.Row>
+      <Table.HeaderCell>Nazwa</Table.HeaderCell>
+      <Table.HeaderCell>Rodzaj</Table.HeaderCell>
+      <Table.HeaderCell>Dawkowanie</Table.HeaderCell>
+        <Table.HeaderCell>Opis</Table.HeaderCell>
+        <Table.HeaderCell>*Data rozpoczęcia</Table.HeaderCell>
+        <Table.HeaderCell>*Lekarz przepisujący lek</Table.HeaderCell>
+        <Table.HeaderCell>Uwagi</Table.HeaderCell>
+      </Table.Row>
+    </Table.Header>
+
+    <Table.Body>{data.map(item => { return <Table.Row key={item.id}>
+<Table.Cell><p key={item.id}>{item.name}</p></Table.Cell>
+             <Table.Cell><p key={item.id}>{item.type}</p></Table.Cell>
+             <Table.Cell><p key={item.id}>{item.dosage}</p></Table.Cell>
+        <Table.Cell><p></p></Table.Cell>
+        <Table.Cell><p></p></Table.Cell>
+        <Table.Cell><p></p>
+        </Table.Cell>
+     
+ </Table.Row>})}
+             </Table.Body>
+  </Table>
+ <Data> </Data>
+          <Menu floated='right' pagination>
+            <Menu.Item as='a' icon>
+              <Icon name='chevron left' />
+            </Menu.Item>
+            <Menu.Item as='a'>1</Menu.Item>
+            <Menu.Item as='a'>2</Menu.Item>
+            <Menu.Item as='a'>3</Menu.Item>
+            <Menu.Item as='a'>4</Menu.Item>
+            <Menu.Item as='a' icon>
+              <Icon name='chevron right' />
+            </Menu.Item>
+          </Menu>
+  
+  </div>
+  )
+};
+
+export default TableExampleFixed

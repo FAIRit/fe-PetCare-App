@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import List from './List';
 
-export default class addData extends Component {
+export default class AddData extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -29,8 +29,7 @@ export default class addData extends Component {
         <List items={this.state.items} />
         <p>Dodaj dane:</p>
           <input value={this.state.term} onChange={this.onChange} />
-          <button>Zapisz</button>
-        </form>
+          <button type="submit">Zapisz</button>        </form>
       </div>
     );
   }
