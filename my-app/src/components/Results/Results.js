@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { List } from 'semantic-ui-react'
-import Form from './NewFormMedicines'
-import { getData } from '../services/results'
+import { getData } from '../../services/results'
+import Data from './AddData'
+
 
 const ListExampleCelled = () => {
   const [data, setData] = useState([]);
@@ -27,8 +28,7 @@ const ListExampleCelled = () => {
    
   </List></div>
   <div className="results">
-  <p>Dodaj nowy wynik</p>
-  <Form></Form>
+<Data></Data>
   </div>
   </>
 )};

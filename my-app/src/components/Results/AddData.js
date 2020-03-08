@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import List from './List';
 
+
 export default class addData extends Component {
   constructor(props) {
     super(props);
@@ -25,11 +26,11 @@ export default class addData extends Component {
   render() {
     return (
       <div>
-        <form className="App" onSubmit={this.onSubmit}>
+        <form className="resulrs" onSubmit={this.onSubmit}>
         <List items={this.state.items} />
-
+<p>Dodaj wynik:</p>
           <input value={this.state.term} onChange={this.onChange} />
-          <button>Submit</button>
+          <button>Zapisz</button>
         </form>
       </div>
     );

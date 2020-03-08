@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Table } from 'semantic-ui-react'
-import Form from './NewForm'
-import { getData } from '../services/doctors'
+import { getData } from '../../services/doctors'
+import Data from './AddData'
 
 const TableExamplePagination = () => {
   const [data, setData] = useState([]);
@@ -41,10 +41,9 @@ const TableExamplePagination = () => {
           </Table.Row>
         </Table.Body>
       </Table>
-      <p className="doctors">Dodaj nowego lekarza:</p>
-
       <div className="doctors">
-        <Form></Form>
+      <Data></Data>
+
       </div>
     </>
   )

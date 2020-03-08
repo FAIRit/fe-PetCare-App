@@ -16,11 +16,14 @@ code {
 text-align:left;
 padding:10px;}
 
+
 .results{
   text-align:left;
+  display:flex;
 }
 
 div.doctors{
+  text-align:left;
   display:flex;
   padding:10px;
 }

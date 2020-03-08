@@ -6,12 +6,12 @@ import {
   Switch,
   Route,
 } from "react-router-dom";
-import Medicines from './components/Medicines'
+import Medicines from './components/Medicines/Medicines'
 import Calendar from './components/Calendar'
-import Doctors from './components/doctors'
+import Doctors from './components/Doctors/doctors'
 import History from './components/History'
 import Diagrams from './components/Diagrams'
-import Results from './components/Results'
+import Results from './components/Results/Results'
 
 
 const styleLink = document.createElement("link");
