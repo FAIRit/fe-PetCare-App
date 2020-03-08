@@ -19,9 +19,11 @@ let DOCTORS = [
   }
 ];
 
+const calculateNextId = list => ((list || []).slice(-1)[0]?.id ?? 0) + 1;
+
 export const getData = () => Promise.resolve(DOCTORS);
 
 export const addDoctor = doctor => {
-  DOCTORS.push({ ...doctor, id: DOCTORS.slice(-1)[0].id + 1 });
+  DOCTORS = [...DOCTORS, ({ ...doctor, id: calculateNextId(DOCTORS)})];
   return Promise.resolve();
 };
