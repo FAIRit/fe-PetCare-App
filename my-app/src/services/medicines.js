@@ -76,7 +76,7 @@ export const getData = () => Promise.resolve([
         dosage: '1 tabletka rano, jedna wieczorem'
     }
     , {
-        id: 12,
+        id: 13,
         name: 'Hyalutidin',
         type: 'roztwór',
         dosage: '2 ml dziennie, doustnie'
