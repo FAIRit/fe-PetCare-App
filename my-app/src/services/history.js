@@ -23,8 +23,8 @@ export const getData = () => Promise.resolve([
      } ,
      {
         id: 3,
-        admission_date: '04.02.2020',
-        discharge_date: '04.02.2020',
+        admission_date: '05.03.2020',
+        discharge_date: '05.032020',
         vet: 'Przychodnia VetCentrum Gdynia, ul. Chylońska 230',
         doctor: 'Sylwana Rzepczyk',
         patients_condition: 'Kot osowiały, od 03.02 oddaje zmniejszone ilości moczu, wygryzł sobie sierść na lewym boku',
@@ -34,8 +34,8 @@ export const getData = () => Promise.resolve([
      } ,
      {
         id: 4,
-        admission_date: '05.02.2020',
-        discharge_date: '06.02.2020',
+        admission_date: '06.03.2020',
+        discharge_date: '07.03.2020',
         vet: 'Przychodnia VetCentrum Gdynia, ul. Chylońska 230',
         doctor: 'Sylwana Rzepczyk',
         patients_condition: 'Kot oddaje mocz, ale nadal w niewielkich ilościach. W usg pęcherz bardziej powiększony niż dzień wcześniej. Kot wygryzł sobie sierść również na prawnym boku. Bardzo osowiały',
@@ -45,8 +45,8 @@ export const getData = () => Promise.resolve([
      },
      {
         id: 4,
-        admission_date: '06.02.2020',
-        discharge_date: '',
+        admission_date: '07.03.2020',
+        discharge_date: '07.03.2020',
         vet: 'Przychodnia VetCentrum Gdynia, ul. Chylońska 230',
         doctor: 'Sylwana Rzepczyk',
         patients_condition: 'Kot oddaje mocz przy pomocy cewnika, jednak w badaniu pęcherz jest nadal znacznie powiększony. Zwierzę jest znacznie bardziej aktywne niż w poprzednich dniach',
