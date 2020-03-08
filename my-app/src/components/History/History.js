@@ -1,17 +1,26 @@
-import React from 'react'
+import React, { useEffect, useState } from "react";
 import { Table } from 'semantic-ui-react'
 import { Icon, Menu } from 'semantic-ui-react'
 import Data from './AddData'
+import { getData } from '../../services/history'
 
 
 
 
-const TableExampleFixed = () => (
+
+const TableExampleFixed = () => {
+  const [data, setData] = useState([]);
+  useEffect(() => {
+    getData()
+      .then(data => setData(data));
+  }, [])
+
+  return (
   <div>
   <Table fixed>
     <Table.Header>
       <Table.Row>
-      <Table.HeaderCell>Data przyjecia</Table.HeaderCell>
+      <Table.HeaderCell>Data przyjęcia</Table.HeaderCell>
       <Table.HeaderCell>Data wypisu</Table.HeaderCell>
       <Table.HeaderCell>Lecznica</Table.HeaderCell>
         <Table.HeaderCell>Lekarz</Table.HeaderCell>
@@ -23,21 +32,15 @@ const TableExampleFixed = () => (
 
     <Table.Body>
       <Table.Row>
-        <Table.Cell>12.12.2019</Table.Cell>
-        <Table.Cell>05.02.2020</Table.Cell>
+        <Table.Cell>{data.map(item => <p key={item.id}>{item.admission_date}</p>)}</Table.Cell>
+        <Table.Cell>{data.map(item => <p key={item.id}>{item.discharge_date}</p>)}</Table.Cell>
 
-        <Table.Cell>Przychodnia VetCare Gdynia, ul. Abrahama</Table.Cell>
-        <Table.Cell> /wielu lekarzy/</Table.Cell>
-        <Table.Cell> Kot wolnożyjący, wiek około 12 lat, znaleziony w Gdyni. Niewykastrowany, historia zdrowia nieznana.
-        Temperatura 40 st. C. Kot nie utrzymuje się samodzielnie na łapach, usypia na stole.
-        Widoczny duży strup na uchu nieznanego pochodzenia. Po zdjęciu strupa z ucha stwierdzono marwicę - konieczna amputacja 
-        i pobranie materiału do badań. Kot zatrzymany na obserwacji.
+        <Table.Cell>{data.map(item => <p key={item.id}>{item.vet}</p>)}</Table.Cell>
+        <Table.Cell>{data.map(item => <p key={item.id}>{item.doctor}</p>)}</Table.Cell>
+        <Table.Cell> {data.map(item => <p key={item.id}>{item.patients_condition}</p>)}
         </Table.Cell>
-        <Table.Cell> Nowotwor złośliwy - kostniakomięsak - w lewym uchu.
-          Przewlekła niewydolność nerek, stan zapalny pęcherza,
-        piasek w pęcherzu, nieprawidłowe wartości prób wątrobowych, anemia. Prawdopodobnie na skutek przebytego 
-        wypadku komunikacyjnego uszkodzenie kręgosłupa (nieleczone, samozrośnięte), uszkodzenie nerwów dna miednicy oraz złamany ogon.</Table.Cell>
-        <Table.Cell>Kot zatrzymany na obserwacji w lecznicy. Ucho do amputacji. Konieczne dodatkowe badania</Table.Cell>
+        <Table.Cell> {data.map(item => <p key={item.id}>{item.diagnosis}</p>)}</Table.Cell>
+        <Table.Cell>{data.map(item => <p key={item.id}>{item.recommendations}</p>)}</Table.Cell>
        
       </Table.Row>
       <Table.Row>
@@ -48,15 +51,12 @@ const TableExampleFixed = () => (
         <Table.Cell>dr Agnieszka Antczak</Table.Cell>
 
         <Table.Cell>
-          Kot opuścił lecznicę VetCare 05.02.2020, po długim leczeniu. Kot choruje na przewlekłą niewydolność nerek.
-          Po zmianie otoczenia przestał oddawać mocz.
+          example
         </Table.Cell>
         <Table.Cell>
-         W badaniu USG powiększony pęcherz, stan zapalny pęcherza.
-        </Table.Cell>
+example        </Table.Cell>
         <Table.Cell>
-          Antybiotykoteriapia, podłączenie cewnika. Przewidywany około tygodniowy pobyt w lecznicy.
-        </Table.Cell>
+example        </Table.Cell>
       </Table.Row>
     </Table.Body>
   </Table>
@@ -75,6 +75,7 @@ const TableExampleFixed = () => (
           </Menu>
   
   </div>
-)
+  )
+};
 
 export default TableExampleFixed

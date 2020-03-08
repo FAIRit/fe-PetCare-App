@@ -7,7 +7,7 @@ import {
   Route,
 } from "react-router-dom";
 import Medicines from './components/Medicines/Medicines'
-import Calendar from './components/Calendar'
+import Calendar from './components/Calendar/Calendar'
 import Doctors from './components/Doctors/doctors'
 import History from './components/History/History'
 import Diagrams from './components/Diagrams'
