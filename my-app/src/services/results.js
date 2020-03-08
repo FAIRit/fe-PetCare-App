@@ -25,9 +25,9 @@ export const getData = () => Promise.resolve([
         id: 3,
         name: 'Hemoglobina',
         type: 'morfologia',
-        result: "'6.20','3.84'",
-        unit: "'g/dl', 'mmol/l'",
-        referenceUnit: "'9.00-15.0', '5.58-9.30",
+        result: '6.20',
+        unit: 'g/dl', 
+        referenceUnit: '9.00-15.0',
         date: '2020.03.06'
 
 

@@ -31,9 +31,9 @@ const TableExampleFixed = () => {
 <Table.Cell><p key={item.id}>{item.name}</p></Table.Cell>
              <Table.Cell><p key={item.id}>{item.type}</p></Table.Cell>
              <Table.Cell><p key={item.id}>{item.dosage}</p></Table.Cell>
+        <Table.Cell><p key={item.id}>{item.other}</p></Table.Cell>
         <Table.Cell><p></p></Table.Cell>
-        <Table.Cell><p></p></Table.Cell>
-        <Table.Cell><p></p>
+        <Table.Cell><p key={item.id}>{item.doctor}</p>
         </Table.Cell>
      
  </Table.Row>})}

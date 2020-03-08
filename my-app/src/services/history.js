@@ -18,7 +18,7 @@ export const getData = () => Promise.resolve([
         doctor: 'dr Agnieszka Antczak',
         patients_condition: 'Kot opuścił lecznicę VetCare 05.02.2020, po długim leczeniu. Kot choruje na przewlekłą niewydolność nerek. Po zmianie otoczenia przestał oddawać mocz.',
         diagnosis: 'W badaniu USG powiększony pęcherz, stan zapalny pęcherza',
-        recommendations:'Antybiotykoteriapia, podłączenie cewnika. Przewidywany około tygodniowy pobyt w lecznicy.'
+        recommendations:'Antybiotykoteriapia (wprowadzono Enroton Flavour), podłączenie cewnika. Przewidywany około tygodniowy pobyt w lecznicy.'
 
      } ,
      {
@@ -51,6 +51,6 @@ export const getData = () => Promise.resolve([
         doctor: 'Sylwana Rzepczyk',
         patients_condition: 'Kot oddaje mocz przy pomocy cewnika, jednak w badaniu pęcherz jest nadal znacznie powiększony. Zwierzę jest znacznie bardziej aktywne niż w poprzednich dniach',
         diagnosis: 'Prawdopodobny stan zapalny pęcherza i nerek, oczekujemy na wyniki badań moczu. Wynik badań mocznika i leukocytów powyżej skali',
-        recommendations:'Podano jedynie znieczulenie miejscowe ze względu na serce. Ponownie wszyto cewnik, spuszczono mocz. Kot z cewnikiem i kołnierzem, zgodnie z decyzją opiekunki, został wypuszczony do domu. Konieczny powrót do lecznicy 09.02 na kroplówkę i konktrolę stanu pęcherza. 09.02 powinny wpłynąć częściowe wyniki badań moczu. Wprowadzono antybiotyk i cześciowo zmieniono sposób dotychczasowego leczenia.'
+        recommendations:'Podano jedynie znieczulenie miejscowe ze względu na serce. Ponownie wszyto cewnik, spuszczono mocz. Kot z cewnikiem i kołnierzem, zgodnie z decyzją opiekunki, został wypuszczony do domu. Konieczny powrót do lecznicy 09.02 na kroplówkę i konktrolę stanu pęcherza. 09.02 powinny wpłynąć częściowe wyniki badań moczu. Wprowadzono antybiotyk i cześciowo zmieniono sposób dotychczasowego leczenia, tj. - zmiejszono ilość Semintry o połowę (badanie ciśnienia w normie), zwiększono dawkę Cystaid Plus o połowę, wprowadzono Hyalutidin, Clavaseptin oraz Gabapentynę.'
 
      }   ]); 
