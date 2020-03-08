@@ -15,9 +15,10 @@ export const getData = () => Promise.resolve([
     },
     {
         id: 3,
-        firstname: 'example',
-        surname: 'example',
-        vet_clinic: 'example',
+        firstname: 'Sylwana',
+        surname: 'Rzepczyk',
+        vet_clinic: 'Przychodnia VetCentrum Gdynia, ul. Chylońska 230'
 
     }
+
 ]); 

@@ -25,14 +25,13 @@ export default class addData extends Component {
   render() {
     return (
       <div>
-        <form className="medicines" onSubmit={this.onSubmit}>
+        <form className="doctors" onSubmit={this.onSubmit}>
         <List items={this.state.items} />
-<p>Dodaj nowy lek:</p>
-          <input value={this.state.term} onChange={this.onChange}/>
+        <p>Dodaj dane:</p>
+          <input value={this.state.term} onChange={this.onChange} />
           <button>Zapisz</button>
         </form>
       </div>
-      
     );
   }
 }

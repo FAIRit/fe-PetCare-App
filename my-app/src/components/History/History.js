@@ -1,6 +1,7 @@
 import React from 'react'
 import { Table } from 'semantic-ui-react'
 import { Icon, Menu } from 'semantic-ui-react'
+import Data from './AddData'
 
 
 
@@ -59,6 +60,7 @@ const TableExampleFixed = () => (
       </Table.Row>
     </Table.Body>
   </Table>
+  <Data></Data>
           <Menu floated='right' pagination>
             <Menu.Item as='a' icon>
               <Icon name='chevron left' />

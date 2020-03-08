@@ -9,7 +9,7 @@ import {
 import Medicines from './components/Medicines/Medicines'
 import Calendar from './components/Calendar'
 import Doctors from './components/Doctors/doctors'
-import History from './components/History'
+import History from './components/History/History'
 import Diagrams from './components/Diagrams'
 import Results from './components/Results/Results'
 
