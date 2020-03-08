@@ -43,7 +43,8 @@ const TableExampleFixed = () => {
         <Table.Cell>{data.map(item => <p key={item.id}>{item.recommendations}</p>)}</Table.Cell>
        
       </Table.Row>
-      <Table.Row>
+     
+   <Table.Row>
         <Table.Cell>07.02.2020</Table.Cell>
         <Table.Cell></Table.Cell>
 
@@ -60,7 +61,7 @@ example        </Table.Cell>
       </Table.Row>
     </Table.Body>
   </Table>
-  <Data></Data>
+ <Data> </Data>
           <Menu floated='right' pagination>
             <Menu.Item as='a' icon>
               <Icon name='chevron left' />

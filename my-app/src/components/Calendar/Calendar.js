@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import List from './List';
+import DatePicker from './DatePicker'
 
 export default class addData extends Component {
   constructor(props) {
@@ -25,12 +26,19 @@ export default class addData extends Component {
   render() {
     return (
       <div>
+          <DatePicker
+  selected={this.state.date}
+  onSelect={this.handleSelect} //when day is clicked
+  onChange={this.handleChange} //only when value has changed
+/>
+<br/>
         <form className="App" onSubmit={this.onSubmit}>
         <List items={this.state.items} />
 
-          <input value={this.state.term} onChange={this.onChange} />
-          <button>Submit</button>
+          <input value={this.state.term} onChange={this.onChange} Placeholder="enter task" />
+          <button>Zapisz</button>
         </form>
+      
       </div>
     );
   }
