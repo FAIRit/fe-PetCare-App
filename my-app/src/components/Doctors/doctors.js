@@ -1,22 +1,25 @@
 import React, { useEffect, useState } from "react";
-import { Table } from 'semantic-ui-react'
-import { getData } from '../../services/doctors'
-import Data from './AddData'
+import { Table } from "semantic-ui-react";
+import { getData, addDoctor } from "../../services/doctors";
+import AddData from "./AddData";
 
 const TableExamplePagination = () => {
   const [data, setData] = useState([]);
+
+  const fetchDoctors = () => getData().then(data => setData(data));
+
+  const onDoctorAdded = doctor => addDoctor(doctor).then(fetchDoctors);
+
   useEffect(() => {
-    getData()
-      .then(data => setData(data));
-  }, [])
+    fetchDoctors();
+  }, []);
 
   return (
     <>
       <Table celled>
         <Table.Header>
           <Table.Row>
-            <Table.HeaderCell>Imię
-</Table.HeaderCell>
+            <Table.HeaderCell>Imię</Table.HeaderCell>
             <Table.HeaderCell>Nazwisko</Table.HeaderCell>
             <Table.HeaderCell>Lecznica</Table.HeaderCell>
           </Table.Row>
@@ -24,10 +27,21 @@ const TableExamplePagination = () => {
 
         <Table.Body>
           <Table.Row>
-            <Table.Cell>  {data.map(item => <p key={item.id}>{item.firstname}</p>)}
+            <Table.Cell>
+              {data.map(item => (
+                <p key={item.id}>{item.firstname}</p>
+              ))}
             </Table.Cell>
-            <Table.Cell>{data.map(item => <p key={item.id}>{item.surname}</p>)}</Table.Cell>
-            <Table.Cell>{data.map(item => <p key={item.id}>{item.vet_clinic}</p>)}</Table.Cell>
+            <Table.Cell>
+              {data.map(item => (
+                <p key={item.id}>{item.surname}</p>
+              ))}
+            </Table.Cell>
+            <Table.Cell>
+              {data.map(item => (
+                <p key={item.id}>{item.vetClinic}</p>
+              ))}
+            </Table.Cell>
           </Table.Row>
           <Table.Row>
             <Table.Cell></Table.Cell>
@@ -42,11 +56,10 @@ const TableExamplePagination = () => {
         </Table.Body>
       </Table>
       <div className="doctors">
-      <Data></Data>
-
+        <AddData doctorAdded={onDoctorAdded} />
       </div>
     </>
-  )
+  );
 };
 
-export default TableExamplePagination
+export default TableExamplePagination;

@@ -1,34 +1,40 @@
-import React, { Component } from 'react';
-import List from './List';
+import React, { Component } from "react";
 
-export default class addData extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      term: '',
-      items: []
-    };
-  }
+const DEFAULT_STATE = {
+  firstname: "",
+  surname: "",
+  vetClinic: ""
+};
 
-  onChange = (event) => {
-    this.setState({ term: event.target.value });
-  }
+export default class AddData extends Component {
+  state = {...DEFAULT_STATE};
 
-  onSubmit = (event) => {
+  onChange = (key, event) => this.setState({ [key]: event.target.value });
+
+  onSubmit = event => {
     event.preventDefault();
-    this.setState({
-      term: '',
-      items: [...this.state.items, this.state.term]
-    });
-  }
+
+    this.props.doctorAdded({...this.state});
+    this.setState(DEFAULT_STATE);
+  };
 
   render() {
     return (
       <div>
         <form className="doctors" onSubmit={this.onSubmit}>
-        <List items={this.state.items} />
-        <p>Dodaj lekarza:</p>
-          <input value={this.state.term} onChange={this.onChange} />
+          <p>Dodaj lekarza:</p>
+          <input
+            value={this.state.firstname}
+            onChange={this.onChange.bind(this, "firstname")}
+          />
+          <input
+            value={this.state.surname}
+            onChange={this.onChange.bind(this, "surname")}
+          />
+          <input
+            value={this.state.vetClinic}
+            onChange={this.onChange.bind(this, "vetClinic")}
+          />
           <button>Zapisz</button>
         </form>
       </div>
