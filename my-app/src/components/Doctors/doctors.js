@@ -12,7 +12,6 @@ const PaginatedTable = () => {
 
   return (
     <>
-    <div class="dropdown"></div>
       <Table celled>
         <Table.Header>
           <Table.Row>
