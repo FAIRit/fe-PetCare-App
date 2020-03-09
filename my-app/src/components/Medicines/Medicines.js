@@ -5,7 +5,7 @@ import Data from './AddData'
 
 
 
-const TableExampleFixed = () => {
+const TableFixed = () => {
   const [data, setData] = useState([]);
   useEffect(() => {
     getData()
@@ -45,4 +45,4 @@ const TableExampleFixed = () => {
   )
 };
 
-export default TableExampleFixed
+export default TableFixed

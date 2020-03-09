@@ -3,7 +3,7 @@ import { Input, Menu } from 'semantic-ui-react'
 import Card from './petCard.js'
 import { Link } from 'react-router-dom'
 
-export default class MenuExampleSecondary extends Component {
+export default class MenuSecondary extends Component {
   state = { activeItem: 'home' }
 
   handleItemClick = (e, { name }) => this.setState({ activeItem: name })
