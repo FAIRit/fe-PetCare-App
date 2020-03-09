@@ -245,7 +245,7 @@ export const getData = () => Promise.resolve([
         date: '2020.03.06'
     },
     {
-        id: 26,
+        id: 27,
         name: 'Leukocyty',
         type: 'morfologia',
         result: '55.8',
@@ -256,7 +256,7 @@ export const getData = () => Promise.resolve([
 
 
     }, {
-        id: 27,
+        id: 28,
         name: 'Erytrocyty',
         type: 'morfologia',
         result: '5.30',
@@ -267,7 +267,7 @@ export const getData = () => Promise.resolve([
 
     },
     {
-        id: 28,
+        id: 29,
         name: 'Hemoglobina',
         type: 'morfologia',
         result: '6.4',
@@ -278,7 +278,7 @@ export const getData = () => Promise.resolve([
 
     },
     {
-        id: 29,
+        id: 30,
         name: 'Hematokryt',
         type: 'morfologia',
         result: '20.5',
@@ -289,7 +289,7 @@ export const getData = () => Promise.resolve([
 
     },
     {
-        id: 30,
+        id: 31,
         name: 'MCV',
         type: 'morfologia',
         result: '38.7',
@@ -300,7 +300,7 @@ export const getData = () => Promise.resolve([
 
     },
     {
-        id: 31,
+        id: 32,
         name: 'MCH',
         type: 'morfologia',
         result: '12.1',
@@ -311,7 +311,7 @@ export const getData = () => Promise.resolve([
 
     },
     {
-        id: 32,
+        id: 33,
         name: 'MCHC',
         type: 'morfologia',
         result: '31.2',
@@ -322,7 +322,7 @@ export const getData = () => Promise.resolve([
 
     },
     {
-        id: 33,
+        id: 34,
         name: 'Płytki krwi',
         type: 'morfologia',
         result: '832',
@@ -333,7 +333,7 @@ export const getData = () => Promise.resolve([
 
     },
     {
-        id: 34,
+        id: 35,
         name: 'Neutrofile pałeczkowate (ilość)',
         type: 'rozmaz krwi obwodowej',
         result: '0.56',
@@ -344,7 +344,7 @@ export const getData = () => Promise.resolve([
 
     },
     {
-        id: 35,
+        id: 36,
         name: 'Neutrofile segmentowane (ilość)',
         type: 'rozmaz krwi obwodowej',
         result: '45.76',
@@ -354,7 +354,7 @@ export const getData = () => Promise.resolve([
 
 
     }, {
-        id: 36,
+        id: 37,
         name: 'Limfocyty (ilość)',
         type: 'rozmaz krwi obwodowej',
         result: '4.46',
@@ -366,7 +366,7 @@ export const getData = () => Promise.resolve([
     },
 
     {
-        id: 36,
+        id: 38,
         name: 'Eozynofile %',
         type: 'rozmaz krwi obwodowej',
         result: '7',
@@ -377,7 +377,7 @@ export const getData = () => Promise.resolve([
 
     },
     {
-        id: 37,
+        id: 39,
         name: 'Neutrofile pałeczkowate %',
         type: 'rozmaz krwi obwodowej',
         result: '1',
@@ -387,7 +387,7 @@ export const getData = () => Promise.resolve([
 
     },
     {
-        id: 37,
+        id: 40,
         name: 'Neutrofile segmentowane %',
         type: 'rozmaz krwi obwodowej',
         result: '82',
@@ -397,7 +397,7 @@ export const getData = () => Promise.resolve([
 
 
     }, {
-        id: 38,
+        id: 41,
         name: 'Monocyty %',
         type: 'rozmaz krwi obwodowej',
         result: '2',
@@ -408,7 +408,7 @@ export const getData = () => Promise.resolve([
 
     },
     {
-        id: 39,
+        id: 42,
         name: 'Sód',
         type: 'morfologia',
         result: '364',
@@ -419,7 +419,7 @@ export const getData = () => Promise.resolve([
 
     },
     {
-        id: 40,
+        id: 43,
         name: 'Chlorki',
         type: 'morfologia',
         result: '425',
@@ -430,7 +430,7 @@ export const getData = () => Promise.resolve([
 
     },
     {
-        id: 41,
+        id: 44,
         name: 'UREA (Mocznik)',
         type: 'biochemia krwi',
         result: '217',
@@ -441,7 +441,7 @@ export const getData = () => Promise.resolve([
 
     },
     {
-        id: 41,
+        id: 45,
         name: 'CREA (Kreatynina)',
         type: 'biochemia krwi',
         result: '4.71',
@@ -452,7 +452,7 @@ export const getData = () => Promise.resolve([
 
     },
     {
-        id: 42,
+        id: 46,
         name: 'Leukocyty',
         type: 'morfologia',
         result: '85.9',
@@ -463,7 +463,7 @@ export const getData = () => Promise.resolve([
 
     },
     {
-        id: 42,
+        id: 47,
         name: 'Erytrocyty',
         type: 'morfologia',
         result: '5.84',
@@ -473,7 +473,7 @@ export const getData = () => Promise.resolve([
 
 
     }, {
-        id: 41,
+        id: 48,
         name: 'Hemoglobina',
         type: 'morfologia',
         result: '8.6',
@@ -483,7 +483,7 @@ export const getData = () => Promise.resolve([
 
 
     }, {
-        id: 42,
+        id: 49,
         name: 'Hematokryt',
         type: 'morfologia',
         result: '28.2',
@@ -493,7 +493,7 @@ export const getData = () => Promise.resolve([
 
 
     }, {
-        id: 43,
+        id: 50,
         name: 'MCV',
         type: 'morfologia',
         result: '48.3',
@@ -503,7 +503,7 @@ export const getData = () => Promise.resolve([
 
 
     }, {
-        id: 44,
+        id: 51,
         name: 'MCH',
         type: 'morfologia',
         result: '4.71',
@@ -513,7 +513,7 @@ export const getData = () => Promise.resolve([
 
 
     }, {
-        id: 45,
+        id: 52,
         name: 'MCHC',
         type: 'morfologia',
         result: '30.5',
@@ -524,7 +524,7 @@ export const getData = () => Promise.resolve([
 
     },
     {
-        id: 46,
+        id: 53,
         name: 'Płytki krwi',
         type: 'morfologia',
         result: '534',
@@ -535,7 +535,7 @@ export const getData = () => Promise.resolve([
 
     },
     {
-        id: 47,
+        id: 54,
         name: 'Kreatynina',
         type: 'morfologia',
         result: '534',
@@ -545,7 +545,7 @@ export const getData = () => Promise.resolve([
 
 
     }, {
-        id: 48,
+        id: 55,
         name: 'Mocznik',
         type: 'morfologia',
         result: '269',
@@ -556,7 +556,7 @@ export const getData = () => Promise.resolve([
 
     },
     {
-        id: 49,
+        id: 56,
         name: 'Glukoza',
         type: 'morfologia',
         result: '22',
@@ -567,7 +567,7 @@ export const getData = () => Promise.resolve([
 
     },
     {
-        id: 50,
+        id: 57,
         name: 'Białko całkowite',
         type: 'morfologia',
         result: '9.1',
