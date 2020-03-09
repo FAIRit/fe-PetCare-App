@@ -31,11 +31,11 @@ const TableExampleFixed = () => {
     </Table.Header>
 
     <Table.Body>{data.map(item => { return <Table.Row key={item.id}>
-<Table.Cell><p key={item.id}>{item.admission_date}</p></Table.Cell>
-             <Table.Cell><p key={item.id}>{item.discharge_date}</p></Table.Cell>
+<Table.Cell><p key={item.id}>{item.admissionDate}</p></Table.Cell>
+             <Table.Cell><p key={item.id}>{item.dischargeDate}</p></Table.Cell>
              <Table.Cell><p key={item.id}>{item.vet}</p></Table.Cell>
         <Table.Cell><p key={item.id}>{item.doctor}</p></Table.Cell>
-        <Table.Cell><p key={item.id}>{item.patients_condition}</p>
+        <Table.Cell><p key={item.id}>{item.patientsCondition}</p>
         </Table.Cell>
         <Table.Cell><p key={item.id}>{item.diagnosis}</p></Table.Cell>
         <Table.Cell><p key={item.id}>{item.recommendations}</p></Table.Cell>
