@@ -27,7 +27,7 @@ class FormExampleFieldControl extends Component {
             placeholder=''
           />
         </Form.Group>
-       </Form>
+      </Form>
     )
   }
 }

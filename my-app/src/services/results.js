@@ -26,7 +26,7 @@ export const getData = () => Promise.resolve([
         name: 'Hemoglobina',
         type: 'morfologia',
         result: '6.20',
-        unit: 'g/dl', 
+        unit: 'g/dl',
         referenceUnit: '9.00-15.0',
         date: '2020.03.06'
 
@@ -353,7 +353,7 @@ export const getData = () => Promise.resolve([
         date: '2020.02.12'
 
 
-    },  {
+    }, {
         id: 36,
         name: 'Limfocyty (ilość)',
         type: 'rozmaz krwi obwodowej',
@@ -365,216 +365,216 @@ export const getData = () => Promise.resolve([
 
     },
 
- {
-    id: 36,
-    name: 'Eozynofile %',
-    type: 'rozmaz krwi obwodowej',
-    result: '7',
-    unit: '%',
-    referenceUnit: '7-12',
-    date: '2020.02.12'
+    {
+        id: 36,
+        name: 'Eozynofile %',
+        type: 'rozmaz krwi obwodowej',
+        result: '7',
+        unit: '%',
+        referenceUnit: '7-12',
+        date: '2020.02.12'
 
 
-},
-{
-   id: 37,
-   name: 'Neutrofile pałeczkowate %',
-   type: 'rozmaz krwi obwodowej',
-   result: '1',
-   unit: '%',
-   referenceUnit: '0-6',
-   date: '2020.02.12'
+    },
+    {
+        id: 37,
+        name: 'Neutrofile pałeczkowate %',
+        type: 'rozmaz krwi obwodowej',
+        result: '1',
+        unit: '%',
+        referenceUnit: '0-6',
+        date: '2020.02.12'
 
-},
-{
-   id: 37,
-   name: 'Neutrofile segmentowane %',
-   type: 'rozmaz krwi obwodowej',
-   result: '82',
-   unit: '%',
-   referenceUnit: '35-75',
-   date: '2020.02.12'
+    },
+    {
+        id: 37,
+        name: 'Neutrofile segmentowane %',
+        type: 'rozmaz krwi obwodowej',
+        result: '82',
+        unit: '%',
+        referenceUnit: '35-75',
+        date: '2020.02.12'
 
 
-},{
-    id: 38,
-    name: 'Monocyty %',
-    type: 'rozmaz krwi obwodowej',
-    result: '2',
-    unit: '%',
-    referenceUnit: '1-4',
-    date: '2020.02.12'
- 
- 
- },
- {
-    id: 39,
-    name: 'Sód',
-    type: 'morfologia',
-    result: '364',
-    unit: 'mg/dl',
-    referenceUnit: '330-360',
-    date: '2020.02.12'
- 
- 
- },
- {
-    id: 40,
-    name: 'Chlorki',
-    type: 'morfologia',
-    result: '425',
-    unit: 'mg/dl',
-    referenceUnit: '360-420',
-    date: '2020.02.12'
- 
- 
- },
- {
-    id: 41,
-    name: 'UREA (Mocznik)',
-    type: 'biochemia krwi',
-    result: '217',
-    unit: 'mg/dl',
-    referenceUnit: '<=82',
-    date: '2020.02.12'
- 
- 
- },
- {
-    id: 41,
-    name: 'CREA (Kreatynina)',
-    type: 'biochemia krwi',
-    result: '4.71',
-    unit: 'mg/dl',
-    referenceUnit: '<= 1.8',
-    date: '2020.02.12'
- 
- 
- },
- {
-    id: 42,
-    name: 'Leukocyty',
-    type: 'morfologia',
-    result: '85.9',
-    unit: 'tys/ul',
-    referenceUnit: '5.5-19',
-    date: '2019.12.12'
- 
- 
- },
- {
-    id: 42,
-    name: 'Erytrocyty',
-    type: 'morfologia',
-    result: '5.84',
-    unit: 'mln/ul',
-    referenceUnit: '6.5-10',
-    date: '2019.12.12'
- 
- 
- },{
-    id: 41,
-    name: 'Hemoglobina',
-    type: 'morfologia',
-    result: '8.6',
-    unit: 'g/dl',
-    referenceUnit: '8-15',
-    date: '2019.12.12'
- 
- 
- },{
-    id: 42,
-    name: 'Hematokryt',
-    type: 'morfologia',
-    result: '28.2',
-    unit: '%',
-    referenceUnit: '24-45',
-    date: '2019.12.12'
- 
- 
- },{
-    id: 43,
-    name: 'MCV',
-    type: 'morfologia',
-    result: '48.3',
-    unit: 'fl',
-    referenceUnit: '39-55',
-    date: '2019.12.12'
- 
- 
- },{
-    id: 44,
-    name: 'MCH',
-    type: 'morfologia',
-    result: '4.71',
-    unit: 'pg',
-    referenceUnit: '13-17',
-    date: '2019.12.12'
- 
- 
- },{
-    id: 45,
-    name: 'MCHC',
-    type: 'morfologia',
-    result: '30.5',
-    unit: 'g/dl',
-    referenceUnit: '30-36',
-    date: '2019.12.12'
- 
- 
- },
- {
-    id: 46,
-    name: 'Płytki krwi',
-    type: 'morfologia',
-    result: '534',
-    unit: 'tys-ul',
-    referenceUnit: '200-600',
-    date: '2019.12.12'
- 
- 
- },
- {
-    id: 47,
-    name: 'Kreatynina',
-    type: 'morfologia',
-    result: '534',
-    unit: 'mg/dl',
-    referenceUnit: '200-600',
-    date: '2019.12.12'
- 
- 
- },{
-    id: 48,
-    name: 'Mocznik',
-    type: 'morfologia',
-    result: '269',
-    unit: 'mg/dl',
-    referenceUnit: '25-70',
-    date: '2019.12.12'
- 
- 
- },
- {
-    id: 49,
-    name: 'Glukoza',
-    type: 'morfologia',
-    result: '22',
-    unit: 'mg/dl',
-    referenceUnit: '100-130',
-    date: '2019.12.12'
- 
- 
- },
- {
-    id: 50,
-    name: 'Białko całkowite',
-    type: 'morfologia',
-    result: '9.1',
-    unit: 'g/dl',
-    referenceUnit: '5.7-9',
-    date: '2019.12.12'
- 
- 
- },
+    }, {
+        id: 38,
+        name: 'Monocyty %',
+        type: 'rozmaz krwi obwodowej',
+        result: '2',
+        unit: '%',
+        referenceUnit: '1-4',
+        date: '2020.02.12'
+
+
+    },
+    {
+        id: 39,
+        name: 'Sód',
+        type: 'morfologia',
+        result: '364',
+        unit: 'mg/dl',
+        referenceUnit: '330-360',
+        date: '2020.02.12'
+
+
+    },
+    {
+        id: 40,
+        name: 'Chlorki',
+        type: 'morfologia',
+        result: '425',
+        unit: 'mg/dl',
+        referenceUnit: '360-420',
+        date: '2020.02.12'
+
+
+    },
+    {
+        id: 41,
+        name: 'UREA (Mocznik)',
+        type: 'biochemia krwi',
+        result: '217',
+        unit: 'mg/dl',
+        referenceUnit: '<=82',
+        date: '2020.02.12'
+
+
+    },
+    {
+        id: 41,
+        name: 'CREA (Kreatynina)',
+        type: 'biochemia krwi',
+        result: '4.71',
+        unit: 'mg/dl',
+        referenceUnit: '<= 1.8',
+        date: '2020.02.12'
+
+
+    },
+    {
+        id: 42,
+        name: 'Leukocyty',
+        type: 'morfologia',
+        result: '85.9',
+        unit: 'tys/ul',
+        referenceUnit: '5.5-19',
+        date: '2019.12.12'
+
+
+    },
+    {
+        id: 42,
+        name: 'Erytrocyty',
+        type: 'morfologia',
+        result: '5.84',
+        unit: 'mln/ul',
+        referenceUnit: '6.5-10',
+        date: '2019.12.12'
+
+
+    }, {
+        id: 41,
+        name: 'Hemoglobina',
+        type: 'morfologia',
+        result: '8.6',
+        unit: 'g/dl',
+        referenceUnit: '8-15',
+        date: '2019.12.12'
+
+
+    }, {
+        id: 42,
+        name: 'Hematokryt',
+        type: 'morfologia',
+        result: '28.2',
+        unit: '%',
+        referenceUnit: '24-45',
+        date: '2019.12.12'
+
+
+    }, {
+        id: 43,
+        name: 'MCV',
+        type: 'morfologia',
+        result: '48.3',
+        unit: 'fl',
+        referenceUnit: '39-55',
+        date: '2019.12.12'
+
+
+    }, {
+        id: 44,
+        name: 'MCH',
+        type: 'morfologia',
+        result: '4.71',
+        unit: 'pg',
+        referenceUnit: '13-17',
+        date: '2019.12.12'
+
+
+    }, {
+        id: 45,
+        name: 'MCHC',
+        type: 'morfologia',
+        result: '30.5',
+        unit: 'g/dl',
+        referenceUnit: '30-36',
+        date: '2019.12.12'
+
+
+    },
+    {
+        id: 46,
+        name: 'Płytki krwi',
+        type: 'morfologia',
+        result: '534',
+        unit: 'tys-ul',
+        referenceUnit: '200-600',
+        date: '2019.12.12'
+
+
+    },
+    {
+        id: 47,
+        name: 'Kreatynina',
+        type: 'morfologia',
+        result: '534',
+        unit: 'mg/dl',
+        referenceUnit: '200-600',
+        date: '2019.12.12'
+
+
+    }, {
+        id: 48,
+        name: 'Mocznik',
+        type: 'morfologia',
+        result: '269',
+        unit: 'mg/dl',
+        referenceUnit: '25-70',
+        date: '2019.12.12'
+
+
+    },
+    {
+        id: 49,
+        name: 'Glukoza',
+        type: 'morfologia',
+        result: '22',
+        unit: 'mg/dl',
+        referenceUnit: '100-130',
+        date: '2019.12.12'
+
+
+    },
+    {
+        id: 50,
+        name: 'Białko całkowite',
+        type: 'morfologia',
+        result: '9.1',
+        unit: 'g/dl',
+        referenceUnit: '5.7-9',
+        date: '2019.12.12'
+
+
+    },
 ]); 

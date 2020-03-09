@@ -8,7 +8,7 @@ const Rechart = () => {
   useEffect(() => {
     getData()
       .then(data => setData(data));
-  },[])
+  }, [])
 
   return (
     <LineChart

@@ -1,14 +1,14 @@
 import React, { Component } from "react";
 import {
-    Calendar,
-    momentLocalizer,
-  } from 'react-big-calendar';
+  Calendar,
+  momentLocalizer,
+} from 'react-big-calendar';
 import moment from "moment";
 
 //import "./App.css";
 
 const localizer = momentLocalizer(moment)
-  
+
 class App extends Component {
   state = {
     events: [

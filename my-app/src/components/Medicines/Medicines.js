@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Table, Menu, Icon} from 'semantic-ui-react'
+import { Table, Menu, Icon } from 'semantic-ui-react'
 import { getData } from '../../services/medicines'
 import Data from './AddData'
 
@@ -13,33 +13,35 @@ const TableExampleFixed = () => {
   }, [])
 
   return (
-  <div>
-  <Table fixed>
-    <Table.Header>
-      <Table.Row>
-      <Table.HeaderCell>Nazwa</Table.HeaderCell>
-      <Table.HeaderCell>Rodzaj</Table.HeaderCell>
-      <Table.HeaderCell>Dawkowanie</Table.HeaderCell>
-        <Table.HeaderCell>Opis</Table.HeaderCell>
-        <Table.HeaderCell>*Data rozpoczęcia</Table.HeaderCell>
-        <Table.HeaderCell>*Lekarz przepisujący lek</Table.HeaderCell>
-        <Table.HeaderCell>Uwagi</Table.HeaderCell>
-      </Table.Row>
-    </Table.Header>
+    <div>
+      <Table fixed>
+        <Table.Header>
+          <Table.Row>
+            <Table.HeaderCell>Nazwa</Table.HeaderCell>
+            <Table.HeaderCell>Rodzaj</Table.HeaderCell>
+            <Table.HeaderCell>Dawkowanie</Table.HeaderCell>
+            <Table.HeaderCell>Opis</Table.HeaderCell>
+            <Table.HeaderCell>*Data rozpoczęcia</Table.HeaderCell>
+            <Table.HeaderCell>*Lekarz przepisujący lek</Table.HeaderCell>
+            <Table.HeaderCell>Uwagi</Table.HeaderCell>
+          </Table.Row>
+        </Table.Header>
 
-    <Table.Body>{data.map(item => { return <Table.Row key={item.id}>
-<Table.Cell><p key={item.id}>{item.name}</p></Table.Cell>
-             <Table.Cell><p key={item.id}>{item.type}</p></Table.Cell>
-             <Table.Cell><p key={item.id}>{item.dosage}</p></Table.Cell>
-        <Table.Cell><p key={item.id}>{item.other}</p></Table.Cell>
-        <Table.Cell><p></p></Table.Cell>
-        <Table.Cell><p key={item.id}>{item.doctor}</p>
-        </Table.Cell>
-     
- </Table.Row>})}
-             </Table.Body>
-  </Table>
-  </div>
+        <Table.Body>{data.map(item => {
+          return <Table.Row key={item.id}>
+            <Table.Cell><p key={item.id}>{item.name}</p></Table.Cell>
+            <Table.Cell><p key={item.id}>{item.type}</p></Table.Cell>
+            <Table.Cell><p key={item.id}>{item.dosage}</p></Table.Cell>
+            <Table.Cell><p key={item.id}>{item.other}</p></Table.Cell>
+            <Table.Cell><p></p></Table.Cell>
+            <Table.Cell><p key={item.id}>{item.doctor}</p>
+            </Table.Cell>
+
+          </Table.Row>
+        })}
+        </Table.Body>
+      </Table>
+    </div>
   )
 };
 

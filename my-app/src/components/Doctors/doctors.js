@@ -22,16 +22,18 @@ const TableExamplePagination = () => {
           </Table.Row>
         </Table.Header>
 
-        <Table.Body>{data.map(item => { return <Table.Row key={item.id}>
-<Table.Cell><p>{item.firstname}</p></Table.Cell>
-             <Table.Cell><p>{item.surname}</p></Table.Cell>
-             <Table.Cell><p>{item.vetClinic}</p></Table.Cell>
- </Table.Row>})}
-         
+        <Table.Body>{data.map(item => {
+          return <Table.Row key={item.id}>
+            <Table.Cell><p>{item.firstname}</p></Table.Cell>
+            <Table.Cell><p>{item.surname}</p></Table.Cell>
+            <Table.Cell><p>{item.vetClinic}</p></Table.Cell>
+          </Table.Row>
+        })}
+
         </Table.Body>
       </Table>
       <div className="doctors">
-      <Data></Data>
+        <Data></Data>
 
       </div>
     </>
