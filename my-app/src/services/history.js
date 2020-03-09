@@ -29,7 +29,7 @@ export const getData = () => Promise.resolve([
       doctor: 'Sylwana Rzepczyk',
       patientsCondition: 'Kot osowiały, od wieczora 03.03 oddaje zmniejszone ilości moczu, wygryzł sobie sierść na lewym boku',
       diagnosis: 'W usg powiekszony pęcherz, po stanie sierści widać, że w przeszłości musiał mieć pasożyty (z badania pod mikroskopem wychodzi, że są martwe), stan trzustki zły, mocz niejednorodny, nerki w stanie terminalnym lub zapalnym (konieczne dodatkowe badania), szmery w sercu - konieczne echo serca',
-      recommendations: 'Podano lek rozkurczowy, pobrano krew do badań, pacjent wypisany do domu, konieczność powrotu 05.02 na ponowne usg'
+      recommendations: 'Podano lek rozkurczowy, pobrano krew do badań, pacjent wypisany do domu, konieczność powrotu 06.03 na ponowne usg'
 
    },
    {

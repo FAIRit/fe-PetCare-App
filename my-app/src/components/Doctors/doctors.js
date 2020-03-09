@@ -3,7 +3,7 @@ import { Table } from 'semantic-ui-react'
 import { getData } from '../../services/doctors'
 import Data from './AddData'
 
-const TableExamplePagination = () => {
+const PaginatedTable = () => {
   const [data, setData] = useState([]);
   useEffect(() => {
     getData()
@@ -40,4 +40,4 @@ const TableExamplePagination = () => {
   )
 };
 
-export default TableExamplePagination 
+export default PaginatedTable 

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Button, Header, Image, Modal } from 'semantic-ui-react'
 import { getData } from '../services/pet'
 
-const ModalModalExample = () => {
+const PatientCardModal = () => {
   const [data, setData] = useState([]);
   useEffect(() => {
     getData()
@@ -28,4 +28,4 @@ const ModalModalExample = () => {
   )
 };
 
-export default ModalModalExample;
+export default PatientCardModal;
