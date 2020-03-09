@@ -1,45 +1,38 @@
-import React, { Component } from 'react';
-import List from './List';
-import DatePicker from './DatePicker'
+import React, { Component } from "react";
+import {
+    Calendar,
+    momentLocalizer,
+  } from 'react-big-calendar';
+import moment from "moment";
 
-export default class addData extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      term: '',
-      items: []
-    };
-  }
+//import "./App.css";
 
-  onChange = (event) => {
-    this.setState({ term: event.target.value });
-  }
-
-  onSubmit = (event) => {
-    event.preventDefault();
-    this.setState({
-      term: '',
-      items: [...this.state.items, this.state.term]
-    });
-  }
+const localizer = momentLocalizer(moment)
+  
+class App extends Component {
+  state = {
+    events: [
+      {
+        start: new Date(),
+        end: new Date(moment().add(1, "days")),
+        title: "Some title"
+      }
+    ]
+  };
 
   render() {
     return (
-      <div>
-          <DatePicker
-  selected={this.state.date}
-  onSelect={this.handleSelect} //when day is clicked
-  onChange={this.handleChange} //only when value has changed
-/>
-<br/>
-        <form className="App" onSubmit={this.onSubmit}>
-        <List items={this.state.items} />
-
-          <input value={this.state.term} onChange={this.onChange} placeholder="dodaj zadanie" />
-          <button>Zapisz</button>
-        </form>
-      
+      <div className="App">
+        <Calendar
+          localizer={localizer}
+          defaultDate={new Date()}
+          defaultView="month"
+          events={this.state.events}
+          style={{ height: "100vh" }}
+        />
       </div>
     );
   }
 }
+
+export default App;
