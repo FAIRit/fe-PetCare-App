@@ -40,6 +40,22 @@ export default class AddData extends Component {
         
         </form>
       </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     );
   }
 }

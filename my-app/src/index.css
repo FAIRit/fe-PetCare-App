@@ -46,3 +46,6 @@ p.medicines{
   padding:10px;
 }
 
+.dropdown{
+  display:flex;
+}
