@@ -53,4 +53,15 @@ export const getData = () => Promise.resolve([
       diagnosis: 'Prawdopodobny stan zapalny pęcherza i nerek, oczekujemy na wyniki badań moczu. Wynik badań mocznika i leukocytów powyżej skali',
       recommendations: 'Podano jedynie znieczulenie miejscowe ze względu na serce. Ponownie wszyto cewnik, spuszczono mocz. Kot z cewnikiem i kołnierzem, zgodnie z decyzją opiekunki, został wypuszczony do domu. Konieczny powrót do lecznicy 09.02 na kroplówkę i konktrolę stanu pęcherza. 09.02 powinny wpłynąć częściowe wyniki badań moczu. Wprowadzono antybiotyk i cześciowo zmieniono sposób dotychczasowego leczenia, tj. - zmiejszono ilość Semintry o połowę (badanie ciśnienia w normie), zwiększono dawkę Cystaid Plus o połowę, wprowadzono Hyalutidin, Clavaseptin oraz Gabapentynę.'
 
+   },
+   {
+      id: 6,
+      admissionDate: '09.03.2020',
+      dischargeDate: '09.03.2020',
+      vet: 'Przychodnia VetCentrum Gdynia, ul. Chylońska 230',
+      doctor: 'Sylwana Rzepczyk',
+      patientsCondition: 'Kot w dużo lepszej formie fizycznej, cewnik pozostanie wszyty jeszcze na około 2 dni. Podano lek przeciwzapalny w zastrzyku i podłączono kroplówkę. Kot pozostaje w lecznicy do godzin wieczornych z podpiętą kroplówką, następnie uzyska wypis do domu',
+      diagnosis: 'Prawdopodobny stan zapalny pęcherza i nerek, oczekujemy na wyniki badań moczu.',
+      recommendations: 'Konieczny powrót 10.03 rano na kolejną kroplówkę i kontrolę stanu zdrowia'
+
    }]); 
