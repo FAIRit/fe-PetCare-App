@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import List from './List';
+import { List} from 'semantic-ui-react'
 
 export default class addData extends Component {
   constructor(props) {
