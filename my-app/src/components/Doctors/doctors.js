@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Table } from 'semantic-ui-react'
 import { getData } from '../../services/doctors'
-import Data from './AddData'
+import AddData from './AddData'
 
 const PaginatedTable = () => {
   const [data, setData] = useState([]);
@@ -34,7 +34,7 @@ const PaginatedTable = () => {
         </Table.Body>
       </Table>
       <div className="doctors">
-        <Data></Data>
+        <AddData></AddData>
 
       </div>
     </>
