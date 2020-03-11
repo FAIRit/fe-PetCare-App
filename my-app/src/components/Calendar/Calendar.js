@@ -6,9 +6,6 @@ import {
 import moment from "moment";
 import events from '../../services/events';
 
-
-//import "./App.css";
-
 const localizer = momentLocalizer(moment)
 
 class App extends Component {
