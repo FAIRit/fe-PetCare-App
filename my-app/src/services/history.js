@@ -64,4 +64,25 @@ export const getData = () => Promise.resolve([
       diagnosis: 'Prawdopodobny stan zapalny pęcherza i nerek, oczekujemy na wyniki badań moczu.',
       recommendations: 'Konieczny powrót 10.03 rano na kolejną kroplówkę i kontrolę stanu zdrowia'
 
+   }, {
+      id: 7,
+      admissionDate: '10.03.2020',
+      dischargeDate: '10.03.2020',
+      vet: 'Przychodnia VetCentrum Gdynia, ul. Chylońska 230',
+      doctor: 'Sylwana Rzepczyk',
+      patientsCondition: 'Kot silnie zestresowany, podano opioid, pozostawiono na 6 godzin na kroplówce. Po godzinie 15 zdjęto cewnik i wypisano do domu',
+      diagnosis: 'Prawdopodobny stan zapalny pęcherza i nerek, oczekujemy na wyniki badań moczu.',
+      recommendations: 'Konieczny powrót 11.03 rano na kontrolę stanu zdrowia'
+
+   },
+   {
+      id: 7,
+      admissionDate: '11.03.2020',
+      dischargeDate: '11.03.2020',
+      vet: 'Przychodnia VetCentrum Gdynia, ul. Chylońska 230',
+      doctor: 'Sylwana Rzepczyk',
+      patientsCondition: 'Kot w dobrej formie, siusia samodzielnie, pęcherz nie jest powiększony (nie wykonano USG). Podano antybiotyk w zastrzyku i wypisano do domu',
+      diagnosis: 'Prawdopodobny stan zapalny pęcherza i nerek, oczekujemy na wyniki badań moczu.',
+      recommendations: 'Konieczny powrót 13.03 na kontrolę stanu zdrowia i 16.03 na echo serca'
+
    }]); 
