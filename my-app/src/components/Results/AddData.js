@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { List} from 'semantic-ui-react'
 
 
 export default class addData extends Component {
@@ -27,7 +26,6 @@ export default class addData extends Component {
     return (
       <div>
         <form className="resulrs" onSubmit={this.onSubmit}>
-        <List items={this.state.items} />
 <p>Dodaj wynik:</p>
           <input value={this.state.term} onChange={this.onChange} />
           <button type="submit">Zapisz</button>        </form>
