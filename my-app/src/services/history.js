@@ -85,4 +85,14 @@ export const getData = () => Promise.resolve([
       diagnosis: 'Prawdopodobny stan zapalny pęcherza i nerek, oczekujemy na wyniki badań moczu.',
       recommendations: 'Konieczny powrót 13.03 na kontrolę stanu zdrowia i 16.03 na echo serca'
 
+   },{
+      id:8,
+      admissionDate: '13.03.2020',
+      dischargeDate: '13.03.2020',
+      vet: 'Przychodnia VetCentrum Gdynia, ul. Chylońska 230',
+      doctor: 'Sylwana Rzepczyk',
+      patientsCondition: 'Kot w dobrej formie, siusia samodzielnie. W usg pęcherz nadal duży, jednak, ponieważ kot siusia i czuje się dobrze, zostaje wypisany do domu. Podano zastrzyk na wzmocnienie pęcherza.',
+      diagnosis: 'Na podstawie posiewu, stwierdzono dużą ilość escherichia colie w moczu.',
+      recommendations: 'Antybiotykoterapia przez około 2 tygodnie, obserwacja ilości oddawanego moczu w domu. Konieczny powrót 16.03 na echo serca'
+
    }]); 
