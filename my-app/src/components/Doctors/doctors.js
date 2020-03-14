@@ -1,14 +1,18 @@
 import React, { useEffect, useState } from "react";
 import { Table } from 'semantic-ui-react'
-import { getData } from '../../services/doctors'
+import { getData, addDoctor } from "../../services/doctors";
 import AddData from './AddData'
 
 const PaginatedTable = () => {
   const [data, setData] = useState([]);
+
+  const fetchDoctors = () => getData().then(data => setData(data));
+
+  const onDoctorAdded = doctor => addDoctor(doctor).then(fetchDoctors);
+
   useEffect(() => {
-    getData()
-      .then(data => setData(data));
-  }, [])
+    fetchDoctors();
+  }, []);
 
   return (
     <>
@@ -34,8 +38,7 @@ const PaginatedTable = () => {
         </Table.Body>
       </Table>
       <div className="doctors">
-        <AddData></AddData>
-
+      <AddData doctorAdded={onDoctorAdded} />
       </div>
     </>
   )
