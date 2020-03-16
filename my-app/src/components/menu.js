@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import { Input, Menu } from 'semantic-ui-react'
 import Card from './petCard.js'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
-export default class MenuExampleSecondary extends Component {
+export default class MenuSecondary extends Component {
   state = { activeItem: 'home' }
 
   handleItemClick = (e, { name }) => this.setState({ activeItem: name })
@@ -13,35 +13,35 @@ export default class MenuExampleSecondary extends Component {
 
     return (
       <Menu secondary>
-           <Card></Card>
+        <Card></Card>
 
-   <Menu.Item  as ={Link} to='./leki'
+        <Menu.Item as={Link} to='./leki'
           name='Leki'
           active={activeItem === 'Leki'}
           onClick={this.handleItemClick}
         />
-        <Menu.Item  as ={Link} to='./Calendar'
+        <Menu.Item as={Link} to='./Calendar'
           name='Kalendarz'
           active={activeItem === 'Kalendarz'}
           onClick={this.handleItemClick}
         />
-          <Menu.Item as ={Link} to='./History'
+        <Menu.Item as={Link} to='./History'
           name='Historia leczenia'
           active={activeItem === 'Historia leczenia'}
           onClick={this.handleItemClick}
         />
-         <Menu.Item  as ={Link} to='./doctors'
+        <Menu.Item as={Link} to='./doctors'
           name='Lekarze'
           active={activeItem === 'Lekarze'}
           onClick={this.handleItemClick}
         />
-           <Menu.Item as ={Link} to='./wyniki'
+        <Menu.Item as={Link} to='./wyniki'
           name='Wyniki badań'
           active={activeItem === 'Wyniki badań'}
           onClick={this.handleItemClick}
         />
-          <Menu.Item as ={Link} to='./Diagramy'
-          name='Diagramy' as ={Link} to='./Diagramy'
+        <Menu.Item as={Link} to='./Diagramy'
+          name='Diagramy' as={Link} to='./Diagramy'
           active={activeItem === 'Diagramy'}
           onClick={this.handleItemClick}
         />

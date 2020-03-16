@@ -10,7 +10,7 @@ const options = [
   { key: 'c', text: 'Chomik', value: 'animal' },
 ]
 
-class FormExampleFieldControl extends Component {
+class FormFieldControl extends Component {
   state = {}
 
   handleChange = (e, { value }) => this.setState({ value })
@@ -27,9 +27,9 @@ class FormExampleFieldControl extends Component {
             placeholder=''
           />
         </Form.Group>
-       </Form>
+      </Form>
     )
   }
 }
 
-export default FormExampleFieldControl
+export default FormFieldControl

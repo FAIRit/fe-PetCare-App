@@ -1,20 +1,29 @@
-export const getData = () => Promise.resolve([
-    { id: 1, 
-        firstname: 'wielu lekarzy',
-    surname:'-\\-',
-    vet_clinic:'Przychodnia weterynaryjna VetCare, Gdynia',
-
+let DOCTORS = [
+    {
+      id: 1,
+      firstname: "wielu lekarzy",
+      surname: "-\\-",
+      vetClinic: "Przychodnia weterynaryjna VetCare, Gdynia"
     },
-{ id: 1, 
-    firstname: 'Agnieszka',
-surname:'Antczak',
-vet_clinic:'Przychodnia CrisVet Gdynia, ul. Warszawska',
+    {
+      id: 2,
+      firstname: "Agnieszka",
+      surname: "Antczak",
+      vetClinic: "Przychodnia CrisVet Gdynia, ul. Warszawska"
+    },
+    {
+      id: 3,
+      firstname: "Sylwana",
+      surname: "Rzepczyk",
+      vetClinic: "Przychodnia VetCentrum Gdynia, ul. Chylońska 230"
+    }
+  ];
+  
+  const calculateNextId = list => ((list || []).slice(-1)[0]?.id ?? 0) + 1;
 
-},
-{ id: 1, 
-    firstname: 'example',
-surname:'example',
-vet_clinic:'example',
-
-}
- ]); 
+  export const getData = () => Promise.resolve(DOCTORS);
+  
+  export const addDoctor = doctor => {
+    DOCTORS = [...DOCTORS, ({ ...doctor, id: calculateNextId(DOCTORS)})];
+    return Promise.resolve();
+  };

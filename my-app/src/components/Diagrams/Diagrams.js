@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip } from 'recharts';
 
-import { getData } from "../services/data";
+import { getData } from "../../services/data";
 
 const Rechart = () => {
   const [data, setData] = useState([]);
   useEffect(() => {
     getData()
       .then(data => setData(data));
-  },[])
+  }, [])
 
   return (
     <LineChart
