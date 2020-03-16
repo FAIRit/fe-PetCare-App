@@ -1,20 +1,19 @@
 import React, { useEffect, useState } from "react";
 import { Table } from 'semantic-ui-react'
-import { Icon, Menu } from 'semantic-ui-react'
-import Data from './AddData'
-import { getData } from '../../services/history'
-
-
-
+import { getData, addDoctor } from "../../services/history";
+import AddData from './AddData'
 
 
 const TableFixed = () => {
   const [data, setData] = useState([]);
-  useEffect(() => {
-    getData()
-      .then(data => setData(data));
-  }, [])
 
+  const fetchDoctors = () => getData().then(data => setData(data));
+
+  const onDoctorAdded = doctor => addDoctor(doctor).then(fetchDoctors);
+
+  useEffect(() => {
+    fetchDoctors();
+  }, []);
   return (
     <div>
       <Table fixed>
@@ -44,6 +43,9 @@ const TableFixed = () => {
         })}
         </Table.Body>
       </Table>
+      <div className="doctors">
+      <AddData doctorAdded={onDoctorAdded} />
+      </div>
     </div>
   )
 };

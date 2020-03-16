@@ -1,17 +1,18 @@
 import React, { useEffect, useState } from "react";
-import { Table, Menu, Icon } from 'semantic-ui-react'
-import { getData } from '../../services/results'
-import Data from './AddData'
-
-
+import { Table } from 'semantic-ui-react'
+import { getData, addDoctor } from "../../services/results";
+import AddData from './AddData'
 
 const TableFixed = () => {
   const [data, setData] = useState([]);
-  useEffect(() => {
-    getData()
-      .then(data => setData(data));
-  }, [])
 
+  const fetchDoctors = () => getData().then(data => setData(data));
+
+  const onDoctorAdded = doctor => addDoctor(doctor).then(fetchDoctors);
+
+  useEffect(() => {
+    fetchDoctors();
+  }, []);
   return (
     <div>
       <Table fixed>
@@ -29,18 +30,19 @@ const TableFixed = () => {
 
         <Table.Body>{data.map(item => {
           return <Table.Row key={item.id}>
-            <Table.Cell><p key={item.id}>{item.date}</p></Table.Cell>
-            <Table.Cell><p key={item.id}>{item.name}</p></Table.Cell>
-            <Table.Cell><p key={item.id}>{item.type}</p></Table.Cell>
-            <Table.Cell><p key={item.id}>{item.result}</p></Table.Cell>
-            <Table.Cell><p key={item.id}>{item.unit}</p></Table.Cell>
-            <Table.Cell><p key={item.id}>{item.referenceUnit}</p></Table.Cell>
-            <Table.Cell><p></p></Table.Cell>
-
+            <Table.Cell><p>{item.date}</p></Table.Cell>
+            <Table.Cell><p>{item.name}</p></Table.Cell>
+            <Table.Cell><p>{item.type}</p></Table.Cell>
+            <Table.Cell><p>{item.result}</p></Table.Cell>
+            <Table.Cell><p>{item.unit}</p></Table.Cell>
+            <Table.Cell><p>{item.referenceUnit}</p></Table.Cell>
           </Table.Row>
         })}
         </Table.Body>
       </Table>
+      <div className="doctors">
+      <AddData doctorAdded={onDoctorAdded} />
+      </div>
     </div>
   )
 };

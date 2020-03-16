@@ -1,4 +1,4 @@
-export const getData = () => Promise.resolve([
+let DOCTORS = [
    {
       id: 1,
       admissionDate: '12.12.2019',
@@ -76,7 +76,7 @@ export const getData = () => Promise.resolve([
 
    },
    {
-      id: 7,
+      id: 8,
       admissionDate: '11.03.2020',
       dischargeDate: '11.03.2020',
       vet: 'Przychodnia VetCentrum Gdynia, ul. Chylońska 230',
@@ -85,8 +85,8 @@ export const getData = () => Promise.resolve([
       diagnosis: 'Prawdopodobny stan zapalny pęcherza i nerek, oczekujemy na wyniki badań moczu.',
       recommendations: 'Konieczny powrót 13.03 na kontrolę stanu zdrowia i 16.03 na echo serca'
 
-   },{
-      id:8,
+   }, {
+      id: 9,
       admissionDate: '13.03.2020',
       dischargeDate: '13.03.2020',
       vet: 'Przychodnia VetCentrum Gdynia, ul. Chylońska 230',
@@ -95,4 +95,24 @@ export const getData = () => Promise.resolve([
       diagnosis: 'Na podstawie posiewu, stwierdzono dużą ilość escherichia colie w moczu.',
       recommendations: 'Antybiotykoterapia przez około 2 tygodnie, obserwacja ilości oddawanego moczu w domu. Konieczny powrót 16.03 na echo serca'
 
-   }]); 
+   },
+   {
+      id: 10,
+      admissionDate: '16.03.2020',
+      dischargeDate: '16.03.2020',
+      vet: 'Przychodnia VetCentrum Gdynia, ul. Chylońska 230',
+      doctor: 'Michał Bartnicki,  dr Marta',
+      patientsCondition: 'Kot czuje się dobrze, siusia samodzielnie, ale w ocenie opiekunki ma powiększony brzuszek - do zbadania w usg Wykonano echo serca - serce w normie, brak przeciwskazań od strony kardiologicznej do stosowania znieczulenia ogólnego. Szmery wynikają z płynu w jamie opłucnowej (śladowe ilości), ponadto stwierdzono też fragmenty niedodmowe płatów płucnych. Wykonano dwa zdjęcia rtg - zmiana nie wygląda na nowotworową, a zapalną - zdjęcia skierowano do dodatkowej konsultacji. W badaniu usg pęcherz duży, około 10 cm, ale taką samą wielkość stwierdzono podczas ostatniego badania. Ze względu na atonię pęcherza zalecono jedynie obserwację ilości oddawanego moczu w warunkach domowych',
+      diagnosis: 'Na podstawie posiewu, stwierdzono dużą ilość escherichia colie w moczu.',
+      recommendations: 'Kontynuacja antybiotykoterapii, obserwacja ilości oddawanego moczu w domu. Konieczny powrót 20.03 na zastrzyk wzmacianjący pęcherz. Do oceny pozostają zdjęcia rtg'
+
+   }];
+
+const calculateNextId = list => ((list || []).slice(-1)[0] ?.id ?? 0) + 1;
+
+export const getData = () => Promise.resolve(DOCTORS);
+
+export const addDoctor = doctor => {
+   DOCTORS = [...DOCTORS, ({ ...doctor, id: calculateNextId(DOCTORS) })];
+   return Promise.resolve();
+};

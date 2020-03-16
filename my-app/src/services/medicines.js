@@ -1,4 +1,4 @@
-export const getData = () => Promise.resolve([
+let DOCTORS = [
     {
         id: 1,
         name: 'Gasprid',
@@ -129,4 +129,13 @@ export const getData = () => Promise.resolve([
 
 
     }
-]); 
+];
+
+const calculateNextId = list => ((list || []).slice(-1)[0] ?.id ?? 0) + 1;
+
+export const getData = () => Promise.resolve(DOCTORS);
+
+export const addDoctor = doctor => {
+    DOCTORS = [...DOCTORS, ({ ...doctor, id: calculateNextId(DOCTORS) })];
+    return Promise.resolve();
+};
