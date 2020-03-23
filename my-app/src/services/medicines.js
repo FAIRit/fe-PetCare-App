@@ -89,7 +89,7 @@ let DOCTORS = [
 
 
     },
-    , {
+    {
         id: 10,
         name: 'Płyn ringera',
         type: 'roztwór',
@@ -98,8 +98,8 @@ let DOCTORS = [
         doctor: 'Przychodnia Vet Care',
 
 
-    }
-    , {
+    },
+    {
         id: 11,
         name: 'Gabapentyna',
         type: 'tabletki',

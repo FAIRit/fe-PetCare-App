@@ -94,7 +94,7 @@ let DOCTORS = [
         date: '2020.03.06'
 
     },
-    , {
+    {
         id: 10,
         name: 'Limfocyty %',
         type: 'morfologia',
@@ -104,7 +104,7 @@ let DOCTORS = [
         date: '2020.03.06'
 
     },
-    , {
+    {
         id: 11,
         name: 'Eozynofile (ilość)',
         type: 'rozmaz krwi obwodowej',
@@ -112,8 +112,8 @@ let DOCTORS = [
         unit: 'tys/ul',
         referenceUnit: '0.1-2.3',
         date: '2020.02.12'
-    }
-    , {
+    },
+     {
         id: 12,
         name: 'Monocyty (ilość)',
         type: 'rozmaz krwi obwodowej',
@@ -122,7 +122,7 @@ let DOCTORS = [
         referenceUnit: '0.06-0.8',
         date: '2020.02.12'
     },
-    , {
+     {
         id: 13,
         name: 'Limfocyty ilościowo',
         type: 'morfologia',
@@ -140,7 +140,7 @@ let DOCTORS = [
         referenceUnit: '0.040-0.500',
         date: '2020.03.06'
     },
-    , {
+    {
         id: 15,
         name: 'Kwasochłonne %',
         type: 'morfologia',
@@ -157,7 +157,7 @@ let DOCTORS = [
         referenceUnit: '0.100-0.600',
         date: '2020.03.06'
     },
-    , {
+     {
         id: 17,
         name: 'Zasadochłonne %',
         type: 'morfologia',
