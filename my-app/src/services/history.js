@@ -106,6 +106,38 @@ let DOCTORS = [
       diagnosis: 'Na podstawie posiewu, stwierdzono dużą ilość escherichia colie w moczu.',
       recommendations: 'Kontynuacja antybiotykoterapii, obserwacja ilości oddawanego moczu w domu. Konieczny powrót 20.03 na zastrzyk wzmacianjący pęcherz. Do oceny pozostają zdjęcia rtg'
 
+   },
+   {
+      id: 11,
+      admissionDate: '20.03.2020',
+      dischargeDate: '20.03.2020',
+      vet: 'Przychodnia VetCentrum Gdynia, ul. Chylońska 230',
+      doctor: 'dr Marta',
+      patientsCondition: 'Kot czuje się dobrze, siusia samodzielnie. Podano karprofen na wzmocnienie pęcherza. Wyznaczono termony kolejnych wizyt na 27.03 oraz 04.03',
+      diagnosis: 'Na podstawie posiewu, stwierdzono dużą ilość escherichia colie w moczu. W RTG nie stwierdzono zmian nowotworowych. Powiększone węzły chłonne z niewiadomej przyczyny',
+      recommendations: 'Kontynuacja antybiotykoterapii, obserwacja ilości oddawanego moczu w domu. Konieczny powrót 27.03 na zastrzyk wzmacianjący pęcherz.'
+
+   }, {
+      id: 12,
+      admissionDate: '21.03.2020',
+      dischargeDate: '21.03.2020',
+      vet: 'Przychodnia VetCentrum Gdynia, ul. Chylońska 230',
+      doctor: 'dr Marta',
+      patientsCondition: 'Kot przestał siusiać, zawodził w nocy próbując skorzystać z kuwety, Dodatkowo stwierdzono obecność pasożytów',
+      diagnosis: 'Prawdopodobnie blokada na skutek stresu. Duża ilość pasożytów w organiźmie',
+      recommendations: 'Podano tabletkę na odrobaczenie, wszytko cewnik. Zdjęcie cewnika zaplanowane na 23.03'
+
+   },
+   {
+      id: 13,
+      admissionDate: '23.03.2020',
+      dischargeDate: '23.03.2020',
+      vet: 'Przychodnia VetCentrum Gdynia, ul. Chylońska 230',
+      doctor: 'dr Marta',
+      patientsCondition: 'Kot wyrwał sobie cewnik w nocy z soboty na niedzielę, ale zaczął siusiać samodzielnie, zalecono obserwację w domu. W godzinach popołudniowych skontaktowała się opiekunka kota z informacją o nierównomiernych źrenicach zwierzęcia oraz stanie zagubienia. Zalecono przyjazd do lecznicy. W lecznicy kot reagował na bodźce, podano parafinę, środek osłonowy na wątrobę oraz kroplówkę. Pobrano krew celem oceny wątroby i wskaźników mocznika ',
+      diagnosis: 'Prawdopodobnie doszło do zatrucia związanego z kuracją przeciwpasożytniczą.',
+      recommendations: 'Po pierwszej kroplówce kot w lepszej formie, zjadł pół saszetki karmy renal. Źrenice nadal nierównimierne.Konieczne wizyty w kolejnych dniach celem kontynuacji kroplówek.'
+
    }];
 
 const calculateNextId = list => ((list || []).slice(-1)[0] ?.id ?? 0) + 1;
