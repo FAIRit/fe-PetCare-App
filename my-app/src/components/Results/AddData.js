@@ -8,7 +8,8 @@ const DEFAULT_STATE = {
   type: "",
   result: "",
   unit: "",
-  referenceUnit: ""
+  referenceUnit: "",
+  other: ""
 };
 
 
