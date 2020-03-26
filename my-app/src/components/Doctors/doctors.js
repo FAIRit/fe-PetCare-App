@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Table } from 'semantic-ui-react'
 import { getData, addDoctor } from "../../services/doctors";
 import AddData from './AddData'
-
+debugger;
 const PaginatedTable = () => {
   const [data, setData] = useState([]);
 
@@ -27,7 +27,7 @@ const PaginatedTable = () => {
           </Table.Row>
         </Table.Header>
 
-        <Table.Body>{data.map(item => {
+        <Table.Body>{data.map(item => { 
           return <Table.Row key={item.id}>
             <Table.Cell><p>{item.firstname}</p></Table.Cell>
             <Table.Cell><p>{item.surname}</p></Table.Cell>
