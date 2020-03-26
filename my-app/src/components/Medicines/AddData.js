@@ -58,7 +58,6 @@ export default class AddData extends Component {
           />
           <br />
           <button>Zapisz</button>
-
         </form>
       </div>
 

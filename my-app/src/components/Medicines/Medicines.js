@@ -15,6 +15,7 @@ const TableFixed = () => {
     fetchDoctors();
   }, []);
 
+
   return (
     <div>
       <Table fixed>
