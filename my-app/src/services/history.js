@@ -147,7 +147,11 @@ let DOCTORS = [
       doctor: 'dr Marta Kozuń',
       patientsCondition: 'Kot w lepszej kondycji. Wielkość źrenic nadal zróżnicowana, ale wyglądają lepiej, niż dzień wcześniej. Ma apetyt, siusia samodzielnie, wydala niewielkie ilości martwych pasożytów. Wyniki badań krwi lepsze,niż poprzednie. Mocznik spadł',
       diagnosis: 'Prawdopodobnie doszło do zatrucia związanego z kuracją przeciwpasożytniczą.',
+<<<<<<< HEAD
       recommendations: 'Podawano drugą kroplówkę przez 5 godzin. Zalecany powrót 25.03 na trzecią, ostatnią kroplówkę. Dodatkowo, antybiotykoterapia zostaje przedłużona do 21 dni'
+=======
+      recommendations: 'Podawano drugą kroplówkę przez 5 godzin. Zalecany powrót 25.03 na trzecią, ostatnią kroplówkę'
+>>>>>>> 9fe01dd8dec4170073a6850c7f3e4ba78517edb4
 
    },
    {
