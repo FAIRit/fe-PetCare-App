@@ -149,6 +149,17 @@ let DOCTORS = [
       diagnosis: 'Prawdopodobnie doszło do zatrucia związanego z kuracją przeciwpasożytniczą.',
       recommendations: 'Podawano drugą kroplówkę przez 5 godzin. Zalecany powrót 25.03 na trzecią, ostatnią kroplówkę. Dodatkowo, antybiotykoterapia zostaje przedłużona do 21 dni'
 
+   },
+   {
+      id: 14,
+      admissionDate: '25.03.2020',
+      dischargeDate: '25.03.2020',
+      vet: 'Przychodnia VetCentrum Gdynia, ul. Chylońska 230',
+      doctor: 'dr Marta Kozuń',
+      patientsCondition: 'Kot w lepszej kondycji. Wielkość źrenic nadal zróżnicowana. W trakcie pobytu w lecznicy, ygryzł sobie dużą ilość sierści na lewym boku, założono kołnierz na czas pobytu w lecznicy',
+      diagnosis: 'Prawdopodobnie doszło do zatrucia związanego z kuracją przeciwpasożytniczą.',
+      recommendations: 'Podawano trzecią kroplówkę przez 5 godzin. Zalecany powrót 26.03 na jeszcze jedną kroplówkę. Prawdopodobną przyczyną wygryzania sierści jest podwyższony poziom eozynofilów spowodowany infekcją pasożytniczą'
+
    }];
 
 const calculateNextId = list => ((list || []).slice(-1)[0] ?.id ?? 0) + 1;
