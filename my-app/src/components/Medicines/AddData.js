@@ -45,6 +45,10 @@ export default class AddData extends Component {
             onChange={this.onChange.bind(this, "dosage")}
           />
           <p>Dodaj datę rozpoczęcia:</p>
+          <input
+            value={this.state.data}
+            onChange={this.onChange.bind(this, "data")}
+          />
           <p>Dodaj informację o lekarzu:</p>
 
           <input

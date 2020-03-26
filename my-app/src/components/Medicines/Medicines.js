@@ -25,7 +25,7 @@ const TableFixed = () => {
             <Table.HeaderCell>Rodzaj</Table.HeaderCell>
             <Table.HeaderCell>Dawkowanie</Table.HeaderCell>
             <Table.HeaderCell>Opis</Table.HeaderCell>
-            <Table.HeaderCell>*Data rozpoczęcia</Table.HeaderCell>
+            <Table.HeaderCell>Czas kuracji</Table.HeaderCell>
             <Table.HeaderCell>*Lekarz przepisujący lek</Table.HeaderCell>
             <Table.HeaderCell>Uwagi</Table.HeaderCell>
           </Table.Row>
@@ -37,7 +37,7 @@ const TableFixed = () => {
             <Table.Cell><p key={item.id}>{item.type}</p></Table.Cell>
             <Table.Cell><p key={item.id}>{item.dosage}</p></Table.Cell>
             <Table.Cell><p key={item.id}>{item.other}</p></Table.Cell>
-            <Table.Cell><p></p></Table.Cell>
+            <Table.Cell><p key={item.id}>{item.date}</p></Table.Cell>
             <Table.Cell><p key={item.id}>{item.doctor}</p>
             </Table.Cell>
 

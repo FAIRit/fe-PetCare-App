@@ -12,6 +12,8 @@ import Doctors from './components/Doctors/doctors'
 import History from './components/History/History'
 import Diagrams from './components/Diagrams/Diagrams'
 import Results from './components/Results/Results'
+import ListaPacjentow from './components/ListaPacjetow/ListaPacjentow'
+
 
 
 const styleLink = document.createElement("link");
@@ -43,6 +45,9 @@ function App() {
             </Route>
             <Route path="/Diagramy">
             <Diagrams/>
+            </Route>
+            <Route path="/lista-pacjentow">
+            <ListaPacjentow/>
             </Route>
           </Switch>
         </div>

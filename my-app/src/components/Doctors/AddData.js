@@ -23,19 +23,19 @@ export default class AddData extends Component {
     return (
       <div>
         <form className="doctors" onSubmit={this.onSubmit}>
-          <p>Dodaj lekarza:</p>
+          <p>Dodaj lekarza:</p><br/><p>Imię:</p>
           <input
             value={this.state.firstname}
             onChange={this.onChange.bind(this, "firstname")}
-          />
+          /><br/><p>Nazwisko:</p>
           <input
             value={this.state.surname}
             onChange={this.onChange.bind(this, "surname")}
-          />
+          /><br/><p>Lecznica:</p>
           <input
             value={this.state.vetClinic}
             onChange={this.onChange.bind(this, "vetClinic")}
-          />
+          /><br/>
           <button>Zapisz</button>
         
         </form>
