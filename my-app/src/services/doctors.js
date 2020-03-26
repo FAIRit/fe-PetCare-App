@@ -16,6 +16,12 @@ let DOCTORS = [
       firstname: "Sylwana",
       surname: "Rzepczyk",
       vetClinic: "Przychodnia VetCentrum Gdynia, ul. Chylońska 230"
+    },
+    {
+      id: 3,
+      firstname: "Marta",
+      surname: "Kozuń",
+      vetClinic: "Przychodnia VetCentrum Gdynia, ul. Chylońska 230"
     }
   ];
   
