@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Image from '../Firebase/ImageUpload'
 
 
 const DEFAULT_STATE = {
@@ -8,7 +9,8 @@ const DEFAULT_STATE = {
   age:"",
   color:"",
   owner:"",
-  idnumber:""
+  idnumber:"",
+  img:""
 };
 
 export default class AddData extends Component {
@@ -56,6 +58,9 @@ export default class AddData extends Component {
             value={this.state.idnumber}
             onChange={this.onChange.bind(this, "idnumber")}
           /><br/>
+<p>Dodaj zdjęcie</p>
+<Image value={this.state.img}
+            onChange={this.onChange.bind(this, "img")}/>
           <button>Zapisz</button>
         
         </form>

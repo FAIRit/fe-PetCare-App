@@ -42,8 +42,8 @@ class ImageUpload extends Component {
     const style = {
       height: '30vh',
       flexDirection: 'column',
-      alignItems: 'center',
-      justifyContent: 'center'
+      alignItems: 'left',
+      justifyContent: 'left'
     };
     return (
       <div style={style}>
@@ -52,7 +52,7 @@ class ImageUpload extends Component {
         <input type="file" onChange={this.handleChange}/>
         <button onClick={this.handleUpload}>Upload</button>
         <br/>
-        <img src={this.state.url || 'http://via.placeholder.com/100x100'} alt="Uploaded images" height="100" width="100"/>
+        <img src={this.state.url || 'http://via.placeholder.com/100x100'} alt="Uploaded images" height="150" width="150"/>
       </div>
     )
   }

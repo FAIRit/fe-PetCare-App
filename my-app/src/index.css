@@ -49,3 +49,7 @@ p.medicines{
 .dropdown{
   display:flex;
 }
+
+.imgButton{
+text-align: left;
+}

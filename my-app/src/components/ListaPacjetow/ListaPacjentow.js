@@ -47,7 +47,7 @@ const TableFixed = () => {
                         <Table.Cell><p key={item.id}>{item.owner}</p></Table.Cell>
                         <Table.Cell><p key={item.id}>{item.idnumber}</p>
                         </Table.Cell>
-                        <Table.Cell><Image/>
+                        <Table.Cell>
 
                         </Table.Cell>
 
