@@ -2,11 +2,13 @@ import React, { useEffect, useState } from "react";
 import { Table } from 'semantic-ui-react'
 import { getData, addDoctor } from "../../services/results";
 import AddData from './AddData'
+import { getResults } from "../../components/Firebase/fetchData";
+
 
 const TableFixed = () => {
   const [data, setData] = useState([]);
 
-  const fetchDoctors = () => getData().then(data => setData(data));
+  const fetchDoctors = () => getResults().then(data => setData(data));
 
   const onDoctorAdded = doctor => addDoctor(doctor).then(fetchDoctors);
 

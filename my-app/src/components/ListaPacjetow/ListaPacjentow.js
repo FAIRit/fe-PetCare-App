@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Table } from 'semantic-ui-react'
 import { getData,addDoctor } from "../../services/patients";
+import { getPatients } from "../../components/Firebase/fetchData";
 import AddData from './AddData'
 
 
@@ -8,7 +9,7 @@ import AddData from './AddData'
 const TableFixed = () => {
     const [data, setData] = useState([]);
 
-    const fetchDoctors = () => getData().then(data => setData(data));
+    const fetchDoctors = () => getPatients().then(data => setData(data));
     
     const onDoctorAdded = doctor => addDoctor(doctor).then(fetchDoctors);
 

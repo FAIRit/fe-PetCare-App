@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { Table } from 'semantic-ui-react'
-import { getData, addDoctor } from "../../services/doctors";
+import { getDoctors } from "../../components/Firebase/fetchData";
+import { addDoctor } from "../../services/doctors"
+
 import AddData from './AddData'
-debugger;
+
 const PaginatedTable = () => {
   const [data, setData] = useState([]);
 
-  const fetchDoctors = () => getData().then(data => setData(data));
+  const fetchDoctors = () => getDoctors().then(data => setData(data));
 
   const onDoctorAdded = doctor => addDoctor(doctor).then(fetchDoctors);
 
@@ -38,10 +40,10 @@ const PaginatedTable = () => {
         </Table.Body>
       </Table>
       <div className="doctors">
-      <AddData doctorAdded={onDoctorAdded} />
-      </div>
+      <AddData doctorAdded={onDoctorAdded} />      </div>
     </>
   )
 };
 
 export default PaginatedTable 
+
