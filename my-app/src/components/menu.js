@@ -46,16 +46,17 @@ export default class MenuSecondary extends Component {
           active={activeItem === 'Wyniki badań'}
           onClick={this.handleItemClick}
         />
+        <Menu.Item as={Link} to='./Docs'
+          name='Dokumenty' as={Link} to='./Archiwum'
+          active={activeItem === 'Dokumenty'}
+          onClick={this.handleItemClick}
+        />
         <Menu.Item as={Link} to='./Diagramy'
           name='Diagramy' as={Link} to='./Diagramy'
           active={activeItem === 'Diagramy'}
           onClick={this.handleItemClick}
         />
-           <Menu.Item as={Link} to='./Docs'
-          name='Archiwum' as={Link} to='./Archiwum'
-          active={activeItem === 'Archiwum'}
-          onClick={this.handleItemClick}
-        />
+           
         <Menu.Menu position='right'>
           <Menu.Item>
             <Input icon='search' placeholder='Search...' />
