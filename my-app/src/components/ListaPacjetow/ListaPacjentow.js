@@ -3,6 +3,7 @@ import { Table } from 'semantic-ui-react'
 import { getData,addDoctor } from "../../services/patients";
 import { getPatients } from "../../components/Firebase/fetchData";
 import AddData from './AddData'
+import Image from '../Firebase/ImageUpload'
 
 
 
@@ -31,6 +32,8 @@ const TableFixed = () => {
                         <Table.HeaderCell>Umaszczenie</Table.HeaderCell>
                         <Table.HeaderCell>Opienkun</Table.HeaderCell>
                         <Table.HeaderCell>Numer identyfikacyjny</Table.HeaderCell>
+                        <Table.HeaderCell>Zdjęcie</Table.HeaderCell>
+
                     </Table.Row>
                 </Table.Header>
 
@@ -43,6 +46,8 @@ const TableFixed = () => {
                         <Table.Cell><p key={item.id}>{item.color}</p></Table.Cell>
                         <Table.Cell><p key={item.id}>{item.owner}</p></Table.Cell>
                         <Table.Cell><p key={item.id}>{item.idnumber}</p>
+                        </Table.Cell>
+                        <Table.Cell><Image/>
 
                         </Table.Cell>
 
