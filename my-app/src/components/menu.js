@@ -51,6 +51,11 @@ export default class MenuSecondary extends Component {
           active={activeItem === 'Diagramy'}
           onClick={this.handleItemClick}
         />
+           <Menu.Item as={Link} to='./Docs'
+          name='Archiwum' as={Link} to='./Archiwum'
+          active={activeItem === 'Archiwum'}
+          onClick={this.handleItemClick}
+        />
         <Menu.Menu position='right'>
           <Menu.Item>
             <Input icon='search' placeholder='Search...' />

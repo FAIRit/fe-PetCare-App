@@ -13,6 +13,7 @@ import History from './components/History/History'
 import Diagrams from './components/Diagrams/Diagrams'
 import Results from './components/Results/Results'
 import ListaPacjentow from './components/ListaPacjetow/ListaPacjentow'
+import Archive from './components/Docs/archive'
 
 
 
@@ -48,6 +49,9 @@ function App() {
             </Route>
             <Route path="/lista-pacjentow">
             <ListaPacjentow/>
+            </Route>
+            <Route path="/archiwum">
+            <Archive/>
             </Route>
           </Switch>
         </div>
