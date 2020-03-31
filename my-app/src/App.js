@@ -1,5 +1,5 @@
-import React from 'react';
-import './App.css';
+
+import React, { Component, Suspense } from 'react';
 import Menu from './components/menu';
 import {
   BrowserRouter as Router,
@@ -14,20 +14,31 @@ import Diagrams from './components/Diagrams/Diagrams'
 import Results from './components/Results/Results'
 import ListaPacjentow from './components/ListaPacjetow/ListaPacjentow'
 import Archive from './components/Docs/archive'
-
-
+import { useTranslation } from 'react-i18next';
+import i18next from 'i18next';
 
 const styleLink = document.createElement("link");
 styleLink.rel = "stylesheet";
 styleLink.href = "https://cdn.jsdelivr.net/npm/semantic-ui/dist/semantic.min.css";
 document.head.appendChild(styleLink);
-
+ 
 function App() {
-  return (
-      <Router>
-        <div className="App">
-          <Menu />
+  const { t } = useTranslation();
 
+  function handleClick(lang) {
+    i18next.changeLanguage(lang)
+  }
+
+  return (
+
+    <div>
+      <div className="language" style ={{width:'100%', padding:'2rem, 0'}}>
+      <button onClick={()=>handleClick('en')}>English</button>
+      <button onClick={()=>handleClick('ge')}>German</button>
+      
+      </div>
+      <Router>
+          <Menu />
           <Switch>
             <Route path="/Leki">
               <Medicines />
@@ -54,10 +65,10 @@ function App() {
             <Archive/>
             </Route>
           </Switch>
-        </div>
       </Router>
+      <div><p>{t('Language.1')}</p></div>
+      </div>
   );
 }
-
 
 export default App;

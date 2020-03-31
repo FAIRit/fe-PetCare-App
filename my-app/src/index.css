@@ -49,3 +49,8 @@ p.medicines{
 .dropdown{
   display:flex;
 }
+
+.language{
+  display: flex;
+  justify-content: right;
+}
