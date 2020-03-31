@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { Button, Header, Modal } from 'semantic-ui-react'
+
 
 
 
@@ -28,6 +30,12 @@ export default class AddData extends Component {
   render() {
     return (
       <div>
+
+      <Modal trigger={<Button>Dodaj lek</Button>}>
+      <Modal.Content>
+       
+        <Modal.Description>
+          <Header>Dodaj lek</Header>      
         <form className="doctors" onSubmit={this.onSubmit}>
           <p>Dodaj lek:</p>
           <input
@@ -63,8 +71,10 @@ export default class AddData extends Component {
           <br />
           <button>Zapisz</button>
         </form>
-      </div>
-
+        </Modal.Description>
+      </Modal.Content>
+    </Modal>
+    </div>
 
 
 

@@ -1,5 +1,6 @@
 import React, { Component} from "react";
-import Image from '../Firebase/ImageUpload'
+import AddImage from '../Firebase/ImageUpload'
+import { Button, Header, Modal, Image } from 'semantic-ui-react'
 
 
 
@@ -24,8 +25,12 @@ export default class AddData extends Component {
   render() {
     return (
       <div>
+      <Modal trigger={<Button>Dodaj dokument</Button>}>
+      <Modal.Content>
+        <Modal.Description>
+          <Header>Dodaj dokument</Header>
         <form className="doctors" onSubmit={this.onSubmit}>
-          <p>Dodaj dokument:</p><br/><p>Data:</p>
+         <br/><p>Data:</p>
           <input
             value={this.state.date}
             onChange={this.onChange.bind(this, "date")}
@@ -35,12 +40,15 @@ export default class AddData extends Component {
             onChange={this.onChange.bind(this, "type")}
           /><br/>
 <p>Dodaj plik</p>
-<Image value={this.state.img}
+<AddImage value={this.state.img}
             onChange={this.onChange.bind(this, "img")}/>
           <button>Zapisz</button>
         
         </form>
-      </div>
+        </Modal.Description>
+      </Modal.Content>
+    </Modal>
+    </div>
 
 
 

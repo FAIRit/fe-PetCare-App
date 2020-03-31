@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Button, Header, Modal, Image } from 'semantic-ui-react'
 
 
 const DEFAULT_STATE = {
@@ -28,6 +29,11 @@ export default class AddData extends Component {
   render() {
     return (
       <div>
+
+<Modal trigger={<Button>Dodaj wynik</Button>}>
+<Modal.Content>
+  <Modal.Description>
+    <Header>Dodaj wynik</Header>      
         <form className="doctors" onSubmit={this.onSubmit}>
           <p>Dodaj datę badania:</p>
           <input
@@ -68,7 +74,11 @@ export default class AddData extends Component {
           <button>Zapisz</button>
 
         </form>
-      </div>
+        </Modal.Description>
+      </Modal.Content>
+    </Modal>
+    </div>
+
 
 
 

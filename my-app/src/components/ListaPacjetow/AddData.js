@@ -1,5 +1,7 @@
 import React, { Component } from "react";
-import Image from '../Firebase/ImageUpload'
+import AddImage from '../Firebase/ImageUpload'
+import { Button, Header, Modal, Image } from 'semantic-ui-react'
+
 
 
 const DEFAULT_STATE = {
@@ -27,9 +29,14 @@ export default class AddData extends Component {
 
   render() {
     return (
+      <Modal trigger={<Button>Dodaj pacjenta</Button>}>
+      <Modal.Content>
+        <Modal.Description>
+          <Header>Dodaj pacjenta</Header>
+         
       <div>
         <form className="doctors" onSubmit={this.onSubmit}>
-          <p>Dodaj pacjenta:</p><br/><p>Imię:</p>
+        <br/><p>Imię:</p>
           <input
             value={this.state.name}
             onChange={this.onChange.bind(this, "name")}
@@ -59,13 +66,15 @@ export default class AddData extends Component {
             onChange={this.onChange.bind(this, "idnumber")}
           /><br/>
 <p>Dodaj zdjęcie</p>
-<Image value={this.state.img}
+<AddImage value={this.state.img}
             onChange={this.onChange.bind(this, "img")}/>
           <button>Zapisz</button>
         
         </form>
-      </div>
-
+        </div>
+        </Modal.Description>
+      </Modal.Content>
+    </Modal>
 
 
 
