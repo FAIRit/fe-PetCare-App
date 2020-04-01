@@ -16,6 +16,10 @@ import ListaPacjentow from './components/ListaPacjetow/ListaPacjentow'
 import Archive from './components/Docs/archive'
 import { useTranslation } from 'react-i18next';
 import i18next from 'i18next';
+import En from './components/Languages/Flags/en'
+import Pl from './components/Languages/Flags/pl'
+
+
 
 const styleLink = document.createElement("link");
 styleLink.rel = "stylesheet";
@@ -33,8 +37,8 @@ function App() {
 
     <div>
       <div className="language" style ={{width:'100%', padding:'2rem, 0'}}>
-      <button onClick={()=>handleClick('en')}>English</button>
-      <button onClick={()=>handleClick('ge')}>German</button>
+      <button onClick={()=>handleClick('en')}><En/></button>
+      <button onClick={()=>handleClick('pl')}><Pl/></button>
       
       </div>
       <Router>
@@ -58,7 +62,7 @@ function App() {
             <Route path="/Diagramy">
             <Diagrams/>
             </Route>
-            <Route path="/lista-pacjentow">
+            <Route path="/lista-pacjentow"> 
             <ListaPacjentow/>
             </Route>
             <Route path="/archiwum">

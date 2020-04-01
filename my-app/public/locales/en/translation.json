@@ -1,5 +1,92 @@
 {
   "Language": {
-      "1": "English"
-  }
+    "1": "English"
+  },
+  "Imię": {
+    "2": "Name"
+  },
+  "Gatunek": {
+    "3": "Species"
+  },
+  "Rasa": {
+    "4": "Breed"
+  },
+"Wiek": {
+  "5": "Age"
+},
+"Umaszczenie": {
+  "6": "Coat"
+},
+"Opiekun": {
+  "7": "Owner"
+},
+"Numer identyfikacyjny": {
+  "8": "Chip number"
+},
+"Zdjęcie": {
+  "9": "Photo"
+},
+"Nazwisko": {
+  "10": "Surname"
+},
+"Lecznica": {
+  "11": "Veterynary clinic"
+},
+"Data przyjęcia": {
+  "12": "Admission date"
+},
+"Data wypisu": {
+  "13": "Discharge date"
+},
+"Lekarz": {
+  "14": "Doctor"
+},
+"Informacja o stanie pacjenta": {
+  "15": "Patient's condition"
+},
+"Diagnoza": {
+  "16": "Diagnosis"
+},
+"Zalecenia": {
+  "17": "Recommendations"
+},
+"Nazwa": {
+  "18": "Name"
+},
+"Rodzaj": {
+  "19": "Type"
+},
+"Dawkowanie": {
+  "20": "Dosage"
+},
+"Opis": {
+  "21": "Description"
+},
+"Czas kuracji": {
+  "22": "Treatment time"
+},
+"Lekarz przepisujący lek": {
+  "23": "Doctor"
+},
+"Uwagi": {
+  "24": "Other"
+},
+"Data": {
+  "25": "Date"
+},
+"Wynik": {
+  "26": "Result"
+},
+"Jednostka": {
+  "27": "Unit"
+},
+"Jednostka referencyjna": {
+  "28": "Reference unit"
+},
+"Wczytaj dokument": {
+  "28": "Upload docs"
 }
+}
+
+
+

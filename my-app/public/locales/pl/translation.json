@@ -1,0 +1,85 @@
+{
+    "Language": {
+        "1": "Polish"
+    },
+    "Imię": {
+        "2": "Imię"
+  },
+    "Gatunek": {
+      "3": "Gatunek"
+    },
+    "Rasa": {
+      "4": "Rasa"
+    },
+    "Wiek": {
+        "5": "Wiek"
+      },"Umaszczenie": {
+        "6": "Umaszczenie"
+      },"Opiekun": {
+        "7": "Opiekun"
+      },
+      "Numer identyfikacyjny": {
+        "8": "Numer identyfikacyjny"
+      },
+    "Zdjęcie": {
+      "9": "Zdjęcie"
+    },
+    "Nazwisko": {
+      "10": "Nazwisko"
+    },
+    "Lecznica": {
+      "11": "Lecznica"
+    },
+    "Data przyjęcia": {
+      "12": "Data przyjęcia"
+    },
+    "Data wypisu": {
+      "13": "Data wypisu"
+    },
+    "Lekarz": {
+      "14": "Lekarz"
+    },
+    "Informacja o stanie pacjenta": {
+      "15": "Informacja o stanie pacjenta"
+    },
+    "Diagnoza": {
+      "16": "Diagnoza"
+    },
+    "Zalecenia": {
+      "17": "Zalecenia"
+    },
+    "Nazwa": {
+      "18": "Name"
+    },
+    "Rodzaj": {
+      "19": "Rodzaj"
+    },
+    "Dawkowanie": {
+      "20": "Dawkowanie"
+    },
+    "Opis": {
+      "21": "Opis"
+    },
+    "Czas kuracji": {
+      "22": "Czas kuracji"
+    },
+    "Lekarz przepisujący lek": {
+      "23": "Lekarz przepisujący lek"
+    },
+    "Uwagi": {
+      "24": "Uwagi"
+    },
+    "Data": {
+      "25": "Data"
+    },"Wynik": {
+      "26": "Wynik"
+    },
+    "Jednostka": {
+      "27": "Jednostka"
+    },
+    "Jednostka referencyjna": {
+      "28": "Jednostka referencyjna"
+    },
+    "Wczytaj dokument": {
+      "28": "Wczytaj dokument"
+    }}

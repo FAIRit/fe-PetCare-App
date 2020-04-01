@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { Table} from 'semantic-ui-react'
 import { getData, addDoctor } from "../../services/medicines";
 import { getMedicines } from "../../components/Firebase/fetchData";
+import { useTranslation } from 'react-i18next';
+import i18next from 'i18next';
 
 import AddData from './AddData'
 
@@ -17,19 +19,24 @@ const TableFixed = () => {
     fetchDoctors();
   }, []);
 
+  const { t } = useTranslation();
+
+  function handleClick(lang) {
+    i18next.changeLanguage(lang)
+  }
 
   return (
     <div>
       <Table fixed>
         <Table.Header>
           <Table.Row>
-            <Table.HeaderCell>Nazwa</Table.HeaderCell>
-            <Table.HeaderCell>Rodzaj</Table.HeaderCell>
-            <Table.HeaderCell>Dawkowanie</Table.HeaderCell>
-            <Table.HeaderCell>Opis</Table.HeaderCell>
-            <Table.HeaderCell>Czas kuracji</Table.HeaderCell>
-            <Table.HeaderCell>*Lekarz przepisujący lek</Table.HeaderCell>
-            <Table.HeaderCell>Uwagi</Table.HeaderCell>
+            <Table.HeaderCell>{t('Nazwa.18')}</Table.HeaderCell>
+            <Table.HeaderCell>{t('Rodzaj.19')}</Table.HeaderCell>
+            <Table.HeaderCell>{t('Dawkowanie.20')}</Table.HeaderCell>
+            <Table.HeaderCell>{t('Opis.21')}</Table.HeaderCell>
+            <Table.HeaderCell>{t('Czas kuracji.22')}</Table.HeaderCell>
+            <Table.HeaderCell>{t('Lekarz przepisujący lek.23')}</Table.HeaderCell>
+            <Table.HeaderCell>{t('Uwagi.24')}</Table.HeaderCell>
           </Table.Row>
         </Table.Header>
 

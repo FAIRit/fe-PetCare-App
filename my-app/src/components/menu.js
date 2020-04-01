@@ -13,7 +13,6 @@ export default class MenuSecondary extends Component {
   render() {
     const { activeItem } = this.state
 
-
     return (
       <Menu secondary>
 
@@ -25,7 +24,7 @@ export default class MenuSecondary extends Component {
         <Card></Card>
 
         <Menu.Item as={Link} to='./leki'
-          name='Leki'
+          name='Leki' 
           active={activeItem === 'Leki'}
           onClick={this.handleItemClick}
         />

@@ -4,6 +4,8 @@ import { addDoctor,getData } from "../../services/patients";
 import AddData from './AddData'
 import Image from '../Firebase/ImageUpload'
 import Modal from './petCard'
+import { useTranslation } from 'react-i18next';
+import i18next from 'i18next';
 
 
 
@@ -18,28 +20,33 @@ const TableFixed = () => {
         fetchDoctors();
     }, []);
 
+    const { t } = useTranslation();
 
+    function handleClick(lang) {
+      i18next.changeLanguage(lang)
+    }
+  
 
     return (
         <div>
             <Table fixed>
                 <Table.Header>
                     <Table.Row>
-                        <Table.HeaderCell>Imię</Table.HeaderCell>
-                        <Table.HeaderCell>Gatunek</Table.HeaderCell>
-                        <Table.HeaderCell>Rasa</Table.HeaderCell>
-                        <Table.HeaderCell>Wiek</Table.HeaderCell>
-                        <Table.HeaderCell>Umaszczenie</Table.HeaderCell>
-                        <Table.HeaderCell>Opienkun</Table.HeaderCell>
-                        <Table.HeaderCell>Numer identyfikacyjny</Table.HeaderCell>
-                        <Table.HeaderCell>Zdjęcie</Table.HeaderCell>
+                        <Table.HeaderCell>{t('Imię.2')}</Table.HeaderCell>
+                        <Table.HeaderCell>{t('Gatunek.3')}</Table.HeaderCell>
+                        <Table.HeaderCell>{t('Rasa.4')}</Table.HeaderCell>
+                        <Table.HeaderCell>{t('Wiek.5')}</Table.HeaderCell>
+                        <Table.HeaderCell>{t('Umaszczenie.6')}</Table.HeaderCell>
+                        <Table.HeaderCell>{t('Opiekun.7')}</Table.HeaderCell>
+                        <Table.HeaderCell>{t('Numer identyfikacyjny.8')}</Table.HeaderCell>
+                        <Table.HeaderCell>{t('Zdjęcie.9')}</Table.HeaderCell>
 
                     </Table.Row>
                 </Table.Header>
 
                 <Table.Body>{data.map(item => {
                     return <Table.Row key={item.id}>
-                        <Table.Cell><Modal> <p key={item.id}>{item.name} </p></Modal></Table.Cell>
+                        <Table.Cell> <p key={item.id}>{item.name} </p><Modal></Modal></Table.Cell>
                         <Table.Cell><p key={item.id}>{item.type}</p></Table.Cell>
                         <Table.Cell><p key={item.id}>{item.breed}</p></Table.Cell>
                         <Table.Cell><p key={item.id}>{item.age}</p></Table.Cell>
