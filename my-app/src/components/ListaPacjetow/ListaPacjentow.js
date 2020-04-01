@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Table } from 'semantic-ui-react'
-import { getData,addDoctor } from "../../services/patients";
-import { getPatients } from "../../components/Firebase/fetchData";
+import { addDoctor,getData } from "../../services/patients";
 import AddData from './AddData'
 import Image from '../Firebase/ImageUpload'
 import Modal from './petCard'
@@ -11,7 +10,7 @@ import Modal from './petCard'
 const TableFixed = () => {
     const [data, setData] = useState([]);
 
-    const fetchDoctors = () => getPatients().then(data => setData(data));
+    const fetchDoctors = () => getData().then(data => setData(data));
     
     const onDoctorAdded = doctor => addDoctor(doctor).then(fetchDoctors);
 
@@ -41,7 +40,7 @@ const TableFixed = () => {
                 <Table.Body>{data.map(item => {
                     return <Table.Row key={item.id}>
                         <Table.Cell><Modal> <p key={item.id}>{item.name} </p></Modal></Table.Cell>
-                        <Table.Cell><p key={item.id}>{item.species}</p></Table.Cell>
+                        <Table.Cell><p key={item.id}>{item.type}</p></Table.Cell>
                         <Table.Cell><p key={item.id}>{item.breed}</p></Table.Cell>
                         <Table.Cell><p key={item.id}>{item.age}</p></Table.Cell>
                         <Table.Cell><p key={item.id}>{item.color}</p></Table.Cell>
