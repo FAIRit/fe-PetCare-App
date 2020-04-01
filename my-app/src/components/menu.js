@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import { Input, Menu } from 'semantic-ui-react'
 import Card from './petCard.js'
 import { Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next';
+import i18next from 'i18next';
 
 export default class MenuSecondary extends Component {
   state = { activeItem: 'home' }
@@ -10,6 +12,7 @@ export default class MenuSecondary extends Component {
 
   render() {
     const { activeItem } = this.state
+
 
     return (
       <Menu secondary>

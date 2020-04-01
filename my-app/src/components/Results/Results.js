@@ -5,6 +5,7 @@ import AddData from './AddData'
 import { getResults } from "../../components/Firebase/fetchData";
 
 
+
 const TableFixed = () => {
   const [data, setData] = useState([]);
 
@@ -12,9 +13,11 @@ const TableFixed = () => {
 
   const onDoctorAdded = doctor => addDoctor(doctor).then(fetchDoctors);
 
+
   useEffect(() => {
     fetchDoctors();
   }, []);
+  
   return (
     <div>
       <Table fixed>
@@ -48,5 +51,6 @@ const TableFixed = () => {
     </div>
   )
 };
+
 
 export default TableFixed

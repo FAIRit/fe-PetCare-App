@@ -4,6 +4,7 @@ import { getData,addDoctor } from "../../services/patients";
 import { getPatients } from "../../components/Firebase/fetchData";
 import AddData from './AddData'
 import Image from '../Firebase/ImageUpload'
+import Modal from './petCard'
 
 
 
@@ -39,7 +40,7 @@ const TableFixed = () => {
 
                 <Table.Body>{data.map(item => {
                     return <Table.Row key={item.id}>
-                        <Table.Cell>  <p key={item.id}>{item.name}</p></Table.Cell>
+                        <Table.Cell><Modal> <p key={item.id}>{item.name} </p></Modal></Table.Cell>
                         <Table.Cell><p key={item.id}>{item.species}</p></Table.Cell>
                         <Table.Cell><p key={item.id}>{item.breed}</p></Table.Cell>
                         <Table.Cell><p key={item.id}>{item.age}</p></Table.Cell>
