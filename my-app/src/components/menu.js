@@ -4,11 +4,19 @@ import Card from './petCard.js'
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next';
 import i18next from 'i18next';
+import Logout from './LoginPanel/Logout'
+import En from '../components/Languages/Flags/en'
+import Pl from '../components/Languages/Flags/pl'
+
+function handleClick(lang) {
+  i18next.changeLanguage(lang)
+}
 
 export default class MenuSecondary extends Component {
   state = { activeItem: 'home' }
 
   handleItemClick = (e, { name }) => this.setState({ activeItem: name })
+
 
   render() {
     const { activeItem } = this.state
@@ -21,7 +29,6 @@ export default class MenuSecondary extends Component {
       active={activeItem === 'Lista Pacjentów'}
       onClick={this.handleItemClick}
     />
-        <Card></Card>
 
         <Menu.Item as={Link} to='./leki'
           name='Leki' 
@@ -60,16 +67,12 @@ export default class MenuSecondary extends Component {
         />
            
         <Menu.Menu position='right'>
-          <Menu.Item>
-            <Input icon='search' placeholder='Search...' />
-          </Menu.Item>
-          <Menu.Item
-            name='logout'
-            active={activeItem === 'logout'}
-            onClick={this.handleItemClick}
-          />
-        </Menu.Menu>
-
+          
+      <div className="language" style ={{width:'100%', padding:'2rem, 0'}}>
+      <button onClick={()=>handleClick('pl')}><Pl/></button>
+      <button onClick={()=>handleClick('en')}><En/></button>
+      </div>     
+      <Logout></Logout> </Menu.Menu>
       </Menu>
     )
   }

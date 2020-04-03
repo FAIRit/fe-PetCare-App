@@ -15,6 +15,7 @@ function getDoctors() {
     });
 }
 
+
 function getHistory() {
     return fetch(`${BASE_URL}/history.json`)
       .then(response => response.json())

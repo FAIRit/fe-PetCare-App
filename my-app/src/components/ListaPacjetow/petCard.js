@@ -12,12 +12,12 @@ const PatientCardModal = () => {
   
     return (
     <React.Fragment>{data.map(item => {
-return        <Modal trigger={<Button> <p key={item.id}>{item.name}</p> </Button>}>
-        <Modal.Content>
+      return <Modal trigger={<Button> <p> Karta pacjenta</p> </Button>}>
+      <Modal.Content>
           <Modal.Description>
             <Header> <p key={item.id}>{item.name}</p>   </Header>
            <Modal.Content image>
-        <Image wrapped size='medium' src='https://media.istockphoto.com/photos/fluffy-gray-kitten-of-a-russian-blue-cat-picture-id858701710?k=6&m=858701710&s=612x612&w=0&h=cxMmreqn3-__M9gNKWa8f-fqzzUfjoyPkSSJjUVlanM=' />
+        <Image wrapped size='medium' src='' />
            </Modal.Content>
         <div>
           <form className="doctors">
@@ -31,8 +31,8 @@ return        <Modal trigger={<Button> <p key={item.id}>{item.name}</p> </Button
           </form>
           </div>
           </Modal.Description>
-        </Modal.Content>
-      </Modal>        })}
+        </Modal.Content> 
+      </Modal>  })}     
 
       </React.Fragment>
 

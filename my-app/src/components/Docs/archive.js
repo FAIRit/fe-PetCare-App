@@ -32,7 +32,7 @@ const TableFixed = () => {
                     <Table.Row>
                         <Table.HeaderCell>{t('Data.25')}</Table.HeaderCell>
                         <Table.HeaderCell>{t('Rodzaj.19')}</Table.HeaderCell>
-                        <Table.HeaderCell>{t('Wczytaj dokument.28')}</Table.HeaderCell>
+                        <Table.HeaderCell>{t('Wczytaj dokument.29')}</Table.HeaderCell>
 
                     </Table.Row>
                 </Table.Header>
