@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import fire from '../Firebase/firebase'
 import Demo from './Demo';
 class Login extends Component {

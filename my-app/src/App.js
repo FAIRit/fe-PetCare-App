@@ -39,9 +39,7 @@ class App extends Component {
         {this.state.user ? (
           <Home />
         ) :
-          (
-            <Login />
-            || <Demo/>
+          ( <Login />|| <Demo />
           )}
       </div>
     );

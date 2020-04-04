@@ -1,11 +1,8 @@
-import { Redirect } from 'react-router'
-import React, { Component } from 'react';
+import React from 'react';
 import Home from '../../Home'
 
 
-
-
-class FooBar extends React.Component {
+class Demo extends React.Component {
   state = {
     navigate: false
   }
@@ -20,11 +17,11 @@ class FooBar extends React.Component {
     return (
       <div>
         <button onClick={() => this.setState({ navigate: true })}>
-          Home
+          Wersja demo
         </button>
       </div>
     )
   }
 }
 
-export default FooBar;
+export default Demo;

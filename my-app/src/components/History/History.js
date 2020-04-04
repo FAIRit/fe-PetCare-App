@@ -4,7 +4,6 @@ import { getHistory } from "../../components/Firebase/fetchData";
 import { addDoctor } from "../../services/history";
 import AddData from './AddData'
 import { useTranslation } from 'react-i18next';
-import i18next from 'i18next';
 
 
 const TableFixed = () => {
@@ -21,9 +20,6 @@ const TableFixed = () => {
 
   const { t } = useTranslation();
 
-  function handleClick(lang) {
-    i18next.changeLanguage(lang)
-  }
 
   return (
     <div>

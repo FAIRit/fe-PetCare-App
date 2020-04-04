@@ -10,7 +10,7 @@ let PATIENTS = [
         medicalHistory: 'Przewlekła niewydolność nerek, przeybyty kostniakomięsak (lewe ucho), uszkodzenie kręgosłupa, złamany ogon, uszkodzenie nerwów dna miednicy, problemy z oddawaniem moczu.',
         other: 'kot przez lata był wolnożyjący, brak informacji o alergiach, kot stosuje dietę dla kotów chorych na pnn',
         ownerContact: 'Pomorski koci dom tymczasowy: Wioletta Pisała, Opiekun z domu tymczasowego: Natalia Nowak',
-        idnumber: "brak"
+        idnumber: "brak",
 
     },
     {
@@ -24,7 +24,7 @@ let PATIENTS = [
         medicalHistory: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque orci orci, accumsan ac orci ac, hendrerit lobortis risus. Phasellus eu ornare enim.',
         other: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque orci orci, accumsan ac orci ac, hendrerit lobortis risus. Phasellus eu ornare enim.',
         ownerContact: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque orci orci, accumsan ac orci ac, hendrerit lobortis risus. Phasellus eu ornare enim.',
-idnumber:""
+        idnumber: ""
     },
     {
         id: 3,
@@ -36,7 +36,7 @@ idnumber:""
         medicalHistory: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque orci orci, accumsan ac orci ac, hendrerit lobortis risus. Phasellus eu ornare enim.',
         other: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque orci orci, accumsan ac orci ac, hendrerit lobortis risus. Phasellus eu ornare enim.',
         ownerContact: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque orci orci, accumsan ac orci ac, hendrerit lobortis risus. Phasellus eu ornare enim.',
-idnumber:""
+        idnumber: ""
     },
     {
         id: 4,
@@ -48,10 +48,10 @@ idnumber:""
         medicalHistory: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque orci orci, accumsan ac orci ac, hendrerit lobortis risus. Phasellus eu ornare enim.',
         other: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque orci orci, accumsan ac orci ac, hendrerit lobortis risus. Phasellus eu ornare enim.',
         ownerContact: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque orci orci, accumsan ac orci ac, hendrerit lobortis risus. Phasellus eu ornare enim.',
-idnumber:""
+        idnumber: ""
     }
 ];
-
+export default PATIENTS;
 const calculateNextId = list => ((list || []).slice(-1)[0] ?.id ?? 0) + 1;
 
 export const getData = () => Promise.resolve(PATIENTS);
