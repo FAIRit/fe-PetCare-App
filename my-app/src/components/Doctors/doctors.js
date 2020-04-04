@@ -3,6 +3,8 @@ import { Table } from 'semantic-ui-react'
 import { getDoctors } from "../../components/Firebase/fetchData";
 import { addDoctor } from "../../services/doctors"
 import AddData from './AddData'
+import { useTranslation } from 'react-i18next';
+
 
 
 
@@ -15,17 +17,18 @@ const PaginatedTable = () => {
     fetchDoctors();
   }, []); 
   
-  
+  const { t } = useTranslation();
+
   return (
     <>
       <div className="dropdown"></div>
       <Table celled>
         <Table.Header>
           <Table.Row>
-            <Table.HeaderCell>Imię
+            <Table.HeaderCell>{t('Imię.2')}
 </Table.HeaderCell>
-            <Table.HeaderCell>Nazwisko</Table.HeaderCell>
-            <Table.HeaderCell>Lecznica</Table.HeaderCell>
+            <Table.HeaderCell>{t('Nazwisko.10')}</Table.HeaderCell>
+            <Table.HeaderCell>{t('Lecznica.11')}</Table.HeaderCell>
           </Table.Row>
         </Table.Header>        <Table.Body>{data.map(item => {
           return <Table.Row key={item.id}>
