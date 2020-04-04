@@ -57,8 +57,9 @@ function App() {
             <Route path="/archiwum">
             <Archive/>
             </Route>
-          </Switch>
+            </Switch>
       </Router>
+  
   
   );
 }

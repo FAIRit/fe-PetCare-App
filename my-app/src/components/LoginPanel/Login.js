@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import fire from '../Firebase/firebase'
-
+import Demo from './Demo';
 class Login extends Component {
   constructor(props) {
     super(props);
@@ -48,10 +48,11 @@ class Login extends Component {
           </div>
           <button type="submit" onClick={this.login}>Login</button>
           <button onClick={this.signup} style={{marginLeft: '25px'}}>Signup</button>
+          <Demo/>
         </form>
-      
+
       </div>
     );
   }
 }
-export default Login;
+export default Login; 
