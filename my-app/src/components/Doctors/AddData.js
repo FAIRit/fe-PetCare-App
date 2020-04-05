@@ -1,12 +1,13 @@
-
 import React, { Component } from "react";
+import AddImage from '../Firebase/ImageUpload'
 import { Button, Header, Modal, Image } from 'semantic-ui-react'
 
 
+
 const DEFAULT_STATE = {
-  firstname: "",
+  firstbame: "",
   surname: "",
-  vetClinic: ""
+  vetClinic: "",
 };
 
 export default class AddData extends Component {
@@ -17,18 +18,20 @@ export default class AddData extends Component {
   onSubmit = event => {
     event.preventDefault();
 
-    this.props.doctorAdded({...this.state});
+    //this.props.doctorAdded({...this.state});
     this.setState(DEFAULT_STATE);
   };
 
   render() {
     return (
-<div>
-      <Modal trigger={<Button>Dodaj lekarza</Button>}>
+      <Modal trigger={<Button>Dodaj pacjenta</Button>}>
       <Modal.Content>
         <Modal.Description>
-          <Header>Dodaj lekarza</Header>        <form className="doctors" onSubmit={this.onSubmit}>
-          <br/><p>Imię:</p>
+          <Header>Dodaj lekarza</Header>
+         
+      <div>
+        <form className="doctors" onSubmit={this.onSubmit}>
+        <br/><p>Imię:</p>
           <input
             value={this.state.firstname}
             onChange={this.onChange.bind(this, "firstname")}
@@ -36,31 +39,20 @@ export default class AddData extends Component {
           <input
             value={this.state.surname}
             onChange={this.onChange.bind(this, "surname")}
-          /><br/><p>Lecznica:</p>
+         
+          /><br/><p>Klinika:</p>
           <input
             value={this.state.vetClinic}
             onChange={this.onChange.bind(this, "vetClinic")}
-          /><br/>
+          />
+
           <button>Zapisz</button>
         
         </form>
+        </div>
         </Modal.Description>
       </Modal.Content>
     </Modal>
-    </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

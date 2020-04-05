@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Table } from 'semantic-ui-react'
 import { getData } from "../../services/patients";
 import { useTranslation } from 'react-i18next';
+import { getPatients } from "../../components/Firebase/fetchData";
+import Image from '../Firebase/ImageUpload'
 
 
 
@@ -11,7 +13,7 @@ function App() {
   const [loading] = useState(false);
   const [search, setSearch] = useState("");
   const [filteredPatients, setFilteredPatients] = useState([]);
-  const fetchDoctors = () => getData().then(data => setData(data));
+  const fetchDoctors = () => getPatients().then(data => setData(data));
 
 
   useEffect(() => {
@@ -38,15 +40,19 @@ function App() {
 
   if (loading) {
     return <p>Ładuję listę...</p>;
-  }
+  }  
+
 
   return (
+
     <div>
-      <h1>Patient Lists</h1>
+
+      <h4>Wyszukiwanie</h4>
       <input
         type="text"
         placeholder="Search Patient"
         onChange={e => setSearch(e.target.value)}
+
       />
       {filteredPatients.map((patient, id) => (
         <PatientDetail key={id} {...patient} />

@@ -1,27 +1,26 @@
+
 import React, { useEffect, useState } from "react";
 import { Table } from 'semantic-ui-react'
 import { getHistory } from "../../components/Firebase/fetchData";
-import { addDoctor } from "../../services/history";
+import { addDoctor } from "../../services/doctors"
 import AddData from './AddData'
 import { useTranslation } from 'react-i18next';
-
+import i18next from 'i18next';
 
 const TableFixed = () => {
-  const [data, setData] = useState([]);
-
-  const fetchDoctors = () => getHistory().then(data => setData(data));
-
-  const onDoctorAdded = doctor => addDoctor(doctor).then(fetchDoctors);
-
+  const [data, setData] = useState([]);  
+  const fetchDoctors = () => getHistory().then(data => setData(data));  
+  const onDoctorAdded = doctor => addDoctor(doctor).then(fetchDoctors);  
+  
   useEffect(() => {
     fetchDoctors();
-  }, []);
-
-
+  }, []);  
   const { t } = useTranslation();
 
-
-  return (
+  function handleClick(lang) {
+    i18next.changeLanguage(lang)
+  }
+return(
     <div>
       <Table fixed>
         <Table.Header>
@@ -51,7 +50,7 @@ const TableFixed = () => {
         </Table.Body>
       </Table>
       <div className="doctors">
-      <AddData doctorAdded={onDoctorAdded} />
+      <AddData />
       </div>
     </div>
   )

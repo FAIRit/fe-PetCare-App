@@ -1,24 +1,26 @@
-import React, { Component} from "react";
-import AddImage from '../Firebase/ImageUpload'
+import React, { Component } from "react";
 import { Button, Header, Modal, Image } from 'semantic-ui-react'
+//import AddImage from '../Firebase/ImageUpload'
+//<AddImage>
 
 
 
 const DEFAULT_STATE = {
   date: "",
   type: "",
-  img:""
-};
+  img: ""
+}
+
 
 export default class AddData extends Component {
-  state = {...DEFAULT_STATE};
+  state = { ...DEFAULT_STATE };
 
   onChange = (key, event) => this.setState({ [key]: event.target.value });
 
   onSubmit = event => {
     event.preventDefault();
 
-    this.props.doctorAdded({...this.state});
+    //this.props.doctorAdded({ ...this.state });
     this.setState(DEFAULT_STATE);
   };
 
@@ -40,8 +42,7 @@ export default class AddData extends Component {
             onChange={this.onChange.bind(this, "type")}
           /><br/>
 <p>Dodaj plik</p>
-<AddImage value={this.state.img}
-            onChange={this.onChange.bind(this, "img")}/>
+
           <button>Zapisz</button>
         
         </form>
