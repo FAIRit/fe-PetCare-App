@@ -1,95 +1,101 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
+import firebase from '../Firebase/firebase'
 import { Button, Header, Modal } from 'semantic-ui-react'
 
 
 
+const AddData = () => {
+  const [data, setData] = useState('');
+  const [name, setName] = useState('');
+  const [type, setType] = useState('');
+  const [dosage, setDosage] = useState('');
+  const [description, setDescription] = useState('');
+  const [date, setDate] = useState('');
+  const [doctor, setDoctor] = useState('');
+  const [other, setOther] = useState('');
 
-const DEFAULT_STATE = {
-  id: "",
-  name: "",
-  type: "",
-  dosage: "",
-  date: "",
-  doctor: "",
-  other: "",
-}
 
 
-export default class AddData extends Component {
-  state = { ...DEFAULT_STATE };
+  function onsubmit(e) {
+    e.preventDefault()
 
-  onChange = (key, event) => this.setState({ [key]: event.target.value });
+    firebase.firestore()
+      .collection('medicines')
+      .add({
+        name,
+        type,
+        dosage,
+        date,
+        doctor,
+        other,
+        description
+      })
 
-  onSubmit = event => {
-    event.preventDefault();
+      .then(() => {
+        setName('')
+        setType('')
+        setDosage('')
+        setDate('')
+        setDoctor('')
+        setOther('')
+        setDescription('')
 
-    this.props.doctorAdded({ ...this.state });
-    this.setState(DEFAULT_STATE);
-  };
 
-  render() {
-    return (
+      }
+      )
+  }
+  return (
       <div>
 
-      <Modal trigger={<Button>Dodaj lek</Button>}>
-      <Modal.Content>
-       
-        <Modal.Description>
-          <Header>Dodaj lek</Header>      
-        <form className="doctors" onSubmit={this.onSubmit}>
-          <p>Dodaj lek:</p>
-          <input
-            value={this.state.name}
-            onChange={this.onChange.bind(this, "name")}
-          />          <p>Dodaj rodzaj leku:</p>
+<Modal trigger={<Button>Dodaj lek</Button>}>
+        <Modal.Content>
+          <Modal.Description>
+            <Header>Dodaj lek</Header>
 
-          <input
-            value={this.state.type}
-            onChange={this.onChange.bind(this, "type")}
-          />          <p>Dodaj dawkowanie:</p>
+            <div>
+              <form className="doctors" onSubmit={onsubmit}><div>
+                <p>Nazwa:</p>
+                <input value={name} onChange={e => setName(e.currentTarget.value)}></input></div>
+                <div>      <p>Rodzaj:</p>
 
-          <input
-            value={this.state.dosage}
-            onChange={this.onChange.bind(this, "dosage")}
-          />
-          <p>Dodaj datę rozpoczęcia:</p>
-          <input
-            value={this.state.data}
-            onChange={this.onChange.bind(this, "data")}
-          />
-          <p>Dodaj informację o lekarzu:</p>
+                  <input value={type} onChange={e => setType(e.currentTarget.value)}></input></div>
+                <p>Dawkowanie:</p>
 
-          <input
-            value={this.state.doctor}
-            onChange={this.onChange.bind(this, "doctor")}
-          />          <p>Dodatkowe informacje:</p>
 
-          <input
-            value={this.state.other}
-            onChange={this.onChange.bind(this, "other")}
-          />
-          <br />
-          <button>Zapisz</button>
-        </form>
-        </Modal.Description>
-      </Modal.Content>
-    </Modal>
+                <div><input value={dosage} onChange={e => setDosage(e.currentTarget.value)}></input></div>
+                <p>Opis:</p>
+
+
+                <div><input value={description} onChange={e => setDescription(e.currentTarget.value)}></input></div>
+                <p>Czas kuracji:</p>
+
+
+                <div><input value={date} onChange={e => setDate(e.currentTarget.value)}></input></div>
+
+                <p>Lekarz:</p>
+
+
+                <div><input value={doctor} onChange={e => setDoctor(e.currentTarget.value)}></input></div>
+
+                <p>Inne:</p>
+
+
+                <div><input value={other} onChange={e => setOther(e.currentTarget.value)}></input></div>
+
+
+
+                <button onSubmit={onsubmit}>Submit</button></form>
+            </div>
+          </Modal.Description>
+        </Modal.Content>
+      </Modal>
+
+
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
     );
   }
-}
+
+  export default AddData
