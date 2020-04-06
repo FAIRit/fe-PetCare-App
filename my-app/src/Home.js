@@ -52,7 +52,7 @@ function App() {
           <ListaPacjentow />
         </Route>
         <Route path="/archiwum">
-          <Archive />
+        <Archive/>
         </Route>
       </Switch>
     </Router>

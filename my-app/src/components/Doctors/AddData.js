@@ -1,54 +1,57 @@
-import React, { Component } from "react";
+import React, { useState, useEffect } from 'react';
+import firebase from '../Firebase/firebase'
 import AddImage from '../Firebase/ImageUpload'
 import { Button, Header, Modal, Image } from 'semantic-ui-react'
 
 
 
-const DEFAULT_STATE = {
-  firstbame: "",
-  surname: "",
-  vetClinic: "",
-};
+const AddData = () => {
+  const [data, setData] = useState('');
+  const [firstname, setFirstname] = useState('');
+  const [surname, setSurname] = useState('');
+  const [vetClinic, setVetClinic] = useState('');
 
-export default class AddData extends Component {
-  state = {...DEFAULT_STATE};
 
-  onChange = (key, event) => this.setState({ [key]: event.target.value });
 
-  onSubmit = event => {
-    event.preventDefault();
+  function onsubmit(e){
+e.preventDefault()
 
-    //this.props.doctorAdded({...this.state});
-    this.setState(DEFAULT_STATE);
-  };
+firebase.firestore()
+.collection('doctors')
+.add({
+  firstname,
+  surname,
+  vetClinic
+})
 
-  render() {
+.then(()=>{
+  setFirstname('')
+  setSurname('')
+  setVetClinic('')
+
+
+}
+)
+  }
     return (
-      <Modal trigger={<Button>Dodaj pacjenta</Button>}>
+      <Modal trigger={<Button>Dodaj lekarza</Button>}>
       <Modal.Content>
         <Modal.Description>
           <Header>Dodaj lekarza</Header>
          
       <div>
-        <form className="doctors" onSubmit={this.onSubmit}>
-        <br/><p>Imię:</p>
-          <input
-            value={this.state.firstname}
-            onChange={this.onChange.bind(this, "firstname")}
-          /><br/><p>Nazwisko:</p>
-          <input
-            value={this.state.surname}
-            onChange={this.onChange.bind(this, "surname")}
-         
-          /><br/><p>Klinika:</p>
-          <input
-            value={this.state.vetClinic}
-            onChange={this.onChange.bind(this, "vetClinic")}
-          />
+      <form className="doctors" onSubmit={onsubmit}><h4>Dodaj</h4><div>
+      <p>Imię:</p>
+            <input value={firstname} onChange={e=>setFirstname(e.currentTarget.value)}></input></div>
+            <div>      <p>Imię:</p>
 
-          <button>Zapisz</button>
-        
-        </form>
+                <input value={surname} onChange={e=>setSurname(e.currentTarget.value)}></input></div>
+                <p>Imię:</p>
+
+
+                <div><input value={vetClinic} onChange={e=>setVetClinic(e.currentTarget.value)}></input></div>
+
+            <button onSubmit={onsubmit}>Submit</button></form>
         </div>
         </Modal.Description>
       </Modal.Content>
@@ -58,4 +61,5 @@ export default class AddData extends Component {
 
     );
   }
-}
+
+  export default AddData

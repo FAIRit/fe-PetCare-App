@@ -34,7 +34,6 @@ return(
             <Table.HeaderCell>{t('Uwagi.24')}</Table.HeaderCell>
           </Table.Row>
         </Table.Header>
-
         <Table.Body>{data.map(item => {
           return <Table.Row key={item.id}>
             <Table.Cell><p key={item.id}>{item.name}</p></Table.Cell>
@@ -47,10 +46,11 @@ return(
 
           </Table.Row>
         })}
-        </Table.Body>
+        </Table.Body>        
+
       </Table>
       <div className="doctors">
-      <AddData />
+      <AddData onDoctorAdded={onDoctorAdded}/>
       </div>
     </div>
   )
