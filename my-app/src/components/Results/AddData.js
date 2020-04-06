@@ -1,100 +1,97 @@
-import React, { Component } from "react";
+import React, { useState, useEffect } from 'react';
+import firebase from '../Firebase/firebase'
 import { Button, Header, Modal, Image } from 'semantic-ui-react'
 
 
-const DEFAULT_STATE = {
-  id: "",
-  date: "",
-  name: "",
-  type: "",
-  result: "",
-  unit: "",
-  referenceUnit: "",
-  other: ""
-};
+const AddData = () => {
+  const [data, setData] = useState('');
+  const [name, setName] = useState('');
+  const [type, setType] = useState('');
+  const [result, setResult] = useState('');
+  const [date, setDate] = useState('');
+  const [unit, setUnit] = useState('');
+  const [referenceunit, setReferenceunit] = useState('');
+  const [other, setOther] = useState('');
 
 
-export default class AddData extends Component {
-  state = { ...DEFAULT_STATE };
 
-  onChange = (key, event) => this.setState({ [key]: event.target.value });
 
-  onSubmit = event => {
-    event.preventDefault();
+  function onsubmit(e) {
+    e.preventDefault()
 
-    this.props.doctorAdded({ ...this.state });
-    this.setState(DEFAULT_STATE);
-  };
+    firebase.firestore()
+      .collection('results')
+      .add({
+        name,
+        type,
+        date,
+        result,
+        unit,
+        referenceunit,
+        other
+      })
 
-  render() {
-    return (
+      .then(() => {
+        setName('')
+        setType('')
+        setDate('')
+        setResult('')
+        setUnit('')
+        setReferenceunit('')
+        setOther('')
+      }
+      )
+  }
+  return (
       <div>
 
 <Modal trigger={<Button>Dodaj wynik</Button>}>
-<Modal.Content>
-  <Modal.Description>
-    <Header>Dodaj wynik</Header>      
-        <form className="doctors" onSubmit={this.onSubmit}>
-          <p>Dodaj datę badania:</p>
-          <input
-            value={this.state.date}
-            onChange={this.onChange.bind(this, "date")}
-          />          <p>Dodaj nazwę:</p>
+        <Modal.Content>
+          <Modal.Description>
+            <Header>Dodaj wynik</Header>
 
-          <input
-            value={this.state.name}
-            onChange={this.onChange.bind(this, "name")}
-          />          <p>Dodaj rodzaj:</p>
+            <div>
+              <form className="doctors" onSubmit={onsubmit}><div>
+                <p>Nazwa:</p>
+                <input value={name} onChange={e => setName(e.currentTarget.value)}></input></div>
+                <div>      <p>Rodzaj:</p>
 
-          <input
-            value={this.state.type}
-            onChange={this.onChange.bind(this, "type")}
-          />          <p>Dodaj wynik:</p>
+                  <input value={type} onChange={e => setType(e.currentTarget.value)}></input></div>
+                <p>Data:</p>
 
-          <input
-            value={this.state.result}
-            onChange={this.onChange.bind(this, "result")}
-          />          <p>Dodaj jednostkę:</p>
 
-          <input
-            value={this.state.unit}
-            onChange={this.onChange.bind(this, "unit")}
-          />          <p>Dodaj jednostkę referencyjną:</p>
+                <div><input value={date} onChange={e => setDate(e.currentTarget.value)}></input></div>
+                <p>Wynik:</p>
 
-          <input
-            value={this.state.referenceUnit}
-            onChange={this.onChange.bind(this, "referenceUnit")}
-          />          <p>Dodatkowe informacje:</p>
-            <input
-            value={this.state.other}
-            onChange={this.onChange.bind(this, "other")}
-          />       
 
-  <br />
-          <button>Zapisz</button>
+                <div><input value={result} onChange={e => setResult(e.currentTarget.value)}></input></div>
+                <p>Jednostka:</p>
 
-        </form>
-        </Modal.Description>
-      </Modal.Content>
-    </Modal>
+
+                <div><input value={unit} onChange={e => setUnit(e.currentTarget.value)}></input></div>
+
+                <p>Jednostka referencyjna:</p>
+
+
+                <div><input value={referenceunit} onChange={e => setReferenceunit(e.currentTarget.value)}></input></div>
+
+                <p>Uwagi:</p>
+
+
+                <div><input value={other} onChange={e => setOther(e.currentTarget.value)}></input></div>
+
+
+
+                <button onSubmit={onsubmit}>Submit</button></form>
+            </div>
+          </Modal.Description>
+        </Modal.Content>
+      </Modal>
+
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     );
   }
-}
+
+  export default AddData

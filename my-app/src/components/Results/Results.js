@@ -1,26 +1,40 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useEffect } from 'react';
+import firebase from '../Firebase/firebase'
 import { Table } from 'semantic-ui-react'
-import { getResults } from "../../components/Firebase/fetchData";
-import { addDoctor } from "../../services/doctors"
 import AddData from './AddData'
 import { useTranslation } from 'react-i18next';
 import i18next from 'i18next';
 
-const TableFixed = () => {
-  const [data, setData] = useState([]);  
-  const fetchDoctors = () => getResults().then(data => setData(data));  
-  const onDoctorAdded = doctor => addDoctor(doctor).then(fetchDoctors);  
-  
-  useEffect(() => {
-    fetchDoctors();
-  }, []);  
-  const { t } = useTranslation();
+// odczyt
+function useData(){
+  const [data,setData]= useState([]);
 
-  function handleClick(lang) {
-    i18next.changeLanguage(lang)
-  }
+  useEffect(()=>{
+      firebase.firestore().collection('results')
+      .onSnapshot((snapshot)=>{
+          const newData = snapshot.docs.map((doc)=>({
+              id:doc.id,
+              ...doc.data()
+          }))
+setData(newData)
+      })
 
-  return(
+  },[])
+  return data
+
+}
+
+
+
+const TableFixed=()=>{
+const data = useData();
+const { t } = useTranslation();
+
+function handleClick(lang) {
+i18next.changeLanguage(lang)
+}
+
+return (
     <div>
       <Table fixed>
         <Table.Header>
@@ -43,6 +57,8 @@ const TableFixed = () => {
             <Table.Cell><p>{item.result}</p></Table.Cell>
             <Table.Cell><p>{item.unit}</p></Table.Cell>
             <Table.Cell><p>{item.referenceunit}</p></Table.Cell>
+            <Table.Cell><p>{item.other}</p></Table.Cell>
+
           </Table.Row>
         })}
         </Table.Body>
