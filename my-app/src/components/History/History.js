@@ -1,26 +1,43 @@
 
 import React, { useEffect, useState } from "react";
 import { Table } from 'semantic-ui-react'
-import { getHistory } from "../../components/Firebase/fetchData";
-import { addDoctor } from "../../services/doctors"
 import AddData from './AddData'
 import { useTranslation } from 'react-i18next';
 import i18next from 'i18next';
+import firebase from '../Firebase/firebase'
 
-const TableFixed = () => {
-  const [data, setData] = useState([]);  
-  const fetchDoctors = () => getHistory().then(data => setData(data));  
-  const onDoctorAdded = doctor => addDoctor(doctor).then(fetchDoctors);  
-  
-  useEffect(() => {
-    fetchDoctors();
-  }, []);  
-  const { t } = useTranslation();
 
-  function handleClick(lang) {
-    i18next.changeLanguage(lang)
-  }
-return(
+
+// odczyt
+function useData(){
+  const [data,setData]= useState([]);
+
+  useEffect(()=>{
+      firebase.firestore().collection('history')
+      .onSnapshot((snapshot)=>{
+          const newData = snapshot.docs.map((doc)=>({
+              id:doc.id,
+              ...doc.data()
+          }))
+setData(newData)
+      })
+
+  },[])
+  return data
+
+}
+
+
+
+const TableFixed=()=>{
+const data = useData();
+const { t } = useTranslation();
+
+function handleClick(lang) {
+i18next.changeLanguage(lang)
+}
+
+return (
     <div>
       <Table fixed>
         <Table.Header>
