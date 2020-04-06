@@ -43,24 +43,26 @@ const AddData = () => {
       )
   }
   return (
-      <div>
+    <div>
 
-<Modal trigger={<Button>Dodaj wynik</Button>}>
+      <Modal trigger={<Button>Dodaj wynik</Button>}>
         <Modal.Content>
           <Modal.Description>
             <Header>Dodaj wynik</Header>
 
             <div>
               <form className="doctors" onSubmit={onsubmit}><div>
-                <p>Nazwa:</p>
-                <input value={name} onChange={e => setName(e.currentTarget.value)}></input></div>
-                <div>      <p>Rodzaj:</p>
-
-                  <input value={type} onChange={e => setType(e.currentTarget.value)}></input></div>
                 <p>Data:</p>
 
 
                 <div><input value={date} onChange={e => setDate(e.currentTarget.value)}></input></div>
+                <p>Nazwa:</p>
+
+                <input value={name} onChange={e => setName(e.currentTarget.value)}></input></div>
+                <div>      <p>Rodzaj:</p>
+
+                  <input value={type} onChange={e => setType(e.currentTarget.value)}></input></div>
+
                 <p>Wynik:</p>
 
 
@@ -91,7 +93,7 @@ const AddData = () => {
     </div>
 
 
-    );
-  }
+  );
+}
 
-  export default AddData
+export default AddData

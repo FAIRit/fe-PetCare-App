@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Table } from 'semantic-ui-react'
 import AddData from './AddData'
-import { getData, addDoctor } from "../../services/patients";
-import { getPatients } from "../../components/Firebase/fetchData";
+
 import { useTranslation } from 'react-i18next';
 import i18next from 'i18next';
 

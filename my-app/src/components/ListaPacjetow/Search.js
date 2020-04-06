@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+/*import React, { useState, useEffect } from 'react';
 import { Table } from 'semantic-ui-react'
 import { getData } from "../../services/patients";
 import { useTranslation } from 'react-i18next';
@@ -101,3 +101,4 @@ const PatientDetail = props => {
 
 
 export default App;
+*/
