@@ -68,15 +68,16 @@ const ContactTableRow = props => {
                         /></div>
                 </Table.Cell>
                 <Table.Cell>
-                    <Button basic color='red'
-                        onClick={() => props.setEditing(false)}
-                    >
-                        Zrezygnuj
-          </Button>
+                   
                     <Button basic color='green'
                         onClick={() => props.updateData(data)}
                     >
                         Zapisz
+          </Button>
+          <Button basic color='red'
+                        onClick={() => props.setEditing(false)}
+                    >
+                        Zrezygnuj
           </Button>
                 </Table.Cell>
             </Table.Row>

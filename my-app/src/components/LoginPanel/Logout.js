@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Button } from 'semantic-ui-react'
 import fire from '../Firebase/firebase';
 
 class Home extends Component {
@@ -15,7 +16,7 @@ class Home extends Component {
     render() {
         return (
             <div>
-                <button onClick={this.logout}>Wyloguj</button>
+                <Button content ="Wyloguj" onClick={this.logout}></Button>
             </div>
         );
 

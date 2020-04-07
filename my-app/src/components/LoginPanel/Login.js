@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
+import { Button } from 'semantic-ui-react'
 import fire from '../Firebase/firebase'
 import Demo from './Demo';
+
+
 class Login extends Component {
   constructor(props) {
     super(props);
@@ -38,15 +41,15 @@ class Login extends Component {
       <div>
         <form>
           <div >
-            <label>Email address</label>
+            <label>Adres e-mail</label>
             <input  value={this.state.email} onChange={this.handleChange} type="email" name="email" id="exampleInputEmail1" placeholder="admin@admin.pl" />
           </div>
           <div className="form-group">
-            <label>Password</label>
+            <label>Hasło</label>
             <input  value={this.state.password} onChange={this.handleChange} type="password" name="password" placeholder="haslo123" />
           </div>
-          <button type="submit" onClick={this.login}>Login</button>
-          <button onClick={this.signup} style={{marginLeft: '25px'}}>Signup</button>
+          <Button content='Zaloguj'type="submit" onClick={this.login}/>
+          <Button content='Zarejestruj' onClick={this.signup} style={{marginLeft: '25px'}}/>
           <Demo/><br/>
           <p>Tylko zalogowani użytkownicy mogą wprowadzać i edytować dane. <br/>
             Załóż konto, aby móc korzystać ze wszystkich funkcjonalności.

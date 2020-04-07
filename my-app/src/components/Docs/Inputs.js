@@ -48,15 +48,15 @@ const ContactTableRow = props => {
         </Table.Cell>
 
         <Table.Cell>
-          <Button basic color='red'
-            onClick={() => props.setEditing(false)}
-          >
-            Zrezygnuj
-          </Button>
           <Button basic color='green'
             onClick={() => props.updateData(data)}
           >
             Zapisz
+          </Button>
+          <Button basic color='red'
+            onClick={() => props.setEditing(false)}
+          >
+            Zrezygnuj
           </Button>
         </Table.Cell>
       </Table.Row>
@@ -77,9 +77,10 @@ const ContactTableRow = props => {
                 props.editRow(props.item);
               }}
             />
-            <FontAwesomeIcon icon={faTrashAlt} size='2x' color="lightgrey"
+             <FontAwesomeIcon icon={faTrashAlt} size='2x' color="lightgrey"
               onClick={() => props.deleteData(props.item.id)}
             />
+           
           </Table.Cell>
         </Table.Row>
       </Fragment>

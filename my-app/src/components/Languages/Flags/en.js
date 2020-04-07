@@ -1,6 +1,6 @@
 
 import React from 'react'
-import { Flag } from 'semantic-ui-react'
+import { Flag, Button } from 'semantic-ui-react'
 
 const FlagExampleFlag = () => (
     <Flag name='gb' />

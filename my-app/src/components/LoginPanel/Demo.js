@@ -1,5 +1,7 @@
 import React from 'react';
 import Home from '../../Home'
+import { Button } from 'semantic-ui-react'
+
 
 
 class Demo extends React.Component {
@@ -16,9 +18,8 @@ class Demo extends React.Component {
 
     return (
       <div>
-        <button onClick={() => this.setState({ navigate: true })}>
-          Wersja demo
-        </button>
+        <Button content ="Wersja demo" onClick={() => this.setState({ navigate: true })}>
+        </Button>
       </div>
     )
   }
