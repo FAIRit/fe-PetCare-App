@@ -44,9 +44,9 @@ const PaginatedTable = props => {
                   <Table unstackable>
           <Table.Header>
             <Table.Row>
-            <Table.HeaderCell>{t('Imię.2')}</Table.HeaderCell>
-            <Table.HeaderCell>{t('Nazwisko.10')}</Table.HeaderCell>
-            <Table.HeaderCell>{t('Lecznica.11')}</Table.HeaderCell>
+            <Table.HeaderCell>{t('Data.25')}</Table.HeaderCell>
+            <Table.HeaderCell>{t('Rodzaj.19')}</Table.HeaderCell>
+            <Table.HeaderCell>{t('Plik.29')}</Table.HeaderCell>
 
             
             </Table.Row>

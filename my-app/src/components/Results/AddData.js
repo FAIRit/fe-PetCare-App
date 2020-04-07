@@ -52,6 +52,7 @@ const AddData = () => {
 
             <div>
               <form className="doctors" onSubmit={onsubmit}><div>
+                
                 <p>Data:</p>
 
 
@@ -84,7 +85,7 @@ const AddData = () => {
 
 
 
-                <button onSubmit={onsubmit}>Submit</button></form>
+                <button onSubmit={onsubmit}>Zapisz</button></form>
             </div>
           </Modal.Description>
         </Modal.Content>

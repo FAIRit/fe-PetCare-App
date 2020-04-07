@@ -13,53 +13,53 @@ const AddData = () => {
 
 
 
-  function onsubmit(e){
-e.preventDefault()
+  function onsubmit(e) {
+    e.preventDefault()
 
-firebase.firestore()
-.collection('doctors')
-.add({
-  firstname,
-  surname,
-  vetClinic
-})
+    firebase.firestore()
+      .collection('doctors')
+      .add({
+        firstname,
+        surname,
+        vetClinic
+      })
 
-.then(()=>{
-  setFirstname('')
-  setSurname('')
-  setVetClinic('')
+      .then(() => {
+        setFirstname('')
+        setSurname('')
+        setVetClinic('')
 
 
-}
-)
+      }
+      )
   }
-    return (
-      <Modal trigger={<Button>Dodaj lekarza</Button>}>
+  return (
+    <Modal trigger={<Button>Dodaj lekarza</Button>}>
       <Modal.Content>
         <Modal.Description>
           <Header>Dodaj lekarza</Header>
-         
-      <div>
-      <form className="doctors" onSubmit={onsubmit}><h4>Dodaj</h4><div>
-      <p>Imię:</p>
-            <input value={firstname} onChange={e=>setFirstname(e.currentTarget.value)}></input></div>
-            <div>      <p>Imię:</p>
 
-                <input value={surname} onChange={e=>setSurname(e.currentTarget.value)}></input></div>
-                <p>Imię:</p>
+          <div>
+            <form className="doctors" onSubmit={onsubmit}><div>
+              <p>Imię:</p>
+              <input value={firstname} onChange={e => setFirstname(e.currentTarget.value)}></input></div>
+              <div>      <p>Imię:</p>
+
+                <input value={surname} onChange={e => setSurname(e.currentTarget.value)}></input></div>
+              <p>Imię:</p>
 
 
-                <div><input value={vetClinic} onChange={e=>setVetClinic(e.currentTarget.value)}></input></div>
+              <div><input value={vetClinic} onChange={e => setVetClinic(e.currentTarget.value)}></input></div>
 
-            <button onSubmit={onsubmit}>Submit</button></form>
-        </div>
+              <button onSubmit={onsubmit}>Zapisz</button></form>
+          </div>
         </Modal.Description>
       </Modal.Content>
     </Modal>
 
 
 
-    );
-  }
+  );
+}
 
-  export default AddData
+export default AddData

@@ -51,10 +51,10 @@ const AddData = () => {
       )
   }
   return (
-    <Modal trigger={<Button>Dodaj lekarza</Button>}>
+    <Modal trigger={<Button>Dodaj pacjenta</Button>}>
       <Modal.Content>
         <Modal.Description>
-          <Header>Dodaj lekarza</Header>
+          <Header>Dodaj pacjenta</Header>
           <div>
             <form className="doctors" onSubmit={onsubmit}><div>
               <p>Imię:</p>
@@ -80,7 +80,7 @@ const AddData = () => {
 
 
 
-              <button onSubmit={onsubmit}>Submit</button></form>
+              <button onSubmit={onsubmit}>Zapisz</button></form>
           </div>
         </Modal.Description>
       </Modal.Content>

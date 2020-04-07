@@ -1,6 +1,8 @@
 import React, { useState, useEffect, Fragment } from "react";
-import { Table, Tab } from 'semantic-ui-react'
-
+import { Table, Button } from 'semantic-ui-react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTrashAlt } from '@fortawesome/free-solid-svg-icons'
+import { faEdit } from '@fortawesome/free-solid-svg-icons'
 
 
 const ContactTableRow = props => {
@@ -18,44 +20,44 @@ const ContactTableRow = props => {
   return props.editing && props.currentData.id === props.item.id ? (
     <Fragment>
       <Table.Row key={props.item.id}>
-        <Table.Cell>
+        <Table.Cell><div class="ui input">
           <input
             type="text"
             name="firstname"
             value={data.firstname}
             onChange={handleInputChange}
-          />
+          /></div>
         </Table.Cell>
-        <Table.Cell>
+        <Table.Cell><div class="ui input">
           <input
             type="text"
             name="surname"
             value={data.surname}
             onChange={handleInputChange}
-          />
+          /></div>
         </Table.Cell>
 
-
-        <Table.Cell>
+      
+        <Table.Cell>  <div class="ui input">
           <input
             type="text"
             name="vetClinic"
             value={data.vetClinic}
             onChange={handleInputChange}
-          />
+          /></div>
         </Table.Cell>
-      
+
         <Table.Cell>
-          <button
+          <Button basic color='red'
             onClick={() => props.setEditing(false)}
           >
             Zrezygnuj
-          </button>
-          <button
+          </Button>
+          <Button basic color='green'
             onClick={() => props.updateData(data)}
           >
             Zapisz
-          </button>
+          </Button>
         </Table.Cell>
       </Table.Row>
     </Fragment>
@@ -70,18 +72,14 @@ const ContactTableRow = props => {
 
           <Table.Cell>
 
-            <button
+            <FontAwesomeIcon icon={faEdit} size='2x' color="lightgrey"
               onClick={() => {
                 props.editRow(props.item);
               }}
-            >
-              Edytuj
-          </button>
-            <button
+            />
+            <FontAwesomeIcon icon={faTrashAlt} size='2x' color="lightgrey"
               onClick={() => props.deleteData(props.item.id)}
-            >
-              Usuń
-          </button>
+            />
           </Table.Cell>
         </Table.Row>
       </Fragment>

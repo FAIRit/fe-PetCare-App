@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import firebase from '../Firebase/firebase'
-import { Button, Header, Modal, Image } from 'semantic-ui-react'
+import { Button, Header, Modal } from 'semantic-ui-react'
 
 
 const AddData = () => {
@@ -44,13 +44,13 @@ const AddData = () => {
   }
   return (
     <div>
-      <Modal trigger={<Button>Dodaj lekarza</Button>}>
+      <Modal trigger={<Button>Dodaj dane</Button>}>
         <Modal.Content>
           <Modal.Description>
-            <Header>Dodaj lekarza</Header>
+            <Header>Dodaj dane</Header>
 
             <div>
-              <form className="doctors" onSubmit={onsubmit}><h4>Dodaj</h4><div>
+              <form className="doctors" onSubmit={onsubmit}><div>
                 <p>Data przyjęcia:</p>
                 <input value={admissionDate} onChange={e => setAdmissionDate(e.currentTarget.value)}></input></div>
                 <div>      <p>Data wypisu:</p>
@@ -82,7 +82,7 @@ const AddData = () => {
 
 
 
-                <button onSubmit={onsubmit}>Submit</button></form>
+                <button onSubmit={onsubmit}>Zapisz</button></form>
             </div>
           </Modal.Description>
         </Modal.Content>

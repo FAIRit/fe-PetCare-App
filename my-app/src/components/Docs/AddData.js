@@ -37,13 +37,13 @@ firebase.firestore()
 )
   }
     return (
-      <Modal trigger={<Button>Dodaj lekarza</Button>}>
+      <Modal trigger={<Button>Dodaj dokument</Button>}>
       <Modal.Content>
         <Modal.Description>
           <Header>Dodaj dokument</Header>
          
       <div>
-      <form className="doctors" onSubmit={onsubmit}><h4>Dodaj</h4><div>
+      <form className="doctors" onSubmit={onsubmit}><div>
       <p>Imię:</p>
             <input value={firstname} onChange={e=>setFirstname(e.currentTarget.value)}></input></div>
             <div>      <p>Imię:</p>
@@ -55,7 +55,7 @@ firebase.firestore()
                 <div><input value={vetClinic} onChange={e=>setVetClinic(e.currentTarget.value)}></input></div>
 
                 <FileUploader/>
-            <button onSubmit={onsubmit}>Submit</button></form>
+            <button onSubmit={onsubmit}>Zapisz</button></form>
         </div> 
         </Modal.Description>
       </Modal.Content>

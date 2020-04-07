@@ -4,6 +4,9 @@
   "private": true,
   "dependencies": {
     "@firebase/storage": "^0.3.31",
+    "@fortawesome/fontawesome-svg-core": "^1.2.28",
+    "@fortawesome/free-solid-svg-icons": "^5.13.0",
+    "@fortawesome/react-fontawesome": "^0.1.9",
     "@fullcalendar/core": "^4.4.0",
     "@fullcalendar/daygrid": "^4.4.0",
     "@fullcalendar/interaction": "^4.4.0",
@@ -14,6 +17,7 @@
     "firebase": "^7.13.2",
     "firebase-admin": "^8.10.0",
     "firestore-export-import": "^0.4.0",
+    "font-awesome": "^4.7.0",
     "i18next": "^19.3.4",
     "i18next-browser-languagedetector": "^4.0.2",
     "i18next-xhr-backend": "^3.2.2",

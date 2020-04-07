@@ -1,5 +1,8 @@
 import React, { useState, useEffect, Fragment } from "react";
-import { Table, Tab } from 'semantic-ui-react'
+import { Table,Button } from 'semantic-ui-react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTrashAlt } from '@fortawesome/free-solid-svg-icons'
+import { faEdit } from '@fortawesome/free-solid-svg-icons'
 
 
 const ContactTableRow = props => {
@@ -44,16 +47,16 @@ const ContactTableRow = props => {
           /></div>
         </Table.Cell>
         <Table.Cell>
-          <button
+          <Button basic color='red'
             onClick={() => props.setEditing(false)}
           >
             Zrezygnuj
-          </button>
-          <button
+          </Button>
+          <Button basic color='green'
             onClick={() => props.updateData(data)}
           >
             Zapisz
-          </button>
+          </Button>
         </Table.Cell>
       </Table.Row>
     </Fragment>
@@ -70,18 +73,14 @@ const ContactTableRow = props => {
             {props.item.vetClinic}</Table.Cell>
 
           <Table.Cell>
-            <button
+            <FontAwesomeIcon icon={faEdit} size='2x' color="lightgrey"
               onClick={() => {
                 props.editRow(props.item);
               }}
-            >
-              Edytuj
-          </button>
-            <button
+            />
+            <FontAwesomeIcon icon={faTrashAlt} size='2x' color="lightgrey"
               onClick={() => props.deleteData(props.item.id)}
-            >
-              Usuń
-          </button>
+            />
           </Table.Cell>
         </Table.Row>
       </Fragment>

@@ -1,5 +1,8 @@
 import React, { useState, useEffect, Fragment } from "react";
-import { Table, Tab } from 'semantic-ui-react'
+import { Table, Button } from 'semantic-ui-react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTrashAlt } from '@fortawesome/free-solid-svg-icons'
+import { faEdit } from '@fortawesome/free-solid-svg-icons'
 
 
 const ContactTableRow = props => {
@@ -22,58 +25,60 @@ const ContactTableRow = props => {
                         type="text"
                         name="admissionDate"
                         value={data.admissionDate}
-                        onChange={handleInputChange}/>
-               </div><div class="ui input">
-                    <input
-                        type="text"
-                        name="dischargeDate"
-                        value={data.dischargeDate}
-                        onChange={handleInputChange}
-                    /></div>
-            <div class="ui input">                    <input
-                        type="text"
-                        name="vet"
-                        value={data.vet}
-                        onChange={handleInputChange}
-                    /></div>
-                <div class="ui input">
-                    <input
-                        type="text"
-                        name="doctor"
-                        value={data.doctor}
-                        onChange={handleInputChange}
-                    /></div>
-              <div class="ui input">
-                    <input
-                        type="text"
-                        name="patientsCondition"
-                        value={data.patientsCondition}
-                        onChange={handleInputChange}
-                    /></div><div class="ui input">
-                    <input
-                        type="text"
-                        name="diagnosis"
-                        value={data.diagnosis}
-                        onChange={handleInputChange}
-                    /><div class="ui input"></div>
-                    <input
-                        type="text"
-                        name="recommendations"
-                        value={data.recommendations}
-                        onChange={handleInputChange}
-                    /></div>
+                        onChange={handleInputChange} />
+                </div>
+                    <div class="ui input">
+                        <input
+                            type="text"
+                            name="dischargeDate"
+                            value={data.dischargeDate}
+                            onChange={handleInputChange}
+                        /></div>
+                    <div class="ui input">
+                        <input
+                            type="text"
+                            name="vet"
+                            value={data.vet}
+                            onChange={handleInputChange}
+                        /></div>
+                    <div class="ui input">
+                        <input
+                            type="text"
+                            name="doctor"
+                            value={data.doctor}
+                            onChange={handleInputChange}
+                        /></div>
+                    <div class="ui input">
+                        <input
+                            type="text"
+                            name="patientsCondition"
+                            value={data.patientsCondition}
+                            onChange={handleInputChange}
+                        /></div><div class="ui input">
+                        <input
+                            type="text"
+                            name="diagnosis"
+                            value={data.diagnosis}
+                            onChange={handleInputChange}
+                        /><div class="ui input"></div>
+                        <input
+                            type="text"
+                            name="recommendations"
+                            value={data.recommendations}
+                            onChange={handleInputChange}
+                        /></div>
                 </Table.Cell>
                 <Table.Cell>
-                    <button
+                    <Button basic color='red' 
                         onClick={() => props.setEditing(false)}
                     >
                         Zrezygnuj
-          </button>
-                    <button
+          </Button>
+                    <Button basic color='green'
                         onClick={() => props.updateData(data)}
                     >
                         Zapisz
-          </button>
+          </Button>
                 </Table.Cell>
             </Table.Row>
         </Fragment>
@@ -101,18 +106,14 @@ const ContactTableRow = props => {
                         {props.item.recommendations}</Table.Cell>
 
                     <Table.Cell>
-                        <button
+                        <FontAwesomeIcon icon={faEdit} size='2x' color="lightgrey"
                             onClick={() => {
                                 props.editRow(props.item);
                             }}
-                        >
-                            Edytuj
-          </button>
-                        <button
+                        />
+                        <FontAwesomeIcon icon={faTrashAlt} size='2x' color="lightgrey"
                             onClick={() => props.deleteData(props.item.id)}
-                        >
-                            Usuń
-          </button>
+                        />
                     </Table.Cell>
                 </Table.Row>
             </Fragment>
