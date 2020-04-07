@@ -1,62 +1,64 @@
-import React,{useState,useEffect} from 'react'
-import firebase from '../Firebase/firebase'
-import { Table } from 'semantic-ui-react'
-import { useTranslation } from 'react-i18next';
-import i18next from 'i18next';
-import AddData from './AddData'
+import React, { useState } from "react";
+import Table from "./Table";
+import firebase from "../Firebase/firebase"
+import AddData from "./AddData"
+
+const App = () => {
+  const data = [{ id: null, surname: "", firstname: "",vetClinic: "" }];
+  const initialFormState = { id: null, surname: "", firstname: "",vetClinic: "" };
+
+  const [datas, setDatas] = useState(data);
+  const [currentData, setCurrentData] = useState(initialFormState);
+  const [editing, setEditing] = useState(false);
 
 
 
-// odczyt
-function useData(){
-    const [data,setData]= useState([]);
+  const deleteData = id => {
+    setEditing(false);
+    firebase
+      .firestore()
+      .collection("doctors")
+      .doc(id)
+      .delete();
+  };
 
-    useEffect(()=>{
-        firebase.firestore().collection('doctors')
-        .onSnapshot((snapshot)=>{
-            const newData = snapshot.docs.map((doc)=>({
-                id:doc.id,
-                ...doc.data()
-            }))
-setData(newData)
-        })
+  const updatedData = updatedData => {
+    setEditing(false);
+    firebase
+      .firestore()
+      .collection("doctors")
+      .doc(updatedData.id)
+      .set(updatedData);
+  };
 
-    },[])
-    return data
+  const editRow = data => {
+    setEditing(true);
+    setCurrentData({
+      id: data.id,
+      name: data.name,
+      username: data.username,
+      firstname: data.firstname,
+      vetClinic: data.vetClinic,
 
-}
 
+    });
+  };
 
+  return (<div>
+    <div>
+          <Table
+            datas={datas}
+            editRow={editRow}
+            deleteData={deleteData}
+            editing={editing}
+            setEditing={setEditing}
+            currentData={currentData}
+            updatedData={updatedData}
+          />
+        </div>
+        <div className="doctors">
+        <AddData /></div></div>
+  );
+};
 
-const PaginatedTable=()=>{
-const data = useData();
-const { t } = useTranslation();
-
-function handleClick(lang) {
-  i18next.changeLanguage(lang)
-}
-
-return (
-    <>
-      <div className="dropdown"></div>
-      <Table celled>
-        <Table.Header>
-          <Table.Row>
-            <Table.HeaderCell>{t('Imię.2')}</Table.HeaderCell>
-            <Table.HeaderCell>{t('Nazwisko.10')}</Table.HeaderCell>
-            <Table.HeaderCell>{t('Lecznica.11')}</Table.HeaderCell>
-          </Table.Row>
-          </Table.Header><Table.Body>{data.map(item => {
-          return <Table.Row key={item.id}>
-            <Table.Cell><p>{item.firstname}</p></Table.Cell>
-            <Table.Cell><p>{item.surname}</p></Table.Cell>
-            <Table.Cell><p>{item.vetClinic}</p></Table.Cell>
-          </Table.Row>
-        })}</Table.Body>
-      </Table>
-      <div className="doctors">
-        <AddData/></div>
-    </>
-  )
-}; export default PaginatedTable 
-
+export default App;

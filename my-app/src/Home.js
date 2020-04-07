@@ -16,7 +16,6 @@ import Archive from './components/Docs/archive'
 
 
 
-
 const styleLink = document.createElement("link");
 styleLink.rel = "stylesheet";
 styleLink.href = "https://cdn.jsdelivr.net/npm/semantic-ui/dist/semantic.min.css";
@@ -54,7 +53,7 @@ function App() {
         <Route path="/archiwum">
         <Archive/>
         </Route>
-      </Switch>
+          </Switch>
     </Router>
 
 
