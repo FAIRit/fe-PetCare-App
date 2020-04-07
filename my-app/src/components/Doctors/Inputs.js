@@ -17,31 +17,31 @@ const ContactTableRow = props => {
   return props.editing && props.currentData.id === props.item.id ? (
     <Fragment>
       <Table.Row key={props.item.id}>
-        <Table.Cell>
+        <Table.Cell><div class="ui input">
           <input
             type="text"
             name="firstname"
             value={data.firstname}
             onChange={handleInputChange}
-          />
+          /></div>
         </Table.Cell>
-        <Table.Cell>
+        <Table.Cell><div class="ui input">
           <input
             type="text"
             name="surname"
             value={data.surname}
             onChange={handleInputChange}
-          />
+          /></div>
         </Table.Cell>
 
 
-        <Table.Cell>
+        <Table.Cell><div class="ui input">
           <input
             type="text"
             name="vetClinic"
             value={data.vetClinic}
             onChange={handleInputChange}
-          />
+          /></div>
         </Table.Cell>
         <Table.Cell>
           <button

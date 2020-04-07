@@ -17,52 +17,52 @@ const ContactTableRow = props => {
     return props.editing && props.currentData.id === props.item.id ? (
         <Fragment>
             <Table.Row key={props.item.id}>
-                <Table.Cell>
+                <Table.Cell><div class="ui input">
                     <input
                         type="text"
                         name="name"
                         value={data.name}
-                        onChange={handleInputChange}/>
-               
-                    <input
-                        type="text"
-                        name="type"
-                        value={data.type}
-                        onChange={handleInputChange}
-                    />
-            
-                    <input
-                        type="text"
-                        name="dosage"
-                        value={data.dosage}
-                        onChange={handleInputChange}
-                    />
-                
-                    <input
-                        type="text"
-                        name="doctor"
-                        value={data.doctor}
-                        onChange={handleInputChange}
-                    />
-              
-                    <input
-                        type="text"
-                        name="other"
-                        value={data.other}
-                        onChange={handleInputChange}
-                    />
-                    <input
-                        type="text"
-                        name="time"
-                        value={data.time}
-                        onChange={handleInputChange}
-                    />
-                    <input
-                        type="text"
-                        name="recommendations"
-                        value={data.recommendations}
-                        onChange={handleInputChange}
-                    />
+                        onChange={handleInputChange} />
+                </div><div class="ui input">
+                        <input
+                            type="text"
+                            name="type"
+                            value={data.type}
+                            onChange={handleInputChange}
+                        /></div>
+                    <div class="ui input">
+                        <input
+                            type="text"
+                            name="dosage"
+                            value={data.dosage}
+                            onChange={handleInputChange}
+                        /></div>
+                    <div class="ui input">
+                        <input
+                            type="text"
+                            name="doctor"
+                            value={data.doctor}
+                            onChange={handleInputChange}
+                        /></div>
+                    <div class="ui input">
+                        <input
+                            type="text"
+                            name="other"
+                            value={data.other}
+                            onChange={handleInputChange}
+                        /></div><div class="ui input">
+                        <input
+                            type="text"
+                            name="time"
+                            value={data.time}
+                            onChange={handleInputChange}
+                        /></div><div class="ui input">
+                        <input
+                            type="text"
+                            name="recommendations"
+                            value={data.recommendations}
+                            onChange={handleInputChange}
+                        /></div>
                 </Table.Cell>
                 <Table.Cell>
                     <button
@@ -90,7 +90,7 @@ const ContactTableRow = props => {
                     <Table.Cell>
                         {props.item.dosage}</Table.Cell>
 
-                        <Table.Cell>
+                    <Table.Cell>
                         {props.item.doctor}</Table.Cell>
                     <Table.Cell>
                         {props.item.other}</Table.Cell>
@@ -98,7 +98,7 @@ const ContactTableRow = props => {
                     <Table.Cell>
                         {props.item.time}</Table.Cell>
 
-                    
+
                     <Table.Cell>
                         {props.item.th}</Table.Cell>
 

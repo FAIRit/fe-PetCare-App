@@ -17,52 +17,52 @@ const ContactTableRow = props => {
     return props.editing && props.currentData.id === props.item.id ? (
         <Fragment>
             <Table.Row key={props.item.id}>
-                <Table.Cell>
+                <Table.Cell><div class="ui input">
                     <input
                         type="text"
                         name="name"
                         value={data.name}
-                        onChange={handleInputChange}/>
-               
-                    <input
-                        type="text"
-                        name="species"
-                        value={data.species}
-                        onChange={handleInputChange}
-                    />
-            
-                    <input
-                        type="text"
-                        name="breed"
-                        value={data.breed}
-                        onChange={handleInputChange}
-                    />
-                
-                    <input
-                        type="text"
-                        name="age"
-                        value={data.age}
-                        onChange={handleInputChange}
-                    />
-              
-                    <input
-                        type="text"
-                        name="color"
-                        value={data.color}
-                        onChange={handleInputChange}
-                    />
-                    <input
-                        type="text"
-                        name="owner"
-                        value={data.owner}
-                        onChange={handleInputChange}
-                    />
-                    <input
-                        type="text"
-                        name="idnumber"
-                        value={data.idnumber}
-                        onChange={handleInputChange}
-                    />
+                        onChange={handleInputChange} />
+                </div><div class="ui input">
+                        <input
+                            type="text"
+                            name="species"
+                            value={data.species}
+                            onChange={handleInputChange}
+                        /></div>
+                    <div class="ui input">
+                        <input
+                            type="text"
+                            name="breed"
+                            value={data.breed}
+                            onChange={handleInputChange}
+                        /></div>
+                    <div class="ui input">
+                        <input
+                            type="text"
+                            name="age"
+                            value={data.age}
+                            onChange={handleInputChange}
+                        /></div>
+                    <div class="ui input">
+                        <input
+                            type="text"
+                            name="color"
+                            value={data.color}
+                            onChange={handleInputChange}
+                        /></div><div class="ui input">
+                        <input
+                            type="text"
+                            name="owner"
+                            value={data.owner}
+                            onChange={handleInputChange}
+                        /></div><div class="ui input">
+                        <input
+                            type="text"
+                            name="idnumber"
+                            value={data.idnumber}
+                            onChange={handleInputChange}
+                        /></div>
                 </Table.Cell>
                 <Table.Cell>
                     <button

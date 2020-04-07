@@ -17,52 +17,51 @@ const ContactTableRow = props => {
     return props.editing && props.currentData.id === props.item.id ? (
         <Fragment>
             <Table.Row key={props.item.id}>
-                <Table.Cell>
+                <Table.Cell><div class="ui input">
                     <input
                         type="text"
                         name="admissionDate"
                         value={data.admissionDate}
                         onChange={handleInputChange}/>
-               
+               </div><div class="ui input">
                     <input
                         type="text"
                         name="dischargeDate"
                         value={data.dischargeDate}
                         onChange={handleInputChange}
-                    />
-            
-                    <input
+                    /></div>
+            <div class="ui input">                    <input
                         type="text"
                         name="vet"
                         value={data.vet}
                         onChange={handleInputChange}
-                    />
-                
+                    /></div>
+                <div class="ui input">
                     <input
                         type="text"
                         name="doctor"
                         value={data.doctor}
                         onChange={handleInputChange}
-                    />
-              
+                    /></div>
+              <div class="ui input">
                     <input
                         type="text"
                         name="patientsCondition"
                         value={data.patientsCondition}
                         onChange={handleInputChange}
-                    />
+                    /></div><div class="ui input">
                     <input
                         type="text"
                         name="diagnosis"
                         value={data.diagnosis}
                         onChange={handleInputChange}
-                    />
+                    /><div class="ui input"></div>
                     <input
                         type="text"
                         name="recommendations"
                         value={data.recommendations}
                         onChange={handleInputChange}
-                    />
+                    /></div>
                 </Table.Cell>
                 <Table.Cell>
                     <button
