@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import firebase from '../Firebase/firebase'
+import AddImage from '../Firebase/ImageUpload'
 import { Button, Header, Modal, Image } from 'semantic-ui-react'
+
 
 
 const AddData = () => {
   const [data, setData] = useState('');
-  const [name, setName] = useState('');
   const [species, setSpecies] = useState('');
+  const [name, setName] = useState('');
   const [breed, setBreed] = useState('');
   const [age, setAge] = useState('');
   const [color, setColor] = useState('');
@@ -23,42 +25,45 @@ const AddData = () => {
       .collection('patients')
       .add({
         name,
-        species,
         breed,
+        species,
         age,
         color,
         owner,
         idnumber
+
       })
 
       .then(() => {
         setName('')
-        setSpecies('')
         setBreed('')
+        setSpecies('')
         setAge('')
         setColor('')
         setOwner('')
         setIdnumber('')
+
+
+
+
+
       }
       )
   }
   return (
-    <div>
-
-    <Modal trigger={<Button>Dodaj pacjenta</Button>}>
+    <Modal trigger={<Button>Dodaj lekarza</Button>}>
       <Modal.Content>
         <Modal.Description>
-          <Header>Dodaj pacjenta</Header>
-
+          <Header>Dodaj lekarza</Header>
           <div>
             <form className="doctors" onSubmit={onsubmit}><div>
               <p>Imię:</p>
               <div><input value={name} onChange={e => setName(e.currentTarget.value)}></input></div>
-              
+
               <p>Gatunek:</p>
               <input value={species} onChange={e => setSpecies(e.currentTarget.value)}></input></div>
-              <div>     
-               <p>Rasa:</p>
+              <div>
+                <p>Rasa:</p>
                 <input value={breed} onChange={e => setBreed(e.currentTarget.value)}></input></div>
 
               <p>Wiek:</p>
@@ -80,11 +85,11 @@ const AddData = () => {
         </Modal.Description>
       </Modal.Content>
     </Modal>
-  
-  </div>
 
 
-    );
-  }
 
-  export default AddData;
+  );
+}
+
+
+export default AddData;

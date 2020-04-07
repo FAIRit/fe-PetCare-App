@@ -1,75 +1,77 @@
-import React, { useEffect, useState } from "react";
-import { Table } from 'semantic-ui-react'
-import firebase from '../Firebase/firebase'
-import AddData from './AddData'
-import { useTranslation } from 'react-i18next';
-import i18next from 'i18next';
+import React, { useState } from "react";
+import Table from "./Table";
+import firebase from "../Firebase/firebase"
+import AddData from "./AddData"
 
+const App = () => {
+    const data = [{ id: null, admissionDate: "", type: "", vetClinic: "" }];
+    const initialFormState = { id: null, admissionDate: "", type: "", vetClinic: "" };
 
-// odczyt
-function useData(){
-  const [data,setData]= useState([]);
-
-  useEffect(()=>{
-      firebase.firestore().collection('medicines')
-      .onSnapshot((snapshot)=>{
-          const newData = snapshot.docs.map((doc)=>({
-              id:doc.id,
-              ...doc.data()
-          }))
-setData(newData)
-      })
-
-  },[])
-  return data
-
-}
+    const [datas, setDatas] = useState(data);
+    const [currentData, setCurrentData] = useState(initialFormState);
+    const [editing, setEditing] = useState(false);
 
 
 
-const TableFixed=()=>{
-const data = useData();
-const { t } = useTranslation();
+    const deleteData = id => {
+        setEditing(false);
+        firebase
+            .firestore()
+            .collection("medicines")
+            .doc(id)
+            .delete();
+    };
 
-function handleClick(lang) {
-i18next.changeLanguage(lang)
-}
+    const updatedData = updatedData => {
+        setEditing(false);
+        firebase
+            .firestore()
+            .collection("medicines")
+            .doc(updatedData.id)
+            .set(updatedData);
+    };
 
-return (
+    const editRow = data => {
+        setEditing(true);
+        setCurrentData({
+          id: data.id,
+          name: data.name,
+          type: data.type,
+          dosage: data.dosage,
+          other: data.other,
+          doctor: data.doctor,
+          diagnosis: data.diagnosis,
+          recommendations: data.recommendations,
+          
 
-    <div>
-      <Table fixed>
-        <Table.Header>
-          <Table.Row>
-            <Table.HeaderCell>{t('Nazwa.18')}</Table.HeaderCell>
-            <Table.HeaderCell>{t('Rodzaj.19')}</Table.HeaderCell>
-            <Table.HeaderCell>{t('Dawkowanie.20')}</Table.HeaderCell>
-            <Table.HeaderCell>{t('Opis.21')}</Table.HeaderCell>
-            <Table.HeaderCell>{t('Czas kuracji.22')}</Table.HeaderCell>
-            <Table.HeaderCell>{t('Lekarz przepisujący lek.23')}</Table.HeaderCell>
-            <Table.HeaderCell>{t('Uwagi.24')}</Table.HeaderCell>
-          </Table.Row>
-        </Table.Header>
-        <Table.Body>{data.map(item => {
-          return <Table.Row key={item.id}>
-            <Table.Cell><p key={item.id}>{item.name}</p></Table.Cell>
-            <Table.Cell><p key={item.id}>{item.type}</p></Table.Cell>
-            <Table.Cell><p key={item.id}>{item.dosage}</p></Table.Cell>
-            <Table.Cell><p key={item.id}>{item.other}</p></Table.Cell>
-            <Table.Cell><p key={item.id}>{item.date}</p></Table.Cell>
-            <Table.Cell><p key={item.id}>{item.doctor}</p>
-            </Table.Cell>
 
-          </Table.Row>
-        })}
-        </Table.Body>        
 
-      </Table>
-      <div className="doctors">
-      <AddData/>
-      </div>
-    </div>
-  )
+
+        });
+    };
+
+    return (<div>
+        <div>
+            <Table
+                datas={datas}
+                editRow={editRow}
+                deleteData={deleteData}
+                editing={editing}
+                setEditing={setEditing}
+                currentData={currentData}
+                updatedData={updatedData}
+            />
+        </div>
+        <div className="doctors">
+            <AddData /></div></div>
+    );
 };
 
-export default TableFixed
+export default App;
+
+
+
+
+
+
+

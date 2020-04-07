@@ -1,58 +1,69 @@
-import React, { Component } from "react";
+import React, { useState, useEffect } from 'react';
+import firebase from '../Firebase/firebase'
+import AddImage from '../Firebase/ImageUpload'
 import { Button, Header, Modal, Image } from 'semantic-ui-react'
-//import AddImage from '../Firebase/ImageUpload'
-//<AddImage>
+import FileUploader from './FileUploader'
 
 
 
-const DEFAULT_STATE = {
-  date: "",
-  type: "",
-  img: ""
+const AddData = () => {
+  const [data, setData] = useState('');
+  const [firstname, setFirstname] = useState('');
+  const [surname, setSurname] = useState('');
+  const [vetClinic, setVetClinic] = useState('');
+  const [file, setFile] = useState('');
+
+
+
+
+  function onsubmit(e){
+e.preventDefault()
+
+firebase.firestore()
+.collection('docs')
+.add({
+  firstname,
+  surname,
+  vetClinic
+})
+
+.then(()=>{
+  setFirstname('')
+  setSurname('')
+  setVetClinic('')
+
+
 }
-
-
-export default class AddData extends Component {
-  state = { ...DEFAULT_STATE };
-
-  onChange = (key, event) => this.setState({ [key]: event.target.value });
-
-  onSubmit = event => {
-    event.preventDefault();
-
-    //this.props.doctorAdded({ ...this.state });
-    this.setState(DEFAULT_STATE);
-  };
-
-  render() {
+)
+  }
     return (
-      <div>
-      <Modal trigger={<Button>Dodaj dokument</Button>}>
+      <Modal trigger={<Button>Dodaj lekarza</Button>}>
       <Modal.Content>
         <Modal.Description>
           <Header>Dodaj dokument</Header>
-        <form className="doctors" onSubmit={this.onSubmit}>
-         <br/><p>Data:</p>
-          <input
-            value={this.state.date}
-            onChange={this.onChange.bind(this, "date")}
-          /><br/><p>Rodzaj dokumentu:</p>
-          <input
-            value={this.state.type}
-            onChange={this.onChange.bind(this, "type")}
-          /><br/>
-<p>Dodaj plik</p>
+         
+      <div>
+      <form className="doctors" onSubmit={onsubmit}><h4>Dodaj</h4><div>
+      <p>Imię:</p>
+            <input value={firstname} onChange={e=>setFirstname(e.currentTarget.value)}></input></div>
+            <div>      <p>Imię:</p>
 
-          <button>Zapisz</button>
-        
-        </form>
+                <input value={surname} onChange={e=>setSurname(e.currentTarget.value)}></input></div>
+                <p>Imię:</p>
+
+
+                <div><input value={vetClinic} onChange={e=>setVetClinic(e.currentTarget.value)}></input></div>
+
+                <FileUploader/>
+            <button onSubmit={onsubmit}>Submit</button></form>
+        </div> 
         </Modal.Description>
       </Modal.Content>
     </Modal>
-    </div>
 
 
 
     );
   }
-}
+
+  export default AddData

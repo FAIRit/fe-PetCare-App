@@ -39,7 +39,7 @@ class Login extends Component {
         <form>
           <div >
             <label>Email address</label>
-            <input  value={this.state.email} onChange={this.handleChange} type="email" name="email" id="exampleInputEmail1" placeholder="admin@admin.wp.pl" />
+            <input  value={this.state.email} onChange={this.handleChange} type="email" name="email" id="exampleInputEmail1" placeholder="admin@admin.pl" />
           </div>
           <div className="form-group">
             <label>Password</label>
@@ -47,7 +47,10 @@ class Login extends Component {
           </div>
           <button type="submit" onClick={this.login}>Login</button>
           <button onClick={this.signup} style={{marginLeft: '25px'}}>Signup</button>
-          <Demo/>
+          <Demo/><br/>
+          <p>Tylko zalogowani użytkownicy mogą wprowadzać i edytować dane. <br/>
+            Załóż konto, aby móc korzystać ze wszystkich funkcjonalności.
+          </p>
         </form>
 
       </div>

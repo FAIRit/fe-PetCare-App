@@ -1,76 +1,69 @@
+import React, { useState } from "react";
+import Table from "./Table";
+import firebase from "../Firebase/firebase"
+import AddData from "./AddData"
 
-import React, { useEffect, useState } from "react";
-import { Table } from 'semantic-ui-react'
-import AddData from './AddData'
-import { useTranslation } from 'react-i18next';
-import i18next from 'i18next';
-import firebase from '../Firebase/firebase'
+const App = () => {
+    const data = [{ id: null, admissionDate: "", type: "", vetClinic: "" }];
+    const initialFormState = { id: null, admissionDate: "", type: "", vetClinic: "" };
 
-
-
-// odczyt
-function useData(){
-  const [data,setData]= useState([]);
-
-  useEffect(()=>{
-      firebase.firestore().collection('history')
-      .onSnapshot((snapshot)=>{
-          const newData = snapshot.docs.map((doc)=>({
-              id:doc.id,
-              ...doc.data()
-          }))
-setData(newData)
-      })
-
-  },[])
-  return data
-
-}
+    const [datas, setDatas] = useState(data);
+    const [currentData, setCurrentData] = useState(initialFormState);
+    const [editing, setEditing] = useState(false);
 
 
 
-const TableFixed=()=>{
-const data = useData();
-const { t } = useTranslation();
+    const deleteData = id => {
+        setEditing(false);
+        firebase
+            .firestore()
+            .collection("history")
+            .doc(id)
+            .delete();
+    };
 
-function handleClick(lang) {
-i18next.changeLanguage(lang)
-}
+    const updatedData = updatedData => {
+        setEditing(false);
+        firebase
+            .firestore()
+            .collection("history")
+            .doc(updatedData.id)
+            .set(updatedData);
+    };
 
-return (
-    <div>
-      <Table fixed>
-        <Table.Header>
-          <Table.Row>
-            <Table.HeaderCell>{t('Data przyjęcia.12')}</Table.HeaderCell>
-            <Table.HeaderCell>{t('Data wypisu.13')}</Table.HeaderCell>
-            <Table.HeaderCell>{t('Lecznica.11')}</Table.HeaderCell>
-            <Table.HeaderCell>{t('Lekarz.14')}</Table.HeaderCell>
-            <Table.HeaderCell>{t('Informacja o stanie pacjenta.15')}</Table.HeaderCell>
-            <Table.HeaderCell>{t('Diagnoza.16')}</Table.HeaderCell>
-            <Table.HeaderCell>{t('Zalecenia.17')}</Table.HeaderCell>
-          </Table.Row>
-        </Table.Header>
+    const editRow = data => {
+        setEditing(true);
+        setCurrentData({
+            id: data.id,
+            admissionDate: data.admissionDate,
+            dischargeDate: data.dischargeDate,
+            vet: data.vet,
+            doctor: data.doctor,
+            patientsCondition: data.patientsCondition,
+            diagnosis: data.diagnosis,
+            recommendations: data.recommendations,
 
-        <Table.Body>{data.map(item => {
-          return <Table.Row key={item.id}>
-            <Table.Cell><p key={item.id}>{item.admissionDate}</p></Table.Cell>
-            <Table.Cell><p key={item.id}>{item.dischargeDate}</p></Table.Cell>
-            <Table.Cell><p key={item.id}>{item.vet}</p></Table.Cell>
-            <Table.Cell><p key={item.id}>{item.doctor}</p></Table.Cell>
-            <Table.Cell><p key={item.id}>{item.patientsCondition}</p>
-            </Table.Cell>
-            <Table.Cell><p key={item.id}>{item.diagnosis}</p></Table.Cell>
-            <Table.Cell><p key={item.id}>{item.recommendations}</p></Table.Cell>
-          </Table.Row>
-        })}
-        </Table.Body>
-      </Table>
-      <div className="doctors">
-      <AddData />
-      </div>
-    </div>
-  )
+
+
+
+        });
+    };
+
+    return (<div>
+        <div>
+            <Table
+                datas={datas}
+                editRow={editRow}
+                deleteData={deleteData}
+                editing={editing}
+                setEditing={setEditing}
+                currentData={currentData}
+                updatedData={updatedData}
+            />
+        </div>
+        <div className="doctors">
+            <AddData /></div></div>
+    );
 };
 
-export default TableFixed
+export default App;

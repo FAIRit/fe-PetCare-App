@@ -1,77 +1,72 @@
-import React, { useEffect, useState } from "react";
-import { Table } from 'semantic-ui-react'
-import firebase from '../Firebase/firebase'
-import { useTranslation } from 'react-i18next';
-import i18next from 'i18next';
-import AddData from './AddData'
+import React, { useState } from "react";
+import Table from "./Table";
+import firebase from "../Firebase/firebase"
+import AddData from "./AddData"
+
+const App = () => {
+    const data = [{ id: null, name: "", type: "", vetClinic: "" }];
+    const initialFormState = { id: null, name: "", type: "", vetClinic: "" };
+
+    const [datas, setDatas] = useState(data);
+    const [currentData, setCurrentData] = useState(initialFormState);
+    const [editing, setEditing] = useState(false);
 
 
 
-// odczyt
-function useData(){
-  const [data,setData]= useState([]);
+    const deleteData = id => {
+        setEditing(false);
+        firebase
+            .firestore()
+            .collection("patients")
+            .doc(id)
+            .delete();
+    };
 
-  useEffect(()=>{
-      firebase.firestore().collection('patients')
-      .onSnapshot((snapshot)=>{
-          const newData = snapshot.docs.map((doc)=>({
-              id:doc.id,
-              ...doc.data()
-          }))
-setData(newData)
-      })
+    const updatedData = updatedData => {
+        setEditing(false);
+        firebase
+            .firestore()
+            .collection("patients")
+            .doc(updatedData.id)
+            .set(updatedData);
+    };
 
-  },[])
-  return data
+    const editRow = data => {
+        setEditing(true);
+        setCurrentData({
+            id: data.id,
+            name: data.name,
+            age: data.age,
 
-}
+            type: data.type,
+            breed: data.breed,
+            owner: data.owner,
+            species: data.species,
+            idnumber: data.idnumber,
+            color: data.color,
 
 
-const TableFixed=()=>{
-const data = useData();
-const { t } = useTranslation();
 
-function handleClick(lang) {
-i18next.changeLanguage(lang)
-}
 
-return (
+        });
+    };
+
+    return (<div>
         <div>
-            <Table fixed>
-                <Table.Header>
-                    <Table.Row>
-                        <Table.HeaderCell>Imię</Table.HeaderCell>
-                        <Table.HeaderCell>Gatunek</Table.HeaderCell>
-                        <Table.HeaderCell>Rasa</Table.HeaderCell>
-                        <Table.HeaderCell>Wiek</Table.HeaderCell>
-                        <Table.HeaderCell>Umaszczenie</Table.HeaderCell>
-                        <Table.HeaderCell>Opienkun</Table.HeaderCell>
-                        <Table.HeaderCell>Numer identyfikacyjny</Table.HeaderCell>
-                    </Table.Row>
-                </Table.Header>
-
-                <Table.Body>{data.map(item => {
-                    return <Table.Row key={item.id}>
-                        <Table.Cell>  <p key={item.id}>{item.name}</p></Table.Cell>
-                        <Table.Cell><p key={item.id}>{item.species}</p></Table.Cell>
-                        <Table.Cell><p key={item.id}>{item.breed}</p></Table.Cell>
-                        <Table.Cell><p key={item.id}>{item.age}</p></Table.Cell>
-                        <Table.Cell><p key={item.id}>{item.color}</p></Table.Cell>
-                        <Table.Cell><p key={item.id}>{item.owner}</p></Table.Cell>
-                        <Table.Cell><p key={item.id}>{item.idnumber}</p>
-
-                        </Table.Cell>
-
-                    </Table.Row>
-                })}
-                </Table.Body>
-            </Table>
-            <div className="doctors">
-      <AddData />
-      </div>
+            <Table
+                datas={datas}
+                editRow={editRow}
+                deleteData={deleteData}
+                editing={editing}
+                setEditing={setEditing}
+                currentData={currentData}
+                updatedData={updatedData}
+            />
         </div>
-    )
+        <div className="doctors">
+            <AddData /></div></div>
+    );
 };
 
-export default TableFixed;
+export default App;
 

@@ -36,7 +36,7 @@ const App = () => {
     setCurrentData({
       id: data.id,
       name: data.name,
-      username: data.username,
+      surname: data.surname,
       firstname: data.firstname,
       vetClinic: data.vetClinic,
 

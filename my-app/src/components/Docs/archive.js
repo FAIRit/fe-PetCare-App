@@ -1,45 +1,70 @@
-import React, { useEffect, useState } from "react";
-import { Table } from 'semantic-ui-react'
-import AddData from './AddData'
+import React, { useState } from "react";
+import Table from "./Table";
+import firebase from "../Firebase/firebase"
+import AddData from "./AddData"
+import FileUploader from "../Firebase/ImageUpload"
 
-import { useTranslation } from 'react-i18next';
-import i18next from 'i18next';
+const App = () => {
+  const data = [{ id: null, surname: "", firstname: "",vetClinic: "" }];
+  const initialFormState = { id: null, surname: "", firstname: "",vetClinic: "" };
+
+  const [datas, setDatas] = useState(data);
+  const [currentData, setCurrentData] = useState(initialFormState);
+  const [editing, setEditing] = useState(false);
 
 
 
-const TableFixed = () => {
+  const deleteData = id => {
+    setEditing(false);
+    firebase
+      .firestore()
+      .collection("docs")
+      .doc(id)
+      .delete();
+  };
 
-    const { t } = useTranslation();
+  const updatedData = updatedData => {
+    setEditing(false);
+    firebase
+      .firestore()
+      .collection("docs")
+      .doc(updatedData.id)
+      .set(updatedData);
+  };
 
-    function handleClick(lang) {
-        i18next.changeLanguage(lang)
-    }
+  const editRow = data => {
+    setEditing(true);
+    setCurrentData({
+      id: data.id,
+      name: data.name,
+      username: data.username,
+      firstname: data.firstname,
+      vetClinic: data.vetClinic,
 
-    return (
-        <div>
-            <Table fixed>
-                <Table.Header>
-                    <Table.Row>
-                        <Table.HeaderCell>{t('Data.25')}</Table.HeaderCell>
-                        <Table.HeaderCell>{t('Rodzaj.19')}</Table.HeaderCell>
-                        <Table.HeaderCell>{t('Wczytaj dokument.29')}</Table.HeaderCell>
-                    </Table.Row>
-                </Table.Header>
-                <Table.Body>
-                    <Table.Row>
-                        <Table.Cell>
-                        </Table.Cell><Table.Cell>
-                        </Table.Cell><Table.Cell>
-                        </Table.Cell>
-                    </Table.Row>
-                </Table.Body>
-            </Table>
-            <div className="doctors">
-                <AddData />
-            </div>
+
+    });
+  };
+
+  return (<div>
+    <div>
+          <Table
+            datas={datas}
+            editRow={editRow}
+            deleteData={deleteData}
+            editing={editing}
+            setEditing={setEditing}
+            currentData={currentData}
+            updatedData={updatedData}
+          />
         </div>
-    )
+        <div className="doctors">
+        <AddData /></div></div>
+  );
 };
 
-export default TableFixed;
+export default App;
 
+                       // <Table.HeaderCell>{t('Data.25')}</Table.HeaderCell>
+                      //  <Table.HeaderCell>{t('Rodzaj.19')}</Table.HeaderCell>
+                      //  <Table.HeaderCell>{t('Wczytaj dokument.29')}</Table.HeaderCell>
+                

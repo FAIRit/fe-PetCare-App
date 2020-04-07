@@ -3,7 +3,6 @@ import { Table } from 'semantic-ui-react'
 import { getData } from "../../services/patients";
 import { useTranslation } from 'react-i18next';
 import { getPatients } from "../../components/Firebase/fetchData";
-import Image from '../Firebase/ImageUpload'
 
 
 
