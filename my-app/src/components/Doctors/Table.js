@@ -3,7 +3,6 @@ import { Table, Tab } from 'semantic-ui-react'
 import firebase from "../Firebase/firebase";
 import { useTranslation } from 'react-i18next';
 import i18next from 'i18next';
-
 import Input from "./Inputs";
 
 
@@ -12,6 +11,7 @@ function useData() {
   const [data, setData] = useState([]);
   const [editing, setEditing] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
+  
 
   useEffect(() => {
 
@@ -41,7 +41,8 @@ const PaginatedTable = props => {
     i18next.changeLanguage(lang)
     }
   return (
-    <Fragment>
+    <Fragment> 
+
                   <Table unstackable>
           <Table.Header>
             <Table.Row>

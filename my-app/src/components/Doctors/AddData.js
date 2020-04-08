@@ -58,7 +58,7 @@ const AddData = () => {
     </Modal>
 
 
-
+   
   );
 }
 

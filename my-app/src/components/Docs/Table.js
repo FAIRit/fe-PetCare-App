@@ -5,42 +5,53 @@ import { useTranslation } from 'react-i18next';
 import i18next from 'i18next';
 import Input from "./Inputs";
 
-
-
-function useData() {
+function useData(filter = '') {
   const [data, setData] = useState([]);
   const [editing, setEditing] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
-
   useEffect(() => {
+      firebase
+          .firestore()
+          .collection("docs")
+          .onSnapshot(snapshot => {
+              const newData = snapshot.docs.map(doc => ({
+                  id: doc.id,
+                  ...doc.data()
+              }));
 
-    firebase
-      .firestore()
-      .collection("docs")
-      .onSnapshot(snapshot => {
-        const newData = snapshot.docs.map(doc => ({
-          id: doc.id,
-          ...doc.data()
-        }));
-        setData(newData);
-        setIsLoading(false);
-      });
+              const normalizedFilter = filter.toLowerCase();
+              const filteredData = newData.filter(item => item.id.toLowerCase().includes(normalizedFilter));
 
-  }, []);
+              setData(filteredData);
+              setIsLoading(false);
+          });
+
+
+
+      }, [filter]);
+
+
+
 
 
   return data;
 }
 
 const PaginatedTable = props => {
-  const data = useData();
+  const [filter, setFilter] = useState('');
+
+  const data = useData(filter);
   const { t } = useTranslation();
 
+  const onInputChange = event => setFilter(event.currentTarget.value);
+
   function handleClick(lang) {
-    i18next.changeLanguage(lang)
-    }
+      i18next.changeLanguage(lang)
+  }
+
   return (
-    <Fragment>
+      <Fragment>
+          <input onChange={onInputChange} />
                   <Table unstackable>
           <Table.Header>
             <Table.Row>

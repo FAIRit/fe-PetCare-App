@@ -8,13 +8,11 @@ import Input from "./Inputs";
 
 
 
-function useData() {
+function useData(filter = '') {
     const [data, setData] = useState([]);
     const [editing, setEditing] = useState(false);
     const [isLoading, setIsLoading] = useState(true);
-
     useEffect(() => {
-
         firebase
             .firestore()
             .collection("patients")
@@ -23,25 +21,40 @@ function useData() {
                     id: doc.id,
                     ...doc.data()
                 }));
-                setData(newData);
+
+                const normalizedFilter = filter.toLowerCase();
+                const filteredData = newData.filter(item => item.name.toLowerCase().includes(normalizedFilter));
+
+                setData(filteredData);
                 setIsLoading(false);
             });
 
-    }, []);
+
+
+        }, [filter]);
+
+
+
 
 
     return data;
 }
 
 const PaginatedTable = props => {
-    const data = useData();
+    const [filter, setFilter] = useState('');
+
+    const data = useData(filter);
     const { t } = useTranslation();
+
+    const onInputChange = event => setFilter(event.currentTarget.value);
 
     function handleClick(lang) {
         i18next.changeLanguage(lang)
     }
+
     return (
         <Fragment>
+            <input onChange={onInputChange} />
             <Table unstackable>
                 <Table.Header>
                     <Table.Row>
