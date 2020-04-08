@@ -70,7 +70,7 @@ const ContactTableRow = props => {
                 <Table.Cell>
                    
                     <Button basic color='green'
-                        onClick={() => props.updateData(data)}
+                        onClick={() => props.updatedData(data)}
                     >
                         Zapisz
           </Button>

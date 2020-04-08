@@ -23,33 +23,23 @@ const ContactTableRow = props => {
         <Table.Cell><div class="ui input">
           <input
             type="text"
-            name="firstname"
-            value={data.firstname}
+            name="date"
+            value={data.date}
             onChange={handleInputChange}
           /></div>
         </Table.Cell>
         <Table.Cell><div class="ui input">
           <input
             type="text"
-            name="surname"
-            value={data.surname}
-            onChange={handleInputChange}
-          /></div>
-        </Table.Cell>
-
-      
-        <Table.Cell>  <div class="ui input">
-          <input
-            type="text"
-            name="vetClinic"
-            value={data.vetClinic}
+            name="type"
+            value={data.type}
             onChange={handleInputChange}
           /></div>
         </Table.Cell>
 
         <Table.Cell>
           <Button basic color='green'
-            onClick={() => props.updateData(data)}
+            onClick={() => props.updatedData(data)}
           >
             Zapisz
           </Button>
@@ -65,10 +55,10 @@ const ContactTableRow = props => {
       <Fragment>
         <Table.Row key={props.item.id}>
           <Table.Cell>
-            {props.item.firstname}</Table.Cell>
+            {props.item.date}</Table.Cell>
 
           <Table.Cell>
-            {props.item.surname}</Table.Cell>
+            {props.item.type}</Table.Cell>
 
           <Table.Cell>
 

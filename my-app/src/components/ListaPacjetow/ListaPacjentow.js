@@ -22,13 +22,13 @@ const App = () => {
             .delete();
     };
 
-    const updatedData = updatedData => {
+    const updatedData = updatedRow => {
         setEditing(false);
         firebase
             .firestore()
             .collection("patients")
-            .doc(updatedData.id)
-            .set(updatedData);
+            .doc(updatedRow.id)
+            .set(updatedRow);
     };
 
     const editRow = data => {
@@ -37,7 +37,6 @@ const App = () => {
             id: data.id,
             name: data.name,
             age: data.age,
-
             type: data.type,
             breed: data.breed,
             owner: data.owner,

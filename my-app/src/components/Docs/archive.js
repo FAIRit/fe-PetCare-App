@@ -5,8 +5,8 @@ import AddData from "./AddData"
 import FileUploader from "../Firebase/ImageUpload"
 
 const App = () => {
-  const data = [{ id: null, surname: "", firstname: "",vetClinic: "" }];
-  const initialFormState = { id: null, surname: "", firstname: "",vetClinic: "" };
+  const data = [{ id: null, surname: "", firstname: "" }];
+  const initialFormState = { id: null, surname: "", firstname: "" };
 
   const [datas, setDatas] = useState(data);
   const [currentData, setCurrentData] = useState(initialFormState);
@@ -23,23 +23,21 @@ const App = () => {
       .delete();
   };
 
-  const updatedData = updatedData => {
+  const updatedData = updatedRow => {
     setEditing(false);
     firebase
       .firestore()
       .collection("docs")
-      .doc(updatedData.id)
-      .set(updatedData);
+      .doc(updatedRow.id)
+      .set(updatedRow);
   };
 
   const editRow = data => {
     setEditing(true);
     setCurrentData({
       id: data.id,
-      name: data.name,
-      username: data.username,
-      firstname: data.firstname,
-      vetClinic: data.vetClinic,
+      date: data.date,
+      type: data.type,
 
 
     });
