@@ -50,7 +50,7 @@ class file extends Component {
       />
 
 <div>
-{this.state.imageURL}  <a href={this.state.imageURL}>Link</a>
+{this.state.imageURL}  <a href={this.state.imageURL} target="_blank">Link</a>
 
 </div>
 
