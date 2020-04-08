@@ -54,9 +54,8 @@ firebase.firestore()
 
                 <div><input value={vetClinic} onChange={e=>setVetClinic(e.currentTarget.value)}></input></div>
 
-                <FileUploader/>
             <button onSubmit={onsubmit}>Zapisz</button></form>
-        </div> 
+        </div> <FileUploader></FileUploader>
         </Modal.Description>
       </Modal.Content>
     </Modal>

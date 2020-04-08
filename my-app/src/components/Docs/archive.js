@@ -63,8 +63,3 @@ const App = () => {
 };
 
 export default App;
-
-                       // <Table.HeaderCell>{t('Data.25')}</Table.HeaderCell>
-                      //  <Table.HeaderCell>{t('Rodzaj.19')}</Table.HeaderCell>
-                      //  <Table.HeaderCell>{t('Wczytaj dokument.29')}</Table.HeaderCell>
-                

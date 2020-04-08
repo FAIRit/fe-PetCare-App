@@ -1,65 +1,63 @@
-import React, { Component } from 'react';
-import { storage } from '../Firebase/firebase';
+import FileUploader from "react-firebase-file-uploader";
+import React, {Component} from 'react';
+import firebase from 'firebase';
 
-class ImageUpload extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      image: null,
-      url: '',
+
+
+class file extends Component {
+
+  state = {
+    image: '',
+    imageURL: '',
+    progress: 0
+  }
+
+
+  handleUploadStart = () => {
+
+    this.setState({
       progress: 0
-    }
-    this.handleChange = this
-      .handleChange
-      .bind(this);
-    this.handleUpload = this.handleUpload.bind(this);
+    })
   }
-  handleChange = e => {
-    if (e.target.files[0]) {
-      const image = e.target.files[0];
-      this.setState(() => ({ image }));
-    }
-  }
-  handleUpload = () => {
-    const { image } = this.state;
-    const uploadTask = storage.ref(`images/${image.name}`).put(image);
-    uploadTask.on('state_changed',
-      (snapshot) => {
-        // progrss function ....
-        const progress = Math.round((snapshot.bytesTransferred / snapshot.totalBytes) * 100);
-        this.setState({ progress });
-      },
-      (error) => {
-        // error function ....
-        console.log(error);
-      },
-      () => {
-        // complete function ....
-        storage.ref('images').child(image.name).getDownloadURL().then(url => {
-          console.log(url);
-          this.setState({ url });
-        })
-      });
-  }
-  render() {
-    const style = {
-      height: '100vh',
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
-      justifyContent: 'center'
-    };
-    return (
-      <div style={style}>
-        <progress value={this.state.progress} max="100" />
-        <br />
-        <input type="file" onChange={this.handleChange} />
-        <button onClick={this.handleUpload}>Upload</button>
-        <br />
-        <img src={this.state.url || 'http://via.placeholder.com/400x300'} alt="Uploaded images" height="300" width="400" />
-      </div>
-    )
-  }
-}
 
-export default ImageUpload;
+  handleUploadSuccess = filename => {
+    this.setState ({
+      image: filename,
+      progress: 100
+    })
+
+    firebase.storage().ref('avatars').child(filename).getDownloadURL()
+    .then(url => this.setState({
+      imageURL: url
+    }))
+  }
+
+
+
+  render() {
+
+    console.log("this.state", this.state)
+    console.log("this.state.imageURL",this.state.imageURL)
+  return (
+    <div className="App">
+
+      <FileUploader  
+      accept="image/*"
+      name='image'
+      storageRef={firebase.storage().ref('avatars')}
+      onUploadStart = {this.handleUploadStart}
+      onUploadSuccess = {this.handleUploadSuccess}
+      />
+
+<div>
+{this.state.imageURL}  <a href={this.state.imageURL}>Link</a>
+
+</div>
+
+
+
+    </div>
+  );
+};
+  }
+export default file;
