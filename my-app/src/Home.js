@@ -17,11 +17,6 @@ import { useTranslation } from 'react-i18next';
 import i18next from 'i18next';
 
 
-const styleLink = document.createElement("link");
-styleLink.rel = "stylesheet";
-styleLink.href = "https://cdn.jsdelivr.net/npm/semantic-ui/dist/semantic.min.css";
-document.head.appendChild(styleLink);
-
 const App = () => {
 
 
