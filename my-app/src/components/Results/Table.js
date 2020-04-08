@@ -28,13 +28,7 @@ function useData(filter = '') {
                 setIsLoading(false);
             });
 
-
-
         }, [filter]);
-
-
-
-
 
     return data;
 }
@@ -65,29 +59,32 @@ const PaginatedTable = props => {
             <Table.HeaderCell>{t('Jednostka referencyjna.28')}</Table.HeaderCell>
             <Table.HeaderCell>{t('Uwagi.24')}</Table.HeaderCell>    
                     </Table.Row>
-                </Table.Header>
+                    </Table.Header>
+          <Table.Body>
+            {data.length > 0 ? (
+              data.map(item => (
+                <Input
+                  key={item.id}
+                  item={item}
+                  datas={props.datas}
+                  editRow={props.editRow}
+                  deleteData={props.deleteData}
+                  editing={props.editing}
+                  setEditing={props.setEditing}
+                  currentData={props.currentData}
+                  updatedData={props.updatedData}
+                />
+              ))
+            ) : (
 
-                {data.length > 0 ? (
-                    data.map(item => (
-                        <Input
-                            key={item.id}
-                            item={item}
-                            datas={props.datas}
-                            editRow={props.editRow}
-                            deleteData={props.deleteData}
-                            editing={props.editing}
-                            setEditing={props.setEditing}
-                            currentData={props.currentData}
-                            updatedData={props.updatedData}
-                        />
-                    ))
-                ) : (
-                        <Table.Row>
-<Table.Cell>{t('Brak danych.34')}</Table.Cell>                       
- </Table.Row>
-                    )}</Table>
-        </Fragment></div>
-    );
+                <Table.Row>
+                  <Table.Cell>{t('Brak danych.34')}</Table.Cell>
+                </Table.Row>
+            )}
+          </Table.Body>
+
+          </Table>
+    </Fragment></div>
+  );
 };
-
 export default PaginatedTable;
