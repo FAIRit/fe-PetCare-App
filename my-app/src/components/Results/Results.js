@@ -3,7 +3,7 @@ import Table from "./Table";
 import firebase from "../Firebase/firebase"
 import AddData from "./AddData"
 
-const App = () => {
+const Results = () => {
     const data = [{ id: null, admissionDate: "", type: "", vetClinic: "" }];
     const initialFormState = { id: null, admissionDate: "", type: "", vetClinic: "" };
 
@@ -67,5 +67,5 @@ const App = () => {
     );
 };
 
-export default App;
+export default Results;
 

@@ -4,7 +4,7 @@ import firebase from "../Firebase/firebase"
 import AddData from "./AddData"
 import FileUploader from "../Firebase/ImageUpload"
 
-const App = () => {
+const Archive = () => {
   const data = [{ id: null, surname: "", firstname: "" }];
   const initialFormState = { id: null, surname: "", firstname: "" };
 
@@ -60,4 +60,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default Archive;

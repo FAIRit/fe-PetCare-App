@@ -17,7 +17,7 @@ import { useTranslation } from 'react-i18next';
 import i18next from 'i18next';
 
 
-const App = () => {
+const Home = () => {
 
 
   return (
@@ -55,4 +55,4 @@ const App = () => {
   );
 }
 
-export default App;
+export default Home;
