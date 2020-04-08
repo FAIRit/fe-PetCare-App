@@ -22,20 +22,20 @@ const App = () => {
       .delete();
   };
 
-  const updatedData = updatedData => {
+  const updatedData = updatedRow => {
     setEditing(false);
     firebase
       .firestore()
       .collection("doctors")
-      .doc(updatedData.id)
-      .set(updatedData);
+      .doc(updatedRow.id)
+      .set(updatedRow);
   };
 
   const editRow = data => {
     setEditing(true);
     setCurrentData({
       id: data.id,
-      name: data.name,
+      firstname: data.firstname,
       surname: data.surname,
       firstname: data.firstname,
       vetClinic: data.vetClinic,

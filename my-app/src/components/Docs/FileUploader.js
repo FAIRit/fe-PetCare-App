@@ -35,9 +35,6 @@ class file extends Component {
 
 
   render() {
-
-    console.log("this.state", this.state)
-    console.log("this.state.imageURL",this.state.imageURL)
   return (
     <div className="App">
 
