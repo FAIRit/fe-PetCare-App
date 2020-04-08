@@ -11,88 +11,105 @@
   "Rasa": {
     "4": "Breed"
   },
-"Wiek": {
-  "5": "Age"
+  "Wiek": {
+    "5": "Age"
+  },
+  "Umaszczenie": {
+    "6": "Coat"
+  },
+  "Opiekun": {
+    "7": "Owner"
+  },
+  "Numer identyfikacyjny": {
+    "8": "Chip number"
+  },
+  "Zdjęcie": {
+    "9": "Photo"
+  },
+  "Nazwisko": {
+    "10": "Surname"
+  },
+  "Lecznica": {
+    "11": "Veterynary clinic"
+  },
+  "Data przyjęcia": {
+    "12": "Admission date"
+  },
+  "Data wypisu": {
+    "13": "Discharge date"
+  },
+  "Lekarz": {
+    "14": "Doctor"
+  },
+  "Informacja o stanie pacjenta": {
+    "15": "Patient's condition"
+  },
+  "Diagnoza": {
+    "16": "Diagnosis"
+  },
+  "Zalecenia": {
+    "17": "Recommendations"
+  },
+  "Nazwa": {
+    "18": "Name"
+  },
+  "Rodzaj": {
+    "19": "Type"
+  },
+  "Dawkowanie": {
+    "20": "Dosage"
+  },
+  "Opis": {
+    "21": "Description"
+  },
+  "Czas kuracji": {
+    "22": "Treatment time"
+  },
+  "Lekarz przepisujący lek": {
+    "23": "Doctor"
+  },
+  "Uwagi": {
+    "24": "Other"
+  },
+  "Data": {
+    "25": "Date"
+  },
+  "Wynik": {
+    "26": "Result"
+  },
+  "Jednostka": {
+    "27": "Unit"
+  },
+  "Jednostka referencyjna": {
+    "28": "Reference unit"
+  },
+  "Plik": {
+    "29": "File"
+  },
+  "Szczegóły": {
+    "30": "Details"
+  },
+  "Lista pacjentów": {
+    "31": "Patients list"
+  },
+  "Dodaj lekarza": {
+    "32": "Add doctor"
+  },
+  "Zapisz": {
+    "33": "Submit"
+  },
+  "Dodaj historię": {
+    "34": "Add history"
 },
-"Umaszczenie": {
-  "6": "Coat"
+"Dodaj pacjenta": {
+  "35": "Add patient"
 },
-"Opiekun": {
-  "7": "Owner"
+"Dodaj lek": {
+  "36": "Add medicine"
 },
-"Numer identyfikacyjny": {
-  "8": "Chip number"
+"Dodaj wynik": {
+  "37": "Add result"
 },
-"Zdjęcie": {
-  "9": "Photo"
-},
-"Nazwisko": {
-  "10": "Surname"
-},
-"Lecznica": {
-  "11": "Veterynary clinic"
-},
-"Data przyjęcia": {
-  "12": "Admission date"
-},
-"Data wypisu": {
-  "13": "Discharge date"
-},
-"Lekarz": {
-  "14": "Doctor"
-},
-"Informacja o stanie pacjenta": {
-  "15": "Patient's condition"
-},
-"Diagnoza": {
-  "16": "Diagnosis"
-},
-"Zalecenia": {
-  "17": "Recommendations"
-},
-"Nazwa": {
-  "18": "Name"
-},
-"Rodzaj": {
-  "19": "Type"
-},
-"Dawkowanie": {
-  "20": "Dosage"
-},
-"Opis": {
-  "21": "Description"
-},
-"Czas kuracji": {
-  "22": "Treatment time"
-},
-"Lekarz przepisujący lek": {
-  "23": "Doctor"
-},
-"Uwagi": {
-  "24": "Other"
-},
-"Data": {
-  "25": "Date"
-},
-"Wynik": {
-  "26": "Result"
-},
-"Jednostka": {
-  "27": "Unit"
-},
-"Jednostka referencyjna": {
-  "28": "Reference unit"
-},
-"Plik": {
-  "29": "File"
-},
-"Szczegóły": {
-  "30": "Details"
-},
-"Lista pacjentów": {
-  "31": "Patients list"
-}
-}
-
-
-
+"Dodaj dokument": {
+  "38": "Add file"
+}}

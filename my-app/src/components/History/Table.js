@@ -3,7 +3,6 @@ import { Table, Tab } from 'semantic-ui-react'
 import firebase from "../Firebase/firebase";
 import { useTranslation } from 'react-i18next';
 import i18next from 'i18next';
-
 import Input from "./Inputs";
 
 
@@ -28,12 +27,7 @@ function useData(filter = '') {
                 setIsLoading(false);
             });
 
-
-
         }, [filter]);
-
-
-
 
 
     return data;
@@ -83,7 +77,7 @@ const PaginatedTable = props => {
                     ))
                 ) : (
                         <Table.Row>
-                            <Table.Cell>Brak danych</Table.Cell>
+                        <Table.Cell>{t('Brak danych.34')}</Table.Cell>
                         </Table.Row>
                     )}</Table>
         </Fragment>

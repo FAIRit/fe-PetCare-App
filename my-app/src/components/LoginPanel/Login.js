@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Button } from 'semantic-ui-react'
 import fire from '../Firebase/firebase'
 import Demo from './Demo';
+import { useTranslation } from 'react-i18next';
+import i18next from 'i18next';
 
 
 class Login extends Component {

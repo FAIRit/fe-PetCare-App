@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import firebase from '../Firebase/firebase'
 import { Button, Header, Modal, Image } from 'semantic-ui-react'
+import { useTranslation } from 'react-i18next';
+import i18next from 'i18next';
 
 
 const AddData = () => {
@@ -12,8 +14,6 @@ const AddData = () => {
   const [unit, setUnit] = useState('');
   const [referenceunit, setReferenceunit] = useState('');
   const [other, setOther] = useState('');
-
-
 
 
   function onsubmit(e) {
@@ -42,51 +42,47 @@ const AddData = () => {
       }
       )
   }
+  const { t } = useTranslation();
+
+  function handleClick(lang) {
+    i18next.changeLanguage(lang)
+}
   return (
     <div>
 
-      <Modal trigger={<Button>Dodaj wynik</Button>}>
+      <Modal trigger={<Button>{t('Dodaj wynik.37')}</Button>}>
         <Modal.Content>
           <Modal.Description>
-            <Header>Dodaj wynik</Header>
+            <Header>{t('Dodaj wynik.37')}</Header>
 
             <div>
               <form className="doctors" onSubmit={onsubmit}><div>
                 
-                <p>Data:</p>
-
-
+                <p>{t('Data.25')}:</p>
                 <div><input value={date} onChange={e => setDate(e.currentTarget.value)}></input></div>
-                <p>Nazwa:</p>
 
+                <p>{t('Nazwa.18')}:</p>
                 <input value={name} onChange={e => setName(e.currentTarget.value)}></input></div>
-                <div>      <p>Rodzaj:</p>
-
+                <div>      
+                  
+                  <p>{t('Rodzaj.19')}:</p>
                   <input value={type} onChange={e => setType(e.currentTarget.value)}></input></div>
 
-                <p>Wynik:</p>
-
-
+                <p>{t('Wynik.26')}:</p>
                 <div><input value={result} onChange={e => setResult(e.currentTarget.value)}></input></div>
-                <p>Jednostka:</p>
-
-
+                
+                <p>{t('Jednostka.27')}:</p>
                 <div><input value={unit} onChange={e => setUnit(e.currentTarget.value)}></input></div>
 
-                <p>Jednostka referencyjna:</p>
-
-
+                <p>{t('Jednostka referencyjna.28')}:</p>
                 <div><input value={referenceunit} onChange={e => setReferenceunit(e.currentTarget.value)}></input></div>
 
-                <p>Uwagi:</p>
-
-
+                <p>{t('Uwagi.24')}:</p>
                 <div><input value={other} onChange={e => setOther(e.currentTarget.value)}></input></div>
 
 
-
-                <button onSubmit={onsubmit}>Zapisz</button></form>
-            </div>
+                <button onSubmit={onsubmit}>{t('Zapisz.33')}</button></form> 
+                           </div>
           </Modal.Description>
         </Modal.Content>
       </Modal>

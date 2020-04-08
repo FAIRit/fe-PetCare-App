@@ -3,7 +3,8 @@ import firebase from '../Firebase/firebase'
 import AddImage from '../Firebase/ImageUpload'
 import { Button, Header, Modal, Image } from 'semantic-ui-react'
 import FileUploader from './FileUploader'
-
+import { useTranslation } from 'react-i18next';
+import i18next from 'i18next';
 
 
 const AddData = () => {
@@ -12,8 +13,6 @@ const AddData = () => {
   const [surname, setSurname] = useState('');
   const [vetClinic, setVetClinic] = useState('');
   const [file, setFile] = useState('');
-
-
 
 
   function onsubmit(e){
@@ -32,29 +31,29 @@ firebase.firestore()
   setSurname('')
   setVetClinic('')
 
-
 }
 )
   }
+  const { t } = useTranslation();
+
+  function handleClick(lang) {
+    i18next.changeLanguage(lang)
+}
     return (
-      <Modal trigger={<Button>Dodaj dokument</Button>}>
+      <Modal trigger={<Button>{t('Dodaj dokument.38')}</Button>}>
       <Modal.Content>
         <Modal.Description>
-          <Header>Dodaj dokument</Header>
+          <Header>{t('Dodaj dokument.38')}</Header>
          
       <div>
       <form className="doctors" onSubmit={onsubmit}><div>
-      <p>Imię:</p>
+      <p>{t('Data.25')}:</p>
             <input value={firstname} onChange={e=>setFirstname(e.currentTarget.value)}></input></div>
-            <div>      <p>Imię:</p>
+            <div>      <p>{t('Rodzaj.19')}:</p>
 
                 <input value={surname} onChange={e=>setSurname(e.currentTarget.value)}></input></div>
-                <p>Imię:</p>
 
-
-                <div><input value={vetClinic} onChange={e=>setVetClinic(e.currentTarget.value)}></input></div>
-
-            <button onSubmit={onsubmit}>Zapisz</button></form>
+                <button onSubmit={onsubmit}>{t('Zapisz.33')}</button></form>
         </div> <FileUploader></FileUploader>
         </Modal.Description>
       </Modal.Content>

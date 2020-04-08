@@ -8,7 +8,6 @@ class Home extends Component {
         this.logout = this.logout.bind(this);
     }
 
-
     logout() {
         fire.auth().signOut();
     }
@@ -16,12 +15,10 @@ class Home extends Component {
     render() {
         return (
             <div>
-                <Button content ="Wyloguj" onClick={this.logout}></Button>
+                <Button onClick={this.logout}>Wyloguj</Button>
             </div>
         );
-
     }
-
 }
 
 export default Home;

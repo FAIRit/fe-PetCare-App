@@ -3,7 +3,6 @@ import { Table, Tab } from 'semantic-ui-react'
 import firebase from "../Firebase/firebase";
 import { useTranslation } from 'react-i18next';
 import i18next from 'i18next';
-
 import Input from "./Inputs";
 
 function useData(filter = '') {
@@ -27,13 +26,7 @@ function useData(filter = '') {
                 setIsLoading(false);
             });
 
-
-
-        }, [filter]);
-
-
-
-
+    }, [filter]);
 
     return data;
 }
@@ -56,13 +49,13 @@ const PaginatedTable = props => {
             <Table unstackable>
                 <Table.Header>
                     <Table.Row>
-                    <Table.HeaderCell>{t('Nazwa.18')}</Table.HeaderCell>
-            <Table.HeaderCell>{t('Rodzaj.19')}</Table.HeaderCell>
-            <Table.HeaderCell>{t('Dawkowanie.20')}</Table.HeaderCell>
-            <Table.HeaderCell>{t('Lekarz przepisujący lek.23')}</Table.HeaderCell>
-            <Table.HeaderCell>{t('Opis.21')}</Table.HeaderCell>
-            <Table.HeaderCell>{t('Czas kuracji.22')}</Table.HeaderCell>
-            <Table.HeaderCell>{t('Uwagi.24')}</Table.HeaderCell>
+                        <Table.HeaderCell>{t('Nazwa.18')}</Table.HeaderCell>
+                        <Table.HeaderCell>{t('Rodzaj.19')}</Table.HeaderCell>
+                        <Table.HeaderCell>{t('Dawkowanie.20')}</Table.HeaderCell>
+                        <Table.HeaderCell>{t('Lekarz przepisujący lek.23')}</Table.HeaderCell>
+                        <Table.HeaderCell>{t('Opis.21')}</Table.HeaderCell>
+                        <Table.HeaderCell>{t('Czas kuracji.22')}</Table.HeaderCell>
+                        <Table.HeaderCell>{t('Uwagi.24')}</Table.HeaderCell>
                     </Table.Row>
                 </Table.Header>
 
@@ -82,8 +75,8 @@ const PaginatedTable = props => {
                     ))
                 ) : (
                         <Table.Row>
-                            <Table.Cell>Brak danych</Table.Cell>
-                        </Table.Row>
+                            <Table.Cell>{t('Brak danych.34')}</Table.Cell>    
+ </Table.Row>
                     )}</Table>
         </Fragment>
     );

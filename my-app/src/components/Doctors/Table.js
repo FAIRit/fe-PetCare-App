@@ -68,7 +68,7 @@ const PaginatedTable = props => {
             ))
           ) : (
             <Table.Row>
-              <Table.Cell>Brak danych</Table.Cell>
+              <Table.Cell>{t('Brak danych.34')}</Table.Cell>
             </Table.Row>
           )}</Table>
     </Fragment>

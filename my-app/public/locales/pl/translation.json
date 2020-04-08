@@ -88,4 +88,24 @@
     },
 "Lista pacjentów": {
   "31":"Lista pacjentów"
-}}
+},
+"Dodaj lekarza": {
+  "32": "Dodaj lekarza"
+},"Zapisz": {
+  "33": "Submit"
+},
+  "Dodaj historię": {
+    "34": "Dodaj historię"
+  },
+  "Dodaj pacjenta": {
+    "35": "Dodaj pacjeta"
+  },
+  "Dodaj lek": {
+    "36": "Dodaj lek"
+  },
+  "Dodaj wynik": {
+    "37": "Dodaj wynik"
+  },
+  "Dodaj dokument": {
+    "38": "Dodaj dokument"
+  }}

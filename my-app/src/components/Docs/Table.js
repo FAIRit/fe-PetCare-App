@@ -26,12 +26,7 @@ function useData(filter = '') {
               setIsLoading(false);
           });
 
-
-
       }, [filter]);
-
-
-
 
 
   return data;
@@ -58,8 +53,6 @@ const PaginatedTable = props => {
             <Table.HeaderCell>{t('Data.25')}</Table.HeaderCell>
             <Table.HeaderCell>{t('Rodzaj.19')}</Table.HeaderCell>
             <Table.HeaderCell>{t('Plik.29')}</Table.HeaderCell>
-
-            
             </Table.Row>
           </Table.Header>
 
@@ -79,8 +72,7 @@ const PaginatedTable = props => {
             ))
           ) : (
             <Table.Row>
-              <Table.Cell>Brak danych</Table.Cell>
-            </Table.Row>
+<Table.Cell>{t('Brak danych.34')}</Table.Cell></Table.Row>
           )}</Table>
     </Fragment>
   );
