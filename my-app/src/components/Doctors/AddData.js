@@ -43,10 +43,10 @@ const AddData = () => {
             <form className="doctors" onSubmit={onsubmit}><div>
               <p>Imię:</p>
               <input value={firstname} onChange={e => setFirstname(e.currentTarget.value)}></input></div>
-              <div>      <p>Imię:</p>
+              <div>      <p>Nazwisko:</p>
 
                 <input value={surname} onChange={e => setSurname(e.currentTarget.value)}></input></div>
-              <p>Imię:</p>
+              <p>Klinika:</p>
 
 
               <div><input value={vetClinic} onChange={e => setVetClinic(e.currentTarget.value)}></input></div>

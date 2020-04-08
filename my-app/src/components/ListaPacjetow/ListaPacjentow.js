@@ -4,8 +4,8 @@ import firebase from "../Firebase/firebase"
 import AddData from "./AddData"
 
 const App = () => {
-    const data = [{ id: null, name: "", type: "", vetClinic: "" }];
-    const initialFormState = { id: null, name: "", type: "", vetClinic: "" };
+    const data = [{ id: null, name: "", age: "", breed: "", owner:"", species:"", color:"", idnumber:""}];
+    const initialFormState = { id: null, name: "", age: "", breed: "", owner:"", species:"", color:"", idnumber:""};
 
     const [datas, setDatas] = useState(data);
     const [currentData, setCurrentData] = useState(initialFormState);
@@ -37,15 +37,11 @@ const App = () => {
             id: data.id,
             name: data.name,
             age: data.age,
-            type: data.type,
             breed: data.breed,
             owner: data.owner,
             species: data.species,
             idnumber: data.idnumber,
             color: data.color,
-
-
-
 
         });
     };
