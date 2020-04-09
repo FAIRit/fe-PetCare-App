@@ -4,8 +4,8 @@ import firebase from "../Firebase/firebase"
 import AddData from "./AddData"
 
 const Results = () => {
-    const data = [{ id: null, admissionDate: "", type: "", vetClinic: "" }];
-    const initialFormState = { id: null, admissionDate: "", type: "", vetClinic: "" };
+    const data = [{}];
+    const initialFormState = {};
 
     const [datas, setDatas] = useState(data);
     const [currentData, setCurrentData] = useState(initialFormState);
@@ -22,30 +22,25 @@ const Results = () => {
             .delete();
     };
 
-    const updatedData = updatedData => {
+    const updatedData = updatedRow => {
         setEditing(false);
         firebase
             .firestore()
             .collection("medicines")
-            .doc(updatedData.id)
-            .set(updatedData);
+            .doc(updatedRow.id)
+            .set(updatedRow);
     };
 
     const editRow = data => {
         setEditing(true);
         setCurrentData({
           id: data.id,
+          date: data.date,
           name: data.name,
           type: data.type,
-          dosage: data.dosage,
-          other: data.other,
-          doctor: data.doctor,
-          diagnosis: data.diagnosis,
-          recommendations: data.recommendations,
-          
-
-
-
+          result: data.result,
+          unit: data.unit,
+          reference: data.reference,
 
         });
     };

@@ -5,47 +5,51 @@ import { useTranslation } from 'react-i18next';
 import i18next from 'i18next';
 import Input from "./Inputs";
 
+
+
 function useData(filter = '') {
-    const [data, setData] = useState([]);
-    const [editing, setEditing] = useState(false);
-    const [isLoading, setIsLoading] = useState(true);
-    useEffect(() => {
-        firebase
-            .firestore()
-            .collection("medicines")
-            .onSnapshot(snapshot => {
-                const newData = snapshot.docs.map(doc => ({
-                    id: doc.id,
-                    ...doc.data()
-                }));
+  const [data, setData] = useState([]);
+  const [editing, setEditing] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
+  
+  useEffect(() => {
+      firebase
+          .firestore()
+          .collection("medicines")
+          .onSnapshot(snapshot => {
+              const newData = snapshot.docs.map(doc => ({
+                  id: doc.id,
+                  ...doc.data()
+              }));
 
-                const normalizedFilter = filter.toLowerCase();
-                const filteredData = newData.filter(item => item.name.toLowerCase().includes(normalizedFilter));
+              const normalizedFilter = filter.toLowerCase();
+              const filteredData = newData.filter(item => item.name.toLowerCase().includes(normalizedFilter));
 
-                setData(filteredData);
-                setIsLoading(false);
-            });
+              setData(filteredData);
+              setIsLoading(false);
+          });
 
-    }, [filter]);
+      }, [filter]);
 
-    return data;
+
+  return data;
 }
 
 const PaginatedTable = props => {
-    const [filter, setFilter] = useState('');
+  const [filter, setFilter] = useState('');
 
-    const data = useData(filter);
-    const { t } = useTranslation();
+  const data = useData(filter);
+  const { t } = useTranslation();
 
-    const onInputChange = event => setFilter(event.currentTarget.value);
+  const onInputChange = event => setFilter(event.currentTarget.value);
 
-    function handleClick(lang) {
-        i18next.changeLanguage(lang)
-    }
+  function handleClick(lang) {
+      i18next.changeLanguage(lang)
+  }
 
-    return (
+  return (
         <Fragment>
-            <input onChange={onInputChange} />
+             <>{t('Wyszukaj lek.40')}: </><input onChange={onInputChange} />
             <Table unstackable>
                 <Table.Header>
                     <Table.Row>

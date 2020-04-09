@@ -36,8 +36,6 @@ const ContactTableRow = props => {
             onChange={handleInputChange}
           /></div>
         </Table.Cell>
-
-
         <Table.Cell><div class="ui input">
           <input
             type="text"

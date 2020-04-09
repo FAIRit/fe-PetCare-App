@@ -10,6 +10,7 @@ function useData(filter = '') {
     const [data, setData] = useState([]);
     const [editing, setEditing] = useState(false);
     const [isLoading, setIsLoading] = useState(true);
+    
     useEffect(() => {
         firebase
             .firestore()
@@ -47,7 +48,7 @@ const PaginatedTable = props => {
 
     return (
         <Fragment>
-            <input onChange={onInputChange} />
+               <>{t('Wyszukaj dane.41')}: </><input onChange={onInputChange} />
             <Table unstackable>
                 <Table.Header>
                     <Table.Row>

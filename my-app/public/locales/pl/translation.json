@@ -108,4 +108,23 @@
   },
   "Dodaj dokument": {
     "38": "Dodaj dokument"
-  }}
+  },
+  "Wyszukaj pacjenta":{
+  "39": "Wyszukaj pacjenta"
+  },
+  "Wyszukaj lek":{
+  "40": "Wyszukaj lek"
+  },
+  "Wyszukaj dane":{
+  "41": "Wyszukaj dane"
+  },
+  "Wyszukaj lekarza":{
+  "42": "Wyszukaj lekarza"
+  },
+  "Wyszukaj wynik":{
+  "43": "Wyszukaj wynik"
+  },
+  "Wyszukaj dokument":{
+  "44": "Wyszukaj dokument"
+  }
+  }

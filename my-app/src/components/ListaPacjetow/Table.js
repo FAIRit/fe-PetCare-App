@@ -23,7 +23,7 @@ function useData(filter = '') {
                 }));
 
                 const normalizedFilter = filter.toLowerCase();
-                const filteredData = newData.filter(item => item.name.toLowerCase().includes(normalizedFilter));
+                const filteredData = newData.filter(data => data.name.toLowerCase().includes(normalizedFilter));
 
                 setData(filteredData);
                 setIsLoading(false);
@@ -53,8 +53,8 @@ const PaginatedTable = props => {
     }
 
     return (
-        <Fragment>
-            <input onChange={onInputChange} />
+        <Fragment><div>
+            <>{t('Wyszukaj pacjenta.39')}: </><input onChange={onInputChange}/></div>
             <Table unstackable>
                 <Table.Header>
                     <Table.Row>
@@ -70,10 +70,10 @@ const PaginatedTable = props => {
                 </Table.Header>
           <Table.Body>
             {data.length > 0 ? (
-              data.map(item => (
+              data.map(data => (
                 <Input
-                  key={item.id}
-                  item={item}
+                  key={data.id}
+                  data={data}
                   datas={props.datas}
                   editRow={props.editRow}
                   deleteData={props.deleteData}

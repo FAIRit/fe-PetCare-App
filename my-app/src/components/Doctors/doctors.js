@@ -5,7 +5,7 @@ import AddData from "./AddData"
 
 const Doctors = () => {
   const data = [{}];
-  const initialFormState = {  };
+  const initialFormState = {};
 
   const [datas, setDatas] = useState(data);
   const [currentData, setCurrentData] = useState(initialFormState);
@@ -35,11 +35,9 @@ const Doctors = () => {
     setEditing(true);
     setCurrentData({
       id: data.id,
-      firstname: data.firstname,
       surname: data.surname,
       firstname: data.firstname,
-      vetClinic: data.vetClinic,
-
+      vetClinic: data.vetClinic
 
     });
   };

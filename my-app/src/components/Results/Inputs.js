@@ -24,10 +24,17 @@ const ContactTableRow = props => {
                     <div class="ui input">
                         <input
                             type="text"
-                            name="name"
-                            value={data.name}
+                            name="date"
+                            value={data.date}
                             onChange={handleInputChange} />
                     </div>
+                    <div class="ui input">
+                        <input
+                            type="text"
+                            name="name"
+                            value={data.name}
+                            onChange={handleInputChange}
+                        /></div>
                     <div class="ui input">
                         <input
                             type="text"
@@ -38,44 +45,31 @@ const ContactTableRow = props => {
                     <div class="ui input">
                         <input
                             type="text"
-                            name="dosage"
-                            value={data.dosage}
-                            onChange={handleInputChange}
-                        /></div>
-                    <div class="ui input">
-                        <input
-                            type="text"
-                            name="doctor"
-                            value={data.doctor}
+                            name="result"
+                            value={data.result}
                             onChange={handleInputChange}
                         /></div>
                     <div class="ui input">
 
                         <input
                             type="text"
-                            name="other"
-                            value={data.other}
+                            name="unit"
+                            value={data.unit}
                             onChange={handleInputChange}
                         /></div>
                     <div class="ui input">
 
                         <input
                             type="text"
-                            name="time"
-                            value={data.time}
+                            name="reference"
+                            value={data.reference}
                             onChange={handleInputChange}
-                        /></div>                                          <div class="ui input">
-
-                        <input
-                            type="text"
-                            name="recommendations"
-                            value={data.recommendations}
-                            onChange={handleInputChange}
-                        /></div>
+                        /></div>                                         
+                    
                 </Table.Cell>
                 <Table.Cell>
                 <Button basic color='green'
-                        onClick={() => props.updateData(data)}
+                        onClick={() => props.updatedData(data)}
                     >
                         Zapisz
           </Button>
@@ -105,15 +99,8 @@ const ContactTableRow = props => {
 
                     <Table.Cell>
                         {props.item.unit}</Table.Cell>
-                    <Table.Cell>
+                        <Table.Cell>
                         {props.item.reference}</Table.Cell>
-
-                    <Table.Cell>
-                        {props.item.time}</Table.Cell>
-
-
-                    <Table.Cell>
-                        {props.item.th}</Table.Cell>
 
                     <Table.Cell>
                         <FontAwesomeIcon icon={faEdit} size='2x' color="lightgrey"

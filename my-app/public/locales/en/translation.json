@@ -112,4 +112,22 @@
 },
 "Dodaj dokument": {
   "38": "Add file"
+},
+"Wyszukaj pacjenta":{
+"39": "Paitent search"
+},
+"Wyszukaj lek":{
+"40": "Medicine search"
+},
+"Wyszukaj dane":{
+"41": "Data search"
+},
+"Wyszukaj lekarza":{
+"42": "Doctor search"
+},
+"Wyszukaj wynik":{
+"43": "Result search"
+},
+"Wyszukaj dokument":{
+"43": "File search"
 }}

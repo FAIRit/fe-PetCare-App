@@ -47,7 +47,7 @@ const PaginatedTable = props => {
 
     return (<div>
         <Fragment>
-            <input onChange={onInputChange} />
+        <>{t('Wyszukaj wynik.43')}:</><input onChange={onInputChange} />
             <Table unstackable>
                 <Table.Header>
                     <Table.Row>

@@ -17,9 +17,9 @@ const ContactTableRow = props => {
         setData({ ...data, [name]: value });
     };
 
-    return props.editing && props.currentData.id === props.item.id ? (
+    return props.editing && props.currentData.id === props.data.id ? (
         <Fragment>
-            <Table.Row key={props.item.id}>
+            <Table.Row key={props.data.id}>
                 <Table.Cell><div class="ui input">
                     <input
                         type="text"
@@ -84,35 +84,35 @@ const ContactTableRow = props => {
         </Fragment>
     ) : (
             <Fragment>
-                <Table.Row key={props.item.id}>
+                <Table.Row key={props.data.id}>
                     <Table.Cell>
-                        {props.item.name}</Table.Cell>
+                        {props.data.name}</Table.Cell>
 
                     <Table.Cell>
-                        {props.item.species}</Table.Cell>
+                        {props.data.species}</Table.Cell>
 
                     <Table.Cell>
-                        {props.item.breed}</Table.Cell>
+                        {props.data.breed}</Table.Cell>
 
                     <Table.Cell>
-                        {props.item.age}</Table.Cell>
+                        {props.data.age}</Table.Cell>
 
                     <Table.Cell>
-                        {props.item.color}</Table.Cell>
+                        {props.data.color}</Table.Cell>
 
                     <Table.Cell>
-                        {props.item.owner}</Table.Cell>
+                        {props.data.owner}</Table.Cell>
                     <Table.Cell>
-                        {props.item.idnumber}</Table.Cell>
+                        {props.data.idnumber}</Table.Cell>
 
                     <Table.Cell>
                         <FontAwesomeIcon icon={faEdit} size='2x' color="lightgrey"
                             onClick={() => {
-                                props.editRow(props.item);
+                                props.editRow(props.data);
                             }}
                         />
                         <FontAwesomeIcon icon={faTrashAlt} size='2x' color="lightgrey"
-                            onClick={() => props.deleteData(props.item.id)}
+                            onClick={() => props.deleteData(props.data.id)}
                         />
                     </Table.Cell>
                 </Table.Row>
