@@ -4,8 +4,8 @@ import firebase from "../Firebase/firebase"
 import AddData from "./AddData"
 
 const Medicines = () => {
-    const data = [{ id: null, name: "", type: "", dosage: "", other:"", doctor:""}];
-    const initialFormState = { id: null, name: "", type: "", dosage: "", other:"", doctor:"" };
+    const data = [{ }];
+    const initialFormState = { };
 
     const [datas, setDatas] = useState(data);
     const [currentData, setCurrentData] = useState(initialFormState);

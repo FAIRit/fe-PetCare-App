@@ -5,8 +5,8 @@ import AddData from "./AddData"
 import FileUploader from "../Firebase/ImageUpload"
 
 const Archive = () => {
-  const data = [{ id: null, surname: "", firstname: "" }];
-  const initialFormState = { id: null, surname: "", firstname: "" };
+  const data = [{  }];
+  const initialFormState = { };
 
   const [datas, setDatas] = useState(data);
   const [currentData, setCurrentData] = useState(initialFormState);
