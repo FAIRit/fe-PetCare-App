@@ -3,6 +3,7 @@ import { Table,Button } from 'semantic-ui-react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTrashAlt } from '@fortawesome/free-solid-svg-icons'
 import { faEdit } from '@fortawesome/free-solid-svg-icons'
+import {  Header, Icon, Modal } from 'semantic-ui-react'
 
 
 const ContactTableRow = props => {
@@ -76,9 +77,26 @@ const ContactTableRow = props => {
                 props.editRow(props.item);
               }}
             />
-            <FontAwesomeIcon icon={faTrashAlt} size='2x' color="lightgrey"
-              onClick={() => props.deleteData(props.item.id)}
-            />
+            <Modal trigger={<Button> <FontAwesomeIcon icon={faTrashAlt} size='2x' color="lightgrey"/>
+             </Button>} closeIcon>
+    <Header icon='archive' content='Archive Old Messages' />
+    <Modal.Content>
+      <p>
+        Your inbox is getting full, would you like us to enable automatic
+        archiving of old messages?
+      </p>
+    </Modal.Content>
+    <Modal.Actions>
+      <Button color='red'>
+        <Icon name='remove' /> No
+      </Button>
+      <Button onClick={() =>  props.deleteData(props.item.id)} color='green' >
+        <Icon name='checkmark' /> Yes
+      </Button>
+    </Modal.Actions>
+  </Modal>
+           
+
           </Table.Cell>
         </Table.Row>
       </Fragment>

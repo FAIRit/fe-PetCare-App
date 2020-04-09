@@ -73,7 +73,8 @@ const ContactTableRow = props => {
                         onClick={() => props.updateData(data)}>Zapisz
           </Button><Button basic color='red'
                         onClick={() => props.setEditing(false)} >
-                        Zrezygnuj</Button></Table.Cell>
+                        Zrezygnuj</Button>
+</Table.Cell>
             </Table.Row>
         </Fragment>
     ) : (
