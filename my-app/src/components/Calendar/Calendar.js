@@ -9,6 +9,8 @@ import "./main.scss";
 import "@fullcalendar/core/main.css";
 import "@fullcalendar/daygrid/main.css";
 import "@fullcalendar/timegrid/main.css";
+import { useTranslation } from 'react-i18next';
+import i18next from 'i18next';
 
 export default class DemoApp extends React.Component {
   calendarComponentRef = React.createRef();
@@ -21,11 +23,13 @@ export default class DemoApp extends React.Component {
   };
 
   render() {
+
+
     return (
       <div className="demo-app">
         <div className="demo-app-top">
-          <button className ='btnCalendar' onClick={this.toggleWeekends}>toggle weekends</button>&nbsp;
-          <button className ='btnCalendar' onClick={this.gotoPast}>go to a date in the past</button>
+          <button className='btnCalendar' onClick={this.toggleWeekends}> Przełącz na widok tygodnia</button>&nbsp;
+          <button className='btnCalendar' onClick={this.gotoPast}> Cofnij się do poprzedniej daty</button>
           &nbsp;
         </div>
         <div className="demo-app-calendar">
@@ -55,7 +59,7 @@ export default class DemoApp extends React.Component {
 
   gotoPast = () => {
     let calendarApi = this.calendarComponentRef.current.getApi();
-    calendarApi.gotoDate("2000-01-01");
+    calendarApi.gotoDate("2020-01-01");
   };
 
   handleDateClick = arg => {

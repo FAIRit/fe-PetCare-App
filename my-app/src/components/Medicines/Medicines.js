@@ -4,8 +4,8 @@ import firebase from "../Firebase/firebase"
 import AddData from "./AddData"
 
 const Medicines = () => {
-    const data = [{ }];
-    const initialFormState = { };
+    const data = [{}];
+    const initialFormState = {};
 
     const [datas, setDatas] = useState(data);
     const [currentData, setCurrentData] = useState(initialFormState);
@@ -34,12 +34,12 @@ const Medicines = () => {
     const editRow = data => {
         setEditing(true);
         setCurrentData({
-            id:data.id,
-          name: data.name,
-          type: data.type,
-          dosage: data.dosage,
-          other: data.other,
-          doctor: data.doctor,
+            id: data.id,
+            name: data.name,
+            type: data.type,
+            dosage: data.dosage,
+            other: data.other,
+            doctor: data.doctor,
 
         });
     };

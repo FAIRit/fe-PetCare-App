@@ -34,13 +34,13 @@ const Results = () => {
     const editRow = data => {
         setEditing(true);
         setCurrentData({
-          id: data.id,
-          date: data.date,
-          name: data.name,
-          type: data.type,
-          result: data.result,
-          unit: data.unit,
-          reference: data.reference,
+            id: data.id,
+            date: data.date,
+            name: data.name,
+            type: data.type,
+            result: data.result,
+            unit: data.unit,
+            reference: data.reference,
 
         });
     };

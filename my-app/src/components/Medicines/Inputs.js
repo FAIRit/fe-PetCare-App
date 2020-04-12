@@ -68,13 +68,13 @@ const ContactTableRow = props => {
                         /></div>
                 </Table.Cell>
                 <Table.Cell>
-                   
+
                     <Button basic color='green'
                         onClick={() => props.updatedData(data)}
                     >
                         Zapisz
           </Button>
-          <Button basic color='red'
+                    <Button basic color='red'
                         onClick={() => props.setEditing(false)}
                     >
                         Zrezygnuj
@@ -96,7 +96,7 @@ const ContactTableRow = props => {
 
                     <Table.Cell>
                         {props.item.doctor}</Table.Cell>
-                   
+
 
                     <Table.Cell>
                         {props.item.time}</Table.Cell>

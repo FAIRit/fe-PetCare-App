@@ -141,5 +141,9 @@
     "46": "Tak"
   }, "Nie":{
     "47": "No"
-    }
+    },"Przełącz na widok tygodnia":{
+      "48": "Przełącz na widok tygodnia"
+      },"Cofnij się do poprzedniej daty":{
+        "49": "Cofnij się do poprzedniej daty"
+        }
 }

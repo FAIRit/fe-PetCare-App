@@ -48,7 +48,7 @@ const AddData = () => {
   const { t } = useTranslation();
   function handleClick(lang) {
     i18next.changeLanguage(lang)
-}
+  }
   return (
     <div>
 
@@ -82,8 +82,8 @@ const AddData = () => {
 
 
 
-                <button onSubmit={onsubmit}>{t('Zapisz.33')}</button></form>   
-                         </div>
+                <button onSubmit={onsubmit}>{t('Zapisz.33')}</button></form>
+            </div>
           </Modal.Description>
         </Modal.Content>
       </Modal>

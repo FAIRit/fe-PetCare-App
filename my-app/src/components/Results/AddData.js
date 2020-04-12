@@ -46,7 +46,7 @@ const AddData = () => {
 
   function handleClick(lang) {
     i18next.changeLanguage(lang)
-}
+  }
   return (
     <div>
 
@@ -57,20 +57,20 @@ const AddData = () => {
 
             <div>
               <form className="doctors" onSubmit={onsubmit}><div>
-                
+
                 <p>{t('Data.25')}:</p>
                 <div><input value={date} onChange={e => setDate(e.currentTarget.value)}></input></div>
 
                 <p>{t('Nazwa.18')}:</p>
                 <input value={name} onChange={e => setName(e.currentTarget.value)}></input></div>
-                <div>      
-                  
+                <div>
+
                   <p>{t('Rodzaj.19')}:</p>
                   <input value={type} onChange={e => setType(e.currentTarget.value)}></input></div>
 
                 <p>{t('Wynik.26')}:</p>
                 <div><input value={result} onChange={e => setResult(e.currentTarget.value)}></input></div>
-                
+
                 <p>{t('Jednostka.27')}:</p>
                 <div><input value={unit} onChange={e => setUnit(e.currentTarget.value)}></input></div>
 
@@ -81,8 +81,8 @@ const AddData = () => {
                 <div><input value={other} onChange={e => setOther(e.currentTarget.value)}></input></div>
 
 
-                <button onSubmit={onsubmit}>{t('Zapisz.33')}</button></form> 
-                           </div>
+                <button onSubmit={onsubmit}>{t('Zapisz.33')}</button></form>
+            </div>
           </Modal.Description>
         </Modal.Content>
       </Modal>

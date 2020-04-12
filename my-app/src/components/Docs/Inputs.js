@@ -67,10 +67,10 @@ const ContactTableRow = props => {
                 props.editRow(props.item);
               }}
             />
-             <FontAwesomeIcon icon={faTrashAlt} size='2x' color="lightgrey"
+            <FontAwesomeIcon icon={faTrashAlt} size='2x' color="lightgrey"
               onClick={() => props.deleteData(props.item.id)}
             />
-           
+
           </Table.Cell>
         </Table.Row>
       </Fragment>

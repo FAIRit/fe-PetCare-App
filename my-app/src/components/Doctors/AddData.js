@@ -39,7 +39,7 @@ const AddData = () => {
 
   function handleClick(lang) {
     i18next.changeLanguage(lang)
-    }
+  }
   return (
     <Modal trigger={<Button>{t('Dodaj lekarza.32')}</Button>}>
       <Modal.Content>
@@ -65,7 +65,7 @@ const AddData = () => {
     </Modal>
 
 
-   
+
   );
 }
 

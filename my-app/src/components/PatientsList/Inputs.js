@@ -68,7 +68,7 @@ const ContactTableRow = props => {
                         /></div>
                 </Table.Cell>
                 <Table.Cell>
-                <Button basic color='green'
+                    <Button basic color='green'
                         onClick={() => props.updatedData(data)}
                     >
                         Zapisz
@@ -78,7 +78,7 @@ const ContactTableRow = props => {
                     >
                         Zrezygnuj
           </Button>
-                   
+
                 </Table.Cell>
             </Table.Row>
         </Fragment>

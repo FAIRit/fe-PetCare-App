@@ -9,7 +9,7 @@ const availableLanguages = ['pl', 'en'];
 
 
 const options = {
-  order: [ 'navigator', 'htmlTag', 'path', 'subdomain'],
+  order: ['navigator', 'htmlTag', 'path', 'subdomain'],
 
   lookupQuerystring: 'lng',
   lookupCookie: 'i18next',
@@ -29,14 +29,14 @@ const options = {
 }
 
 i18n
-  .use(Backend) 
+  .use(Backend)
 
-  .use(LanguageDetector) 
+  .use(LanguageDetector)
 
-  .use(initReactI18next) 
+  .use(initReactI18next)
 
   .init({
-    fallbackLng, 
+    fallbackLng,
     debug: true,
     whitelist: availableLanguages,
     detection: options,

@@ -1,5 +1,5 @@
 import React, { useState, useEffect, Fragment } from "react";
-import { Table, Button} from 'semantic-ui-react'
+import { Table, Button } from 'semantic-ui-react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTrashAlt } from '@fortawesome/free-solid-svg-icons'
 import { faEdit } from '@fortawesome/free-solid-svg-icons'
@@ -64,11 +64,11 @@ const ContactTableRow = props => {
                             name="reference"
                             value={data.reference}
                             onChange={handleInputChange}
-                        /></div>                                         
-                    
+                        /></div>
+
                 </Table.Cell>
                 <Table.Cell>
-                <Button basic color='green'
+                    <Button basic color='green'
                         onClick={() => props.updatedData(data)}
                     >
                         Zapisz
@@ -78,7 +78,7 @@ const ContactTableRow = props => {
                     >
                         Zrezygnuj
           </Button>
-                  
+
                 </Table.Cell>
             </Table.Row>
         </Fragment>
@@ -99,7 +99,7 @@ const ContactTableRow = props => {
 
                     <Table.Cell>
                         {props.item.unit}</Table.Cell>
-                        <Table.Cell>
+                    <Table.Cell>
                         {props.item.reference}</Table.Cell>
 
                     <Table.Cell>

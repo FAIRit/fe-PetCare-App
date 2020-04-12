@@ -24,19 +24,19 @@ class Login extends Component {
 
   login(e) {
     e.preventDefault();
-    fire.auth().signInWithEmailAndPassword(this.state.email, this.state.password).then((u)=>{
+    fire.auth().signInWithEmailAndPassword(this.state.email, this.state.password).then((u) => {
     }).catch((error) => {
-        alert("Błędne hasło lub nazwa użytkownika");
-      });
+      alert("Błędne hasło lub nazwa użytkownika");
+    });
   }
 
-  signup(e){
+  signup(e) {
     e.preventDefault();
-    fire.auth().createUserWithEmailAndPassword(this.state.email, this.state.password).then((u)=>{
-    }).then((u)=>{console.log(u)})
-    .catch((error) => {
-      alert("Coś poszło nie tak...");
-    })
+    fire.auth().createUserWithEmailAndPassword(this.state.email, this.state.password).then((u) => {
+    }).then((u) => { console.log(u) })
+      .catch((error) => {
+        alert("Coś poszło nie tak...");
+      })
   }
 
   render() {
@@ -45,16 +45,16 @@ class Login extends Component {
         <form>
           <div >
             <label>Adres e-mail</label>
-            <input  value={this.state.email} onChange={this.handleChange} type="email" name="email" id="exampleInputEmail1" placeholder="admin@admin.pl" />
+            <input value={this.state.email} onChange={this.handleChange} type="email" name="email" id="exampleInputEmail1" placeholder="admin@admin.pl" />
           </div>
           <div className="form-group">
             <label>Hasło</label>
-            <input  value={this.state.password} onChange={this.handleChange} type="password" name="password" placeholder="haslo123" />
+            <input value={this.state.password} onChange={this.handleChange} type="password" name="password" placeholder="haslo123" />
           </div>
-          <Button content='Zaloguj'type="submit" onClick={this.login}/>
-          <Button content='Zarejestruj' onClick={this.signup} style={{marginLeft: '25px'}}/>
-          <Demo/><br/>
-          <p>Tylko zalogowani użytkownicy mogą wprowadzać i edytować dane. <br/>
+          <Button content='Zaloguj' type="submit" onClick={this.login} />
+          <Button content='Zarejestruj' onClick={this.signup} style={{ marginLeft: '25px' }} />
+          <Demo /><br />
+          <p>Tylko zalogowani użytkownicy mogą wprowadzać i edytować dane. <br />
             Załóż konto, aby móc korzystać ze wszystkich funkcjonalności.
           </p>
         </form>

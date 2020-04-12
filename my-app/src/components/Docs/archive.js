@@ -5,8 +5,8 @@ import AddData from "./AddData"
 import FileUploader from "../Firebase/ImageUpload"
 
 const Archive = () => {
-  const data = [{  }];
-  const initialFormState = { };
+  const data = [{}];
+  const initialFormState = {};
 
   const [datas, setDatas] = useState(data);
   const [currentData, setCurrentData] = useState(initialFormState);
@@ -45,18 +45,18 @@ const Archive = () => {
 
   return (<div>
     <div>
-          <Table
-            datas={datas}
-            editRow={editRow}
-            deleteData={deleteData}
-            editing={editing}
-            setEditing={setEditing}
-            currentData={currentData}
-            updatedData={updatedData}
-          />
-        </div>
-        <div className="doctors">
-        <AddData /></div></div>
+      <Table
+        datas={datas}
+        editRow={editRow}
+        deleteData={deleteData}
+        editing={editing}
+        setEditing={setEditing}
+        currentData={currentData}
+        updatedData={updatedData}
+      />
+    </div>
+    <div className="doctors">
+      <AddData /></div></div>
   );
 };
 

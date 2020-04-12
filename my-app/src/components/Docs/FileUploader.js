@@ -1,5 +1,5 @@
 import FileUploader from "react-firebase-file-uploader";
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import firebase from 'firebase';
 
 
@@ -21,40 +21,40 @@ class file extends Component {
   }
 
   handleUploadSuccess = filename => {
-    this.setState ({
+    this.setState({
       image: filename,
       progress: 100
     })
 
     firebase.storage().ref('avatars').child(filename).getDownloadURL()
-    .then(url => this.setState({
-      imageURL: url
-    }))
+      .then(url => this.setState({
+        imageURL: url
+      }))
   }
 
 
 
   render() {
-  return (
-    <div className="App">
+    return (
+      <div className="App">
 
-      <FileUploader  
-      accept="image/*"
-      name='image'
-      storageRef={firebase.storage().ref('avatars')}
-      onUploadStart = {this.handleUploadStart}
-      onUploadSuccess = {this.handleUploadSuccess}
-      />
+        <FileUploader
+          accept="image/*"
+          name='image'
+          storageRef={firebase.storage().ref('avatars')}
+          onUploadStart={this.handleUploadStart}
+          onUploadSuccess={this.handleUploadSuccess}
+        />
 
-<div>
-{this.state.imageURL}  <a href={this.state.imageURL} target="_blank">Link</a>
+        <div>
+          {this.state.imageURL}  <a href={this.state.imageURL} target="_blank">Link</a>
 
-</div>
+        </div>
 
 
 
-    </div>
-  );
-};
-  }
+      </div>
+    );
+  };
+}
 export default file;

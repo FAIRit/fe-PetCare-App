@@ -15,51 +15,51 @@ const AddData = () => {
   const [file, setFile] = useState('');
 
 
-  function onsubmit(e){
-e.preventDefault()
+  function onsubmit(e) {
+    e.preventDefault()
 
-firebase.firestore()
-.collection('docs')
-.add({
-  date,
-  type,
-})
+    firebase.firestore()
+      .collection('docs')
+      .add({
+        date,
+        type,
+      })
 
-.then(()=>{
-  setDate('')
-  setType('')
+      .then(() => {
+        setDate('')
+        setType('')
 
-}
-)
+      }
+      )
   }
   const { t } = useTranslation();
 
   function handleClick(lang) {
     i18next.changeLanguage(lang)
-}
-    return (
-      <Modal trigger={<Button>{t('Dodaj dokument.38')}</Button>}>
+  }
+  return (
+    <Modal trigger={<Button>{t('Dodaj dokument.38')}</Button>}>
       <Modal.Content>
         <Modal.Description>
           <Header>{t('Dodaj dokument.38')}</Header>
-         
-      <div>
-      <form className="doctors" onSubmit={onsubmit}><div>
-      <p>{t('Data.25')}:</p>
-            <input value={date} onChange={e=>setDate(e.currentTarget.value)}></input></div>
-            <div>      <p>{t('Rodzaj.19')}:</p>
 
-                <input value={type} onChange={e=>setType(e.currentTarget.value)}></input></div>
+          <div>
+            <form className="doctors" onSubmit={onsubmit}><div>
+              <p>{t('Data.25')}:</p>
+              <input value={date} onChange={e => setDate(e.currentTarget.value)}></input></div>
+              <div>      <p>{t('Rodzaj.19')}:</p>
 
-                <button onSubmit={onsubmit}>{t('Zapisz.33')}</button></form>
-        </div> <FileUploader></FileUploader>
+                <input value={type} onChange={e => setType(e.currentTarget.value)}></input></div>
+
+              <button onSubmit={onsubmit}>{t('Zapisz.33')}</button></form>
+          </div> <FileUploader></FileUploader>
         </Modal.Description>
       </Modal.Content>
     </Modal>
 
 
 
-    );
-  }
+  );
+}
 
-  export default AddData
+export default AddData

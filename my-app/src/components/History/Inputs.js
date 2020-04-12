@@ -74,7 +74,7 @@ const ContactTableRow = props => {
           </Button><Button basic color='red'
                         onClick={() => props.setEditing(false)} >
                         Zrezygnuj</Button>
-</Table.Cell>
+                </Table.Cell>
             </Table.Row>
         </Fragment>
     ) : (

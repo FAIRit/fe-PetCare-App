@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {Menu } from 'semantic-ui-react'
+import { Menu } from 'semantic-ui-react'
 import { Link } from 'react-router-dom'
 import i18next from 'i18next';
 import Logout from './LoginPanel/Logout'
@@ -22,14 +22,14 @@ export default class MenuSecondary extends Component {
     return (
       <Menu secondary>
 
-      <Menu.Item as={Link} to='./PatientsList'
-      name='Lista Pacjentów'
-      active={activeItem === 'Lista Pacjentów'}
-      onClick={this.handleItemClick}
-    />
+        <Menu.Item as={Link} to='./PatientsList'
+          name='Lista Pacjentów'
+          active={activeItem === 'Lista Pacjentów'}
+          onClick={this.handleItemClick}
+        />
 
         <Menu.Item as={Link} to='./leki'
-          name='Leki' 
+          name='Leki'
           active={activeItem === 'Leki'}
           onClick={this.handleItemClick}
         />
@@ -62,14 +62,14 @@ export default class MenuSecondary extends Component {
           name='Diagramy' as={Link} to='./Diagramy'
           active={activeItem === 'Diagramy'}
           onClick={this.handleItemClick}
-        />  
+        />
         <Menu.Menu position='right'>
-          
-      <div className="language" style ={{width:'100%', padding:'2rem, 0'}}>
-      <button onClick={()=>handleClick('pl')}><Pl/></button>
-      <button onClick={()=>handleClick('en')}><En/></button>
-      </div>     
-      <Logout></Logout> </Menu.Menu>
+
+          <div className="language" style={{ width: '100%', padding: '2rem, 0' }}>
+            <button onClick={() => handleClick('pl')}><Pl /></button>
+            <button onClick={() => handleClick('en')}><En /></button>
+          </div>
+          <Logout></Logout> </Menu.Menu>
       </Menu>
     )
   }

@@ -7,7 +7,7 @@ class FirstModal extends Component {
 
   open = () => this.setState({ open: true })
   close = () => this.setState({ open: false })
-  
+
   closeConfigShow = (closeOnEscape, closeOnDimmerClick) => () => {
     this.setState({ closeOnEscape, closeOnDimmerClick, open: true })
   }
@@ -26,20 +26,20 @@ class FirstModal extends Component {
           <Button primary icon>
             Zaakceptuj <Icon name='right chevron' />
           </Button>
-       }
-        
-        >
-          <Modal.Header>Tryb pacjenta</Modal.Header>
-          <Modal.Content>
-            <p>Poprawnie załadowano dane!</p>
-          </Modal.Content>
-          <Modal.Actions>
-            <Button icon='check' content='Ok' onClick={this.close} />
-          </Modal.Actions>
-        </Modal>
-      )
-    }
+        }
+
+      >
+        <Modal.Header>Tryb pacjenta</Modal.Header>
+        <Modal.Content>
+          <p>Poprawnie załadowano dane!</p>
+        </Modal.Content>
+        <Modal.Actions>
+          <Button icon='check' content='Ok' onClick={this.close} />
+        </Modal.Actions>
+      </Modal>
+    )
   }
+}
 
 const SelectModal = () => (
   <Modal trigger={<Button>Tryb pacjenta</Button>}>

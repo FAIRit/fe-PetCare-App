@@ -142,5 +142,11 @@
   },
   "Nie":{
     "47": "No"
-    }}
+    },"Przełącz na widok tygodnia":{
+      "48": "Toggle weekends"
+      },
+      "Cofnij się do poprzedniej daty":{
+        "49": "Go to the date in the past"
+        }}
+
 

@@ -1,5 +1,5 @@
 import React, { useState, useEffect, Fragment } from "react";
-import { Table,Button } from 'semantic-ui-react'
+import { Table, Button } from 'semantic-ui-react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTrashAlt } from '@fortawesome/free-solid-svg-icons'
 import { faEdit } from '@fortawesome/free-solid-svg-icons'
@@ -20,12 +20,12 @@ const ContactTableRow = props => {
     setData({ ...data, [name]: value });
   };
 
- 
+
   const { t } = useTranslation();
 
   function handleClick(lang) {
     i18next.changeLanguage(lang)
-}
+  }
 
   return props.editing && props.currentData.id === props.item.id ? (
     <Fragment>
@@ -85,22 +85,22 @@ const ContactTableRow = props => {
                 props.editRow(props.item);
               }}
             />
-            <Modal trigger={ <FontAwesomeIcon icon={faTrashAlt} size='2x' color="lightgrey"/>
-             } closeIcon>
-    <Modal.Content>
-      <p>
-      {t('Czy na pewno chcesz usunąć dane?.45')}
-      </p>
-    </Modal.Content>
-    <Modal.Actions>
-      <Button color='red'>
-        <Icon name='remove' /> {t('Nie.47')}
-      </Button>
-      <Button onClick={() =>  props.deleteData(props.item.id)} color='green' >
-        <Icon name='checkmark' /> {t('Tak.46')}
-      </Button>
-    </Modal.Actions>
-  </Modal>
+            <Modal trigger={<FontAwesomeIcon icon={faTrashAlt} size='2x' color="lightgrey" />
+            } closeIcon>
+              <Modal.Content>
+                <p>
+                  {t('Czy na pewno chcesz usunąć dane?.45')}
+                </p>
+              </Modal.Content>
+              <Modal.Actions>
+                <Button color='red'>
+                  <Icon name='remove' /> {t('Nie.47')}
+                </Button>
+                <Button onClick={() => props.deleteData(props.item.id)} color='green' >
+                  <Icon name='checkmark' /> {t('Tak.46')}
+                </Button>
+              </Modal.Actions>
+            </Modal>
           </Table.Cell>
         </Table.Row>
       </Fragment>

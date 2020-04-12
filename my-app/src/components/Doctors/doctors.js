@@ -44,18 +44,18 @@ const Doctors = () => {
 
   return (<div>
     <div>
-          <Table
-            datas={datas}
-            editRow={editRow}
-            deleteData={deleteData}
-            editing={editing}
-            setEditing={setEditing}
-            currentData={currentData}
-            updatedData={updatedData}
-          />
-        </div>
-        <div className="doctors">
-        <AddData /></div></div>
+      <Table
+        datas={datas}
+        editRow={editRow}
+        deleteData={deleteData}
+        editing={editing}
+        setEditing={setEditing}
+        currentData={currentData}
+        updatedData={updatedData}
+      />
+    </div>
+    <div className="doctors">
+      <AddData /></div></div>
   );
 };
 

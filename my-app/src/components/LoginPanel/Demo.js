@@ -18,7 +18,7 @@ class Demo extends React.Component {
 
     return (
       <div>
-        <Button content ="Demo" onClick={() => this.setState({ navigate: true })}>
+        <Button content="Demo" onClick={() => this.setState({ navigate: true })}>
         </Button>
       </div>
     )
