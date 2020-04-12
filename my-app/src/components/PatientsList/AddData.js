@@ -16,6 +16,14 @@ const AddData = () => {
   const [owner, setOwner] = useState('');
   const [idnumber, setIdnumber] = useState('');
 
+  const onChangeName = e => setName(e.currentTarget.value);
+  const onChangeSpecies = e => setSpecies(e.currentTarget.value);
+  const onChangeBreed = e => setBreed(e.currentTarget.value);
+  const onChangeAge = e => setAge(e.currentTarget.value);
+  const onChangeColor = e => setColor(e.currentTarget.value);
+  const onChangeOwner = e => setOwner(e.currentTarget.value);
+  const onChangeID = e => setIdnumber(e.currentTarget.value);
+
 
   function onsubmit(e) {
     e.preventDefault()
@@ -57,25 +65,25 @@ const AddData = () => {
           <div>
             <form className="doctors" onSubmit={onsubmit}><div>
               <p>{t('Imię.2')}:</p>
-              <div><input value={name} onChange={e => setName(e.currentTarget.value)}></input></div>
+              <div><input value={name} onChange={onChangeName}></input></div>
 
               <p>{t('Gatunek.3')}:</p>
-              <input value={species} onChange={e => setSpecies(e.currentTarget.value)}></input></div>
+              <input value={species} onChange={onChangeSpecies}></input></div>
               <div>
                 <p>{t('Rasa.4')}:</p>
-                <input value={breed} onChange={e => setBreed(e.currentTarget.value)}></input></div>
+                <input value={breed} onChange={onChangeBreed}></input></div>
 
               <p>{t('Wiek.5')}:</p>
-              <div><input value={age} onChange={e => setAge(e.currentTarget.value)}></input></div>
+              <div><input value={age} onChange={onChangeAge}></input></div>
 
               <p>{t('Umaszczenie.6')}:</p>
-              <div><input value={color} onChange={e => setColor(e.currentTarget.value)}></input></div>
+              <div><input value={color} onChange={onChangeColor}></input></div>
 
               <p>{t('Opiekun.7')}:</p>
-              <div><input value={owner} onChange={e => setOwner(e.currentTarget.value)}></input></div>
+              <div><input value={owner} onChange={onChangeOwner}></input></div>
 
               <p>{t('Numer identyfikacyjny.8')}:</p>
-              <div><input value={idnumber} onChange={e => setIdnumber(e.currentTarget.value)}></input></div>
+              <div><input value={idnumber} onChange={onChangeID}></input></div>
 
               <button onSubmit={onsubmit}>{t('Zapisz.33')}</button></form></div>
         </Modal.Description>

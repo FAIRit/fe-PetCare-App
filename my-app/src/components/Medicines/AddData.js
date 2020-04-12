@@ -15,7 +15,12 @@ const AddData = () => {
   const [doctor, setDoctor] = useState('');
   const [other, setOther] = useState('');
 
-
+  const onChangeName = e => setName(e.currentTarget.value);
+  const onChangeType = e => setType(e.currentTarget.value);
+  const onChangeDosage = e => setDosage(e.currentTarget.value);
+  const onChangeDoctor = e => setDoctor(e.currentTarget.value);
+  const onChangeDate = e => setDate(e.currentTarget.value);
+  const onChangeOther = e => setOther(e.currentTarget.value);
 
   function onsubmit(e) {
     e.preventDefault()
@@ -60,26 +65,25 @@ const AddData = () => {
             <div>
               <form className="doctors" onSubmit={onsubmit}><div>
                 <p>{t('Nazwa.18')}:</p>
-                <input value={name} onChange={e => setName(e.currentTarget.value)}></input></div>
+                <input value={name} onChange={onChangeName}></input></div>
 
-                <div>      <p>{t('Rodzaj.19')}:</p>
-                  <input value={type} onChange={e => setType(e.currentTarget.value)}></input></div>
+                <div><p>{t('Rodzaj.19')}:</p>
+                  <input value={type} onChange={onChangeType}></input></div>
 
                 <p>{t('Dawkowanie.20')}:</p>
-                <div><input value={dosage} onChange={e => setDosage(e.currentTarget.value)}></input></div>
+                <div><input value={dosage} onChange={onChangeDosage}></input></div>
 
                 <p>{t('Lekarz przepisujący lek.23')}:</p>
 
-                <div><input value={doctor} onChange={e => setDoctor(e.currentTarget.value)}></input></div>
+                <div><input value={doctor} onChange={onChangeDoctor}></input></div>
 
                 <p>{t('Czas kuracji.22')}:</p>
 
-                <div><input value={date} onChange={e => setDate(e.currentTarget.value)}></input></div>
+                <div><input value={date} onChange={onChangeDate}></input></div>
 
                 <p>{t('Uwagi.24')}:</p>
 
-                <div><input value={other} onChange={e => setOther(e.currentTarget.value)}></input></div>
-
+                <div><input value={other} onChange={onChangeOther}></input></div>
 
 
                 <button onSubmit={onsubmit}>{t('Zapisz.33')}</button></form>

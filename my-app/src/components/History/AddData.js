@@ -16,6 +16,13 @@ const AddData = () => {
   const [diagnosis, setDiagnosis] = useState('');
   const [recommendations, setRecommendations] = useState('');
 
+  const onChangeAdmission = e => setAdmissionDate(e.currentTarget.value);
+  const onChangeDischarge = e => setDischargeDate(e.currentTarget.value);
+  const onChangeVet = e => setVet(e.currentTarget.value);
+  const onChangeDoctor = e => setDoctor(e.currentTarget.value);
+  const onChangeCondition = e => setPatientsCondition(e.currentTarget.value);
+  const onChangeDiagnosis = e => setDiagnosis(e.currentTarget.value);
+  const onChangeRecommendations = e => setRecommendations(e.currentTarget.value);
 
 
   function onsubmit(e) {
@@ -60,25 +67,25 @@ const AddData = () => {
             <div>
               <form className="doctors" onSubmit={onsubmit}><div>
                 <p>{t('Data przyjęcia.12')}:</p>
-                <input value={admissionDate} onChange={e => setAdmissionDate(e.currentTarget.value)}></input></div>
+                <input value={admissionDate} onChange={onChangeAdmission}></input></div>
                 <div>      <p>{t('Data wypisu.13')}:</p>
 
-                  <input value={dischargeDate} onChange={e => setDischargeDate(e.currentTarget.value)}></input></div>
+                  <input value={dischargeDate} onChange={onChangeDischarge}></input></div>
 
                 <p>{t('Lecznica.11')}:</p>
-                <div><input value={vet} onChange={e => setVet(e.currentTarget.value)}></input></div>
+                <div><input value={vet} onChange={onChangeVet}></input></div>
 
                 <p>{t('Lekarz.14')}:</p>
-                <div><input value={doctor} onChange={e => setDoctor(e.currentTarget.value)}></input></div>
+                <div><input value={doctor} onChange={onChangeDoctor}></input></div>
 
                 <p>{t('Informacja o stanie pacjenta.15')}:</p>
-                <div><input value={patientsCondition} onChange={e => setPatientsCondition(e.currentTarget.value)}></input></div>
+                <div><input value={patientsCondition} onChange={onChangeCondition}></input></div>
 
                 <p>{t('Diagnoza.16')}:</p>
-                <div><input value={diagnosis} onChange={e => setDiagnosis(e.currentTarget.value)}></input></div>
+                <div><input value={diagnosis} onChange={onChangeDiagnosis}></input></div>
 
                 <p>{t('Zalecenia.17')}:</p>
-                <div><input value={recommendations} onChange={e => setRecommendations(e.currentTarget.value)}></input></div>
+                <div><input value={recommendations} onChange={onChangeRecommendations}></input></div>
 
 
                 <button onSubmit={onsubmit}>{t('Zapisz.33')}</button></form>

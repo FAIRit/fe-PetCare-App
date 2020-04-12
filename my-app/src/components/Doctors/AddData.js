@@ -13,7 +13,9 @@ const AddData = () => {
   const [surname, setSurname] = useState('');
   const [vetClinic, setVetClinic] = useState('');
 
-
+  const onChangeName = e => setFirstname(e.currentTarget.value)
+  const onChangeSurname = e => setSurname(e.currentTarget.value)
+  const onChangeVet = e => setVetClinic(e.currentTarget.value)
 
   function onsubmit(e) {
     e.preventDefault()
@@ -40,6 +42,7 @@ const AddData = () => {
   function handleClick(lang) {
     i18next.changeLanguage(lang)
   }
+
   return (
     <Modal trigger={<Button>{t('Dodaj lekarza.32')}</Button>}>
       <Modal.Content>
@@ -49,14 +52,14 @@ const AddData = () => {
           <div>
             <form className="doctors" onSubmit={onsubmit}><div>
               <p>{t('Imię.2')}:</p>
-              <input value={firstname} onChange={e => setFirstname(e.currentTarget.value)}></input></div>
+              <input value={firstname} onChange={onChangeName}></input></div>
               <div>      <p>{t('Nazwisko.10')}:</p>
 
-                <input value={surname} onChange={e => setSurname(e.currentTarget.value)}></input></div>
+                <input value={surname} onChange={onChangeSurname}></input></div>
               <p>{t('Lecznica.11')}:</p>
 
 
-              <div><input value={vetClinic} onChange={e => setVetClinic(e.currentTarget.value)}></input></div>
+              <div><input value={vetClinic} onChange={onChangeVet}></input></div>
 
               <button onSubmit={onsubmit}>{t('Zapisz.33')}:</button></form>
           </div>
