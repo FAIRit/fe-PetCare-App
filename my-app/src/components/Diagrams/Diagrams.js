@@ -1,18 +1,57 @@
-import React, { useEffect, useState } from "react";
 import {
   LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend,
 } from 'recharts';
-import { getData } from "../../services/data";
+import React, { useState, useEffect, Fragment } from "react";
+import { Table, Tab } from 'semantic-ui-react'
+import firebase from "../Firebase/firebase";
+import { useTranslation } from 'react-i18next';
+import i18next from 'i18next';
 
-const Rechart = () => {
+
+function useData(filter = '') {
   const [data, setData] = useState([]);
+  const [editing, setEditing] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
+  
   useEffect(() => {
-    getData()
-      .then(data => setData(data));
-  }, [])
+      firebase
+          .firestore()
+          .collection("diagrams")
+          .onSnapshot(snapshot => {
+              const newData = snapshot.docs.map(doc => ({
+                  id: doc.id,
+                  ...doc.data()
+              }));
+
+              const normalizedFilter = filter.toLowerCase();
+              const filteredData = newData.filter(item => item.name.toLowerCase().includes(normalizedFilter));
+
+              setData(filteredData);
+              setIsLoading(false);
+          });
+
+      }, [filter]);
+
+
+  return data;
+}
+
+const Rechart = props => {
+  const [filter, setFilter] = useState('');
+
+  const data = useData(filter);
+  const { t } = useTranslation();
+
+  const onInputChange = event => setFilter(event.currentTarget.value);
+
+  function handleClick(lang) {
+      i18next.changeLanguage(lang)
+  }
 
   return (
-    <div>
+<div>
+<>{t('Wyszukaj diagram.')}: </> <input onChange={onInputChange} /> 
+
       <p>Mocznik</p>
       <LineChart
         width={500}

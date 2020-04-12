@@ -3,7 +3,9 @@ import { Table,Button } from 'semantic-ui-react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTrashAlt } from '@fortawesome/free-solid-svg-icons'
 import { faEdit } from '@fortawesome/free-solid-svg-icons'
-import {  Header, Icon, Modal } from 'semantic-ui-react'
+import { Icon, Modal } from 'semantic-ui-react'
+import { useTranslation } from 'react-i18next';
+import i18next from 'i18next';
 
 
 const ContactTableRow = props => {
@@ -17,6 +19,14 @@ const ContactTableRow = props => {
     const { name, value } = event.target;
     setData({ ...data, [name]: value });
   };
+
+  const data = useData(filter);
+  const { t } = useTranslation();
+
+  function handleClick(lang) {
+    i18next.changeLanguage(lang)
+}
+
 
   return props.editing && props.currentData.id === props.item.id ? (
     <Fragment>
@@ -48,13 +58,12 @@ const ContactTableRow = props => {
         <Table.Cell>
           <Button basic color='green'
             onClick={() => props.updatedData(data)}
-          >
-            Zapisz
+          >{t('Zapisz.33')}
           </Button>
           <Button basic color='red'
             onClick={() => props.setEditing(false)}
           >
-            Zrezygnuj
+            {t('Zrezygnuj.44')}
           </Button>
         </Table.Cell>
       </Table.Row>
@@ -77,26 +86,22 @@ const ContactTableRow = props => {
                 props.editRow(props.item);
               }}
             />
-            <Modal trigger={<Button> <FontAwesomeIcon icon={faTrashAlt} size='2x' color="lightgrey"/>
-             </Button>} closeIcon>
-    <Header icon='archive' content='Archive Old Messages' />
+            <Modal trigger={ <FontAwesomeIcon icon={faTrashAlt} size='2x' color="lightgrey"/>
+             } closeIcon>
     <Modal.Content>
       <p>
-        Your inbox is getting full, would you like us to enable automatic
-        archiving of old messages?
+      {t('Czy na pewno chcesz usunąć dane?.45')}
       </p>
     </Modal.Content>
     <Modal.Actions>
       <Button color='red'>
-        <Icon name='remove' /> No
+        <Icon name='remove' /> {t('Nie.47')}
       </Button>
       <Button onClick={() =>  props.deleteData(props.item.id)} color='green' >
-        <Icon name='checkmark' /> Yes
+        <Icon name='checkmark' /> {t('Tak.46')}
       </Button>
     </Modal.Actions>
   </Modal>
-           
-
           </Table.Cell>
         </Table.Row>
       </Fragment>

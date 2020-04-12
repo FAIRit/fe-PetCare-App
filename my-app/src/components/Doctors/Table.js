@@ -1,9 +1,10 @@
 import React, { useState, useEffect, Fragment } from "react";
-import { Table, Tab } from 'semantic-ui-react'
+import { Table } from 'semantic-ui-react'
 import firebase from "../Firebase/firebase";
 import { useTranslation } from 'react-i18next';
 import i18next from 'i18next';
 import Input from "./Inputs";
+
 
 
 function useData(filter = '') {
@@ -22,7 +23,7 @@ function useData(filter = '') {
               }));
 
               const normalizedFilter = filter.toLowerCase();
-              const filteredData = newData.filter(item => item.firstname.toLowerCase().includes(normalizedFilter));
+              const filteredData = newData.filter(item => item.surname.toLowerCase().includes(normalizedFilter));
 
               setData(filteredData);
               setIsLoading(false);
@@ -42,14 +43,18 @@ const PaginatedTable = props => {
 
   const onInputChange = event => setFilter(event.currentTarget.value);
 
+  
   function handleClick(lang) {
       i18next.changeLanguage(lang)
   }
-
+  
+  
   return (
     <Fragment> 
 
-<>{t('Wyszukaj lekarza.42')}: </> <input onChange={onInputChange} /> <Table unstackable>
+<>{t('Wyszukaj lekarza.42')}: </> <input onChange={onInputChange} placeholder="surname"/>  
+
+ <Table unstackable>
           <Table.Header>
             <Table.Row>
             <Table.HeaderCell>{t('Imię.2')}</Table.HeaderCell>

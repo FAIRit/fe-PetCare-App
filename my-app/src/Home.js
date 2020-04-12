@@ -19,7 +19,6 @@ import i18next from 'i18next';
 
 const Home = () => {
 
-
   return (
     <Router>
       <Menu />
