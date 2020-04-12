@@ -11,10 +11,10 @@ import Doctors from './components/Doctors/doctors'
 import History from './components/History/History'
 import Diagrams from './components/Diagrams/Diagrams'
 import Results from './components/Results/Results'
-import ListaPacjentow from '././components/ListaPacjetow/ListaPacjentow'
 import Archive from './components/Docs/archive'
 import { useTranslation } from 'react-i18next';
 import i18next from 'i18next';
+import PatientsList from './components/PatientsList/PatientsList'
 
 
 const Home = () => {
@@ -41,8 +41,8 @@ const Home = () => {
         <Route path="/Diagramy">
           <Diagrams />
         </Route>
-        <Route path="/lista-pacjentow">
-          <ListaPacjentow />
+        <Route path="/PatientsList">
+          <PatientsList />
         </Route>
         <Route path="/archiwum">
         <Archive/>

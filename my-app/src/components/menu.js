@@ -22,7 +22,7 @@ export default class MenuSecondary extends Component {
     return (
       <Menu secondary>
 
-      <Menu.Item as={Link} to='./lista-pacjentow'
+      <Menu.Item as={Link} to='./PatientsList'
       name='Lista Pacjentów'
       active={activeItem === 'Lista Pacjentów'}
       onClick={this.handleItemClick}
