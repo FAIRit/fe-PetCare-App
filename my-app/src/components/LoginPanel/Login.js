@@ -26,7 +26,7 @@ class Login extends Component {
     e.preventDefault();
     fire.auth().signInWithEmailAndPassword(this.state.email, this.state.password).then((u)=>{
     }).catch((error) => {
-        console.log(error);
+        alert("Błędne hasło lub nazwa użytkownika");
       });
   }
 
