@@ -4,7 +4,7 @@ import firebase from 'firebase';
 
 
 
-class file extends Component {
+class FileUploader extends Component {
 
   state = {
     image: '',
@@ -57,4 +57,4 @@ class file extends Component {
     );
   };
 }
-export default file;
+export default FileUploader;
