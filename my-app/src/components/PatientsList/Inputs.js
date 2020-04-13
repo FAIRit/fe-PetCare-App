@@ -1,8 +1,10 @@
 import React, { useState, useEffect, Fragment } from "react";
-import { Table, Button } from 'semantic-ui-react'
+import { Table, Button, Modal, Icon } from 'semantic-ui-react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTrashAlt } from '@fortawesome/free-solid-svg-icons'
 import { faEdit } from '@fortawesome/free-solid-svg-icons'
+import { useTranslation } from 'react-i18next';
+import i18next from 'i18next';
 
 
 const ContactTableRow = props => {
@@ -16,6 +18,12 @@ const ContactTableRow = props => {
         const { name, value } = event.target;
         setData({ ...data, [name]: value });
     };
+
+    const { t } = useTranslation();
+    function handleClick(lang) {
+        i18next.changeLanguage(lang)
+    }
+
 
     return props.editing && props.currentData.id === props.data.id ? (
         <Fragment>
@@ -69,13 +77,11 @@ const ContactTableRow = props => {
                 </Table.Cell>
                 <Table.Cell>
                     <Button basic color='green'
-                        onClick={() => props.updatedData(data)}
-                    >
+                        onClick={() => props.updatedData(data)} >
                         Zapisz
-          </Button>
+            </Button>
                     <Button basic color='red'
-                        onClick={() => props.setEditing(false)}
-                    >
+                        onClick={() => props.setEditing(false)}>
                         Zrezygnuj
           </Button>
 
@@ -106,18 +112,27 @@ const ContactTableRow = props => {
                         {props.data.idnumber}</Table.Cell>
 
                     <Table.Cell>
-                        <FontAwesomeIcon icon={faEdit} size='2x' color="lightgrey"
-                            onClick={() => {
-                                props.editRow(props.data);
-                            }}
-                        />
-                        <FontAwesomeIcon icon={faTrashAlt} size='2x' color="lightgrey"
-                            onClick={() => props.deleteData(props.data.id)}
-                        />
-                    </Table.Cell>
-                </Table.Row>
-            </Fragment>
-        );
+                    <FontAwesomeIcon icon={faEdit} size='2x' color="lightgrey"
+              onClick={() => {
+                props.editRow(props.data);
+              }}
+            />
+            <Modal trigger={<FontAwesomeIcon icon={faTrashAlt} size='2x' color="lightgrey" />
+            } closeIcon>
+              <Modal.Content>
+                <p>
+                  {t('Czy na pewno chcesz usunąć dane?.45')}
+                </p>
+              </Modal.Content>
+              <Modal.Actions>
+                <Button onClick={() => props.deleteData(props.data.id)} color='green' >
+                  <Icon name='checkmark' /> {t('Tak.46')}
+                </Button>
+              </Modal.Actions>
+            </Modal>
+          </Table.Cell>
+        </Table.Row>
+      </Fragment>
+    );
 };
-
 export default ContactTableRow;

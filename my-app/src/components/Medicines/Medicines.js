@@ -26,7 +26,6 @@ const Medicines = () => {
         firebase
             .firestore()
             .collection("medicines")
-            .limit(10)
             .doc(updatedRow.id)
             .set(updatedRow);
     };
@@ -40,7 +39,7 @@ const Medicines = () => {
             dosage: data.dosage,
             other: data.other,
             doctor: data.doctor,
-
+            created:data.created
         });
     };
 

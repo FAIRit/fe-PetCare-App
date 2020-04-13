@@ -30,7 +30,6 @@ const AddData = () => {
       .then(() => {
         setDate('')
         setType('')
-
       }
       )
   }

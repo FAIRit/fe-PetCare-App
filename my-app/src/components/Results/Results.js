@@ -3,14 +3,14 @@ import Table from "./Table";
 import firebase from "../Firebase/firebase"
 import AddData from "./AddData"
 
-const Results = () => {
+
+const History = () => {
     const data = [{}];
-    const initialFormState = {};
+    const initialFormState = { };
 
     const [datas, setDatas] = useState(data);
     const [currentData, setCurrentData] = useState(initialFormState);
     const [editing, setEditing] = useState(false);
-
 
 
     const deleteData = id => {
@@ -26,7 +26,7 @@ const Results = () => {
         setEditing(false);
         firebase
             .firestore()
-            .collection("medicines")
+            .collection("results")
             .doc(updatedRow.id)
             .set(updatedRow);
     };
@@ -35,12 +35,12 @@ const Results = () => {
         setEditing(true);
         setCurrentData({
             id: data.id,
-            date: data.date,
             name: data.name,
             type: data.type,
             result: data.result,
             unit: data.unit,
             reference: data.reference,
+            created: data.created
 
         });
     };
@@ -62,5 +62,4 @@ const Results = () => {
     );
 };
 
-export default Results;
-
+export default History;

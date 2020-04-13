@@ -4,7 +4,6 @@ import firebase from "../Firebase/firebase";
 import { useTranslation } from 'react-i18next';
 import i18next from 'i18next';
 import Input from "./Inputs";
-import { LINKS_PER_PAGE } from "../a/PerPage";
 
 
 
@@ -83,7 +82,7 @@ const PaginatedTable = props => {
             ))
           ) : (
               <Table.Row>
-                <Table.Cell>{t('Brak danych.34')}</Table.Cell>
+                <Table.Cell>{t('Brak danych.50')}</Table.Cell>
               </Table.Row>
             )}
         </Table.Body>

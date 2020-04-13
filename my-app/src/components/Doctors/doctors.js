@@ -25,22 +25,24 @@ const Doctors = () => {
   const updatedData = updatedRow => {
     setEditing(false);
     firebase
-      .firestore()
-      .collection("doctors")
-      .doc(updatedRow.id)
-      .set(updatedRow);
-  };
+        .firestore()
+        .collection("doctors")
+        .doc(updatedRow.id)
+        .set(updatedRow);
+};
 
-  const editRow = data => {
+const editRow = data => {
     setEditing(true);
     setCurrentData({
-      id: data.id,
-      surname: data.surname,
-      firstname: data.firstname,
-      vetClinic: data.vetClinic
+        id: data.id,
+        firstname: data.firstname,
+        surname: data.surname,
+        vetClinic: data.vetClinic,
+        created:data.created
+
 
     });
-  };
+};
 
   return (<div>
     <div>

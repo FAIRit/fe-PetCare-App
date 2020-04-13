@@ -55,14 +55,15 @@ const ContactTableRow = props => {
           /></div>
         </Table.Cell>
         <Table.Cell>
-          <Button basic color='green'
-            onClick={() => props.updatedData(data)}
-          >{t('Zapisz.33')}
+        <Button basic color='green'
+                        onClick={() => props.updatedData(data)}
+                    >
+                        Zapisz
           </Button>
-          <Button basic color='red'
-            onClick={() => props.setEditing(false)}
-          >
-            {t('Zrezygnuj.44')}
+                    <Button basic color='red'
+                        onClick={() => props.setEditing(false)}
+                    >
+                        Zrezygnuj
           </Button>
         </Table.Cell>
       </Table.Row>
@@ -93,10 +94,7 @@ const ContactTableRow = props => {
                 </p>
               </Modal.Content>
               <Modal.Actions>
-                <Button color='red'>
-                  <Icon name='remove' /> {t('Nie.47')}
-                </Button>
-                <Button onClick={() => props.deleteData(props.item.id)} color='green' >
+                              <Button onClick={() => props.deleteData(props.item.id)} color='green' >
                   <Icon name='checkmark' /> {t('Tak.46')}
                 </Button>
               </Modal.Actions>

@@ -139,11 +139,17 @@
   },
   "Tak": {
     "46": "Tak"
-  }, "Nie":{
+  },
+  "Nie": {
     "47": "No"
-    },"Przełącz na widok tygodnia":{
-      "48": "Przełącz na widok tygodnia"
-      },"Cofnij się do poprzedniej daty":{
-        "49": "Cofnij się do poprzedniej daty"
-        }
+  },
+  "Przełącz na widok tygodnia": {
+    "48": "Przełącz na widok tygodnia"
+  },
+  "Cofnij się do poprzedniej daty": {
+    "49": "Cofnij się do poprzedniej daty"
+  },
+  "Brak danych": {
+    "50": "Brak danych"
+  }
 }

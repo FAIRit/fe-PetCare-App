@@ -15,7 +15,7 @@ function useData(filter = '') {
     firebase
       .firestore()
       .collection("history")
-      .orderBy("id","asc")
+      .orderBy("created","asc")
       .startAfter(0)
       .onSnapshot(snapshot => {
         const newData = snapshot.docs.map(doc => ({
@@ -81,7 +81,7 @@ const PaginatedTable = props => {
           ) : (
 
               <Table.Row>
-                <Table.Cell>{t('Brak danych.34')}</Table.Cell>
+                <Table.Cell>{t('Brak danych.50')}</Table.Cell>
               </Table.Row>
             )}
         </Table.Body>

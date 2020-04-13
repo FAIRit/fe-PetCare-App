@@ -3,14 +3,14 @@ import Table from "./Table";
 import firebase from "../Firebase/firebase"
 import AddData from "./AddData"
 
+
 const History = () => {
-    const data = [{ id: null, admissionDate: "", type: "", vetClinic: "" }];
-    const initialFormState = { id: null, admissionDate: "", type: "", vetClinic: "" };
+    const data = [{}];
+    const initialFormState = { };
 
     const [datas, setDatas] = useState(data);
     const [currentData, setCurrentData] = useState(initialFormState);
     const [editing, setEditing] = useState(false);
-
 
 
     const deleteData = id => {
@@ -22,13 +22,13 @@ const History = () => {
             .delete();
     };
 
-    const updatedData = updatedData => {
+    const updatedData = updatedRow => {
         setEditing(false);
         firebase
             .firestore()
             .collection("history")
-            .doc(updatedData.id)
-            .set(updatedData);
+            .doc(updatedRow.id)
+            .set(updatedRow);
     };
 
     const editRow = data => {
@@ -42,9 +42,7 @@ const History = () => {
             patientsCondition: data.patientsCondition,
             diagnosis: data.diagnosis,
             recommendations: data.recommendations,
-
-
-
+            created: data.created
 
         });
     };

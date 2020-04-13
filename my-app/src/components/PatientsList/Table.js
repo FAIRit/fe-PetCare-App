@@ -7,11 +7,12 @@ import i18next from 'i18next';
 import Input from "./Inputs";
 
 
-
 function useData(filter = '') {
   const [data, setData] = useState([]);
   const [editing, setEditing] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
+
+
   useEffect(() => {
     firebase
       .firestore()
@@ -34,9 +35,6 @@ function useData(filter = '') {
 
 
   }, [filter]);
-
-
-
 
 
   return data;
@@ -71,7 +69,7 @@ const PaginatedTable = props => {
           </Table.Row>
         </Table.Header>
         <Table.Body>
-          {data.length > 0 ? (
+        {data.length > 0 ? (
             data.map(data => (
               <Input
                 key={data.id}
@@ -88,7 +86,7 @@ const PaginatedTable = props => {
           ) : (
 
               <Table.Row>
-                <Table.Cell>{t('Brak danych.34')}</Table.Cell>
+                <Table.Cell>{t('Brak danych.50')}</Table.Cell>
               </Table.Row>
             )}
         </Table.Body>

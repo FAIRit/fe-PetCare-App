@@ -15,8 +15,6 @@ function useData(filter = '') {
         firebase
             .firestore()
             .collection("results")
-            .orderBy('created', 'asc')
-            .startAfter(0)
             .onSnapshot(snapshot => {
                 const newData = snapshot.docs.map(doc => ({
                     id: doc.id,
@@ -24,7 +22,7 @@ function useData(filter = '') {
                 }));
 
                 const normalizedFilter = filter.toLowerCase();
-                const filteredData = newData.filter(item => item.name.toLowerCase().includes(normalizedFilter));
+                const filteredData = newData.filter(data => data.name.toLowerCase().includes(normalizedFilter));
 
                 setData(filteredData);
                 setIsLoading(false);
@@ -66,21 +64,21 @@ const PaginatedTable = props => {
             {data.length > 0 ? (
               data.map(item => (
                 <Input
-                  key={item.id}
-                  item={item}
-                  datas={props.datas}
-                  editRow={props.editRow}
-                  deleteData={props.deleteData}
-                  editing={props.editing}
-                  setEditing={props.setEditing}
-                  currentData={props.currentData}
-                  updatedData={props.updatedData}
+                key={item.id}
+                item={item}
+                datas={props.datas}
+                editRow={props.editRow}
+                deleteData={props.deleteData}
+                editing={props.editing}
+                setEditing={props.setEditing}
+                currentData={props.currentData}
+                updatedData={props.updatedData}
                 />
               ))
             ) : (
 
                 <Table.Row>
-                  <Table.Cell>{t('Brak danych.34')}</Table.Cell>
+                  <Table.Cell>{t('Brak danych.50')}</Table.Cell>
                 </Table.Row>
             )}
           </Table.Body>

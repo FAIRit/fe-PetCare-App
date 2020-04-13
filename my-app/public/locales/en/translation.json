@@ -100,53 +100,56 @@
   },
   "Dodaj historię": {
     "34": "Add history"
-},
-"Dodaj pacjenta": {
-  "35": "Add patient"
-},
-"Dodaj lek": {
-  "36": "Add medicine"
-},
-"Dodaj wynik": {
-  "37": "Add result"
-},
-"Dodaj dokument": {
-  "38": "Add file"
-},
-"Wyszukaj pacjenta":{
-"39": "Paitent search"
-},
-"Wyszukaj lek":{
-"40": "Medicine search"
-},
-"Wyszukaj dane":{
-"41": "Data search"
-},
-"Wyszukaj lekarza":{
-"42": "Doctor search"
-},
-"Wyszukaj wynik":{
-"43": "Result search"
-},
-"Wyszukaj dokument":{
-"43": "File search"
-},
-"Zrezygnuj":{
-"44": "Cancel"
-},
-"Czy na pewno chcesz usunąć dane?":{
-"45": "Are you sure?"
-},
-"Tak":{
-  "46": "Yes"
   },
-  "Nie":{
+  "Dodaj pacjenta": {
+    "35": "Add patient"
+  },
+  "Dodaj lek": {
+    "36": "Add medicine"
+  },
+  "Dodaj wynik": {
+    "37": "Add result"
+  },
+  "Dodaj dokument": {
+    "38": "Add file"
+  },
+  "Wyszukaj pacjenta": {
+    "39": "Patient search"
+  },
+  "Wyszukaj lek": {
+    "40": "Medicine search"
+  },
+  "Wyszukaj dane": {
+    "41": "Data search"
+  },
+  "Wyszukaj lekarza": {
+    "42": "Doctor search"
+  },
+  "Wyszukaj wynik": {
+    "43": "Result search"
+  },
+  "Wyszukaj dokument": {
+    "43": "File search"
+  },
+  "Zrezygnuj": {
+    "44": "Cancel"
+  },
+  "Czy na pewno chcesz usunąć dane?": {
+    "45": "Are you sure?"
+  },
+  "Tak": {
+    "46": "Yes"
+  },
+  "Nie": {
     "47": "No"
-    },"Przełącz na widok tygodnia":{
-      "48": "Toggle weekends"
-      },
-      "Cofnij się do poprzedniej daty":{
-        "49": "Go to the date in the past"
-        }}
-
-
+  },
+  "Przełącz na widok tygodnia": {
+    "48": "Toggle weekends"
+  },
+  "Cofnij się do poprzedniej daty": {
+    "49": "Go to the date in the past"
+  },
+  "Brak danych": {
+    "50": "No data"
+  }
+}
