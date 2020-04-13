@@ -4,6 +4,7 @@ import firebase from "../Firebase/firebase";
 import { useTranslation } from 'react-i18next';
 import i18next from 'i18next';
 import Input from "./Inputs";
+import { LINKS_PER_PAGE } from "../a/PerPage";
 
 
 
@@ -12,10 +13,13 @@ function useData(filter = '') {
   const [editing, setEditing] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
 
+
   useEffect(() => {
     firebase
       .firestore()
       .collection("doctors")
+      .orderBy('created', 'asc')
+      .startAfter(0)
       .onSnapshot(snapshot => {
         const newData = snapshot.docs.map(doc => ({
           id: doc.id,

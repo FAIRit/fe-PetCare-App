@@ -37,7 +37,9 @@ const AddData = () => {
         doctor,
         patientsCondition,
         diagnosis,
-        recommendations
+        recommendations,
+        created: Date.now() 
+
       })
 
       .then(() => {

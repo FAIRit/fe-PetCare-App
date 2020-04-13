@@ -5,17 +5,19 @@ import { useTranslation } from 'react-i18next';
 import i18next from 'i18next';
 import Input from "./Inputs";
 
-
-
 function useData(filter = '') {
   const [data, setData] = useState([]);
   const [editing, setEditing] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
 
+ 
+
   useEffect(() => {
     firebase
       .firestore()
       .collection("medicines")
+      .orderBy('created', 'asc')
+      .startAfter(0)
       .onSnapshot(snapshot => {
         const newData = snapshot.docs.map(doc => ({
           id: doc.id,
@@ -35,6 +37,7 @@ function useData(filter = '') {
   return data;
 }
 
+
 const PaginatedTable = props => {
   const [filter, setFilter] = useState('');
 
@@ -46,6 +49,8 @@ const PaginatedTable = props => {
   function handleClick(lang) {
     i18next.changeLanguage(lang)
   }
+
+  
 
   return (
     <Fragment>

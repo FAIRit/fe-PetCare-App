@@ -37,7 +37,8 @@ const AddData = () => {
         age,
         color,
         owner,
-        idnumber
+        idnumber,
+        created: Date.now() 
 
       })
 

@@ -23,6 +23,8 @@ const AddData = () => {
       .add({
         date,
         type,
+        created: Date.now() 
+
       })
 
       .then(() => {
@@ -54,7 +56,7 @@ const AddData = () => {
                 <input value={type} onChange={onChangeType}></input></div>
 
               <button onSubmit={onsubmit}>{t('Zapisz.33')}</button></form>
-          </div> <FileUploader></FileUploader>
+          </div> <FileUploader ></FileUploader>
         </Modal.Description>
       </Modal.Content>
     </Modal>

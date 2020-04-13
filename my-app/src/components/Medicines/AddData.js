@@ -34,7 +34,9 @@ const AddData = () => {
         date,
         doctor,
         other,
-        description
+        description,
+        created: Date.now() 
+
       })
 
       .then(() => {

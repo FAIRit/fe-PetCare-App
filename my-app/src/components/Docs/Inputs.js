@@ -60,6 +60,7 @@ const ContactTableRow = props => {
           <Table.Cell>
             {props.item.type}</Table.Cell>
 
+
           <Table.Cell>
 
             <FontAwesomeIcon icon={faEdit} size='2x' color="lightgrey"

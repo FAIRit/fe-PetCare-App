@@ -46,8 +46,8 @@ class FilesUploader extends Component {
           onUploadSuccess={this.handleUploadSuccess}
         />
 
-        <div>
-          {this.state.imageURL}  <a href={this.state.imageURL} target="_blank">Link</a>
+        <div addURL>
+         {this.state.imageURL}  <a href={this.state.imageURL} target="_blank">Link</a>
 
         </div>
 

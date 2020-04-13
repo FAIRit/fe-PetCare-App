@@ -16,6 +16,8 @@ function useData(filter = '') {
     firebase
       .firestore()
       .collection("patients")
+      .orderBy('created', 'asc')
+      .startAfter(0)
       .onSnapshot(snapshot => {
         const newData = snapshot.docs.map(doc => ({
           id: doc.id,

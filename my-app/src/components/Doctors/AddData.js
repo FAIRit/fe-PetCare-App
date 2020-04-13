@@ -13,6 +13,7 @@ const AddData = () => {
   const [surname, setSurname] = useState('');
   const [vetClinic, setVetClinic] = useState('');
 
+
   const onChangeName = e => setFirstname(e.currentTarget.value)
   const onChangeSurname = e => setSurname(e.currentTarget.value)
   const onChangeVet = e => setVetClinic(e.currentTarget.value)
@@ -22,10 +23,11 @@ const AddData = () => {
 
     firebase.firestore()
       .collection('doctors')
-      .add({
+      .add({ 
         firstname,
         surname,
-        vetClinic
+        vetClinic,    
+        created: Date.now() 
       })
 
       .then(() => {

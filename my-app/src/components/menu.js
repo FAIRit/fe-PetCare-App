@@ -63,6 +63,7 @@ export default class MenuSecondary extends Component {
           active={activeItem === 'Diagramy'}
           onClick={this.handleItemClick}
         />
+         
         <Menu.Menu position='right'>
 
           <div className="language" style={{ width: '100%', padding: '2rem, 0' }}>

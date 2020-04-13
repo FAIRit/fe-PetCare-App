@@ -14,6 +14,8 @@ function useData(filter = '') {
     firebase
       .firestore()
       .collection("docs")
+      .orderBy('created', 'asc')
+      .startAfter(0)
       .onSnapshot(snapshot => {
         const newData = snapshot.docs.map(doc => ({
           id: doc.id,
@@ -54,6 +56,8 @@ const PaginatedTable = props => {
             <Table.HeaderCell>{t('Data.25')}</Table.HeaderCell>
             <Table.HeaderCell>{t('Rodzaj.19')}</Table.HeaderCell>
             <Table.HeaderCell>{t('Plik.29')}</Table.HeaderCell>
+            <Table.HeaderCell>Dokument</Table.HeaderCell>
+
           </Table.Row>
         </Table.Header>
         <Table.Body>

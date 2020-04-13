@@ -35,7 +35,8 @@ const AddData = () => {
         result,
         unit,
         referenceunit,
-        other
+        other,
+        created: Date.now() 
       })
 
       .then(() => {

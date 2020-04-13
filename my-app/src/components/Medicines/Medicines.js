@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Table from "./Table";
 import firebase from "../Firebase/firebase"
 import AddData from "./AddData"
@@ -10,8 +10,7 @@ const Medicines = () => {
     const [datas, setDatas] = useState(data);
     const [currentData, setCurrentData] = useState(initialFormState);
     const [editing, setEditing] = useState(false);
-
-
+    
 
     const deleteData = id => {
         setEditing(false);
@@ -27,6 +26,7 @@ const Medicines = () => {
         firebase
             .firestore()
             .collection("medicines")
+            .limit(10)
             .doc(updatedRow.id)
             .set(updatedRow);
     };
@@ -57,7 +57,8 @@ const Medicines = () => {
             />
         </div>
         <div className="doctors">
-            <AddData /></div></div>
+            <AddData />  
+    </div></div>
     );
 };
 

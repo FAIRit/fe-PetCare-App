@@ -15,6 +15,8 @@ function useData(filter = '') {
     firebase
       .firestore()
       .collection("history")
+      .orderBy("id","asc")
+      .startAfter(0)
       .onSnapshot(snapshot => {
         const newData = snapshot.docs.map(doc => ({
           id: doc.id,
