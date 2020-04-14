@@ -10,6 +10,7 @@ function useData(filter = '', initialPage = 1) {
   const [editing, setEditing] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
 
+
   useEffect(() => {
     firebase
       .firestore()
@@ -44,14 +45,16 @@ const PaginatedTable = props => {
 
   const onInputChange = event => setFilter(event.currentTarget.value);
 
+   const pageLimit = 10;
 
-  //paginacja
-  const pageLimit = 10;
-
-  const [offset, setOffset] = React.useState(0);
-  const [currentPage, setCurrentPage] = React.useState(1);
- 
-
+   const [offset, setOffset] = React.useState(0);
+   const [currentData, setCurrentData] = useState([]);
+   const [currentPage, setCurrentPage] = React.useState(1);
+  
+   useEffect(() => {
+    setCurrentData(data.slice(offset, offset + pageLimit));
+  }, [offset, data]);
+  
 
 return (
   <Fragment>
@@ -67,10 +70,10 @@ return (
           <Table.HeaderCell>{t('Czas kuracji.22')}</Table.HeaderCell>
           <Table.HeaderCell>{t('Uwagi.24')}</Table.HeaderCell>
         </Table.Row>
-      </Table.Header>
+      </Table.Header> 
       <Table.Body>
         {data.length > 0 ? (
-          data.map(item => (
+          currentData.map(item => (
             <Input
               key={item.id}
               item={item}
@@ -89,7 +92,7 @@ return (
               <Table.Cell>{t('Brak danych.50')}</Table.Cell>
             </Table.Row>
           )}
-      </Table.Body>
+      </Table.Body>      
     </Table>
     <Paginator
         totalRecords={data.length}
