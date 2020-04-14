@@ -12,6 +12,10 @@ function handleClick(lang) {
   i18next.changeLanguage(lang)
 }
 
+const handleClickPL = e => handleClick('pl');
+const handleClickEN = e => handleClick('en')
+
+
 export default class MenuSecondary extends Component {
   state = { activeItem: 'home' }
 
@@ -70,10 +74,9 @@ export default class MenuSecondary extends Component {
               />
 
               <Menu.Menu position='right'>
-
                 <div className="language" style={{ width: '100%', padding: '2rem, 0' }}>
-                  <button onClick={() => handleClick('pl')}><Pl /></button>
-                  <button onClick={() => handleClick('en')}><En /></button>
+                  <button onClick={handleClickPL}><Pl /></button>
+                  <button onClick={handleClickEN}><En /></button>
                 </div>
                 <Logout></Logout> </Menu.Menu>
             </Menu>}

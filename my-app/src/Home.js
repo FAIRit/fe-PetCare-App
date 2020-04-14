@@ -12,8 +12,6 @@ import History from './components/History/History'
 import Diagrams from './components/Diagrams/Diagrams'
 import Results from './components/Results/Results'
 import Archive from './components/Docs/archive'
-import { useTranslation } from 'react-i18next';
-import i18next from 'i18next';
 import PatientsList from './components/PatientsList/PatientsList'
 
 
