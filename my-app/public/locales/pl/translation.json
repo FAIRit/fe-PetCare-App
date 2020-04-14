@@ -1,0 +1,185 @@
+{
+  "Language": {
+    "1": "Polish"
+  },
+  "Imię": {
+    "2": "Imię"
+  },
+  "Gatunek": {
+    "3": "Gatunek"
+  },
+  "Rasa": {
+    "4": "Rasa"
+  },
+  "Wiek": {
+    "5": "Wiek"
+  },
+  "Umaszczenie": {
+    "6": "Umaszczenie"
+  },
+  "Opiekun": {
+    "7": "Opiekun"
+  },
+  "Numer identyfikacyjny": {
+    "8": "Numer identyfikacyjny"
+  },
+  "Zdjęcie": {
+    "9": "Zdjęcie"
+  },
+  "Nazwisko": {
+    "10": "Nazwisko"
+  },
+  "Lecznica": {
+    "11": "Lecznica"
+  },
+  "Data przyjęcia": {
+    "12": "Data przyjęcia"
+  },
+  "Data wypisu": {
+    "13": "Data wypisu"
+  },
+  "Lekarz": {
+    "14": "Lekarz"
+  },
+  "Informacja o stanie pacjenta": {
+    "15": "Informacja o stanie pacjenta"
+  },
+  "Diagnoza": {
+    "16": "Diagnoza"
+  },
+  "Zalecenia": {
+    "17": "Zalecenia"
+  },
+  "Nazwa": {
+    "18": "Name"
+  },
+  "Rodzaj": {
+    "19": "Rodzaj"
+  },
+  "Dawkowanie": {
+    "20": "Dawkowanie"
+  },
+  "Opis": {
+    "21": "Opis"
+  },
+  "Czas kuracji": {
+    "22": "Czas kuracji"
+  },
+  "Lekarz przepisujący lek": {
+    "23": "Lekarz przepisujący lek"
+  },
+  "Uwagi": {
+    "24": "Uwagi"
+  },
+  "Data": {
+    "25": "Data"
+  },
+  "Wynik": {
+    "26": "Wynik"
+  },
+  "Jednostka": {
+    "27": "Jednostka"
+  },
+  "Jednostka referencyjna": {
+    "28": "Jednostka referencyjna"
+  },
+  "Plik": {
+    "29": "Plik"
+  },
+  "Szczegóły": {
+    "30": "Szczegóły"
+  },
+  "Lista pacjentów": {
+    "31": "Lista pacjentów"
+  },
+  "Dodaj lekarza": {
+    "32": "Dodaj lekarza"
+  },
+  "Zapisz": {
+    "33": "Submit"
+  },
+  "Dodaj historię": {
+    "34": "Dodaj historię"
+  },
+  "Dodaj pacjenta": {
+    "35": "Dodaj pacjeta"
+  },
+  "Dodaj lek": {
+    "36": "Dodaj lek"
+  },
+  "Dodaj wynik": {
+    "37": "Dodaj wynik"
+  },
+  "Dodaj dokument": {
+    "38": "Dodaj dokument"
+  },
+  "Wyszukaj pacjenta": {
+    "39": "Wyszukaj pacjenta"
+  },
+  "Wyszukaj lek": {
+    "40": "Wyszukaj lek"
+  },
+  "Wyszukaj dane": {
+    "41": "Wyszukaj dane"
+  },
+  "Wyszukaj lekarza": {
+    "42": "Wyszukaj lekarza"
+  },
+  "Wyszukaj wynik": {
+    "43": "Wyszukaj wynik"
+  },
+  "Wyszukaj dokument": {
+    "44": "Wyszukaj dokument"
+  },
+  "Zrezygnuj": {
+    "44": "Zrezygnuj"
+  },
+  "Czy na pewno chcesz usunąć dane?": {
+    "45": "Czy na pewno chcesz usunąć dane?"
+  },
+  "Tak": {
+    "46": "Tak"
+  },
+  "Nie": {
+    "47": "No"
+  },
+  "Przełącz na widok tygodnia": {
+    "48": "Przełącz na widok tygodnia"
+  },
+  "Cofnij się do poprzedniej daty": {
+    "49": "Cofnij się do poprzedniej daty"
+  },
+  "Brak danych": {
+    "50": "Brak danych"
+  },
+  "Przełącz na widok tygodnia": {
+    "51": "Przełącz na widok tygodnia"
+  },
+  "Cofnij się do poprzedniej daty": {
+    "52": "Cofnij się do poprzedniej daty"
+  },
+  "Lista Pacjentów": {
+    "53": "Lista Pacjentów"
+  },
+  "Leki": {
+    "54": "Leki"
+  },
+  "Kalendarz": {
+    "55": "Kalendarz"
+  },
+  "Historia Leczenia": {
+    "56": "Historia Leczenia"
+  },
+  "Lekarze": {
+    "57": "Lekarze"
+  },
+  "Wyniki Badań": {
+    "58": "Wyniki Badań"
+  },
+  "Archiwum": {
+    "59": "Archiwum"
+  },
+  "Diagramy": {
+    "60": "Diagramy"
+  }
+}

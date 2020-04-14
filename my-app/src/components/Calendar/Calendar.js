@@ -1,37 +1,85 @@
-import React, { Component } from "react";
-import {
-  Calendar,
-  momentLocalizer,
-} from 'react-big-calendar';
-import moment from "moment";
-import events from '../../services/events';
+import React from "react";
+import FullCalendar from "@fullcalendar/react";
+import dayGridPlugin from "@fullcalendar/daygrid";
+import timeGridPlugin from "@fullcalendar/timegrid";
+import interactionPlugin from "@fullcalendar/interaction";
+import { Translation } from 'react-i18next';
+import "./main.scss";
 
-const localizer = momentLocalizer(moment)
+import "@fullcalendar/core/main.css";
+import "@fullcalendar/daygrid/main.css";
+import "@fullcalendar/timegrid/main.css";
 
-class App extends Component {
+
+export default class DemoApp extends React.Component {
+  calendarComponentRef = React.createRef();
+
   state = {
-    events: [
-      {
-        start: new Date(),
-        end: new Date(moment().add(1, "days")),
-        title: "Some title"
-      }
+    calendarWeekends: true,
+    calendarEvents: [
+      { title: "Event Now", start: new Date() }
     ]
   };
-
+  
+  
   render() {
+
+  
+  
     return (
-      <div className="App">
-        <Calendar
-          localizer={localizer}
-          defaultDate={new Date(2019, 3, 9)}
-          defaultView="month"
-          events={events}
-          style={{ height: "100vh" }}
-        />
+      <div className="demo-app">
+        <div className="demo-app-top">
+        <Translation>
+{
+  (t, { i18n }) =>  <button className='btnCalendar' onClick={this.toggleWeekends}> {t('Przełącz na widok tygodnia.51')}</button>}
+            </Translation>
+&nbsp;
+<Translation>{
+(t, { i18n }) => <button className='btnCalendar' onClick={this.gotoPast}> {t('Cofnij się do poprzedniej daty.52')}</button>}
+ </Translation>  &nbsp;
+
+        </div>
+        <div className="demo-app-calendar">
+          <FullCalendar
+            defaultView="dayGridMonth"
+            header={{
+              left: "prev,next, today",
+              center: "title",
+              right: "dayGridMonth,timeGridWeek,timeGridDay,listWeek"
+            }}
+            plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
+            ref={this.calendarComponentRef}
+            weekends={this.state.calendarWeekends}
+            events={this.state.calendarEvents}
+            dateClick={this.handleDateClick}
+          />
+               
+        </div>
       </div>
     );
   }
+
+  toggleWeekends = () => {
+    this.setState({
+      calendarWeekends: !this.state.calendarWeekends
+    });
+  };
+
+  gotoPast = () => {
+    let calendarApi = this.calendarComponentRef.current.getApi();
+    calendarApi.gotoDate("2020-01-01");
+  };
+
+  handleDateClick = arg => {
+    if (true) {
+      this.setState({
+        calendarEvents: this.state.calendarEvents.concat({
+          title: prompt("New Event"),
+          start: arg.date,
+          allDay: arg.allDay
+        })
+      });
+    }
+  };
 }
 
-export default App;

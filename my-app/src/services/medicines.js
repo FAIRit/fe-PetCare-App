@@ -5,6 +5,7 @@ let DOCTORS = [
         type: 'tabletki',
         dosage: '1 tabletka dziennie',
         other: '',
+        date:'',
         doctor: 'Przychodnia Vet Care',
 
     }, {
@@ -12,7 +13,8 @@ let DOCTORS = [
         name: 'Semintra',
         type: 'roztwór',
         dosage: '3 ml dziennie, doustnie',
-        other: '',
+        other: 'Początkowo dawkowano 6 ml, w marcu, po badaniu ciśnienia, zmieniono dawkę na 3 ml',
+        date:' 12.12.2019 - 26.03.2020',
         doctor: 'Przychodnia Vet Care',
 
 
@@ -24,7 +26,9 @@ let DOCTORS = [
         type: 'tabletki',
         dosage: '',
         other: 'suplement',
+        date:'',
         doctor: ''
+
 
 
 
@@ -35,6 +39,7 @@ let DOCTORS = [
         type: 'tabletki',
         dosage: '',
         other: '',
+        date:'',
         doctor: 'dr Agnieszka Antczak',
 
 
@@ -46,6 +51,7 @@ let DOCTORS = [
         type: 'tabletki',
         dosage: '2 razy dziennie po 1 tabletce',
         other: '',
+        date:'',
         doctor: 'Przychodnia Vet Care',
 
 
@@ -57,6 +63,7 @@ let DOCTORS = [
         type: 'tabletki',
         dosage: '',
         other: 'suplement',
+        date:'',
         doctor: '',
 
     }
@@ -67,6 +74,7 @@ let DOCTORS = [
         type: 'tabletki',
         dosage: '',
         other: 'suplement',
+        date:'',
         doctor: '',
 
 
@@ -77,6 +85,7 @@ let DOCTORS = [
         type: 'tabletki',
         dosage: '1 tabletka dziennie, doustnie lub do jedzenia',
         other: '',
+        date:'',
         doctor: 'Przychodnia Vet Care'
 
     }, {
@@ -85,6 +94,7 @@ let DOCTORS = [
         type: 'proszek',
         dosage: '0.5 saszetki dziennie, do jedzenia',
         other: '',
+        date:'',
         doctor: '',
 
 
@@ -95,6 +105,7 @@ let DOCTORS = [
         type: 'roztwór',
         dosage: '100ml co dwa dni, podskórnie',
         other: '',
+        date:'',
         doctor: 'Przychodnia Vet Care',
 
 
@@ -105,6 +116,7 @@ let DOCTORS = [
         type: 'tabletki',
         dosage: '1/3 tabletki na dzień',
         other: '',
+        date:'',
         doctor: 'dr Sylwana Rzepczyk'
 
 
@@ -115,6 +127,7 @@ let DOCTORS = [
         type: 'tabletki',
         dosage: '1 tabletka rano, jedna wieczorem',
         other: '',
+        date:'',
         doctor: 'dr Sylwana Rzepczyk'
 
 
@@ -125,6 +138,7 @@ let DOCTORS = [
         type: 'roztwór',
         dosage: '2 ml dziennie, doustnie',
         other: '',
+        date:'',
         doctor: 'dr Sylwana Rzepczyk'
 
 
