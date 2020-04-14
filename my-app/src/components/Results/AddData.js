@@ -52,9 +52,6 @@ const AddData = () => {
   }
   const { t } = useTranslation();
 
-  function handleClick(lang) {
-    i18next.changeLanguage(lang)
-  }
   return (
     <div>
 

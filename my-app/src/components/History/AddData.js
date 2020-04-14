@@ -56,9 +56,6 @@ const AddData = () => {
   }
   const { t } = useTranslation();
 
-  function handleClick(lang) {
-    i18next.changeLanguage(lang)
-  }
   return (
     <div>
       <Modal trigger={<Button>{t('Dodaj historię.34')}</Button>}>

@@ -23,10 +23,6 @@ const ContactTableRow = props => {
 
   const { t } = useTranslation();
 
-  function handleClick(lang) {
-    i18next.changeLanguage(lang)
-  }
-
   return props.editing && props.currentData.id === props.item.id ? (
     <Fragment>
       <Table.Row key={props.item.id}>

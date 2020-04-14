@@ -46,12 +46,6 @@ const PaginatedTable = props => {
 
   const onInputChange = event => setFilter(event.currentTarget.value);
 
-  function handleClick(lang) {
-    i18next.changeLanguage(lang)
-  }
-
-  
-
   return (
     <Fragment>
       <>{t('Wyszukaj lek.40')}: </><input onChange={onInputChange} />

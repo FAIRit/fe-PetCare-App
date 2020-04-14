@@ -54,9 +54,7 @@ const AddData = () => {
       )
   }
   const { t } = useTranslation();
-  function handleClick(lang) {
-    i18next.changeLanguage(lang)
-  }
+
 
   return (
     <Modal trigger={<Button>{t('Dodaj pacjenta.35')}</Button>}>

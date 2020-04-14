@@ -157,30 +157,29 @@
   },
   "Cofnij się do poprzedniej daty": {
     "52": "Go to the past"
-},
-"Lista Pacjentów": {
-  "53": "Patient's list"
-},
-"Leki": {
-  "54": "Medicines"
-},
-"Kalendarz": {
-  "55": "Calendar"
-},
-"Historia Leczenia": {
-  "56": "Treatment History"
-},
-"Lekarze": {
-  "57": "Doctors"
-},
-"Wyniki Badań": {
-  "58": "Medical Results"
-},
-"Archiwum": {
-  "59": "Archive"
-},"Diagramy": {
-  "60": "Diagrams"
+  },
+  "Lista Pacjentów": {
+    "53": "Patient's list"
+  },
+  "Leki": {
+    "54": "Medicines"
+  },
+  "Kalendarz": {
+    "55": "Calendar"
+  },
+  "Historia Leczenia": {
+    "56": "Treatment History"
+  },
+  "Lekarze": {
+    "57": "Doctors"
+  },
+  "Wyniki Badań": {
+    "58": "Medical Results"
+  },
+  "Archiwum": {
+    "59": "Archive"
+  },
+  "Diagramy": {
+    "60": "Diagrams"
+  }
 }
-}
-
-

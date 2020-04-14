@@ -3,7 +3,6 @@ import Table from "./Table";
 import firebase from "../Firebase/firebase"
 import AddData from "./AddData"
 
-import FileUploader from "../Firebase/ImageUpload"
 
 const Archive = () => {
 
