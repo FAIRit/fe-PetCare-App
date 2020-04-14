@@ -2,9 +2,8 @@ import React, { useState, useEffect, Fragment } from "react";
 import { Table } from 'semantic-ui-react'
 import firebase from "../Firebase/firebase";
 import { useTranslation } from 'react-i18next';
-import i18next from 'i18next';
+import Paginator from 'react-hooks-paginator';
 import Input from "./Inputs";
-
 
 
 function useData(filter = '') {
@@ -46,6 +45,16 @@ const PaginatedTable = props => {
 
   const onInputChange = event => setFilter(event.currentTarget.value);
 
+  const pageLimit = 10;
+
+  const [offset, setOffset] = React.useState(0);
+  const [currentData, setCurrentData] = useState([]);
+  const [currentPage, setCurrentPage] = React.useState(1);
+
+  useEffect(() => {
+    setCurrentData(data.slice(offset, offset + pageLimit));
+  }, [offset, data]);
+
 
   return (
     <Fragment>
@@ -62,7 +71,7 @@ const PaginatedTable = props => {
         </Table.Header>
         <Table.Body>
           {data.length > 0 ? (
-            data.map(item => (
+            currentData.map(item => (
               <Input
                 key={item.id}
                 item={item}
@@ -81,8 +90,17 @@ const PaginatedTable = props => {
               </Table.Row>
             )}
         </Table.Body>
-
       </Table>
+      <Paginator
+        totalRecords={data.length}
+        pageLimit={pageLimit}
+        pageNeighbours={2}
+        setOffset={setOffset}
+        currentPage={currentPage}
+        setCurrentPage={setCurrentPage}
+        pagePrevText="«"
+        pageNextText="»"
+      />
     </Fragment>
   );
 };
