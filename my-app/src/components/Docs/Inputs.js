@@ -44,6 +44,14 @@ const ContactTableRow = props => {
             onChange={handleInputChange}
           /></div>
         </Table.Cell>
+        <Table.Cell><div class="ui input">
+          <input
+            type="text"
+            name="file"
+            value={data.file}
+            onChange={handleInputChange}
+          /></div>
+        </Table.Cell>
 
         <Table.Cell>
           <Button basic color='green'
@@ -67,6 +75,9 @@ const ContactTableRow = props => {
 
           <Table.Cell>
             {props.item.type}</Table.Cell>
+
+            <Table.Cell>
+            {props.item.file}</Table.Cell>
 
           <Table.Cell>
             <FontAwesomeIcon icon={faEdit} size='2x' color="lightgrey"

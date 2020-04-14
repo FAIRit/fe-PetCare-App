@@ -4,14 +4,19 @@ import { Button, Header, Modal, Image } from 'semantic-ui-react'
 import FileUploader from './FileUploader'
 import { useTranslation } from 'react-i18next';
 import i18next from 'i18next';
+import Child from './FileUploader'
 
 
 const AddData = () => {
   const [date, setDate] = useState('');
   const [type, setType] = useState('');
+  const [file, setFile] = useState('');
+
 
   const onChangeDate = e => setDate(e.currentTarget.value)
   const onChangeType = e => setType(e.currentTarget.value)
+  const onChangeFile = e => setFile(e.currentTarget.value)
+
 
   function onsubmit(e) {
     e.preventDefault()
@@ -23,13 +28,16 @@ const AddData = () => {
       .add({
         date,
         type,
-        created: Date.now() 
+        file,
+        created: Date.now()
 
       })
 
       .then(() => {
         setDate('')
         setType('')
+        setFile('')
+
       }
       )
   }
@@ -38,6 +46,8 @@ const AddData = () => {
   function handleClick(lang) {
     i18next.changeLanguage(lang)
   }
+
+
 
 
   return (
@@ -54,8 +64,10 @@ const AddData = () => {
 
                 <input value={type} onChange={onChangeType}></input></div>
 
+
               <button onSubmit={onsubmit}>{t('Zapisz.33')}</button></form>
           </div> <FileUploader ></FileUploader>
+
         </Modal.Description>
       </Modal.Content>
     </Modal>

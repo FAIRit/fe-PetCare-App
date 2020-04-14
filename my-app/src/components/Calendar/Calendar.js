@@ -3,14 +3,13 @@ import FullCalendar from "@fullcalendar/react";
 import dayGridPlugin from "@fullcalendar/daygrid";
 import timeGridPlugin from "@fullcalendar/timegrid";
 import interactionPlugin from "@fullcalendar/interaction";
-
+import { Translation } from 'react-i18next';
 import "./main.scss";
 
 import "@fullcalendar/core/main.css";
 import "@fullcalendar/daygrid/main.css";
 import "@fullcalendar/timegrid/main.css";
-import { useTranslation } from 'react-i18next';
-import i18next from 'i18next';
+
 
 export default class DemoApp extends React.Component {
   calendarComponentRef = React.createRef();
@@ -21,22 +20,30 @@ export default class DemoApp extends React.Component {
       { title: "Event Now", start: new Date() }
     ]
   };
-
+  
+  
   render() {
 
-
+  
+  
     return (
       <div className="demo-app">
         <div className="demo-app-top">
-          <button className='btnCalendar' onClick={this.toggleWeekends}> Przełącz na widok tygodnia</button>&nbsp;
-          <button className='btnCalendar' onClick={this.gotoPast}> Cofnij się do poprzedniej daty</button>
-          &nbsp;
+        <Translation>
+{
+  (t, { i18n }) =>  <button className='btnCalendar' onClick={this.toggleWeekends}> {t('Przełącz na widok tygodnia.51')}</button>}
+            </Translation>
+&nbsp;
+<Translation>{
+(t, { i18n }) => <button className='btnCalendar' onClick={this.gotoPast}> {t('Cofnij się do poprzedniej daty.52')}</button>}
+ </Translation>  &nbsp;
+
         </div>
         <div className="demo-app-calendar">
           <FullCalendar
             defaultView="dayGridMonth"
             header={{
-              left: "prev,next today",
+              left: "prev,next, today",
               center: "title",
               right: "dayGridMonth,timeGridWeek,timeGridDay,listWeek"
             }}
@@ -46,6 +53,7 @@ export default class DemoApp extends React.Component {
             events={this.state.calendarEvents}
             dateClick={this.handleDateClick}
           />
+               
         </div>
       </div>
     );
@@ -74,3 +82,4 @@ export default class DemoApp extends React.Component {
     }
   };
 }
+

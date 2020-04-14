@@ -151,5 +151,35 @@
   },
   "Brak danych": {
     "50": "Brak danych"
+  },
+  "Przełącz na widok tygodnia": {
+    "51": "Przełącz na widok tygodnia"
+  },
+  "Cofnij się do poprzedniej daty": {
+    "52": "Cofnij się do poprzedniej daty"
+  },
+  "Lista Pacjentów": {
+    "53": "Lista Pacjentów"
+  },
+  "Leki": {
+    "54": "Leki"
+  },
+  "Kalendarz": {
+    "55": "Kalendarz"
+  },
+  "Historia Leczenia": {
+    "56": "Historia Leczenia"
+  },
+  "Lekarze": {
+    "57": "Lekarze"
+  },
+  "Wyniki Badań": {
+    "58": "Wyniki Badań"
+  },
+  "Archiwum": {
+    "59": "Archiwum"
+  },
+  "Diagramy": {
+    "60": "Diagramy"
   }
 }
