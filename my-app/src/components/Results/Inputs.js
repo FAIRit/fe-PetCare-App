@@ -25,35 +25,35 @@ const ContactTableRow = props => {
         <Fragment>
 <Table.Row key={props.item.id}>
                 <Table.Cell>
-                    <div class="ui input">
+                    <div className="ui input">
                         <input
                             type="text"
                             name="date"
                             value={data.date}
                             onChange={handleInputChange} />
                     </div>
-                    <div class="ui input">
+                    <div className="ui input">
                         <input
                             type="text"
                             name="name"
                             value={data.name}
                             onChange={handleInputChange}
                         /></div>
-                    <div class="ui input">
+                    <div className="ui input">
                         <input
                             type="text"
                             name="type"
                             value={data.type}
                             onChange={handleInputChange}
                         /></div>
-                    <div class="ui input">
+                    <div className="ui input">
                         <input
                             type="text"
                             name="result"
                             value={data.result}
                             onChange={handleInputChange}
                         /></div>
-                    <div class="ui input">
+                    <div className="ui input">
 
                         <input
                             type="text"
@@ -61,7 +61,7 @@ const ContactTableRow = props => {
                             value={data.unit}
                             onChange={handleInputChange}
                         /></div>
-                    <div class="ui input">
+                    <div className="ui input">
 
                         <input
                             type="text"

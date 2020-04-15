@@ -3,8 +3,6 @@ import firebase from '../Firebase/firebase'
 import { Button, Header, Modal, Image } from 'semantic-ui-react'
 import FileUploader from './FileUploader'
 import { useTranslation } from 'react-i18next';
-import i18next from 'i18next';
-import Child from './FileUploader'
 
 
 const AddData = () => {
@@ -17,10 +15,8 @@ const AddData = () => {
   const onChangeType = e => setType(e.currentTarget.value)
   const onChangeFile = e => setFile(e.currentTarget.value)
 
-
   function onsubmit(e) {
     e.preventDefault()
-
 
 
     firebase.firestore()
@@ -43,7 +39,7 @@ const AddData = () => {
   }
 
   const { t } = useTranslation();
-  
+
 
   return (
     <Modal trigger={<Button>{t('Dodaj dokument.38')}</Button>}>
@@ -59,10 +55,13 @@ const AddData = () => {
 
                 <input value={type} onChange={onChangeType}></input></div>
 
+              <div>      <p>{t('Plik.19')}:</p>
+
+                <input value={file} onChange={onChangeType}></input></div>
+
 
               <button onSubmit={onsubmit}>{t('Zapisz.33')}</button></form>
           </div> <FileUploader ></FileUploader>
-
         </Modal.Description>
       </Modal.Content>
     </Modal>

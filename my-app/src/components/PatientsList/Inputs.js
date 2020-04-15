@@ -25,46 +25,46 @@ const ContactTableRow = props => {
     return props.editing && props.currentData.id === props.data.id ? (
         <Fragment>
             <Table.Row key={props.data.id}>
-                <Table.Cell><div class="ui input">
+                <Table.Cell><div className="ui input">
                     <input
                         type="text"
                         name="name"
                         value={data.name}
                         onChange={handleInputChange} />
-                </div><div class="ui input">
+                </div><div className="ui input">
                         <input
                             type="text"
                             name="species"
                             value={data.species}
                             onChange={handleInputChange}
                         /></div>
-                    <div class="ui input">
+                    <div className="ui input">
                         <input
                             type="text"
                             name="breed"
                             value={data.breed}
                             onChange={handleInputChange}
                         /></div>
-                    <div class="ui input">
+                    <div className="ui input">
                         <input
                             type="text"
                             name="age"
                             value={data.age}
                             onChange={handleInputChange}
                         /></div>
-                    <div class="ui input">
+                    <div className="ui input">
                         <input
                             type="text"
                             name="color"
                             value={data.color}
                             onChange={handleInputChange}
-                        /></div><div class="ui input">
+                        /></div><div className="ui input">
                         <input
                             type="text"
                             name="owner"
                             value={data.owner}
                             onChange={handleInputChange}
-                        /></div><div class="ui input">
+                        /></div><div className="ui input">
                         <input
                             type="text"
                             name="idnumber"

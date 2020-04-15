@@ -15,7 +15,7 @@ function useData(filter = '') {
     firebase
       .firestore()
       .collection("history")
-      .orderBy("created","asc")
+      .orderBy("created", "asc")
       .startAfter(0)
       .onSnapshot(snapshot => {
         const newData = snapshot.docs.map(doc => ({
@@ -49,11 +49,11 @@ const PaginatedTable = props => {
   const [offset, setOffset] = React.useState(0);
   const [currentData, setCurrentData] = useState([]);
   const [currentPage, setCurrentPage] = React.useState(1);
- 
+
   useEffect(() => {
-   setCurrentData(data.slice(offset, offset + pageLimit));
- }, [offset, data]);
- 
+    setCurrentData(data.slice(offset, offset + pageLimit));
+  }, [offset, data]);
+
 
   return (
     <Fragment>

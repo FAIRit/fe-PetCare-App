@@ -25,7 +25,7 @@ const ContactTableRow = props => {
   return props.editing && props.currentData.id === props.item.id ? (
     <Fragment>
       <Table.Row key={props.item.id}>
-        <Table.Cell><div class="ui input">
+        <Table.Cell><div className="ui input">
           <input
             type="text"
             name="date"
@@ -33,7 +33,7 @@ const ContactTableRow = props => {
             onChange={handleInputChange}
           /></div>
         </Table.Cell>
-        <Table.Cell><div class="ui input">
+        <Table.Cell><div className="ui input">
           <input
             type="text"
             name="type"
@@ -41,7 +41,7 @@ const ContactTableRow = props => {
             onChange={handleInputChange}
           /></div>
         </Table.Cell>
-        <Table.Cell><div class="ui input">
+        <Table.Cell><div className="ui input">
           <input
             type="text"
             name="file"
