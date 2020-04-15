@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import firebase from '../Firebase/firebase'
-import { Button, Header, Modal, Image } from 'semantic-ui-react'
+import { Button, Header, Modal } from 'semantic-ui-react'
 import FileUploader from './FileUploader'
 import { useTranslation } from 'react-i18next';
 
@@ -55,13 +55,13 @@ const AddData = () => {
 
                 <input value={type} onChange={onChangeType}></input></div>
 
-              <div>      <p>{t('Plik.19')}:</p>
+              <div>      <p>{t('Plik.29')}:</p>
 
-                <input value={file} onChange={onChangeType}></input></div>
+        <FileUploader> <input value={file} onChange={onChangeFile}></input></FileUploader></div>
 
 
               <button onSubmit={onsubmit}>{t('Zapisz.33')}</button></form>
-          </div> <FileUploader ></FileUploader>
+          </div>
         </Modal.Description>
       </Modal.Content>
     </Modal>

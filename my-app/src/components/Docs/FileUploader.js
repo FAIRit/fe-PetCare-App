@@ -49,7 +49,6 @@ class FilesUploader extends Component {
 <div>
 {this.state.imageURL}  <br/>
 <a href={this.state.imageURL}>Link</a>
-
 </div>
 
       </div>

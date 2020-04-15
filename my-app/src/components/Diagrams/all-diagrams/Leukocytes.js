@@ -1,15 +1,8 @@
+import React, { useState, useEffect } from "react";
 import {
   LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend,
 } from 'recharts';
-import React, { useState, useEffect } from "react";
-import { getData } from "../../services/diagrams/Urea";
-import Urea from './all-diagrams/Urea';
-import Eosinophils from './all-diagrams/Eosinophils';
-import Hemoglobin from './all-diagrams/Hemoglobin';
-import Leukocytes from './all-diagrams/Leukocytes'
-import Monocytes from './all-diagrams/Monocytes';
-import MCH from './all-diagrams/MCH';
-import MCV from './all-diagrams/MCV';
+import { getData } from "../../../services/diagrams/Leukocytes"
 
 
 const Rechart = () => {
@@ -23,7 +16,7 @@ const Rechart = () => {
 
 
 <div>
-      <p>Kreatynina</p>
+      <p>Leukocyty</p>
       <LineChart
         width={500}
         height={300}
@@ -40,13 +33,6 @@ const Rechart = () => {
         <Line type="monotone" id ="kreatynina" dataKey="norma" stroke="#8884d8" activeDot={{ r: 8 }} />
         <Line type="monotone" id ="kreatynina" dataKey="wynik" stroke="#82ca9d" />
       </LineChart>
-      <Urea/>
-<Eosinophils/>
-<Hemoglobin/>
-<Leukocytes/>
-<Monocytes/>
-<MCH/>
-<MCV/>
     </div>
   );
 

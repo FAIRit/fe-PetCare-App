@@ -67,18 +67,18 @@ const PaginatedTable = props => {
           </Table.Row>
         </Table.Header>
         <Table.Body>
-          {data.length > 0 ? (
+        {data.length > 0 ? (
             currentData.map(item => (
               <Input
-                key={item.id}
-                item={item}
-                datas={props.datas}
-                editRow={props.editRow}
-                deleteData={props.deleteData}
-                editing={props.editing}
-                setEditing={props.setEditing}
-                currentData={props.currentData}
-                updatedData={props.updatedData}
+              key={item.id}
+              item={item}
+              datas={props.datas}
+              editRow={props.editRow}
+              deleteData={props.deleteData}
+              editing={props.editing}
+              setEditing={props.setEditing}
+              currentData={props.currentData}
+              updatedData={props.updatedData}
               />
             ))
           ) : (

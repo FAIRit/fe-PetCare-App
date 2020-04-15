@@ -31,8 +31,6 @@ function useData(filter = '') {
         setIsLoading(false);
       });
 
-
-
   }, [filter]);
 
 

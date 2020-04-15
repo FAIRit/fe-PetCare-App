@@ -47,11 +47,11 @@ const AddData = () => {
         setDoctor('')
         setOther('')
         setDescription('')
-
-
+        
       }
       )
   }
+
   const { t } = useTranslation();
 
   return (

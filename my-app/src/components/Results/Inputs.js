@@ -4,7 +4,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTrashAlt } from '@fortawesome/free-solid-svg-icons'
 import { faEdit } from '@fortawesome/free-solid-svg-icons'
 import { useTranslation } from 'react-i18next';
-import i18next from 'i18next';
 
 
 const ContactTableRow = props => {
@@ -21,7 +20,7 @@ const ContactTableRow = props => {
     
     const { t } = useTranslation();
 
-    return props.editing && props.currentData.id === props.data.id ? (
+    return props.editing && props.currentData.id === props.item.id ? (
         <Fragment>
 <Table.Row key={props.item.id}>
                 <Table.Cell>
@@ -119,7 +118,7 @@ const ContactTableRow = props => {
                 </p>
               </Modal.Content>
               <Modal.Actions>
-                              <Button onClick={() => props.deleteData(props.item.id)} color='green' >
+                <Button onClick={() => props.deleteData(props.item.id)} color='green' >
                   <Icon name='checkmark' /> {t('Tak.46')}
                 </Button>
               </Modal.Actions>

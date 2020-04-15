@@ -6,7 +6,7 @@ import AddData from "./AddData"
 
 const History = () => {
     const data = [{}];
-    const initialFormState = { };
+    const initialFormState = {};
 
     const [datas, setDatas] = useState(data);
     const [currentData, setCurrentData] = useState(initialFormState);
@@ -22,6 +22,7 @@ const History = () => {
             .delete();
     };
 
+
     const updatedData = updatedRow => {
         setEditing(false);
         firebase
@@ -35,13 +36,13 @@ const History = () => {
         setEditing(true);
         setCurrentData({
             id: data.id,
+            created: data.created,
+            date: data.date,
             name: data.name,
-            type: data.type,
-            result: data.result,
-            unit: data.unit,
             reference: data.reference,
-            created: data.created
-
+            result: data.result,
+            type: data.type,
+            unit: data.unit
         });
     };
 
