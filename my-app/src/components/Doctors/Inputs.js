@@ -5,7 +5,6 @@ import { faTrashAlt } from '@fortawesome/free-solid-svg-icons'
 import { faEdit } from '@fortawesome/free-solid-svg-icons'
 import { Icon, Modal } from 'semantic-ui-react'
 import { useTranslation } from 'react-i18next';
-import i18next from 'i18next';
 
 
 const ContactTableRow = props => {

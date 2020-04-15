@@ -22,9 +22,9 @@ const ContactTableRow = props => {
     const { t } = useTranslation();
   
 
-    return props.editing && props.currentData.id === props.data.id ? (
+    return props.editing && props.currentData.id === props.item.id ? (
         <Fragment>
-            <Table.Row key={props.data.id}>
+            <Table.Row key={props.item.id}>
                 <Table.Cell><div className="ui input">
                     <input
                         type="text"
@@ -87,31 +87,31 @@ const ContactTableRow = props => {
         </Fragment>
     ) : (
             <Fragment>
-                <Table.Row key={props.data.id}>
+                <Table.Row key={props.item.id}>
                     <Table.Cell>
-                        {props.data.name}</Table.Cell>
+                        {props.item.name}</Table.Cell>
 
                     <Table.Cell>
-                        {props.data.species}</Table.Cell>
+                        {props.item.species}</Table.Cell>
 
                     <Table.Cell>
-                        {props.data.breed}</Table.Cell>
+                        {props.item.breed}</Table.Cell>
 
                     <Table.Cell>
-                        {props.data.age}</Table.Cell>
+                        {props.item.age}</Table.Cell>
 
                     <Table.Cell>
-                        {props.data.color}</Table.Cell>
+                        {props.item.color}</Table.Cell>
 
                     <Table.Cell>
-                        {props.data.owner}</Table.Cell>
+                        {props.item.owner}</Table.Cell>
                     <Table.Cell>
-                        {props.data.idnumber}</Table.Cell>
+                        {props.item.idnumber}</Table.Cell>
 
                     <Table.Cell>
                     <FontAwesomeIcon icon={faEdit} size='2x' color="lightgrey"
               onClick={() => {
-                props.editRow(props.data);
+                props.editRow(props.item);
               }}
             />
             <Modal trigger={<FontAwesomeIcon icon={faTrashAlt} size='2x' color="lightgrey" />
@@ -122,7 +122,7 @@ const ContactTableRow = props => {
                 </p>
               </Modal.Content>
               <Modal.Actions>
-                <Button onClick={() => props.deleteData(props.data.id)} color='green' >
+                <Button onClick={() => props.deleteData(props.item.id)} color='green' >
                   <Icon name='checkmark' /> {t('Tak.46')}
                 </Button>
               </Modal.Actions>
