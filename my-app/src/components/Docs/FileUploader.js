@@ -21,24 +21,30 @@ class FilesUploader extends Component {
       progress: 0
     })
   }
-
+  
+  
   handleUploadSuccess = filename => {
     this.setState({
       image: filename,
       progress: 100
     })
 
-  
+
     firebase.storage().ref('avatars').child(filename).getDownloadURL()
       .then(url => this.setState({
         imageURL: url
       }))
   }
 
+   linkUploader = ({updateLink}) => {
+    onUploadSuccess = () => {
+        updateLink()
+    }
+  }
 
-  
+
   render() {
-
+  
     return (
       <div className="App">
 
@@ -55,10 +61,11 @@ class FilesUploader extends Component {
 <br/>
 <a href={this.state.imageURL}target="_blank">Link</a>
 </div>
+<button onClick={this.props.linkUploader}>Pass the file</button>
 
-    <label> {this.state.imageURL && <image src={this.state.imageURL}/>}</label>
       </div>
       );
   };
 }
+
 export default FilesUploader;
