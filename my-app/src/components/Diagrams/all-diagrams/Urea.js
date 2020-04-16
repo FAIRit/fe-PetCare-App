@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react";
 import {
   LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend,
 } from 'recharts';
-import { getData } from "../../../services/diagrams/Urea"
+import { getData } from "../../../services/diagrams/Urea";
+import { useTranslation } from 'react-i18next';
 
 
 const Rechart = () => {
@@ -12,19 +13,21 @@ const Rechart = () => {
       .then(data => setData(data));
   }, [])
 
+  const { t } = useTranslation();
+
   return (
 
-
 <div>
-      <p>Mocznik</p>
+<h3>{t('Mocznik.71')}</h3>
       <LineChart
-        width={500}
-        height={300}
-        data={data}
-        margin={{
-          top: 5, right: 30, left: 20, bottom: 5,
-        }}
-      >
+          width={700}
+          height={400}
+          data={data}
+          margin={{
+            top: 5, right: 30, left: 20, bottom: 5,
+
+          }}
+        >
         <CartesianGrid strokeDasharray="3 3" />
         <XAxis dataKey="name" />
         <YAxis />

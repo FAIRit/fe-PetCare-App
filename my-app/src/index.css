@@ -61,3 +61,48 @@ p.medicines{
 .select-options{
   width:50%;
 }
+
+.diagrams{
+display: inline-block;
+}
+
+
+button.page-link {
+cursor: pointer;}
+
+
+.react-hooks-paginator .page-item.active .page-link{
+   background-color: #e9e6e6!important;
+   border-color:grey!important;
+   color:grey!important;
+
+}
+
+.react-hooks-paginator .page-item:hover .page-link{
+  background-color: #e9e6e6!important;
+  border-color:grey!important;
+  color:grey!important;
+}
+
+.ui.table{
+  border-color:#e9e6e6;
+}
+
+.loginInput{
+  border-radius: 2px;
+  color:black
+}
+
+.ui.secondary.menu a.item:active {
+background-color:#e9e6e6!important;
+}
+
+.ui.secondary.menu {
+  box-shadow: inset 0 0 1em 
+#e9e6e6;
+}
+
+.login-data ::placeholder {
+  color:black;
+  opacity: 0.7;
+ }

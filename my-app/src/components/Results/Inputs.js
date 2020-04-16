@@ -105,11 +105,7 @@ const ContactTableRow = props => {
                         {props.item.reference}</Table.Cell>
 
                     <Table.Cell>
-                    <FontAwesomeIcon icon={faEdit} size='2x' color="lightgrey"
-              onClick={() => {
-                props.editRow(props.item);
-              }}
-            />
+                   
             <Modal trigger={<FontAwesomeIcon icon={faTrashAlt} size='2x' color="lightgrey" />
             } closeIcon>
               <Modal.Content>

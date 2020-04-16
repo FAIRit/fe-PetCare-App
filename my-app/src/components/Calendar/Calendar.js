@@ -67,7 +67,7 @@ export default class DemoApp extends React.Component {
 
   gotoPast = () => {
     let calendarApi = this.calendarComponentRef.current.getApi();
-    calendarApi.gotoDate("2020-01-01");
+    calendarApi.gotoDate("2020-03-01");
   };
 
   handleDateClick = arg => {

@@ -5,7 +5,6 @@ import { faTrashAlt } from '@fortawesome/free-solid-svg-icons'
 import { faEdit } from '@fortawesome/free-solid-svg-icons'
 import { Icon, Modal } from 'semantic-ui-react'
 import { useTranslation } from 'react-i18next';
-import i18next from 'i18next';
 
 
 const ContactTableRow = props => {
@@ -20,7 +19,6 @@ const ContactTableRow = props => {
   };
 
   const { t } = useTranslation();
- 
 
   return props.editing && props.currentData.id === props.item.id ? (
     <Fragment>
@@ -73,10 +71,9 @@ const ContactTableRow = props => {
           <Table.Cell>
             {props.item.type}</Table.Cell>
 
-            <Table.Cell>
-            {props.item.file}</Table.Cell>
-
           <Table.Cell>
+          </Table.Cell>
+              <Table.Cell>
             <FontAwesomeIcon icon={faEdit} size='2x' color="lightgrey"
               onClick={() => {
                 props.editRow(props.item);

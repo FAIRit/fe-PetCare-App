@@ -3,6 +3,7 @@ import {
   LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend,
 } from 'recharts';
 import { getData } from "../../../services/diagrams/Eosinophils"
+import { useTranslation } from 'react-i18next';
 
 
 const Rechart = () => {
@@ -12,19 +13,21 @@ const Rechart = () => {
       .then(data => setData(data));
   }, [])
 
+  const { t } = useTranslation();
+
   return (
 
-
-<div>
-      <p>Eozynofile</p>
+<div className="diagrams">
+      <h3>{t('Eozynofile.67')}</h3>
       <LineChart
-        width={500}
-        height={300}
-        data={data}
-        margin={{
-          top: 5, right: 30, left: 20, bottom: 5,
-        }}
-      >
+          width={700}
+          height={400}
+          data={data}
+          margin={{
+            top: 5, right: 30, left: 20, bottom: 5,
+
+          }}
+        >
         <CartesianGrid strokeDasharray="3 3" />
         <XAxis dataKey="name" />
         <YAxis />

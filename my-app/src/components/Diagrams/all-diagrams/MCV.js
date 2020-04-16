@@ -16,15 +16,16 @@ const Rechart = () => {
 
 
 <div>
-      <p>MCV</p>
+      <h3>MCV</h3>
       <LineChart
-        width={500}
-        height={300}
-        data={data}
-        margin={{
-          top: 5, right: 30, left: 20, bottom: 5,
-        }}
-      >
+          width={700}
+          height={400}
+          data={data}
+          margin={{
+            top: 5, right: 30, left: 20, bottom: 5,
+
+          }}
+        >
         <CartesianGrid strokeDasharray="3 3" />
         <XAxis dataKey="name" />
         <YAxis />

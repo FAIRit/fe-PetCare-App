@@ -51,7 +51,7 @@
     "17": "Zalecenia"
   },
   "Nazwa": {
-    "18": "Name"
+    "18": "Nazwa"
   },
   "Rodzaj": {
     "19": "Rodzaj"
@@ -181,5 +181,57 @@
   },
   "Diagramy": {
     "60": "Diagramy"
+  },
+  "Hasło": {
+    "61": "Hasło"
+  },
+  "Adres e-mail": {
+    "62": "Adres e-mail"
+  },
+  "Zaloguj": {
+    "63": "Zaloguj"
+  },
+  "Zarejestruj": {
+    "64": "Zarejestruj"
+  },
+  "Tylko zalogowani użytkownicy mogą wprowadzać i edytować dane": {
+    "65": "Tylko zalogowani użytkownicy mogą wprowadzać i edytować dane."
+  },
+  "Załóż konto, aby móc korzystać ze wszystkich funkcjonalności": {
+    "66": "Załóż konto, aby móc korzystać ze wszystkich funkcjonalności"
+  },
+  "Eozynofile": {
+    "67": "Eozynofile"
+  },
+  "Hemoglobina": {
+    "68": "Hemoglobina"
+  },
+  "Leukocyty": {
+    "69": "Leukocyty"
+  },
+  "Monocyty": {
+    "70": "Monocyty"
+  },
+  "Mocznik": {
+    "71": "Mocznik"
+  },
+  "Kreatynina": {
+    "72": "Kreatynina"
+  },
+  "Wyszukaj po nazwisku": {
+    "73": "Wyszukaj po nazwisku"
+  },
+  "Wyszukaj po imieniu": {
+    "74": "Wyszukaj po imieniu"
+  },
+  "Wyszukaj po nazwie": {
+    "75": "Wyszukaj po nazwie"
+  },
+  "Wyszukaj po diagnozie": {
+    "76": "Wyszukaj po diagnozie"
+  },
+  "Wyszukaj po rodzaju": {
+    "77": "Wyszukaj po rodzaju"
   }
 }
+

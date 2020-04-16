@@ -6,10 +6,12 @@ import firebase from 'firebase';
 
 class FilesUploader extends Component {
 
+
   state = {
     image: '',
     imageURL: '',
-    progress: 0
+    progress: 0,
+    updateLink:''
   }
 
 
@@ -26,6 +28,7 @@ class FilesUploader extends Component {
       progress: 100
     })
 
+  
     firebase.storage().ref('avatars').child(filename).getDownloadURL()
       .then(url => this.setState({
         imageURL: url
@@ -33,8 +36,9 @@ class FilesUploader extends Component {
   }
 
 
-
+  
   render() {
+
     return (
       <div className="App">
 
@@ -47,12 +51,14 @@ class FilesUploader extends Component {
         />
 
 <div>
-{this.state.imageURL}  <br/>
-<a href={this.state.imageURL}>Link</a>
+{this.state.imageURL}
+<br/>
+<a href={this.state.imageURL}target="_blank">Link</a>
 </div>
 
+    <label> {this.state.imageURL && <image src={this.state.imageURL}/>}</label>
       </div>
-    );
+      );
   };
 }
 export default FilesUploader;

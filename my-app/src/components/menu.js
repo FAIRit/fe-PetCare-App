@@ -13,7 +13,7 @@ function handleClick(lang) {
 }
 
 const handleClickPL = e => handleClick('pl');
-const handleClickEN = e => handleClick('en')
+const handleClickEN = e => handleClick('en');
 
 
 export default class MenuSecondary extends Component {
