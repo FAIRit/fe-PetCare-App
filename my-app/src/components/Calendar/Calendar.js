@@ -17,10 +17,91 @@ export default class DemoApp extends React.Component {
   state = {
     calendarWeekends: true,
     calendarEvents: [
-      { title: "Event Now", start: new Date() }
-    ]
-  };
-  
+      { title: "Clavaseptin-lek", start: new Date() },
+      {
+        title: "Weterynarz-wizyta",
+        start: new Date("2020-04-03 01:00"),
+        id: "1"
+      },
+      {
+        title: "Gasrpid - lek",
+        start: new Date("2020-04-05 09:00"),
+        id: "2"
+      },
+      {
+        title: "Semintra - lek",
+        start: new Date("2020-04-05 10:00"),
+        id: "3"
+      },
+      {
+        title: "Gasrpid - lek",
+        start: new Date("2020-04-06 09:00"),
+        id: "4"
+      },
+      {
+        title: "Semintra - lek",
+        start: new Date("2020-04-06 10:00"),
+        id: "99999999"
+      },
+      {
+        title: "Weterynarz-wizyta",
+        start: new Date("2020-04-15 10:00"),
+        id: "5"
+      },
+      {
+        title: "Weterynarz-wizyta",
+        start: new Date("2020-04-27 10:00"),
+        id: "5"
+      },
+      {
+        title: "Gasrpid - lek",
+        start: new Date("2020-03-05 09:00"),
+        id: "6"
+      },
+      {
+        title: "Semintra - lek",
+        start: new Date("2020-03-05 10:00"),
+        id: "7"
+      },
+      {
+        title: "Gasrpid - lek",
+        start: new Date("2020-03-06 09:00"),
+        id: "8"
+      },
+      {
+        title: "Semintra - lek",
+        start: new Date("2020-03-06 10:00"),
+        id: "9"
+      },
+      {
+        title: "Weterynarz-wizyta",
+        start: new Date("2020-03-15 10:00"),
+        id: "10"
+      },
+      {
+        title: "Weterynarz-wizyta",
+        start: new Date("2020-03-27 10:00"),
+        id: "11"
+      },{
+        title: "Gasrpid - lek",
+        start: new Date("2020-04-22 09:00"),
+        id: "12"
+      },
+      {
+        title: "Semintra - lek",
+        start: new Date("2020-04-22 10:00"),
+        id: "13"
+      },{
+        title: "Gasrpid - lek",
+        start: new Date("2020-03-24 09:00"),
+        id: "12"
+      },
+      {
+        title: "Semintra - lek",
+        start: new Date("2020-03-24 10:00"),
+        id: "13"
+      }
+    ]};
   
   render() {
 

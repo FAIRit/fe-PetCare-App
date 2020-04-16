@@ -36,12 +36,6 @@ class FilesUploader extends Component {
       }))
   }
 
-   linkUploader = ({updateLink}) => {
-    onUploadSuccess = () => {
-        updateLink()
-    }
-  }
-
 
   render() {
   
@@ -61,7 +55,6 @@ class FilesUploader extends Component {
 <br/>
 <a href={this.state.imageURL}target="_blank">Link</a>
 </div>
-<button onClick={this.props.linkUploader}>Pass the file</button>
 
       </div>
       );
