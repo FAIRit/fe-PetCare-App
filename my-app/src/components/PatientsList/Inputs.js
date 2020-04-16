@@ -19,7 +19,7 @@ const ContactTableRow = props => {
     };
 
     const { t } = useTranslation();
-  
+
 
     return props.editing && props.currentData.id === props.item.id ? (
         <Fragment>
@@ -74,12 +74,13 @@ const ContactTableRow = props => {
                 <Table.Cell>
                     <Button basic color='green'
                         onClick={() => props.updatedData(data)} >
-                        Zapisz
-            </Button>
+                        {t('Zapisz.33')}
+                    </Button>
                     <Button basic color='red'
                         onClick={() => props.setEditing(false)}>
-                        Zrezygnuj
-          </Button>
+                        {t('Zrezygnuj.44')}
+
+                    </Button>
 
                 </Table.Cell>
             </Table.Row>
@@ -108,27 +109,27 @@ const ContactTableRow = props => {
                         {props.item.idnumber}</Table.Cell>
 
                     <Table.Cell>
-                    <FontAwesomeIcon icon={faEdit} size='2x' color="lightgrey"
-              onClick={() => {
-                props.editRow(props.item);
-              }}
-            />
-            <Modal trigger={<FontAwesomeIcon icon={faTrashAlt} size='2x' color="lightgrey" />
-            } closeIcon>
-              <Modal.Content>
-                <p>
-                  {t('Czy na pewno chcesz usunąć dane?.45')}
-                </p>
-              </Modal.Content>
-              <Modal.Actions>
-                <Button onClick={() => props.deleteData(props.item.id)} color='green' >
-                  <Icon name='checkmark' /> {t('Tak.46')}
-                </Button>
-              </Modal.Actions>
-            </Modal>
-          </Table.Cell>
-        </Table.Row>
-      </Fragment>
-    );
+                        <FontAwesomeIcon icon={faEdit} size='2x' color="lightgrey"
+                            onClick={() => {
+                                props.editRow(props.item);
+                            }}
+                        />
+                        <Modal trigger={<FontAwesomeIcon icon={faTrashAlt} size='2x' color="lightgrey" />
+                        } closeIcon>
+                            <Modal.Content>
+                                <p>
+                                    {t('Czy na pewno chcesz usunąć dane?.45')}
+                                </p>
+                            </Modal.Content>
+                            <Modal.Actions>
+                                <Button onClick={() => props.deleteData(props.item.id)} color='green' >
+                                    <Icon name='checkmark' /> {t('Tak.46')}
+                                </Button>
+                            </Modal.Actions>
+                        </Modal>
+                    </Table.Cell>
+                </Table.Row>
+            </Fragment>
+        );
 };
 export default ContactTableRow;

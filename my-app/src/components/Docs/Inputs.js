@@ -25,7 +25,7 @@ const ContactTableRow = props => {
 
   const updateLink = (newLink) => {
     setFile(newLink);
-}
+  }
 
   return props.editing && props.currentData.id === props.item.id ? (
     <Fragment>
@@ -46,25 +46,15 @@ const ContactTableRow = props => {
             onChange={handleInputChange}
           /></div>
         </Table.Cell>
-        <Table.Cell><div className="ui input">
-          <input
-            type="text"
-            name="file"
-            value={data.file}
-            onChange={handleInputChange}
-          /></div>
-        </Table.Cell>
-
         <Table.Cell>
           <Button basic color='green'
             onClick={() => props.updatedData(data)}
           >
-            Zapisz
-            </Button>
+            {t('Zapisz.33')}            </Button>
           <Button basic color='red'
             onClick={() => props.setEditing(false)}
           >
-            Zrezygnuj
+            {t('Zrezygnuj.44')}
           </Button>
         </Table.Cell>
       </Table.Row>
@@ -79,10 +69,10 @@ const ContactTableRow = props => {
             {props.item.type}</Table.Cell>
 
           <Table.Cell>
-        
-          <FileUploader updateLink={updateLink} />
+
+            <FileUploader updateLink={updateLink} />
           </Table.Cell>
-              <Table.Cell>
+          <Table.Cell>
             <FontAwesomeIcon icon={faEdit} size='2x' color="lightgrey"
               onClick={() => {
                 props.editRow(props.item);
