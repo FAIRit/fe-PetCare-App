@@ -5,7 +5,6 @@ import { faTrashAlt } from '@fortawesome/free-solid-svg-icons'
 import { faEdit } from '@fortawesome/free-solid-svg-icons'
 import { Icon, Modal } from 'semantic-ui-react'
 import { useTranslation } from 'react-i18next';
-import i18next from 'i18next';
 
 
 const ContactTableRow = props => {
@@ -26,7 +25,7 @@ const ContactTableRow = props => {
   return props.editing && props.currentData.id === props.item.id ? (
     <Fragment>
       <Table.Row key={props.item.id}>
-        <Table.Cell><div class="ui input">
+        <Table.Cell><div className="ui input">
           <input
             type="text"
             name="firstname"
@@ -34,7 +33,7 @@ const ContactTableRow = props => {
             onChange={handleInputChange}
           /></div>
         </Table.Cell>
-        <Table.Cell><div class="ui input">
+        <Table.Cell><div className="ui input">
           <input
             type="text"
             name="surname"
@@ -42,7 +41,7 @@ const ContactTableRow = props => {
             onChange={handleInputChange}
           /></div>
         </Table.Cell>
-        <Table.Cell><div class="ui input">
+        <Table.Cell><div className="ui input">
           <input
             type="text"
             name="vetClinic"
@@ -51,15 +50,15 @@ const ContactTableRow = props => {
           /></div>
         </Table.Cell>
         <Table.Cell>
-        <Button basic color='green'
-                        onClick={() => props.updatedData(data)}
-                    >
-                        Zapisz
+          <Button basic color='green'
+            onClick={() => props.updatedData(data)}
+          >
+            {t('Zapisz.33')}
           </Button>
-                    <Button basic color='red'
-                        onClick={() => props.setEditing(false)}
-                    >
-                        Zrezygnuj
+          <Button basic color='red'
+            onClick={() => props.setEditing(false)}
+          >
+            {t('Zrezygnuj.44')}
           </Button>
         </Table.Cell>
       </Table.Row>
@@ -90,7 +89,7 @@ const ContactTableRow = props => {
                 </p>
               </Modal.Content>
               <Modal.Actions>
-                              <Button onClick={() => props.deleteData(props.item.id)} color='green' >
+                <Button onClick={() => props.deleteData(props.item.id)} color='green' >
                   <Icon name='checkmark' /> {t('Tak.46')}
                 </Button>
               </Modal.Actions>

@@ -59,7 +59,7 @@ const PaginatedTable = props => {
   return (
     <Fragment>
 
-      <>{t('Wyszukaj lekarza.42')}: </> <input onChange={onInputChange} placeholder="surname" />
+      <>{t('Wyszukaj lekarza.42')}: </> <input onChange={onInputChange} placeholder={t('Wyszukaj po nazwisku.73')} />
 
       <Table unstackable>
         <Table.Header>
@@ -67,6 +67,7 @@ const PaginatedTable = props => {
             <Table.HeaderCell>{t('Imię.2')}</Table.HeaderCell>
             <Table.HeaderCell>{t('Nazwisko.10')}</Table.HeaderCell>
             <Table.HeaderCell>{t('Lecznica.11')}</Table.HeaderCell>
+            <Table.HeaderCell></Table.HeaderCell>
           </Table.Row>
         </Table.Header>
         <Table.Body>

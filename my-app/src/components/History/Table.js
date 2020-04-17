@@ -15,7 +15,7 @@ function useData(filter = '') {
     firebase
       .firestore()
       .collection("history")
-      .orderBy("created","asc")
+      .orderBy("created", "asc")
       .startAfter(0)
       .onSnapshot(snapshot => {
         const newData = snapshot.docs.map(doc => ({
@@ -24,7 +24,7 @@ function useData(filter = '') {
         }));
 
         const normalizedFilter = filter.toLowerCase();
-        const filteredData = newData.filter(item => item.doctor.toLowerCase().includes(normalizedFilter));
+        const filteredData = newData.filter(item => item.diagnosis.toLowerCase().includes(normalizedFilter));
 
         setData(filteredData);
         setIsLoading(false);
@@ -49,15 +49,15 @@ const PaginatedTable = props => {
   const [offset, setOffset] = React.useState(0);
   const [currentData, setCurrentData] = useState([]);
   const [currentPage, setCurrentPage] = React.useState(1);
- 
+
   useEffect(() => {
-   setCurrentData(data.slice(offset, offset + pageLimit));
- }, [offset, data]);
- 
+    setCurrentData(data.slice(offset, offset + pageLimit));
+  }, [offset, data]);
+
 
   return (
     <Fragment>
-      <>{t('Wyszukaj dane.41')}: </><input onChange={onInputChange} />
+      <>{t('Wyszukaj dane.41')}: </><input onChange={onInputChange} placeholder={t('Wyszukaj po diagnozie.76')}/>
       <Table unstackable>
         <Table.Header>
           <Table.Row>
@@ -68,6 +68,7 @@ const PaginatedTable = props => {
             <Table.HeaderCell>{t('Informacja o stanie pacjenta.15')}</Table.HeaderCell>
             <Table.HeaderCell>{t('Diagnoza.16')}</Table.HeaderCell>
             <Table.HeaderCell>{t('Zalecenia.17')}</Table.HeaderCell>
+            <Table.HeaderCell></Table.HeaderCell>
           </Table.Row>
         </Table.Header>
         <Table.Body>

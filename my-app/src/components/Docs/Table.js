@@ -11,6 +11,7 @@ function useData(filter = '') {
   const [editing, setEditing] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
 
+
   useEffect(() => {
     firebase
       .firestore()
@@ -57,15 +58,14 @@ const PaginatedTable = props => {
 
   return (
     <Fragment>
-      <>{t('Wyszukaj dokument.44')}:</><input onChange={onInputChange} />
+      <>{t('Wyszukaj dokument.44')}: </><input onChange={onInputChange} placeholder={t('Wyszukaj po rodzaju.77')}/>
       <Table unstackable>
         <Table.Header>
           <Table.Row>
             <Table.HeaderCell>{t('Data.25')}</Table.HeaderCell>
             <Table.HeaderCell>{t('Rodzaj.19')}</Table.HeaderCell>
             <Table.HeaderCell>{t('Plik.29')}</Table.HeaderCell>
-            <Table.HeaderCell>Dokument</Table.HeaderCell>
-
+            <Table.HeaderCell></Table.HeaderCell>
           </Table.Row>
         </Table.Header>
         <Table.Body>

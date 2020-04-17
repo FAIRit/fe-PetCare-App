@@ -5,7 +5,6 @@ import { faTrashAlt } from '@fortawesome/free-solid-svg-icons'
 import { faEdit } from '@fortawesome/free-solid-svg-icons'
 import { Icon, Modal } from 'semantic-ui-react'
 import { useTranslation } from 'react-i18next';
-import i18next from 'i18next';
 
 
 const ContactTableRow = props => {
@@ -25,7 +24,7 @@ const ContactTableRow = props => {
   return props.editing && props.currentData.id === props.item.id ? (
     <Fragment>
       <Table.Row key={props.item.id}>
-        <Table.Cell><div class="ui input">
+        <Table.Cell><div className="ui input">
           <input
             type="text"
             name="date"
@@ -33,7 +32,7 @@ const ContactTableRow = props => {
             onChange={handleInputChange}
           /></div>
         </Table.Cell>
-        <Table.Cell><div class="ui input">
+        <Table.Cell><div className="ui input">
           <input
             type="text"
             name="type"
@@ -41,25 +40,23 @@ const ContactTableRow = props => {
             onChange={handleInputChange}
           /></div>
         </Table.Cell>
-        <Table.Cell><div class="ui input">
+        <Table.Cell><div className="ui input">
           <input
             type="text"
-            name="file"
+            name="type"
             value={data.file}
             onChange={handleInputChange}
           /></div>
         </Table.Cell>
-
         <Table.Cell>
           <Button basic color='green'
             onClick={() => props.updatedData(data)}
           >
-            Zapisz
-            </Button>
+            {t('Zapisz.33')}            </Button>
           <Button basic color='red'
             onClick={() => props.setEditing(false)}
           >
-            Zrezygnuj
+            {t('Zrezygnuj.44')}
           </Button>
         </Table.Cell>
       </Table.Row>
@@ -73,10 +70,11 @@ const ContactTableRow = props => {
           <Table.Cell>
             {props.item.type}</Table.Cell>
 
-            <Table.Cell>
-            {props.item.file}</Table.Cell>
-
           <Table.Cell>
+        <a href={props.item.file}target="_blank">Link</a>
+          </Table.Cell>
+          <Table.Cell>
+            
             <FontAwesomeIcon icon={faEdit} size='2x' color="lightgrey"
               onClick={() => {
                 props.editRow(props.item);

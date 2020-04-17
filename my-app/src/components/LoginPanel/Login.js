@@ -1,10 +1,19 @@
 import React, { Component } from 'react';
-import { Button } from 'semantic-ui-react'
+import { Button, Input } from 'semantic-ui-react'
 import fire from '../Firebase/firebase'
 import Demo from './Demo';
-import { useTranslation } from 'react-i18next';
+import { Translation } from 'react-i18next';
 import i18next from 'i18next';
+import En from '../Languages/Flags/en'
+import Pl from '../Languages/Flags/pl'
 
+
+function handleClick(lang) {
+  i18next.changeLanguage(lang)
+}
+
+const handleClickPL = e => handleClick('pl');
+const handleClickEN = e => handleClick('en');
 
 class Login extends Component {
   constructor(props) {
@@ -26,7 +35,7 @@ class Login extends Component {
     e.preventDefault();
     fire.auth().signInWithEmailAndPassword(this.state.email, this.state.password).then((u) => {
     }).catch((error) => {
-      alert("Błędne hasło lub nazwa użytkownika");
+     alert("Błędne hasło lub nazwa użytkownika")
     });
   }
 
@@ -40,26 +49,39 @@ class Login extends Component {
   }
 
   render() {
-    return (
-      <div>
-        <form>
-          <div >
-            <label>Adres e-mail</label>
-            <input value={this.state.email} onChange={this.handleChange} type="email" name="email" id="exampleInputEmail1" placeholder="admin@admin.pl" />
-          </div>
-          <div className="form-group">
-            <label>Hasło</label>
-            <input value={this.state.password} onChange={this.handleChange} type="password" name="password" placeholder="haslo123" />
-          </div>
-          <Button content='Zaloguj' type="submit" onClick={this.login} />
-          <Button content='Zarejestruj' onClick={this.signup} style={{ marginLeft: '25px' }} />
-          <Demo /><br />
-          <p>Tylko zalogowani użytkownicy mogą wprowadzać i edytować dane. <br />
-            Załóż konto, aby móc korzystać ze wszystkich funkcjonalności.
-          </p>
-        </form>
+    return (      <div>
 
-      </div>
+      <div className="language" style={{ width: '100%', padding: '2rem, 0' }}>  <button onClick={handleClickPL}><Pl /></button>
+      <button onClick={handleClickEN}><En /></button></div>
+        <form>
+          <div className="login-data">
+            <Translation>
+              {(t) => <label>{t('Adres e-mail.62')}: </label>
+              }</Translation>
+
+            <input size='mini' value={this.state.email} onChange={this.handleChange} type="email" name="email" className="loginInput" placeholder="admin@admin.pl"/>
+          </div>
+          <div className="login-data">
+            <Translation>
+              {(t) => <label>{t('Hasło.61')}:  </label>}
+            </Translation>
+
+            <input size='mini' value={this.state.password} onChange={this.handleChange} type="password" name="password"  className="loginInput" placeholder="haslo123" />
+          </div>
+
+          <Translation>
+            {(t) => <Button type="submit" onClick={this.login}> {t('Zaloguj.63')}</Button>}</Translation>
+
+          <Translation>
+            {(t) => <Button onClick={this.signup} style={{ marginLeft: '25px' }}>{t('Zarejestruj.64')}</Button>}</Translation>
+          <Demo /><br />
+
+          <Translation>
+            {(t) => <p>{t('Tylko zalogowani użytkownicy mogą wprowadzać i edytować dane.65')} </p>}</Translation> 
+        <Translation>
+          {(t) => <p>{t('Załóż konto, aby móc korzystać ze wszystkich funkcjonalności.66')}</p>}</Translation> 
+        </form>     
+      </div >
     );
   }
 }

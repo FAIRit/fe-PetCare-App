@@ -37,7 +37,8 @@ const Archive = () => {
       id: data.id,
       date: data.date,
       type: data.type,
-      created:data.created
+      created:data.created,
+      file: data.file
 
 
     });

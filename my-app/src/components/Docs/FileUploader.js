@@ -3,15 +3,14 @@ import React, { Component } from 'react';
 import firebase from 'firebase';
 
 
-
 class FilesUploader extends Component {
 
   state = {
     image: '',
     imageURL: '',
-    progress: 0
+    progress: 0,
+    updateLink:''
   }
-
 
   handleUploadStart = () => {
 
@@ -19,22 +18,25 @@ class FilesUploader extends Component {
       progress: 0
     })
   }
-
+  
   handleUploadSuccess = filename => {
     this.setState({
       image: filename,
       progress: 100
     })
 
-    firebase.storage().ref('avatars').child(filename).getDownloadURL()
-      .then(url => this.setState({
-        imageURL: url
-      }))
-  }
 
+    firebase.storage().ref('avatars').child(filename).getDownloadURL()
+    .then(url => {
+      this.setState({
+        imageURL: url
+      });
+      this.props.fileSaved(url);
+    })}
 
 
   render() {
+  
     return (
       <div className="App">
 
@@ -47,13 +49,14 @@ class FilesUploader extends Component {
         />
 
 <div>
-{this.state.imageURL}  <br/>
-<a href={this.state.imageURL}>Link</a>
-
+{this.state.imageURL}
+<br/>
+<a href={this.state.imageURL}target="_blank">Link</a>
 </div>
 
       </div>
-    );
+      );
   };
 }
+
 export default FilesUploader;

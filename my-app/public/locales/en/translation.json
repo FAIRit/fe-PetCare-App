@@ -129,7 +129,7 @@
     "43": "Result search"
   },
   "Wyszukaj dokument": {
-    "43": "File search"
+    "44": "File search"
   },
   "Zrezygnuj": {
     "44": "Cancel"
@@ -181,5 +181,59 @@
   },
   "Diagramy": {
     "60": "Diagrams"
+  },
+  "Hasło": {
+    "61": "Password"
+  },
+  "Adres e-mail": {
+    "62": "E-mail adress"
+  },
+  "Zaloguj": {
+    "63": "Login"
+  },
+  "Zarejestruj": {
+    "64": "Register"
+  },
+  "Tylko zalogowani użytkownicy mogą wprowadzać i edytować dane": {
+    "65": "Only logged-in users have access to enter and edit data."
+  },
+  "Załóż konto, aby móc korzystać ze wszystkich funkcjonalności": {
+    "66": "Create an account to be able to use all options."
+  },
+  "Eozynofile": {
+    "67": "Eosinophils"
+  },
+  "Hemoglobina": {
+    "68": "Hemoglobin"
+  },
+  "Leukocyty": {
+    "69": "Leukocytes"
+  },
+  "Monocyty": {
+    "70": "Monocytes"
+  },
+  "Mocznik": {
+    "71": "Urea"
+  },
+  "Kreatynina": {
+    "72": "Creatinine"
+  },
+  "Wyszukaj po nazwisku": {
+    "73": "Search by surname"
+  },
+  "Wyszukaj po imieniu": {
+    "74": "Search by name"
+  },
+  "Wyszukaj po nazwie": {
+    "75": "Search by name"
+  },
+  "Wyszukaj po diagnozie": {
+    "76": "Search by diagnosis"
+  },
+  "Wyszukaj po rodzaju": {
+    "77": "Search by type"
   }
 }
+
+
+

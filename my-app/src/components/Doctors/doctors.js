@@ -12,7 +12,6 @@ const Doctors = () => {
   const [editing, setEditing] = useState(false);
 
 
-
   const deleteData = id => {
     setEditing(false);
     firebase
@@ -39,10 +38,10 @@ const editRow = data => {
         surname: data.surname,
         vetClinic: data.vetClinic,
         created:data.created
-
-
     });
 };
+
+
 
   return (<div>
     <div>
