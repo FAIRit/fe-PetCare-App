@@ -63,9 +63,11 @@ const ContactTableRow = props => {
             {props.item.type}</Table.Cell>
 
           <Table.Cell>
-            {props.item.file}
+        <a href={props.item.file}target="_blank">{props.item.file}
+</a>
           </Table.Cell>
           <Table.Cell>
+            
             <FontAwesomeIcon icon={faEdit} size='2x' color="lightgrey"
               onClick={() => {
                 props.editRow(props.item);
