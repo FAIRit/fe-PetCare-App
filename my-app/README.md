@@ -18,7 +18,9 @@
 
 <p>Now, you can start to enter, update and delete medical data</p><br/><br/>
  
-![Screenshot from 2020-04-17 19-37-33](https://user-images.githubusercontent.com/52631841/79597849-4a421e00-80e3-11ea-9bb5-d63906665087.png)
+![Screenshot from 2020-04-13 17-16-01](https://user-images.githubusercontent.com/52631841/79599988-b6725100-80e6-11ea-8d19-830efa050086.png)
+ 
+ <br/>
  
 ![Screenshot_2020-04-17 React App(3)](https://user-images.githubusercontent.com/52631841/79597566-cc7e1280-80e2-11ea-8cd3-25db0a6f270a.png)
 <br/>
@@ -33,7 +35,7 @@
 
   ![Screenshot_2020-04-17 React App(5)](https://user-images.githubusercontent.com/52631841/79598664-a5284500-80e4-11ea-9e70-e4f92b4bba91.png)
   
-  ![Screenshot_2020-04-17 12122019 morfologia (1) pdf](https://user-images.githubusercontent.com/52631841/79598706-b2ddca80-80e4-11ea-990a-14a17ec99a61.png)
+![Screenshot_2020-04-17 12122019 morfologia (1) pdf](https://user-images.githubusercontent.com/52631841/79599448-c76e9280-80e5-11ea-9d9a-5146d01c0011.png)
   
 <br/>
 <br/>
