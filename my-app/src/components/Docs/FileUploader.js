@@ -23,6 +23,7 @@ class FilesUploader extends Component {
   }
   
   
+  
   handleUploadSuccess = filename => {
     this.setState({
       image: filename,
@@ -31,10 +32,12 @@ class FilesUploader extends Component {
 
 
     firebase.storage().ref('avatars').child(filename).getDownloadURL()
-      .then(url => this.setState({
+    .then(url => {
+      this.setState({
         imageURL: url
-      }))
-  }
+      });
+      this.props.fileSaved(url);
+    })}
 
 
   render() {

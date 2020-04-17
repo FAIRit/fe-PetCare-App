@@ -5,7 +5,7 @@ import { faTrashAlt } from '@fortawesome/free-solid-svg-icons'
 import { faEdit } from '@fortawesome/free-solid-svg-icons'
 import { Icon, Modal } from 'semantic-ui-react'
 import { useTranslation } from 'react-i18next';
-import FileUploader from './FileUploader'
+
 
 const ContactTableRow = props => {
   const [data, setData] = useState(props.currentData);
@@ -19,13 +19,7 @@ const ContactTableRow = props => {
   };
 
   const { t } = useTranslation();
-
-  ///
-  const [file, setFile] = useState('');
-
-  const updateLink = (newLink) => {
-    setFile(newLink);
-  }
+ 
 
   return props.editing && props.currentData.id === props.item.id ? (
     <Fragment>
@@ -69,8 +63,7 @@ const ContactTableRow = props => {
             {props.item.type}</Table.Cell>
 
           <Table.Cell>
-
-            <FileUploader updateLink={updateLink} />
+            {props.item.file}
           </Table.Cell>
           <Table.Cell>
             <FontAwesomeIcon icon={faEdit} size='2x' color="lightgrey"
