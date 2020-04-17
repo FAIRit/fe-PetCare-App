@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Table from "./Table";
 import firebase from "../Firebase/firebase"
 import AddData from "./AddData"
-import { faTable } from "@fortawesome/free-solid-svg-icons";
 
 
 const Archive = () => {

@@ -3,9 +3,7 @@ import React, { Component } from 'react';
 import firebase from 'firebase';
 
 
-
 class FilesUploader extends Component {
-
 
   state = {
     image: '',
@@ -14,15 +12,12 @@ class FilesUploader extends Component {
     updateLink:''
   }
 
-
   handleUploadStart = () => {
 
     this.setState({
       progress: 0
     })
   }
-  
-  
   
   handleUploadSuccess = filename => {
     this.setState({

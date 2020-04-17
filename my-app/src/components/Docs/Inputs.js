@@ -71,8 +71,7 @@ const ContactTableRow = props => {
             {props.item.type}</Table.Cell>
 
           <Table.Cell>
-        <a href={props.item.file}target="_blank">{props.item.file}
-</a>
+        <a href={props.item.file}target="_blank">Link</a>
           </Table.Cell>
           <Table.Cell>
             
