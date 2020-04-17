@@ -143,3 +143,7 @@ width: 98%;
    padding:10px;
    position:fixed;
  }
+
+ .ui.link.card {
+  padding: 12px !important;
+}
