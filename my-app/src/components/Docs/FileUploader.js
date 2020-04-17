@@ -15,14 +15,14 @@ class FilesUploader extends Component {
   handleUploadStart = () => {
 
     this.setState({
-      progress: 0
+      progress: "0%"
     })
   }
   
   handleUploadSuccess = filename => {
     this.setState({
       image: filename,
-      progress: 100
+      progress: "100%"
     })
 
 
@@ -34,7 +34,11 @@ class FilesUploader extends Component {
       this.props.fileSaved(url);
     })}
 
-
+handleProgress=progress=>{
+  this.setState({
+  progress:progress
+})
+}
   render() {
   
     return (
@@ -46,8 +50,11 @@ class FilesUploader extends Component {
           storageRef={firebase.storage().ref('avatars')}
           onUploadStart={this.handleUploadStart}
           onUploadSuccess={this.handleUploadSuccess}
+          onProgress={this.handleProgress}
         />
-
+<br/>
+<label>Progress</label>
+<p>{this.state.progress}</p>
 <div>
 {this.state.imageURL}
 <br/>
