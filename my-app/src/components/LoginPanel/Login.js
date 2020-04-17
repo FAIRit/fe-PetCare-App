@@ -73,12 +73,7 @@ class Login extends Component {
 
           <Translation>
             {(t) => <Button onClick={this.signup} style={{ marginLeft: '25px' }}>{t('Zarejestruj.64')}</Button>}</Translation>
-        <br />
-
-          <Translation>
-            {(t) => <p>{t('Tylko zalogowani użytkownicy mogą wprowadzać i edytować dane.65')} </p>}</Translation> 
-        <Translation>
-          {(t) => <p>{t('Załóż konto, aby móc korzystać ze wszystkich funkcjonalności.66')}</p>}</Translation> 
+        <br />          
         </form>     
       </div >
     );
