@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Button, Input } from 'semantic-ui-react'
 import fire from '../Firebase/firebase'
-import Demo from './Demo';
 import { Translation } from 'react-i18next';
 import i18next from 'i18next';
 import En from '../Languages/Flags/en'
@@ -74,7 +73,7 @@ class Login extends Component {
 
           <Translation>
             {(t) => <Button onClick={this.signup} style={{ marginLeft: '25px' }}>{t('Zarejestruj.64')}</Button>}</Translation>
-          <Demo /><br />
+        <br />
 
           <Translation>
             {(t) => <p>{t('Tylko zalogowani użytkownicy mogą wprowadzać i edytować dane.65')} </p>}</Translation> 
