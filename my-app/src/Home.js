@@ -11,7 +11,7 @@ import Doctors from './components/Doctors/doctors'
 import History from './components/History/History'
 import Diagrams from './components/Diagrams/Diagrams'
 import Results from './components/Results/Results'
-import Archive from './components/Docs/archive'
+import Archive from './components/Docs/Archive'
 import PatientsList from './components/PatientsList/PatientsList'
 
 

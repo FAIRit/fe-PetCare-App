@@ -50,10 +50,10 @@ class Login extends Component {
   render() {
     return (      <div>
 
-      <div className="language" style={{ width: '100%', padding: '2rem, 0' }}>  <button onClick={handleClickPL}><Pl /></button>
-      <button onClick={handleClickEN}><En /></button></div>
-        <form>
-          <div className="login-data">
+  
+      <div className="loginpanel">   <div className="language">  <Button onClick={handleClickPL}><Pl /></Button>
+      <Button onClick={handleClickEN}><En /></Button></div>  <form className="loginform">
+                    <div className="login-data">
             <Translation>
               {(t) => <label>{t('Adres e-mail.62')}: </label>
               }</Translation>
@@ -74,7 +74,7 @@ class Login extends Component {
           <Translation>
             {(t) => <Button onClick={this.signup} style={{ marginLeft: '25px' }}>{t('Zarejestruj.64')}</Button>}</Translation>
         <br />          
-        </form>     
+        </form>     </div>
       </div >
     );
   }

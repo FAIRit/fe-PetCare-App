@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Menu } from 'semantic-ui-react'
+import { Menu, Button } from 'semantic-ui-react'
 import { Link } from 'react-router-dom'
 import i18next from 'i18next';
 import Logout from './LoginPanel/Logout'
@@ -75,8 +75,8 @@ export default class MenuSecondary extends Component {
 
               <Menu.Menu position='right'>
                 <div className="language" style={{ width: '100%', padding: '2rem, 0' }}>
-                  <button onClick={handleClickPL}><Pl /></button>
-                  <button onClick={handleClickEN}><En /></button>
+                  <Button onClick={handleClickPL}><Pl /></Button>
+                  <Button onClick={handleClickEN}><En /></Button>
                 </div>
                 <Logout></Logout> </Menu.Menu>
             </Menu>}

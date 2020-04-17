@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import firebase from '../Firebase/firebase'
-import { Button, Header, Modal, Image } from 'semantic-ui-react'
+import { Button, Header, Modal } from 'semantic-ui-react'
 import FileUploader from './FileUploader'
 import { useTranslation } from 'react-i18next';
 
