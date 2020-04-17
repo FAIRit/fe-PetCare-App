@@ -29,6 +29,14 @@
 
 <br/>
 <br/>
+<p> archive with the option of storing documents (as links) </p><br/><br/>
+
+  ![Screenshot_2020-04-17 React App(5)](https://user-images.githubusercontent.com/52631841/79598664-a5284500-80e4-11ea-9e70-e4f92b4bba91.png)
+  
+  ![Screenshot_2020-04-17 12122019 morfologia (1) pdf](https://user-images.githubusercontent.com/52631841/79598706-b2ddca80-80e4-11ea-990a-14a17ec99a61.png)
+  
+<br/>
+<br/>
 <p> and analyze the treatment history at diagrams</p><br/><br/>
   
  
