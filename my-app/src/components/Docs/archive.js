@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Table from "./Table";
 import firebase from "../Firebase/firebase"
 import AddData from "./AddData"
+import { faTable } from "@fortawesome/free-solid-svg-icons";
 
 
 const Archive = () => {
@@ -37,7 +38,8 @@ const Archive = () => {
       id: data.id,
       date: data.date,
       type: data.type,
-      created:data.created
+      created:data.created,
+      file: data.file
 
 
     });

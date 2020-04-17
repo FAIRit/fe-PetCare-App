@@ -40,6 +40,14 @@ const ContactTableRow = props => {
             onChange={handleInputChange}
           /></div>
         </Table.Cell>
+        <Table.Cell><div className="ui input">
+          <input
+            type="text"
+            name="type"
+            value={data.file}
+            onChange={handleInputChange}
+          /></div>
+        </Table.Cell>
         <Table.Cell>
           <Button basic color='green'
             onClick={() => props.updatedData(data)}
