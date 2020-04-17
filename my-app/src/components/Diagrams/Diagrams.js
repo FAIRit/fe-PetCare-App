@@ -11,6 +11,7 @@ import Monocytes from './all-diagrams/Monocytes';
 import MCH from './all-diagrams/MCH';
 import MCV from './all-diagrams/MCV';
 import { useTranslation } from 'react-i18next';
+import { Card } from 'semantic-ui-react'
 
 
 const Rechart = () => {
@@ -26,9 +27,14 @@ const Rechart = () => {
 
     <div>
       <br /><br />
-
-      <div className="diagrams">    
-      <h3>{t('Kreatynina.72')}</h3>
+      <div className="diagrams-card">  <Card
+        link
+        header='Diagramy'
+        description={['Pamiętaj, że ze względu na różne sposoby określania jednostek referencyjnych oraz ich górnej i dolnej granicy wyniku, rezultaty, które widzisz na diagramach są oparte o uśrednione wartości i mogą nie być równe jednostkom wskazanym w wynikach badań.'
+        ].join('')}
+      /> </div>
+      <div className="diagrams">
+        <h3>{t('Kreatynina.72')}</h3>
 
         <LineChart
           width={700}

@@ -49,11 +49,11 @@ class Login extends Component {
 
   render() {
     return (      <div>
-
-  
+   
       <div className="loginpanel">   <div className="language">  <Button onClick={handleClickPL}><Pl /></Button>
       <Button onClick={handleClickEN}><En /></Button></div>  <form className="loginform">
                     <div className="login-data">
+            
             <Translation>
               {(t) => <label>{t('Adres e-mail.62')}: </label>
               }</Translation>
