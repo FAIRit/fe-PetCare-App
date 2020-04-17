@@ -146,4 +146,8 @@ width: 98%;
 
  .ui.link.card {
   padding: 12px !important;
+  border-bottom: 1px solid
+green;
+border-left: 1px solid
+green;
 }
