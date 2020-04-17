@@ -15,7 +15,7 @@ class Home extends Component {
     render() {
         return (
             <div>
-               <Button class="ui button"onClick={this.logout}>Wyloguj</Button>
+               <Button onClick={this.logout}>Wyloguj</Button>
             </div>
         );
     }
