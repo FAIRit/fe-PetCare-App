@@ -95,16 +95,6 @@ const PaginatedTable = props => {
             )}
         </Table.Body>
       </Table>
-      <Paginator
-        totalRecords={data.length}
-        pageLimit={pageLimit}
-        pageNeighbours={2}
-        setOffset={setOffset}
-        currentPage={currentPage}
-        setCurrentPage={setCurrentPage}
-        pagePrevText="«"
-        pageNextText="»"
-      />
     </Fragment>
   );
 };

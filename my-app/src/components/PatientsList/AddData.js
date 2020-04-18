@@ -63,8 +63,8 @@ const AddData = () => {
           <Header>{t('Dodaj pacjenta.35')}</Header>
           <div>
             <form className="doctors" onSubmit={onsubmit}><div>
-              <p>{t('Imię.2')}:</p>
-              <div><input value={name} onChange={onChangeName}></input></div>
+            <div><p>{t('Imię.2')}:</p>
+              <input value={name} onChange={onChangeName}></input></div>
 
               <p>{t('Gatunek.3')}:</p>
               <input value={species} onChange={onChangeSpecies}></input></div>
@@ -83,8 +83,7 @@ const AddData = () => {
 
               <p>{t('Numer identyfikacyjny.8')}:</p>
               <div><input value={idnumber} onChange={onChangeID}></input></div>
-
-              <button onSubmit={onsubmit}>{t('Zapisz.33')}</button></form></div>
+              <button onSubmit={onsubmit} className="add-submit-button">{t('Zapisz.33')}</button></form></div>
         </Modal.Description>
       </Modal.Content>
     </Modal>

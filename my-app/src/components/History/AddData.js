@@ -87,7 +87,7 @@ const AddData = () => {
                 <div><input value={recommendations} onChange={onChangeRecommendations}></input></div>
 
 
-                <button onSubmit={onsubmit}>{t('Zapisz.33')}</button></form>
+                <button onSubmit={onsubmit} className="add-submit-button">{t('Zapisz.33')}</button></form>
             </div>
           </Modal.Description>
         </Modal.Content>

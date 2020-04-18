@@ -59,7 +59,7 @@ const PatientsList = () => {
       />
     </div>
     <div className="doctors">
-      <AddData /></div></div>
+      <AddData/></div></div>
   );
 };
 

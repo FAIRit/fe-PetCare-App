@@ -61,7 +61,7 @@ setFile(url);
                 <input value={type} onChange={onChangeType}></input></div>
 
        <FileUploader fileSaved={onFileSaved}/>
-                              <button onSubmit={onsubmit}>{t('Zapisz.33')}</button></form>
+                              <button onSubmit={onsubmit} className="add-submit-button">{t('Zapisz.33')}</button></form>
           </div> 
 
         </Modal.Description>
