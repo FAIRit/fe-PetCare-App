@@ -32,3 +32,18 @@
 <br/>
 <br/>
 <p> archive with the option of storing documents (as links) </p><br/><br/>
+
+  ![Screenshot_2020-04-17 React App(5)](https://user-images.githubusercontent.com/52631841/79598664-a5284500-80e4-11ea-9e70-e4f92b4bba91.png)
+  
+![Screenshot_2020-04-17 12122019 morfologia (1) pdf](https://user-images.githubusercontent.com/52631841/79599448-c76e9280-80e5-11ea-9d9a-5146d01c0011.png)
+  
+<br/>
+<br/>
+<p> and analyze the treatment history at diagrams</p><br/><br/>
+  
+ 
+![Screenshot_2020-04-17 React App(4)](https://user-images.githubusercontent.com/52631841/79598233-dce2bd00-80e3-11ea-912d-f547eb8049bd.png)
+
+ <h2> How you can contact with me?</h2>
+<p> It's my e-mail adress: nnowak91@gmail.com</p>
+<p> and github: https://github.com/nnow991 </p>
