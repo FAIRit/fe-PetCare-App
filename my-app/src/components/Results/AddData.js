@@ -56,7 +56,7 @@ const AddData = () => {
     <div>
 
       <Modal trigger={<Button>{t('Dodaj wynik.37')}</Button>}>
-        <Modal.Content>
+        <Modal.Content className="modal-content">
           <Modal.Description>
             <Header>{t('Dodaj wynik.37')}</Header>
 
@@ -86,7 +86,7 @@ const AddData = () => {
                 <div><input value={other} onChange={onChangeOther}></input></div>
 
 
-                <button onSubmit={onsubmit}>{t('Zapisz.33')}</button></form>
+                <button onSubmit={onsubmit} className="add-submit-button">{t('Zapisz.33')}</button></form>
             </div>
           </Modal.Description>
         </Modal.Content>

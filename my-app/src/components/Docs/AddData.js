@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import firebase from '../Firebase/firebase'
-import { Button, Header, Modal, Image } from 'semantic-ui-react'
+import { Button, Header, Modal } from 'semantic-ui-react'
 import FileUploader from './FileUploader'
 import { useTranslation } from 'react-i18next';
 
@@ -48,7 +48,7 @@ setFile(url);
 
   return (
     <Modal trigger={<Button>{t('Dodaj dokument.38')}</Button>}>
-      <Modal.Content>
+      <Modal.Content className="modal-content">
         <Modal.Description>
           <Header>{t('Dodaj dokument.38')}</Header>
 
@@ -61,7 +61,7 @@ setFile(url);
                 <input value={type} onChange={onChangeType}></input></div>
 
        <FileUploader fileSaved={onFileSaved}/>
-                              <button onSubmit={onsubmit}>{t('Zapisz.33')}</button></form>
+                              <button onSubmit={onsubmit} className="add-submit-button">{t('Zapisz.33')}</button></form>
           </div> 
 
         </Modal.Description>

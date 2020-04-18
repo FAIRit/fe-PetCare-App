@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Button } from 'semantic-ui-react'
 import fire from '../Firebase/firebase';
+import { Translation } from 'react-i18next';
+
 
 class Home extends Component {
     constructor(props) {
@@ -12,10 +14,13 @@ class Home extends Component {
         fire.auth().signOut();
     }
 
+
     render() {
         return (
-            <div>
-               <Button class="ui button"onClick={this.logout}>Wyloguj</Button>
+            <div> 
+                <Translation>
+                {(t) => <Button onClick={this.logout}><p>{t('Wyloguj.79')}</p></Button>}
+                </Translation>
             </div>
         );
     }

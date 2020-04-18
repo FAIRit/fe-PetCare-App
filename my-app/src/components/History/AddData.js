@@ -2,8 +2,6 @@ import React, { useState, useEffect } from 'react';
 import firebase from '../Firebase/firebase'
 import { Button, Header, Modal } from 'semantic-ui-react'
 import { useTranslation } from 'react-i18next';
-import i18next from 'i18next';
-
 
 
 const AddData = () => {
@@ -59,7 +57,7 @@ const AddData = () => {
   return (
     <div>
       <Modal trigger={<Button>{t('Dodaj historię.34')}</Button>}>
-        <Modal.Content>
+        <Modal.Content className="modal-content">
           <Modal.Description>
             <Header>{t('Dodaj historię.34')}</Header>
 
@@ -87,7 +85,7 @@ const AddData = () => {
                 <div><input value={recommendations} onChange={onChangeRecommendations}></input></div>
 
 
-                <button onSubmit={onsubmit}>{t('Zapisz.33')}</button></form>
+                <button onSubmit={onsubmit} className="add-submit-button">{t('Zapisz.33')}</button></form>
             </div>
           </Modal.Description>
         </Modal.Content>

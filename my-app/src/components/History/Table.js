@@ -1,9 +1,9 @@
 import React, { useState, useEffect, Fragment } from "react";
-import { Table, Tab } from 'semantic-ui-react'
+import { Table, Input } from 'semantic-ui-react'
 import firebase from "../Firebase/firebase";
 import { useTranslation } from 'react-i18next';
 import Paginator from 'react-hooks-paginator';
-import Input from "./Inputs";
+import Inputs from "./Inputs";
 
 
 function useData(filter = '') {
@@ -57,7 +57,7 @@ const PaginatedTable = props => {
 
   return (
     <Fragment>
-      <>{t('Wyszukaj dane.41')}: </><input onChange={onInputChange} placeholder={t('Wyszukaj po diagnozie.76')}/>
+      <>{t('Wyszukaj dane.41')}: </><Input size='large' icon='search' onChange={onInputChange} placeholder={t('Wyszukaj po diagnozie.76')}/>
       <Table unstackable>
         <Table.Header>
           <Table.Row>
@@ -74,7 +74,7 @@ const PaginatedTable = props => {
         <Table.Body>
           {data.length > 0 ? (
             currentData.map(item => (
-              <Input
+              <Inputs
                 key={item.id}
                 item={item}
                 datas={props.datas}
@@ -89,7 +89,7 @@ const PaginatedTable = props => {
           ) : (
 
               <Table.Row>
-                <Table.Cell>{t('Brak danych.50')}</Table.Cell>
+                <Table.Cell><div class="ui active inline loader"></div></Table.Cell>
               </Table.Row>
             )}
         </Table.Body>

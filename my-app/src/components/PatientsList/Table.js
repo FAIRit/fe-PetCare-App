@@ -1,8 +1,8 @@
 import React, { useState, useEffect, Fragment } from "react";
-import { Table, Tab } from 'semantic-ui-react'
+import { Table, Input } from 'semantic-ui-react'
 import firebase from "../Firebase/firebase";
 import { useTranslation } from 'react-i18next';
-import Input from "./Inputs";
+import Inputs from "./Inputs";
 import Paginator from 'react-hooks-paginator';
 
 
@@ -58,7 +58,7 @@ const PaginatedTable = props => {
 
   return (
     <Fragment><div>
-      <>{t('Wyszukaj pacjenta.39')}: </><input onChange={onInputChange} placeholder={t('Wyszukaj po imieniu.74')}/></div>
+      <>{t('Wyszukaj pacjenta.39')}: </><Input size='large' icon='search' onChange={onInputChange} placeholder={t('Wyszukaj po imieniu.74')}/></div>
       <Table unstackable>
         <Table.Header>
           <Table.Row>
@@ -75,7 +75,7 @@ const PaginatedTable = props => {
         <Table.Body>
           {data.length > 0 ? (
             currentData.map(item => (
-              <Input
+              <Inputs
               key={item.id}
               item={item}
               datas={props.datas}
@@ -90,21 +90,11 @@ const PaginatedTable = props => {
           ) : (
 
               <Table.Row>
-                <Table.Cell>{t('Brak danych.50')}</Table.Cell>
+                <Table.Cell><div class="ui active inline loader"></div></Table.Cell>
               </Table.Row>
             )}
         </Table.Body>
       </Table>
-      <Paginator
-        totalRecords={data.length}
-        pageLimit={pageLimit}
-        pageNeighbours={2}
-        setOffset={setOffset}
-        currentPage={currentPage}
-        setCurrentPage={setCurrentPage}
-        pagePrevText="«"
-        pageNextText="»"
-      />
     </Fragment>
   );
 };

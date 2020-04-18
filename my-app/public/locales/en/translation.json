@@ -232,6 +232,13 @@
   },
   "Wyszukaj po rodzaju": {
     "77": "Search by type"
+  },
+  "Pamiętaj, że ze względu na różne sposoby określania jednostek referencyjnych oraz ich górnej i dolnej granicy wyniku, rezultaty, które widzisz na diagramach są oparte o uśrednione wartości i mogą nie być równe jednostkom wskazanym w wynikach badań":
+   {
+    "78": "Remember, that due to different ways of determining reference units and their upper and lower result limits, the results you see in the diagrams are based on average values ​​and may not be equal to the units indicated in the test results"
+  },
+  "Wyloguj": {
+    "79": "Logout"
   }
 }
 
