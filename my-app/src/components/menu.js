@@ -32,13 +32,13 @@ export default class MenuSecondary extends Component {
             <Menu secondary>
               <Menu.Item as={Link} to='./PatientsList'
                 name={t('Lista Pacjentów.53')}
-                active={activeItem === 'Lista Pacjentów.53'}
+                active={activeItem === 'Lista Pacjentów'}
                 onClick={this.handleItemClick}
               />
 
               <Menu.Item as={Link} to='./leki'
                 name={t('Leki.54')}
-                active={activeItem === 'Leki.54'}
+                active={activeItem === 'Leki'}
                 onClick={this.handleItemClick}
               />
               <Menu.Item as={Link} to='./Calendar'
@@ -48,7 +48,7 @@ export default class MenuSecondary extends Component {
               />
               <Menu.Item as={Link} to='./History'
                 name={t('Historia Leczenia.56')}
-                active={activeItem === 'Historia leczenia'}
+                active={activeItem === 'Historia Leczenia'}
                 onClick={this.handleItemClick}
               />
               <Menu.Item as={Link} to='./doctors'
@@ -58,7 +58,7 @@ export default class MenuSecondary extends Component {
               />
               <Menu.Item as={Link} to='./wyniki'
                 name={t('Wyniki Badań.58')}
-                active={activeItem === 'Wyniki badań'}
+                active={activeItem === 'Wyniki Badań'}
                 onClick={this.handleItemClick}
               />
               <Menu.Item as={Link} to='./Docs'

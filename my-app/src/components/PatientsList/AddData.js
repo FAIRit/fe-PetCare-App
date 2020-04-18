@@ -58,7 +58,7 @@ const AddData = () => {
 
   return (
     <Modal trigger={<Button>{t('Dodaj pacjenta.35')}</Button>}>
-      <Modal.Content>
+      <Modal.Content className="modal-content">
         <Modal.Description>
           <Header>{t('Dodaj pacjenta.35')}</Header>
           <div>

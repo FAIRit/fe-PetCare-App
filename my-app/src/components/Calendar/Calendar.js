@@ -1,4 +1,5 @@
 import React from "react";
+import { Button } from 'semantic-ui-react'
 import FullCalendar from "@fullcalendar/react";
 import dayGridPlugin from "@fullcalendar/daygrid";
 import timeGridPlugin from "@fullcalendar/timegrid";
@@ -112,11 +113,11 @@ export default class DemoApp extends React.Component {
         <div className="demo-app-top">
         <Translation>
 {
-  (t, { i18n }) =>  <button className='btnCalendar' onClick={this.toggleWeekends}> {t('Przełącz na widok tygodnia.51')}</button>}
+  (t, { i18n }) =>  <Button className='btnCalendar' onClick={this.toggleWeekends}> {t('Przełącz na widok tygodnia.51')}</Button>}
             </Translation>
 &nbsp;
 <Translation>{
-(t, { i18n }) => <button className='btnCalendar' onClick={this.gotoPast}> {t('Cofnij się do poprzedniej daty.52')}</button>}
+(t, { i18n }) => <Button className='btnCalendar' onClick={this.gotoPast}> {t('Cofnij się do poprzedniej daty.52')}</Button>}
  </Translation>  &nbsp;
 
         </div>

@@ -48,7 +48,7 @@ setFile(url);
 
   return (
     <Modal trigger={<Button>{t('Dodaj dokument.38')}</Button>}>
-      <Modal.Content>
+      <Modal.Content className="modal-content">
         <Modal.Description>
           <Header>{t('Dodaj dokument.38')}</Header>
 

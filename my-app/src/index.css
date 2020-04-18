@@ -70,7 +70,7 @@ cursor: pointer;
 .react-hooks-paginator .page-item.active .page-link{
 background-color: #e9e6e6!important;
 border-color:grey!important;
-color:grey!important;
+color:darkslategrey!important;
 }
 
 .react-hooks-paginator .page-item:hover .page-link{
@@ -152,6 +152,11 @@ margin-top:6px;
 }
 
 .fileuploader{
-    margin-top:6px;
+margin-top:6px;
 }
 
+.modal-content{
+border:2px solid;
+border-bottom: 2px solid #8884d8;
+border-left: 2px solid #8884d8;
+}

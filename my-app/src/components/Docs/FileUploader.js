@@ -8,7 +8,7 @@ class FilesUploader extends Component {
   state = {
     image: '',
     imageURL: '',
-    progress: 0,
+    progress: '',
     updateLink:''
   }
 
