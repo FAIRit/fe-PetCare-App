@@ -42,8 +42,7 @@ handleProgress=progress=>{
   render() {
   
     return (
-      <div className="App">
-
+      <div class="fileuploader">
         <FileUploader
           accept="image/*"
           name='image'
@@ -53,12 +52,10 @@ handleProgress=progress=>{
           onProgress={this.handleProgress}
         />
 <br/>
-<label>Progress</label>
 <p>{this.state.progress}</p>
 <div>
-{this.state.imageURL}
-<br/>
-<a href={this.state.imageURL}target="_blank">Link</a>
+<a href={this.state.imageURL}target="_blank">{this.state.imageURL}</a>
+
 </div>
 
       </div>
