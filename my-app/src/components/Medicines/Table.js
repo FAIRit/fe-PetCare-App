@@ -90,7 +90,7 @@ return (
         ) : (
 
             <Table.Row>
-              <Table.Cell>{t('Brak danych.50')}</Table.Cell>
+              <Table.Cell><div class="ui active inline loader"></div></Table.Cell>
             </Table.Row>
           )}
       </Table.Body>      

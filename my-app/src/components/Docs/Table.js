@@ -1,5 +1,5 @@
 import React, { useState, useEffect, Fragment } from "react";
-import { Table, Input } from 'semantic-ui-react'
+import { Table, Input} from 'semantic-ui-react'
 import firebase from "../Firebase/firebase";
 import { useTranslation } from 'react-i18next';
 import Inputs from "./Inputs";
@@ -86,7 +86,7 @@ const PaginatedTable = props => {
           ) : (
 
               <Table.Row>
-                <Table.Cell>{t('Brak danych.50')}</Table.Cell>
+                <Table.Cell><div class="ui active inline loader"></div></Table.Cell>
               </Table.Row>
             )}
         </Table.Body>
