@@ -28,7 +28,8 @@ const ContactTableRow = props => {
                         type="text"
                         name="admissionDate"
                         value={data.admissionDate}
-                        onChange={handleInputChange} />
+                        onChange={handleInputChange}
+                        placeholder={t('Data przyjęcia.12')} />
                 </div>
                     <div className="ui input">
                         <input
@@ -36,6 +37,7 @@ const ContactTableRow = props => {
                             name="dischargeDate"
                             value={data.dischargeDate}
                             onChange={handleInputChange}
+                            placeholder={t('Data wypisu.13')}
                         /></div>
                     <div className="ui input">
                     </div>
@@ -45,6 +47,7 @@ const ContactTableRow = props => {
                             name="doctor"
                             value={data.doctor}
                             onChange={handleInputChange}
+                            placeholder={t('Lekarz.14')}
                         /></div>
                     <div className="ui input">
                         <input
@@ -52,18 +55,21 @@ const ContactTableRow = props => {
                             name="patientsCondition"
                             value={data.patientsCondition}
                             onChange={handleInputChange}
+                            placeholder={t('Informacja o stanie pacjenta.15')}
                         /></div><div className="ui input">
                         <input
                             type="text"
                             name="diagnosis"
                             value={data.diagnosis}
                             onChange={handleInputChange}
+                            placeholder={t('Diagnoza.16')}
                         /><div className="ui input"></div>
                         <input
                             type="text"
                             name="recommendations"
                             value={data.recommendations}
                             onChange={handleInputChange}
+                            placeholder={t('Zalecenia.17')}
                         /></div>
                 </Table.Cell>
                 <Table.Cell>

@@ -31,6 +31,7 @@ const ContactTableRow = props => {
             name="firstname"
             value={data.firstname}
             onChange={handleInputChange}
+            placeholder={t('Imię.2')}
           /></div>
         </Table.Cell>
         <Table.Cell><div className="ui input">
@@ -39,6 +40,7 @@ const ContactTableRow = props => {
             name="surname"
             value={data.surname}
             onChange={handleInputChange}
+            placeholder={t('Nazwisko.10')}
           /></div>
         </Table.Cell>
         <Table.Cell><div className="ui input">
@@ -47,6 +49,8 @@ const ContactTableRow = props => {
             name="vetClinic"
             value={data.vetClinic}
             onChange={handleInputChange}
+            placeholder={t('Lecznica.11')}
+
           /></div>
         </Table.Cell>
         <Table.Cell>
