@@ -29,7 +29,9 @@ const ContactTableRow = props => {
                             type="text"
                             name="date"
                             value={data.date}
-                            onChange={handleInputChange} />
+                            onChange={handleInputChange}
+                            placeholder={t('Data.25')}
+                            />
                     </div>
                     <div className="ui input">
                         <input
@@ -37,6 +39,7 @@ const ContactTableRow = props => {
                             name="name"
                             value={data.name}
                             onChange={handleInputChange}
+                            placeholder={t('Nazwa.18')}
                         /></div>
                     <div className="ui input">
                         <input
@@ -44,6 +47,7 @@ const ContactTableRow = props => {
                             name="type"
                             value={data.type}
                             onChange={handleInputChange}
+                            placeholder={t('Rodzaj.19')}
                         /></div>
                     <div className="ui input">
                         <input
@@ -51,6 +55,7 @@ const ContactTableRow = props => {
                             name="result"
                             value={data.result}
                             onChange={handleInputChange}
+                            placeholder={t('Wynik.26')}
                         /></div>
                     <div className="ui input">
 
@@ -59,6 +64,8 @@ const ContactTableRow = props => {
                             name="unit"
                             value={data.unit}
                             onChange={handleInputChange}
+                            placeholder={t('Jednostka.27')}
+
                         /></div>
                     <div className="ui input">
 
@@ -67,6 +74,7 @@ const ContactTableRow = props => {
                             name="reference"
                             value={data.reference}
                             onChange={handleInputChange}
+                            placeholder={t('Jednostka referencyjna.28')}
                         /></div>
 
                 </Table.Cell>

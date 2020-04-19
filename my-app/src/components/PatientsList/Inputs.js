@@ -29,13 +29,16 @@ const ContactTableRow = props => {
                         type="text"
                         name="name"
                         value={data.name}
-                        onChange={handleInputChange} />
+                        onChange={handleInputChange}
+                        placeholder={t('Imię.2')}
+                    />
                 </div><div className="ui input">
                         <input
                             type="text"
                             name="species"
                             value={data.species}
                             onChange={handleInputChange}
+                            placeholder={t('Gatunek.3')}
                         /></div>
                     <div className="ui input">
                         <input
@@ -43,6 +46,7 @@ const ContactTableRow = props => {
                             name="breed"
                             value={data.breed}
                             onChange={handleInputChange}
+                            placeholder={t('Rasa.4')}
                         /></div>
                     <div className="ui input">
                         <input
@@ -50,6 +54,7 @@ const ContactTableRow = props => {
                             name="age"
                             value={data.age}
                             onChange={handleInputChange}
+                            placeholder={t('Wiek.5')}
                         /></div>
                     <div className="ui input">
                         <input
@@ -57,18 +62,22 @@ const ContactTableRow = props => {
                             name="color"
                             value={data.color}
                             onChange={handleInputChange}
+                            placeholder={t('Umaszczenie.6')}
                         /></div><div className="ui input">
                         <input
                             type="text"
                             name="owner"
                             value={data.owner}
                             onChange={handleInputChange}
+                            placeholder={t('Opiekun.7')}
                         /></div><div className="ui input">
                         <input
                             type="text"
                             name="idnumber"
                             value={data.idnumber}
                             onChange={handleInputChange}
+                            placeholder={t('Numer identyfikacyjny.8')}
+
                         /></div>
                 </Table.Cell>
                 <Table.Cell>

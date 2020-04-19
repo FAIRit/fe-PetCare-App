@@ -30,6 +30,7 @@ const ContactTableRow = props => {
             name="date"
             value={data.date}
             onChange={handleInputChange}
+            placeholder=  {t('Data.25')}
           /></div>
         </Table.Cell>
         <Table.Cell><div className="ui input">
@@ -38,6 +39,7 @@ const ContactTableRow = props => {
             name="type"
             value={data.type}
             onChange={handleInputChange}
+            placeholder=  {t('Rodzaj.19')}
           /></div>
         </Table.Cell>
         <Table.Cell><div className="ui input">
@@ -46,6 +48,8 @@ const ContactTableRow = props => {
             name="type"
             value={data.file}
             onChange={handleInputChange}
+            placeholder=  {t('Plik.29')}
+
           /></div>
         </Table.Cell>
         <Table.Cell>
