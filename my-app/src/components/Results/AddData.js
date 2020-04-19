@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import firebase from '../Firebase/firebase'
-import { Button, Header, Modal, Image } from 'semantic-ui-react'
+import { Button, Header, Modal, Input } from 'semantic-ui-react'
 import { useTranslation } from 'react-i18next';
 import i18next from 'i18next';
 
@@ -64,29 +64,29 @@ const AddData = () => {
               <form className="doctors" onSubmit={onsubmit}><div>
 
                 <p>{t('Data.25')}:</p>
-                <div><input value={date} onChange={onChangeDate}></input></div>
+                <div><Input value={date} onChange={onChangeDate}></Input></div>
 
                 <p>{t('Nazwa.18')}:</p>
-                <input value={name} onChange={onChangeName}></input></div>
+                <Input value={name} onChange={onChangeName}></Input></div>
                 <div>
 
                   <p>{t('Rodzaj.19')}:</p>
-                  <input value={type} onChange={onChangeType}></input></div>
+                  <Input value={type} onChange={onChangeType}></Input></div>
 
                 <p>{t('Wynik.26')}:</p>
-                <div><input value={result} onChange={onChangeResult}></input></div>
+                <div><Input value={result} onChange={onChangeResult}></Input></div>
 
                 <p>{t('Jednostka.27')}:</p>
-                <div><input value={unit} onChange={onChangeUnit}></input></div>
+                <div><Input value={unit} onChange={onChangeUnit}></Input></div>
 
                 <p>{t('Jednostka referencyjna.28')}:</p>
-                <div><input value={referenceunit} onChange={onChangeReference}></input></div>
+                <div><Input value={referenceunit} onChange={onChangeReference}></Input></div>
 
                 <p>{t('Uwagi.24')}:</p>
-                <div><input value={other} onChange={onChangeOther}></input></div>
+                <div><Input value={other} onChange={onChangeOther}></Input></div>
 
 
-                <button onSubmit={onsubmit} className="add-submit-button">{t('Zapisz.33')}</button></form>
+                <Button onSubmit={onsubmit} className="add-submit-button">{t('Zapisz.33')}</Button></form>
             </div>
           </Modal.Description>
         </Modal.Content>

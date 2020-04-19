@@ -58,14 +58,14 @@ class Login extends Component {
               {(t) => <label>{t('Adres e-mail.62')}: </label>
               }</Translation>
 
-            <input size='mini' value={this.state.email} onChange={this.handleChange} type="email" name="email" className="loginInput" placeholder="admin@admin.pl"/>
+            <Input size='mini' value={this.state.email} onChange={this.handleChange} type="email" name="email" className="loginInput" placeholder="admin@admin.pl"/>
           </div>
           <div className="login-data">
             <Translation>
               {(t) => <label>{t('Hasło.61')}:  </label>}
             </Translation>
 
-            <input size='mini' value={this.state.password} onChange={this.handleChange} type="password" name="password"  className="loginInput" placeholder="haslo123" />
+            <Input size='mini' value={this.state.password} onChange={this.handleChange} type="password" name="password"  className="loginInput" placeholder="haslo123" />
           </div>
 
           <Translation>

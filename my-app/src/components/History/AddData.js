@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import firebase from '../Firebase/firebase'
-import { Button, Header, Modal } from 'semantic-ui-react'
+import { Button, Header, Modal, Input } from 'semantic-ui-react'
 import { useTranslation } from 'react-i18next';
 
 
@@ -64,28 +64,28 @@ const AddData = () => {
             <div>
               <form className="doctors" onSubmit={onsubmit}><div>
                 <p>{t('Data przyjęcia.12')}:</p>
-                <input value={admissionDate} onChange={onChangeAdmission}></input></div>
+                <Input value={admissionDate} onChange={onChangeAdmission}></Input></div>
                 <div>      <p>{t('Data wypisu.13')}:</p>
 
-                  <input value={dischargeDate} onChange={onChangeDischarge}></input></div>
+                  <Input value={dischargeDate} onChange={onChangeDischarge}></Input></div>
 
                 <p>{t('Lecznica.11')}:</p>
-                <div><input value={vet} onChange={onChangeVet}></input></div>
+                <div><Input value={vet} onChange={onChangeVet}></Input></div>
 
                 <p>{t('Lekarz.14')}:</p>
-                <div><input value={doctor} onChange={onChangeDoctor}></input></div>
+                <div><Input value={doctor} onChange={onChangeDoctor}></Input></div>
 
                 <p>{t('Informacja o stanie pacjenta.15')}:</p>
-                <div><input value={patientsCondition} onChange={onChangeCondition}></input></div>
+                <div><Input value={patientsCondition} onChange={onChangeCondition}></Input></div>
 
                 <p>{t('Diagnoza.16')}:</p>
-                <div><input value={diagnosis} onChange={onChangeDiagnosis}></input></div>
+                <div><Input value={diagnosis} onChange={onChangeDiagnosis}></Input></div>
 
                 <p>{t('Zalecenia.17')}:</p>
-                <div><input value={recommendations} onChange={onChangeRecommendations}></input></div>
+                <div><Input value={recommendations} onChange={onChangeRecommendations}></Input></div>
 
 
-                <button onSubmit={onsubmit} className="add-submit-button">{t('Zapisz.33')}</button></form>
+                <Button onSubmit={onsubmit} className="add-submit-button">{t('Zapisz.33')}</Button></form>
             </div>
           </Modal.Description>
         </Modal.Content>

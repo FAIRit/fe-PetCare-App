@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import firebase from '../Firebase/firebase'
 import AddImage from '../Firebase/ImageUpload'
-import { Button, Header, Modal, Image } from 'semantic-ui-react'
+import { Button, Header, Modal, Image, Input } from 'semantic-ui-react'
 import { useTranslation } from 'react-i18next';
 import i18next from 'i18next';
 
@@ -64,26 +64,28 @@ const AddData = () => {
           <div>
             <form className="doctors" onSubmit={onsubmit}><div>
             <div><p>{t('Imię.2')}:</p>
-              <input value={name} onChange={onChangeName}></input></div>
+              <Input value={name} onChange={onChangeName}></Input></div>
 
               <p>{t('Gatunek.3')}:</p>
-              <input value={species} onChange={onChangeSpecies}></input></div>
+              <Input value={species} onChange={onChangeSpecies}></Input></div>
               <div>
                 <p>{t('Rasa.4')}:</p>
-                <input value={breed} onChange={onChangeBreed}></input></div>
+                <Input value={breed} onChange={onChangeBreed}></Input></div>
 
               <p>{t('Wiek.5')}:</p>
-              <div><input value={age} onChange={onChangeAge}></input></div>
+              <div><Input value={age} onChange={onChangeAge}></Input></div>
 
               <p>{t('Umaszczenie.6')}:</p>
-              <div><input value={color} onChange={onChangeColor}></input></div>
+              <div><Input value={color} onChange={onChangeColor}></Input></div>
 
               <p>{t('Opiekun.7')}:</p>
-              <div><input value={owner} onChange={onChangeOwner}></input></div>
+              <div><Input value={owner} onChange={onChangeOwner}></Input></div>
 
               <p>{t('Numer identyfikacyjny.8')}:</p>
-              <div><input value={idnumber} onChange={onChangeID}></input></div>
-              <button onSubmit={onsubmit} className="add-submit-button">{t('Zapisz.33')}</button></form></div>
+              <div><Input value={idnumber} onChange={onChangeID}></Input></div>
+
+              <Button onSubmit={onsubmit} className="add-submit-button">{t('Zapisz.33')}</Button></form></div>
+              
         </Modal.Description>
       </Modal.Content>
     </Modal>

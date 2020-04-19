@@ -85,7 +85,7 @@ border-color:#e9e6e6;
 
 .loginInput{
 border-radius: 2px;
-color:black
+color:black;
 }
 
 .ui.secondary.menu a.item:active {
@@ -147,8 +147,8 @@ border-bottom: 1px solid green;
 border-left: 1px solid green;
 }
 
-.add-submit-button{
-margin-top:6px;
+Button.add-submit-button{
+margin-top:10px!important;
 }
 
 .fileuploader{
@@ -160,3 +160,4 @@ border:2px solid;
 border-bottom: 2px solid #8884d8;
 border-left: 2px solid #8884d8;
 }
+

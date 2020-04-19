@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import firebase from '../Firebase/firebase'
-import { Button, Header, Modal } from 'semantic-ui-react'
+import { Button, Header, Modal,Input } from 'semantic-ui-react'
 import { useTranslation } from 'react-i18next';
 import i18next from 'i18next';
 
@@ -65,28 +65,28 @@ const AddData = () => {
             <div>
               <form className="doctors" onSubmit={onsubmit}><div>
                 <p>{t('Nazwa.18')}:</p>
-                <input value={name} onChange={onChangeName}></input></div>
+                <Input value={name} onChange={onChangeName}></Input></div>
 
                 <div><p>{t('Rodzaj.19')}:</p>
-                  <input value={type} onChange={onChangeType}></input></div>
+                  <Input value={type} onChange={onChangeType}></Input></div>
 
                 <p>{t('Dawkowanie.20')}:</p>
-                <div><input value={dosage} onChange={onChangeDosage}></input></div>
+                <div><Input value={dosage} onChange={onChangeDosage}></Input></div>
 
                 <p>{t('Lekarz przepisujący lek.23')}:</p>
 
-                <div><input value={doctor} onChange={onChangeDoctor}></input></div>
+                <div><Input value={doctor} onChange={onChangeDoctor}></Input></div>
 
                 <p>{t('Czas kuracji.22')}:</p>
 
-                <div><input value={date} onChange={onChangeDate}></input></div>
+                <div><Input value={date} onChange={onChangeDate}></Input></div>
 
                 <p>{t('Uwagi.24')}:</p>
 
-                <div><input value={other} onChange={onChangeOther}></input></div>
+                <div><Input value={other} onChange={onChangeOther}></Input></div>
 
 
-                <button onSubmit={onsubmit} className="add-submit-button">{t('Zapisz.33')}</button></form>
+                <Button onSubmit={onsubmit} className="add-submit-button">{t('Zapisz.33')}</Button></form>
             </div>
           </Modal.Description>
         </Modal.Content>
