@@ -1,0 +1,245 @@
+{
+  "Language": {
+    "1": "Polish"
+  },
+  "Imię": {
+    "2": "Imię"
+  },
+  "Gatunek": {
+    "3": "Gatunek"
+  },
+  "Rasa": {
+    "4": "Rasa"
+  },
+  "Wiek": {
+    "5": "Wiek"
+  },
+  "Umaszczenie": {
+    "6": "Umaszczenie"
+  },
+  "Opiekun": {
+    "7": "Opiekun"
+  },
+  "Numer identyfikacyjny": {
+    "8": "Numer identyfikacyjny"
+  },
+  "Zdjęcie": {
+    "9": "Zdjęcie"
+  },
+  "Nazwisko": {
+    "10": "Nazwisko"
+  },
+  "Lecznica": {
+    "11": "Lecznica"
+  },
+  "Data przyjęcia": {
+    "12": "Data przyjęcia"
+  },
+  "Data wypisu": {
+    "13": "Data wypisu"
+  },
+  "Lekarz": {
+    "14": "Lekarz"
+  },
+  "Informacja o stanie pacjenta": {
+    "15": "Informacja o stanie pacjenta"
+  },
+  "Diagnoza": {
+    "16": "Diagnoza"
+  },
+  "Zalecenia": {
+    "17": "Zalecenia"
+  },
+  "Nazwa": {
+    "18": "Nazwa"
+  },
+  "Rodzaj": {
+    "19": "Rodzaj"
+  },
+  "Dawkowanie": {
+    "20": "Dawkowanie"
+  },
+  "Opis": {
+    "21": "Opis"
+  },
+  "Czas kuracji": {
+    "22": "Czas kuracji"
+  },
+  "Lekarz przepisujący lek": {
+    "23": "Lekarz przepisujący lek"
+  },
+  "Uwagi": {
+    "24": "Uwagi"
+  },
+  "Data": {
+    "25": "Data"
+  },
+  "Wynik": {
+    "26": "Wynik"
+  },
+  "Jednostka": {
+    "27": "Jednostka"
+  },
+  "Jednostka referencyjna": {
+    "28": "Jednostka referencyjna"
+  },
+  "Plik": {
+    "29": "Plik"
+  },
+  "Szczegóły": {
+    "30": "Szczegóły"
+  },
+  "Lista pacjentów": {
+    "31": "Lista pacjentów"
+  },
+  "Dodaj lekarza": {
+    "32": "Dodaj lekarza"
+  },
+  "Zapisz": {
+    "33": "Zapisz"
+  },
+  "Dodaj historię": {
+    "34": "Dodaj historię"
+  },
+  "Dodaj pacjenta": {
+    "35": "Dodaj pacjenta"
+  },
+  "Dodaj lek": {
+    "36": "Dodaj lek"
+  },
+  "Dodaj wynik": {
+    "37": "Dodaj wynik"
+  },
+  "Dodaj dokument": {
+    "38": "Dodaj dokument"
+  },
+  "Wyszukaj pacjenta": {
+    "39": "Wyszukaj pacjenta"
+  },
+  "Wyszukaj lek": {
+    "40": "Wyszukaj lek"
+  },
+  "Wyszukaj dane": {
+    "41": "Wyszukaj dane"
+  },
+  "Wyszukaj lekarza": {
+    "42": "Wyszukaj lekarza"
+  },
+  "Wyszukaj wynik": {
+    "43": "Wyszukaj wynik"
+  },
+  "Wyszukaj dokument": {
+    "44": "Wyszukaj dokument"
+  },
+  "Zrezygnuj": {
+    "44": "Zrezygnuj"
+  },
+  "Czy na pewno chcesz usunąć dane?": {
+    "45": "Czy na pewno chcesz usunąć dane?"
+  },
+  "Tak": {
+    "46": "Tak"
+  },
+  "Nie": {
+    "47": "No"
+  },
+  "Przełącz na widok tygodnia": {
+    "48": "Przełącz na widok tygodnia"
+  },
+  "Cofnij się do poprzedniej daty": {
+    "49": "Cofnij się do poprzedniej daty"
+  },
+  "Brak danych": {
+    "50": "Brak danych"
+  },
+  "Przełącz na widok tygodnia": {
+    "51": "Przełącz na widok tygodnia"
+  },
+  "Cofnij się do poprzedniej daty": {
+    "52": "Cofnij się do poprzedniej daty"
+  },
+  "Lista Pacjentów": {
+    "53": "Lista Pacjentów"
+  },
+  "Leki": {
+    "54": "Leki"
+  },
+  "Kalendarz": {
+    "55": "Kalendarz"
+  },
+  "Historia Leczenia": {
+    "56": "Historia Leczenia"
+  },
+  "Lekarze": {
+    "57": "Lekarze"
+  },
+  "Wyniki Badań": {
+    "58": "Wyniki Badań"
+  },
+  "Archiwum": {
+    "59": "Archiwum"
+  },
+  "Diagramy": {
+    "60": "Diagramy"
+  },
+  "Hasło": {
+    "61": "Hasło"
+  },
+  "Adres e-mail": {
+    "62": "Adres e-mail"
+  },
+  "Zaloguj": {
+    "63": "Zaloguj"
+  },
+  "Zarejestruj": {
+    "64": "Zarejestruj"
+  },
+  "Tylko zalogowani użytkownicy mogą wprowadzać i edytować dane": {
+    "65": "Tylko zalogowani użytkownicy mogą wprowadzać i edytować dane."
+  },
+  "Załóż konto, aby móc korzystać ze wszystkich funkcjonalności": {
+    "66": "Załóż konto, aby móc korzystać ze wszystkich funkcjonalności"
+  },
+  "Eozynofile": {
+    "67": "Eozynofile"
+  },
+  "Hemoglobina": {
+    "68": "Hemoglobina"
+  },
+  "Leukocyty": {
+    "69": "Leukocyty"
+  },
+  "Monocyty": {
+    "70": "Monocyty"
+  },
+  "Mocznik": {
+    "71": "Mocznik"
+  },
+  "Kreatynina": {
+    "72": "Kreatynina"
+  },
+  "Wyszukaj po nazwisku": {
+    "73": "Wyszukaj po nazwisku"
+  },
+  "Wyszukaj po imieniu": {
+    "74": "Wyszukaj po imieniu"
+  },
+  "Wyszukaj po nazwie": {
+    "75": "Wyszukaj po nazwie"
+  },
+  "Wyszukaj po diagnozie": {
+    "76": "Wyszukaj po diagnozie"
+  },
+  "Wyszukaj po rodzaju": {
+    "77": "Wyszukaj po rodzaju"
+  },
+  "Pamiętaj, że ze względu na różne sposoby określania jednostek referencyjnych oraz ich górnej i dolnej granicy wyniku, rezultaty, które widzisz na diagramach są oparte o uśrednione wartości i mogą nie być równe jednostkom wskazanym w wynikach badań":
+   {
+    "78": "Pamiętaj, że ze względu na różne sposoby określania jednostek referencyjnych oraz ich górnej i dolnej granicy wyniku, rezultaty, które widzisz na diagramach są oparte o uśrednione wartości i mogą nie być równe jednostkom wskazanym w wynikach badań"
+  },
+  "Wyloguj": {
+    "79": "Wyloguj"
+  }
+
+}
+

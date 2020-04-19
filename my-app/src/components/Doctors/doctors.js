@@ -1,47 +1,63 @@
-import React, { useEffect, useState } from "react";
-import { Table } from 'semantic-ui-react'
-import { getData, addDoctor } from "../../services/doctors";
-import AddData from './AddData'
-debugger;
-const PaginatedTable = () => {
-  const [data, setData] = useState([]);
+import React, { useState } from "react";
+import Table from "./Table";
+import firebase from "../Firebase/firebase"
+import AddData from "./AddData"
 
-  const fetchDoctors = () => getData().then(data => setData(data));
+const Doctors = () => {
+  const data = [{}];
+  const initialFormState = {};
 
-  const onDoctorAdded = doctor => addDoctor(doctor).then(fetchDoctors);
+  const [datas, setDatas] = useState(data);
+  const [currentData, setCurrentData] = useState(initialFormState);
+  const [editing, setEditing] = useState(false);
 
-  useEffect(() => {
-    fetchDoctors();
-  }, []);
 
-  return (
-    <>
-    <div class="dropdown"></div>
-      <Table celled>
-        <Table.Header>
-          <Table.Row>
-            <Table.HeaderCell>Imię
-</Table.HeaderCell>
-            <Table.HeaderCell>Nazwisko</Table.HeaderCell>
-            <Table.HeaderCell>Lecznica</Table.HeaderCell>
-          </Table.Row>
-        </Table.Header>
+  const deleteData = id => {
+    setEditing(false);
+    firebase
+      .firestore()
+      .collection("doctors")
+      .doc(id)
+      .delete();
+  };
 
-        <Table.Body>{data.map(item => { 
-          return <Table.Row key={item.id}>
-            <Table.Cell><p>{item.firstname}</p></Table.Cell>
-            <Table.Cell><p>{item.surname}</p></Table.Cell>
-            <Table.Cell><p>{item.vetClinic}</p></Table.Cell>
-          </Table.Row>
-        })}
-
-        </Table.Body>
-      </Table>
-      <div className="doctors">
-      <AddData doctorAdded={onDoctorAdded} />
-      </div>
-    </>
-  )
+  const updatedData = updatedRow => {
+    setEditing(false);
+    firebase
+        .firestore()
+        .collection("doctors")
+        .doc(updatedRow.id)
+        .set(updatedRow);
 };
 
-export default PaginatedTable 
+const editRow = data => {
+    setEditing(true);
+    setCurrentData({
+        id: data.id,
+        firstname: data.firstname,
+        surname: data.surname,
+        vetClinic: data.vetClinic,
+        created:data.created
+    });
+};
+
+
+
+  return (<div>
+    <div>
+      <Table
+        datas={datas}
+        editRow={editRow}
+        deleteData={deleteData}
+        editing={editing}
+        setEditing={setEditing}
+        currentData={currentData}
+        updatedData={updatedData}
+      />
+    </div>
+    <div className="doctors">
+      <AddData /></div></div>
+  );
+};
+
+export default Doctors;

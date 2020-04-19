@@ -1,62 +1,86 @@
 import React, { Component } from 'react'
-import { Input, Menu } from 'semantic-ui-react'
-import Card from './petCard.js'
+import { Menu, Button } from 'semantic-ui-react'
 import { Link } from 'react-router-dom'
+import i18next from 'i18next';
+import Logout from './LoginPanel/Logout'
+import En from '../components/Languages/Flags/en'
+import Pl from '../components/Languages/Flags/pl'
+import { Translation } from 'react-i18next';
+
+
+function handleClick(lang) {
+  i18next.changeLanguage(lang)
+}
+
+const handleClickPL = e => handleClick('pl');
+const handleClickEN = e => handleClick('en');
+
 
 export default class MenuSecondary extends Component {
   state = { activeItem: 'home' }
 
   handleItemClick = (e, { name }) => this.setState({ activeItem: name })
 
+
   render() {
     const { activeItem } = this.state
 
     return (
-      <Menu secondary>
-        <Card></Card>
+      <Translation>
+        {
+          (t) =>
+            <Menu secondary>
+              <Menu.Item as={Link} to='./PatientsList'
+                name={t('Lista Pacjentów.53')}
+                active={activeItem === 'Lista Pacjentów'}
+                onClick={this.handleItemClick}
+              />
 
-        <Menu.Item as={Link} to='./leki'
-          name='Leki'
-          active={activeItem === 'Leki'}
-          onClick={this.handleItemClick}
-        />
-        <Menu.Item as={Link} to='./Calendar'
-          name='Kalendarz'
-          active={activeItem === 'Kalendarz'}
-          onClick={this.handleItemClick}
-        />
-        <Menu.Item as={Link} to='./History'
-          name='Historia leczenia'
-          active={activeItem === 'Historia leczenia'}
-          onClick={this.handleItemClick}
-        />
-        <Menu.Item as={Link} to='./doctors'
-          name='Lekarze'
-          active={activeItem === 'Lekarze'}
-          onClick={this.handleItemClick}
-        />
-        <Menu.Item as={Link} to='./wyniki'
-          name='Wyniki badań'
-          active={activeItem === 'Wyniki badań'}
-          onClick={this.handleItemClick}
-        />
-        <Menu.Item as={Link} to='./Diagramy'
-          name='Diagramy' as={Link} to='./Diagramy'
-          active={activeItem === 'Diagramy'}
-          onClick={this.handleItemClick}
-        />
-        <Menu.Menu position='right'>
-          <Menu.Item>
-            <Input icon='search' placeholder='Search...' />
-          </Menu.Item>
-          <Menu.Item
-            name='logout'
-            active={activeItem === 'logout'}
-            onClick={this.handleItemClick}
-          />
-        </Menu.Menu>
+              <Menu.Item as={Link} to='./leki'
+                name={t('Leki.54')}
+                active={activeItem === 'Leki'}
+                onClick={this.handleItemClick}
+              />
+              <Menu.Item as={Link} to='./Calendar'
+                name={t('Kalendarz.55')}
+                active={activeItem === 'Kalendarz'}
+                onClick={this.handleItemClick}
+              />
+              <Menu.Item as={Link} to='./History'
+                name={t('Historia Leczenia.56')}
+                active={activeItem === 'Historia Leczenia'}
+                onClick={this.handleItemClick}
+              />
+              <Menu.Item as={Link} to='./doctors'
+                name={t('Lekarze.57')}
+                active={activeItem === 'Lekarze'}
+                onClick={this.handleItemClick}
+              />
+              <Menu.Item as={Link} to='./wyniki'
+                name={t('Wyniki Badań.58')}
+                active={activeItem === 'Wyniki Badań'}
+                onClick={this.handleItemClick}
+              />
+              <Menu.Item as={Link} to='./Docs'
+                name={t('Archiwum.59')}
+                as={Link} to='./Archiwum'
+                active={activeItem === 'Archiwum'}
+                onClick={this.handleItemClick}
+              />
+              <Menu.Item as={Link} to='./Diagramy'
+                name={t('Diagramy.60')} as={Link} to='./Diagramy'
+                active={activeItem === 'Diagramy'}
+                onClick={this.handleItemClick}
+              />
 
-      </Menu>
+              <Menu.Menu position='right'>
+                <div className="language" style={{ width: '100%', padding: '2rem, 0' }}>
+                  <Button onClick={handleClickPL}><Pl /></Button>
+                  <Button onClick={handleClickEN}><En /></Button>
+                </div>
+                <Logout></Logout> </Menu.Menu>
+            </Menu>}
+      </Translation>
     )
   }
 }

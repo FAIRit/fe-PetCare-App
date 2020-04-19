@@ -1,90 +1,101 @@
-import React, { Component } from "react";
+import React, { useState, useEffect } from 'react';
+import firebase from '../Firebase/firebase'
+import { Button, Header, Modal, Input } from 'semantic-ui-react'
+import { useTranslation } from 'react-i18next';
+import i18next from 'i18next';
 
 
-const DEFAULT_STATE = {
-  id: "",
-  date: "",
-  name: "",
-  type: "",
-  result: "",
-  unit: "",
-  referenceUnit: "",
-  other: ""
-};
+const AddData = () => {
+  const [data, setData] = useState('');
+  const [name, setName] = useState('');
+  const [type, setType] = useState('');
+  const [result, setResult] = useState('');
+  const [date, setDate] = useState('');
+  const [unit, setUnit] = useState('');
+  const [referenceunit, setReferenceunit] = useState('');
+  const [other, setOther] = useState('');
 
+  const onChangeDate = e => setDate(e.currentTarget.value);
+  const onChangeName = e => setName(e.currentTarget.value);
+  const onChangeType = e => setType(e.currentTarget.value);
+  const onChangeResult = e => setResult(e.currentTarget.value);
+  const onChangeUnit = e => setUnit(e.currentTarget.value);
+  const onChangeReference = e => setReferenceunit(e.currentTarget.value);
+  const onChangeOther = e => setOther(e.currentTarget.value);
 
-export default class AddData extends Component {
-  state = { ...DEFAULT_STATE };
+  function onsubmit(e) {
+    e.preventDefault()
 
-  onChange = (key, event) => this.setState({ [key]: event.target.value });
+    firebase.firestore()
+      .collection('results')
+      .add({
+        name,
+        type,
+        date,
+        result,
+        unit,
+        referenceunit,
+        other,
+        created: Date.now() 
+      })
 
-  onSubmit = event => {
-    event.preventDefault();
-
-    this.props.doctorAdded({ ...this.state });
-    this.setState(DEFAULT_STATE);
-  };
-
-  render() {
-    return (
-      <div>
-        <form className="doctors" onSubmit={this.onSubmit}>
-          <p>Dodaj datę badania:</p>
-          <input
-            value={this.state.date}
-            onChange={this.onChange.bind(this, "date")}
-          />          <p>Dodaj nazwę:</p>
-
-          <input
-            value={this.state.name}
-            onChange={this.onChange.bind(this, "name")}
-          />          <p>Dodaj rodzaj:</p>
-
-          <input
-            value={this.state.type}
-            onChange={this.onChange.bind(this, "type")}
-          />          <p>Dodaj wynik:</p>
-
-          <input
-            value={this.state.result}
-            onChange={this.onChange.bind(this, "result")}
-          />          <p>Dodaj jednostkę:</p>
-
-          <input
-            value={this.state.unit}
-            onChange={this.onChange.bind(this, "unit")}
-          />          <p>Dodaj jednostkę referencyjną:</p>
-
-          <input
-            value={this.state.referenceUnit}
-            onChange={this.onChange.bind(this, "referenceUnit")}
-          />          <p>Dodatkowe informacje:</p>
-            <input
-            value={this.state.other}
-            onChange={this.onChange.bind(this, "other")}
-          />       
-
-  <br />
-          <button>Zapisz</button>
-
-        </form>
-      </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    );
+      .then(() => {
+        setName('')
+        setType('')
+        setDate('')
+        setResult('')
+        setUnit('')
+        setReferenceunit('')
+        setOther('')
+      }
+      )
   }
+  const { t } = useTranslation();
+
+  return (
+    <div>
+
+      <Modal trigger={<Button>{t('Dodaj wynik.37')}</Button>}>
+        <Modal.Content className="modal-content">
+          <Modal.Description>
+            <Header>{t('Dodaj wynik.37')}</Header>
+
+            <div>
+              <form className="doctors" onSubmit={onsubmit}><div>
+
+                <p>{t('Data.25')}:</p>
+                <div><Input value={date} onChange={onChangeDate}></Input></div>
+
+                <p>{t('Nazwa.18')}:</p>
+                <Input value={name} onChange={onChangeName}></Input></div>
+                <div>
+
+                  <p>{t('Rodzaj.19')}:</p>
+                  <Input value={type} onChange={onChangeType}></Input></div>
+
+                <p>{t('Wynik.26')}:</p>
+                <div><Input value={result} onChange={onChangeResult}></Input></div>
+
+                <p>{t('Jednostka.27')}:</p>
+                <div><Input value={unit} onChange={onChangeUnit}></Input></div>
+
+                <p>{t('Jednostka referencyjna.28')}:</p>
+                <div><Input value={referenceunit} onChange={onChangeReference}></Input></div>
+
+                <p>{t('Uwagi.24')}:</p>
+                <div><Input value={other} onChange={onChangeOther}></Input></div>
+
+
+                <Button onSubmit={onsubmit} className="add-submit-button">{t('Zapisz.33')}</Button></form>
+            </div>
+          </Modal.Description>
+        </Modal.Content>
+      </Modal>
+
+    </div>
+
+
+  );
 }
+
+export default AddData

@@ -1,6 +1,7 @@
+
 import React, { useEffect, useState } from "react";
 import { Button, Header, Image, Modal } from 'semantic-ui-react'
-import { getData } from '../services/pet'
+import { getData } from '../services/pets'
 
 const PatientCardModal = () => {
   const [data, setData] = useState([]);

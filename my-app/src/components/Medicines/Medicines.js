@@ -1,54 +1,71 @@
-import React, { useEffect, useState } from "react";
-import { Table} from 'semantic-ui-react'
-import { getData, addDoctor } from "../../services/medicines";
-import AddData from './AddData'
+import React, { useState, useEffect } from "react";
+import Table from "./Table";
+import firebase from "../Firebase/firebase"
+import AddData from "./AddData"
 
+const Medicines = () => {
+    const data = [{}];
+    const initialFormState = {};
 
-const TableFixed = () => {
-  const [data, setData] = useState([]);
+    const [datas, setDatas] = useState(data);
+    const [currentData, setCurrentData] = useState(initialFormState);
+    const [editing, setEditing] = useState(false);
+    
 
-  const fetchDoctors = () => getData().then(data => setData(data));
+    const deleteData = id => {
+        setEditing(false);
+        firebase
+            .firestore()
+            .collection("medicines")
+            .doc(id)
+            .delete();
+    };
 
-  const onDoctorAdded = doctor => addDoctor(doctor).then(fetchDoctors);
+    const updatedData = updatedRow => {
+        setEditing(false);
+        firebase
+            .firestore()
+            .collection("medicines")
+            .doc(updatedRow.id)
+            .set(updatedRow);
+    };
 
-  useEffect(() => {
-    fetchDoctors();
-  }, []);
+    const editRow = data => {
+        setEditing(true);
+        setCurrentData({
+            id: data.id,
+            name: data.name,
+            type: data.type,
+            dosage: data.dosage,
+            other: data.other,
+            doctor: data.doctor,
+            created:data.created,
+        });
+    };
 
-  return (
-    <div>
-      <Table fixed>
-        <Table.Header>
-          <Table.Row>
-            <Table.HeaderCell>Nazwa</Table.HeaderCell>
-            <Table.HeaderCell>Rodzaj</Table.HeaderCell>
-            <Table.HeaderCell>Dawkowanie</Table.HeaderCell>
-            <Table.HeaderCell>Opis</Table.HeaderCell>
-            <Table.HeaderCell>*Data rozpoczęcia</Table.HeaderCell>
-            <Table.HeaderCell>*Lekarz przepisujący lek</Table.HeaderCell>
-            <Table.HeaderCell>Uwagi</Table.HeaderCell>
-          </Table.Row>
-        </Table.Header>
-
-        <Table.Body>{data.map(item => {
-          return <Table.Row key={item.id}>
-            <Table.Cell><p key={item.id}>{item.name}</p></Table.Cell>
-            <Table.Cell><p key={item.id}>{item.type}</p></Table.Cell>
-            <Table.Cell><p key={item.id}>{item.dosage}</p></Table.Cell>
-            <Table.Cell><p key={item.id}>{item.other}</p></Table.Cell>
-            <Table.Cell><p></p></Table.Cell>
-            <Table.Cell><p key={item.id}>{item.doctor}</p>
-            </Table.Cell>
-
-          </Table.Row>
-        })}
-        </Table.Body>
-      </Table>
-      <div className="doctors">
-      <AddData doctorAdded={onDoctorAdded} />
-      </div>
-    </div>
-  )
+    return (<div>
+        <div>
+            <Table
+                datas={datas}
+                editRow={editRow}
+                deleteData={deleteData}
+                editing={editing}
+                setEditing={setEditing}
+                currentData={currentData}
+                updatedData={updatedData}
+            />
+        </div>
+        <div className="doctors">
+            <AddData />  
+    </div></div>
+    );
 };
 
-export default TableFixed
+export default Medicines;
+
+
+
+
+
+
+

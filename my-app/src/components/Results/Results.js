@@ -1,50 +1,66 @@
-import React, { useEffect, useState } from "react";
-import { Table } from 'semantic-ui-react'
-import { getData, addDoctor } from "../../services/results";
-import AddData from './AddData'
+import React, { useState } from "react";
+import Table from "./Table";
+import firebase from "../Firebase/firebase"
+import AddData from "./AddData"
 
-const TableFixed = () => {
-  const [data, setData] = useState([]);
 
-  const fetchDoctors = () => getData().then(data => setData(data));
+const History = () => {
+    const data = [{}];
+    const initialFormState = {};
 
-  const onDoctorAdded = doctor => addDoctor(doctor).then(fetchDoctors);
+    const [datas, setDatas] = useState(data);
+    const [currentData, setCurrentData] = useState(initialFormState);
+    const [editing, setEditing] = useState(false);
 
-  useEffect(() => {
-    fetchDoctors();
-  }, []);
-  return (
-    <div>
-      <Table fixed>
-        <Table.Header>
-          <Table.Row>
-            <Table.HeaderCell>Data</Table.HeaderCell>
-            <Table.HeaderCell>Nazwa</Table.HeaderCell>
-            <Table.HeaderCell>Rodzaj</Table.HeaderCell>
-            <Table.HeaderCell>Wynik</Table.HeaderCell>
-            <Table.HeaderCell>Jednostka</Table.HeaderCell>
-            <Table.HeaderCell>Jednostka referencyjna</Table.HeaderCell>
-            <Table.HeaderCell>Uwagi</Table.HeaderCell>
-          </Table.Row>
-        </Table.Header>
 
-        <Table.Body>{data.map(item => {
-          return <Table.Row key={item.id}>
-            <Table.Cell><p>{item.date}</p></Table.Cell>
-            <Table.Cell><p>{item.name}</p></Table.Cell>
-            <Table.Cell><p>{item.type}</p></Table.Cell>
-            <Table.Cell><p>{item.result}</p></Table.Cell>
-            <Table.Cell><p>{item.unit}</p></Table.Cell>
-            <Table.Cell><p>{item.referenceUnit}</p></Table.Cell>
-          </Table.Row>
-        })}
-        </Table.Body>
-      </Table>
-      <div className="doctors">
-      <AddData doctorAdded={onDoctorAdded} />
-      </div>
-    </div>
-  )
+    const deleteData = id => {
+        setEditing(false);
+        firebase
+            .firestore()
+            .collection("results")
+            .doc(id)
+            .delete();
+    };
+
+
+    const updatedData = updatedRow => {
+        setEditing(false);
+        firebase
+            .firestore()
+            .collection("results")
+            .doc(updatedRow.id)
+            .set(updatedRow);
+    };
+
+    const editRow = data => {
+        setEditing(true);
+        setCurrentData({
+            id: data.id,
+            created: data.created,
+            date: data.date,
+            name: data.name,
+            reference: data.reference,
+            result: data.result,
+            type: data.type,
+            unit: data.unit
+        });
+    };
+
+    return (<div>
+        <div>
+            <Table
+                datas={datas}
+                editRow={editRow}
+                deleteData={deleteData}
+                editing={editing}
+                setEditing={setEditing}
+                currentData={currentData}
+                updatedData={updatedData}
+            />
+        </div>
+        <div className="doctors">
+            <AddData /></div></div>
+    );
 };
 
-export default TableFixed
+export default History;

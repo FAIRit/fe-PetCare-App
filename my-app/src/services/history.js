@@ -140,25 +140,35 @@ let DOCTORS = [
 
    },
    {
-      id: 13,
+      id: 14,
       admissionDate: '24.03.2020',
       dischargeDate: '24.03.2020',
       vet: 'Przychodnia VetCentrum Gdynia, ul. Chylońska 230',
       doctor: 'dr Marta Kozuń',
       patientsCondition: 'Kot w lepszej kondycji. Wielkość źrenic nadal zróżnicowana, ale wyglądają lepiej, niż dzień wcześniej. Ma apetyt, siusia samodzielnie, wydala niewielkie ilości martwych pasożytów. Wyniki badań krwi lepsze,niż poprzednie. Mocznik spadł',
       diagnosis: 'Prawdopodobnie doszło do zatrucia związanego z kuracją przeciwpasożytniczą.',
-      recommendations: 'Podawano drugą kroplówkę przez 5 godzin. Zalecany powrót 25.03 na trzecią, ostatnią kroplówkę'
-
+      recommendations: 'Podawano drugą kroplówkę przez 5 godzin. Zalecany powrót 25.03 na trzecią, ostatnią kroplówkę. Dodatkowo, antybiotykoterapia zostaje przedłużona do 21 dni'
    },
    {
-      id: 14,
+      id: 15,
       admissionDate: '25.03.2020',
       dischargeDate: '25.03.2020',
       vet: 'Przychodnia VetCentrum Gdynia, ul. Chylońska 230',
       doctor: 'dr Marta Kozuń',
-      patientsCondition: 'Kot w lepszej kondycji. Wielkość źrenic nadal zróżnicowana. W trakcie pobytu w lecznicy, ygryzł sobie dużą ilość sierści na lewym boku, założono kołnierz na czas pobytu w lecznicy',
+      patientsCondition: 'Kot w lepszej kondycji. Wielkość źrenic nadal zróżnicowana. W trakcie pobytu w lecznicy, wygryzł sobie dużą ilość sierści na lewym boku, założono kołnierz na czas pobytu w lecznicy',
       diagnosis: 'Prawdopodobnie doszło do zatrucia związanego z kuracją przeciwpasożytniczą.',
       recommendations: 'Podawano trzecią kroplówkę przez 5 godzin. Zalecany powrót 26.03 na jeszcze jedną kroplówkę. Prawdopodobną przyczyną wygryzania sierści jest podwyższony poziom eozynofilów spowodowany infekcją pasożytniczą'
+
+   },
+   {
+      id: 16,
+      admissionDate: '26.03.2020',
+      dischargeDate: '26.03.2020',
+      vet: 'Przychodnia VetCentrum Gdynia, ul. Chylońska 230',
+      doctor: 'dr Marta Kozuń, dr Sylwana Rzepczyk',
+      patientsCondition: 'Kot w dobrej kondycji. Wielkość źrenic nadal zróżnicowana. W trakcie pobytu w lecznicy ściągnął sobie samodzielnie kołnierz założony w celu zapobiegnięcia dalszemu wygryzaniu sierści',
+      diagnosis: 'Prawdopodobnie doszło do zatrucia związanego z kuracją przeciwpasożytniczą.',
+      recommendations: 'Podawano czwartą kroplówkę przez 6 godzin. Wielkosć źrenic nadal obserwowana, wskazana obserwacja w warunkach domowych. Kot siusia samodzielnie. Zalecany powrót 02.04 na wizytę kontrolną. Najprawdopodoniej będzie konieczność ponownego podania leków na pasożyty. Kot ma niskie ciśnienie - nie ma już potrzeby podawania Semintry', 
 
    }];
 

@@ -1,54 +1,52 @@
-import React from 'react';
+
+import React, { Component } from 'react';
 import './App.css';
-import Menu from './components/menu';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-} from "react-router-dom";
-import Medicines from './components/Medicines/Medicines'
-import Calendar from './components/Calendar/Calendar'
-import Doctors from './components/Doctors/doctors'
-import History from './components/History/History'
-import Diagrams from './components/Diagrams/Diagrams'
-import Results from './components/Results/Results'
+import fire from './components/Firebase/firebase';
+import Home from './Home';
+import Login from './components/LoginPanel/Login';
+import Demo from './components/LoginPanel/Demo';
 
 
-const styleLink = document.createElement("link");
-styleLink.rel = "stylesheet";
-styleLink.href = "https://cdn.jsdelivr.net/npm/semantic-ui/dist/semantic.min.css";
-document.head.appendChild(styleLink);
+class App extends Component {
+  constructor() {
+    super();
+    this.state = ({
+      user: null,
+    });
+    this.authListener = this.authListener.bind(this);
+  }
 
-function App() {
-  return (
-      <Router>
-        <div className="App">
-          <Menu />
+  componentDidMount() {
+    this.authListener();
+  }
 
-          <Switch>
-            <Route path="/Leki">
-              <Medicines />
-            </Route>
-            <Route path="/Calendar">
-            <Calendar/>
-            </Route>
-            <Route path="/doctors">
-            <Doctors/>
-            </Route>
-            <Route path="/History">
-            <History/>
-            </Route>
-            <Route path="/wyniki">
-            <Results/>
-            </Route>
-            <Route path="/Diagramy">
-            <Diagrams/>
-            </Route>
-          </Switch>
-        </div>
-      </Router>
-  );
-}
+  authListener() {
+    fire.auth().onAuthStateChanged((user) => {
+      console.log(user);
+      if (user) {
+        this.setState({ user });
+        localStorage.setItem('user', user.uid);
+      } else {
+        this.setState({ user: null });
+        localStorage.removeItem('user');
+      }
+    });
+  }
+
+  render() {
+    return (
+      <div className="App">
+        {this.state.user ? (
+          <Home />
+        ) :
+          (<Login/>
+         
+          )}
+        
+        
+      </div>
+    )}}
+  
 
 
 export default App;

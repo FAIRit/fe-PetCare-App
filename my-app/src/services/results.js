@@ -577,6 +577,28 @@ let DOCTORS = [
 
 
     },
+    {
+        id: 58,
+        name: 'Mocznik',
+        type: 'morfologia',
+        result: '17,8',
+        unit: 'mmol/l',
+        referenceUnit: '5.0-11.03',
+        date: '2019.03.23'
+
+
+    },
+    {
+        id: 59,
+        name: 'Kreatynina',
+        type: 'morfologia',
+        result: '292.1',
+        unit: 'umol/l',
+        referenceUnit: '1-168',
+        date: '2019.12.12'
+
+
+    },
 ];
 
 const calculateNextId = list => ((list || []).slice(-1)[0] ?.id ?? 0) + 1;
