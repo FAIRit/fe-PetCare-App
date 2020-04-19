@@ -6,7 +6,7 @@ import AddData from "./AddData"
 
 const History = () => {
     const data = [{}];
-    const initialFormState = { };
+    const initialFormState = {};
 
     const [datas, setDatas] = useState(data);
     const [currentData, setCurrentData] = useState(initialFormState);
@@ -60,7 +60,8 @@ const History = () => {
             />
         </div>
         <div className="doctors">
-            <AddData /></div></div>
+            <AddData /></div>
+    </div>
     );
 };
 

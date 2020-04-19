@@ -44,7 +44,7 @@ const PaginatedTable = props => {
 
   const onInputChange = event => setFilter(event.currentTarget.value);
 
-  const pageLimit = 10;
+  const pageLimit = 5;
 
   const [offset, setOffset] = React.useState(0);
   const [currentData, setCurrentData] = useState([]);
@@ -89,7 +89,7 @@ const PaginatedTable = props => {
           ) : (
 
               <Table.Row>
-                <Table.Cell><div class="ui active inline loader"></div></Table.Cell>
+                <Table.Cell><div className="ui active inline loader"></div></Table.Cell>
               </Table.Row>
             )}
         </Table.Body>

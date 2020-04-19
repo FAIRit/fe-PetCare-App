@@ -84,7 +84,7 @@ const PaginatedTable = props => {
           ) : (
 
               <Table.Row>
-                <Table.Cell><div class="ui active inline loader"></div></Table.Cell>
+                <Table.Cell><div className="ui active inline loader"></div></Table.Cell>
               </Table.Row>
             )}
         </Table.Body>

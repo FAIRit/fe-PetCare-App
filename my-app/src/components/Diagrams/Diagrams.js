@@ -75,7 +75,6 @@ const Rechart = () => {
         <MCV />
       </div>
       <a href="#" className="top-button"><FontAwesomeIcon icon={faAngleDoubleUp} size='4x' color="lightgrey" /></a>
-
     </div>
   );
 

@@ -4,7 +4,6 @@ import './App.css';
 import fire from './components/Firebase/firebase';
 import Home from './Home';
 import Login from './components/LoginPanel/Login';
-import Demo from './components/LoginPanel/Demo';
 
 
 class App extends Component {
