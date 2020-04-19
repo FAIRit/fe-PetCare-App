@@ -66,7 +66,6 @@ return (
           <Table.HeaderCell>{t('Rodzaj.19')}</Table.HeaderCell>
           <Table.HeaderCell>{t('Dawkowanie.20')}</Table.HeaderCell>
           <Table.HeaderCell>{t('Lekarz przepisujący lek.23')}</Table.HeaderCell>
-          <Table.HeaderCell>{t('Opis.21')}</Table.HeaderCell>
           <Table.HeaderCell>{t('Czas kuracji.22')}</Table.HeaderCell>
           <Table.HeaderCell>{t('Uwagi.24')}</Table.HeaderCell>
           <Table.HeaderCell></Table.HeaderCell>

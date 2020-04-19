@@ -39,7 +39,7 @@ const Medicines = () => {
             dosage: data.dosage,
             other: data.other,
             doctor: data.doctor,
-            created:data.created
+            created:data.created,
         });
     };
 
