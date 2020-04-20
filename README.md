@@ -10,7 +10,7 @@
     
   
  <h2> Now, you can start to work with the PetCare App</h2>
- You could register and login with your account but you can also login with the test account (tips on the page :))<br/>
+ You could register and login with your account, but you can also login with the test account (tips on the page :))<br/>
  <br/>
  
 ![100punktów](https://user-images.githubusercontent.com/52631841/79707319-63ea8d80-82bc-11ea-95b5-94cf88022876.png)
