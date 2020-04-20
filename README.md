@@ -20,6 +20,7 @@
 
 ![Bez tytułu2](https://user-images.githubusercontent.com/52631841/79707644-816c2700-82bd-11ea-96b1-8fae5fa40612.png)
 
+<br/><br/>
 
 <p>After logging in, you can start to enter, update and delete medical data</p><br/><br/>
  
@@ -56,7 +57,7 @@
  
 ![Screenshot_2020-04-17 React App(4)](https://user-images.githubusercontent.com/52631841/79598233-dce2bd00-80e3-11ea-912d-f547eb8049bd.png)
 
- <h2> How do I plan to develop PetCAre App?</h2>
+ <h2> How do I plan to develop PetCare App?</h2>
 I plan to expand my app with the specific search filters and to conent calendar with google calendar.
 I'm gooing to refine diagrams also.
 
