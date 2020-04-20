@@ -1,7 +1,7 @@
 <h1>PetCare App</h1>
 <p> This repository contains react app - PetCare App.</p>
   <p>Using this app, you can archive your pet's test results, treatment history and information about medicines.<p>
-    <p>In addition, you can analyze the treatment results at diagrams</p>
+    <p>In addition, you can analyze the treatment results at diagrams, use event calendar and digital, docs archive.</p>
     
 <h2> How to use</h2>
 
