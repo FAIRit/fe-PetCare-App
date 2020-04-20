@@ -66,16 +66,16 @@ class Login extends Component {
               {(t) => <label>{t('Hasło.61')}:  </label>}
             </Translation>
 
-            <Input size='small' value={this.state.password} onChange={this.handleChange} type="password" name="password" className="loginInput" />
+            <Input size='small' value={this.state.password} onChange={this.handleChange} style={{ marginTop:'5px' }}type="password" name="password" className="loginInput" />
 
 
           </div>
 
           <Translation>
-            {(t) => <Button type="submit" onClick={this.login}> {t('Zaloguj.63')}</Button>}</Translation>
+            {(t) => <Button type="submit" onClick={this.login} style={{ marginLeft: '65px', marginTop:'5px' }}> {t('Zaloguj.63')}</Button>}</Translation>
 
           <Translation>
-            {(t) => <Button onClick={this.signup} style={{ marginLeft: '25px' }}>{t('Zarejestruj.64')}</Button>}</Translation>
+            {(t) => <Button onClick={this.signup} style={{ marginLeft: '2px' }}>{t('Zarejestruj.64')}</Button>}</Translation>
           <br />
 
         </form> <div className="toolip"><a data-tip data-for='happyFace'>          <Translation>
