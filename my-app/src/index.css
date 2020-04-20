@@ -69,8 +69,8 @@ cursor: pointer;
 }
 
 .react-hooks-paginator{
-    position:absolute;
-margin-left:50%;
+position:absolute;
+margin-left:42%!important;
 }
 .react-hooks-paginator .page-item.active .page-link{
 background-color: #e9e6e6!important;
