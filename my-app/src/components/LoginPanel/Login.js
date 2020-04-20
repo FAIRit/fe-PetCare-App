@@ -6,6 +6,9 @@ import i18next from 'i18next';
 import En from '../Languages/Flags/en'
 import Pl from '../Languages/Flags/pl'
 import ReactTooltip from "react-tooltip";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons'
+
 
 function handleClick(lang) {
   i18next.changeLanguage(lang)
@@ -22,10 +25,18 @@ class Login extends Component {
     this.signup = this.signup.bind(this);
     this.state = {
       email: '',
-      password: ''
+      password: '',
+      title: ' Log in',
+
     };
   }
+  changeTitle = () => {
+    this.setState({ title: ' Sing up' });
+  };
 
+  backToTitle = () => {
+    this.setState({ title: " Log in" });
+  };
   handleChange(e) {
     this.setState({ [e.target.name]: e.target.value });
   }
@@ -51,9 +62,23 @@ class Login extends Component {
     return (<div>
 
       <div className="loginpanel">   <div className="language">  <Button onClick={handleClickPL}><Pl /></Button>
-        <Button onClick={handleClickEN}><En /></Button></div>  <form className="loginform">
+        <Button onClick={handleClickEN}><En /></Button></div>
+        <div> <div className="toolip">
+          <a data-tip data-for='happyFace'>          <Translation>
+            {(t) => <p>{t('Potrzebujesz pomocy?.81')}</p>}</Translation>
+          </a><ReactTooltip id='happyFace' type='error'>
+            <span><p>The password must be at least 6 characters :)</p>
+              <p>You can also login to with the test account:</p>
+              <p>Login:  user@user.pl</p>
+              <p>  Password: haslo123</p>
+            </span>
+          </ReactTooltip></div>
+          <div className="backButton"> <p onClick={this.backToTitle}>
+            <FontAwesomeIcon icon={faArrowLeft} size='2x' color="lightgrey" />
+          </p></div>
+        </div> <form className="loginform">
 
-          <div className="login-data">
+          <div className="login-data"> <h1 className="login-title">{this.state.title}</h1>
 
             <Translation>
               {(t) => <label>{t('Adres e-mail.62')}: </label>
@@ -66,30 +91,22 @@ class Login extends Component {
               {(t) => <label>{t('Hasło.61')}:  </label>}
             </Translation>
 
-            <Input size='small' value={this.state.password} onChange={this.handleChange} style={{ marginTop:'5px' }}type="password" name="password" className="loginInput" />
+            <Input size='small' value={this.state.password} onChange={this.handleChange} style={{ marginTop: '5px' }} type="password" name="password" className="loginInput" />
 
 
           </div>
 
           <Translation>
-            {(t) => <Button type="submit" onClick={this.login} style={{ marginLeft: '65px', marginTop:'5px' }}> {t('Zaloguj.63')}</Button>}</Translation>
+            {(t) => <Button type="submit" onClick={this.login} style={{ marginLeft: '65px', marginTop: '5px' }}> {t('Zaloguj.63')}</Button>}</Translation>
 
           <Translation>
             {(t) => <Button onClick={this.signup} style={{ marginLeft: '2px' }}>{t('Zarejestruj.64')}</Button>}</Translation>
           <br />
 
-        </form> <div className="toolip"><a data-tip data-for='happyFace'>          <Translation>
-            {(t) => <p>{t('Potrzebujesz pomocy?.81')}</p>}</Translation> 
-            </a><ReactTooltip id='happyFace' type='error'>
-            <span><p>The password must be at least 6 characters :)</p>
-              <p>You can also login to with the test account:</p>
-              <p>Login:  user@user.pl</p>
-              <p>  Password: haslo123</p>
-            </span>
-          </ReactTooltip></div>
-        </div>
-      </div >
-      );
-    }
+        </form>
+      </div>
+    </div >
+    );
   }
+}
 export default Login; 
