@@ -248,8 +248,12 @@
   },
   "Hasło powinno składać się z minimum 6 liter:)": {
     "82": "The password must be at least 6 characters:)"
+  },
+  "Nie masz jeszcze konta": {
+    "83": "You haven't got an account yet"
   }
 }
+
 
 
 
