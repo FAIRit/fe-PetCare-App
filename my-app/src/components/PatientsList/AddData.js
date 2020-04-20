@@ -64,25 +64,25 @@ const AddData = () => {
           <div>
             <form className="doctors" onSubmit={onsubmit}><div>
             <div><p>{t('Imię.2')}:</p>
-              <Input value={name} onChange={onChangeName}></Input></div>
+              <Input size="small" value={name} onChange={onChangeName}></Input></div>
 
               <p>{t('Gatunek.3')}:</p>
-              <Input value={species} onChange={onChangeSpecies}></Input></div>
+              <Input size="small" value={species} onChange={onChangeSpecies}></Input></div>
               <div>
                 <p>{t('Rasa.4')}:</p>
-                <Input value={breed} onChange={onChangeBreed}></Input></div>
+                <Input size="small" value={breed} onChange={onChangeBreed}></Input></div>
 
               <p>{t('Wiek.5')}:</p>
-              <div><Input value={age} onChange={onChangeAge}></Input></div>
+              <div><Input size="small" value={age} onChange={onChangeAge}></Input></div>
 
               <p>{t('Umaszczenie.6')}:</p>
-              <div><Input value={color} onChange={onChangeColor}></Input></div>
+              <div><Input size="small" value={color} onChange={onChangeColor}></Input></div>
 
               <p>{t('Opiekun.7')}:</p>
-              <div><Input value={owner} onChange={onChangeOwner}></Input></div>
+              <div><Input size="small" value={owner} onChange={onChangeOwner}></Input></div>
 
               <p>{t('Numer identyfikacyjny.8')}:</p>
-              <div><Input value={idnumber} onChange={onChangeID}></Input></div>
+              <div><Input size="small" value={idnumber} onChange={onChangeID}></Input></div>
 
               <Button onSubmit={onsubmit} className="add-submit-button">{t('Zapisz.33')}</Button></form></div>
               

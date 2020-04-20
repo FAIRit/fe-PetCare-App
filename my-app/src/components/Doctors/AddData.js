@@ -48,14 +48,14 @@ import { useTranslation } from 'react-i18next';
           <div>
             <form className="doctors" onSubmit={onsubmit}><div>
               <p>{t('Imię.2')}:</p>
-              <Input value={firstname} onChange={onChangeName}></Input></div>
+              <Input size="small" value={firstname} onChange={onChangeName}></Input></div>
               <div>      <p>{t('Nazwisko.10')}:</p>
 
-                <Input value={surname} onChange={onChangeSurname}></Input></div>
+                <Input size="small"  value={surname} onChange={onChangeSurname}></Input></div>
               <p>{t('Lecznica.11')}:</p>
 
 
-              <div><Input value={vetClinic} onChange={onChangeVet}></Input></div>
+              <div><Input size="small" value={vetClinic} onChange={onChangeVet}></Input></div>
 
               <Button onSubmit={onsubmit} className="add-submit-button">{t('Zapisz.33')}:</Button></form>
           </div>

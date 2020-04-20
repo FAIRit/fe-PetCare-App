@@ -64,26 +64,26 @@ const AddData = () => {
               <form className="doctors" onSubmit={onsubmit}><div>
 
                 <p>{t('Data.25')}:</p>
-                <div><Input value={date} onChange={onChangeDate}></Input></div>
+                <div><Input size="small" value={date} onChange={onChangeDate}></Input></div>
 
                 <p>{t('Nazwa.18')}:</p>
-                <Input value={name} onChange={onChangeName}></Input></div>
+                <Input size="small" value={name} onChange={onChangeName}></Input></div>
                 <div>
 
                   <p>{t('Rodzaj.19')}:</p>
-                  <Input value={type} onChange={onChangeType}></Input></div>
+                  <Input size="small" value={type} onChange={onChangeType}></Input></div>
 
                 <p>{t('Wynik.26')}:</p>
-                <div><Input value={result} onChange={onChangeResult}></Input></div>
+                <div><Input size="small"value={result} onChange={onChangeResult}></Input></div>
 
                 <p>{t('Jednostka.27')}:</p>
-                <div><Input value={unit} onChange={onChangeUnit}></Input></div>
+                <div><Input size="small" value={unit} onChange={onChangeUnit}></Input></div>
 
                 <p>{t('Jednostka referencyjna.28')}:</p>
-                <div><Input value={referenceunit} onChange={onChangeReference}></Input></div>
+                <div><Input size="small" value={referenceunit} onChange={onChangeReference}></Input></div>
 
                 <p>{t('Uwagi.24')}:</p>
-                <div><Input value={other} onChange={onChangeOther}></Input></div>
+                <div><Input size="small" value={other} onChange={onChangeOther}></Input></div>
 
 
                 <Button onSubmit={onsubmit} className="add-submit-button">{t('Zapisz.33')}</Button></form>

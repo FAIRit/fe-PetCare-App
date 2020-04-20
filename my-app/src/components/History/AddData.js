@@ -64,25 +64,25 @@ const AddData = () => {
             <div>
               <form className="doctors" onSubmit={onsubmit}><div>
                 <p>{t('Data przyjęcia.12')}:</p>
-                <Input value={admissionDate} onChange={onChangeAdmission}></Input></div>
+                <Input size="small" value={admissionDate} onChange={onChangeAdmission}></Input></div>
                 <div>      <p>{t('Data wypisu.13')}:</p>
 
-                  <Input value={dischargeDate} onChange={onChangeDischarge}></Input></div>
+                  <Input size="small" value={dischargeDate} onChange={onChangeDischarge}></Input></div>
 
                 <p>{t('Lecznica.11')}:</p>
-                <div><Input value={vet} onChange={onChangeVet}></Input></div>
+                <div><Input size="small" size="small" value={vet} onChange={onChangeVet}></Input></div>
 
                 <p>{t('Lekarz.14')}:</p>
-                <div><Input value={doctor} onChange={onChangeDoctor}></Input></div>
+                <div><Input size="small" value={doctor} onChange={onChangeDoctor}></Input></div>
 
                 <p>{t('Informacja o stanie pacjenta.15')}:</p>
-                <div><Input value={patientsCondition} onChange={onChangeCondition}></Input></div>
+                <div><Input size="small" value={patientsCondition} onChange={onChangeCondition}></Input></div>
 
                 <p>{t('Diagnoza.16')}:</p>
-                <div><Input value={diagnosis} onChange={onChangeDiagnosis}></Input></div>
+                <div><Input size="small" value={diagnosis} onChange={onChangeDiagnosis}></Input></div>
 
                 <p>{t('Zalecenia.17')}:</p>
-                <div><Input value={recommendations} onChange={onChangeRecommendations}></Input></div>
+                <div><Input size="small" value={recommendations} onChange={onChangeRecommendations}></Input></div>
 
 
                 <Button onSubmit={onsubmit} className="add-submit-button">{t('Zapisz.33')}</Button></form>

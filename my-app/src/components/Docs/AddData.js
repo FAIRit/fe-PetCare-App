@@ -55,10 +55,10 @@ setFile(url);
           <div>
             <form className="doctors" onSubmit={onsubmit}><div>
               <p>{t('Data.25')}:</p>
-              <Input value={date} onChange={onChangeDate}></Input></div>
+              <Input size="small" value={date} onChange={onChangeDate}></Input></div>
               <div>      <p>{t('Rodzaj.19')}:</p>
 
-                <Input value={type} onChange={onChangeType}></Input></div>
+                <Input size="small" value={type} onChange={onChangeType}></Input></div>
 
        <FileUploader fileSaved={onFileSaved}/>
                               <Button onSubmit={onsubmit} className="add-submit-button">{t('Zapisz.33')}</Button></form>

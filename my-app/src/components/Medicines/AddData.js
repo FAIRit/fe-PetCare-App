@@ -65,25 +65,25 @@ const AddData = () => {
             <div>
               <form className="doctors" onSubmit={onsubmit}><div>
                 <p>{t('Nazwa.18')}:</p>
-                <Input value={name} onChange={onChangeName}></Input></div>
+                <Input size="small" value={name} onChange={onChangeName}></Input></div>
 
                 <div><p>{t('Rodzaj.19')}:</p>
-                  <Input value={type} onChange={onChangeType}></Input></div>
+                  <Input size="small"value={type} onChange={onChangeType}></Input></div>
 
                 <p>{t('Dawkowanie.20')}:</p>
-                <div><Input value={dosage} onChange={onChangeDosage}></Input></div>
+                <div><Input size="small" value={dosage} onChange={onChangeDosage}></Input></div>
 
                 <p>{t('Lekarz przepisujący lek.23')}:</p>
 
-                <div><Input value={doctor} onChange={onChangeDoctor}></Input></div>
+                <div><Input size="small"value={doctor} onChange={onChangeDoctor}></Input></div>
 
                 <p>{t('Czas kuracji.22')}:</p>
 
-                <div><Input value={date} onChange={onChangeDate}></Input></div>
+                <div><Input size="small" value={date} onChange={onChangeDate}></Input></div>
 
                 <p>{t('Uwagi.24')}:</p>
 
-                <div><Input value={other} onChange={onChangeOther}></Input></div>
+                <div><Input size="small" value={other} onChange={onChangeOther}></Input></div>
 
 
                 <Button onSubmit={onsubmit} className="add-submit-button">{t('Zapisz.33')}</Button></form>

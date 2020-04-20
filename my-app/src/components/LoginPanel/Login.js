@@ -82,7 +82,7 @@ class Login extends Component {
             {(t) => <p>{t('Potrzebujesz pomocy?.81')}</p>}</Translation> 
             </a><ReactTooltip id='happyFace' type='error'>
             <span><p>The password must be at least 6 characters :)</p>
-              <p>you can also log in to an account:</p>
+              <p>You can also login to with the test account:</p>
               <p>Login:  user@user.pl</p>
               <p>  Password: haslo123</p>
             </span>
