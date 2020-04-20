@@ -233,13 +233,19 @@
   "Wyszukaj po rodzaju": {
     "77": "Wyszukaj po rodzaju"
   },
-  "Pamiętaj, że ze względu na różne sposoby określania jednostek referencyjnych oraz ich górnej i dolnej granicy wyniku, rezultaty, które widzisz na diagramach są oparte o uśrednione wartości i mogą nie być równe jednostkom wskazanym w wynikach badań":
-   {
+  "Pamiętaj, że ze względu na różne sposoby określania jednostek referencyjnych oraz ich górnej i dolnej granicy wyniku, rezultaty, które widzisz na diagramach są oparte o uśrednione wartości i mogą nie być równe jednostkom wskazanym w wynikach badań": {
     "78": "Pamiętaj, że ze względu na różne sposoby określania jednostek referencyjnych oraz ich górnej i dolnej granicy wyniku, rezultaty, które widzisz na diagramach są oparte o uśrednione wartości i mogą nie być równe jednostkom wskazanym w wynikach badań"
   },
   "Wyloguj": {
     "79": "Wyloguj"
+  },
+  "Potwierdź i zaloguj": {
+    "80": "Potwierdź i zaloguj"
+  },
+  "Potrzebujesz pomocy?": {
+    "81": "Potrzebujesz pomocy?"
+  },
+  "Hasło powinno składać się z minimum 6 liter:)": {
+    "82": "Hasło powinno składać się z minimum 6 liter:)"
   }
-
 }
-

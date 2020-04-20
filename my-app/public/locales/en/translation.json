@@ -186,7 +186,7 @@
     "61": "Password"
   },
   "Adres e-mail": {
-    "62": "E-mail adress"
+    "62": "E-mail address"
   },
   "Zaloguj": {
     "63": "Login"
@@ -239,8 +239,20 @@
   },
   "Wyloguj": {
     "79": "Logout"
+  },
+  "Potwierdź i zaloguj": {
+    "80": "Submit and login"
+  },
+  "Potrzebujesz pomocy?": {
+    "81": "Need help?"
+  },
+  "Hasło powinno składać się z minimum 6 liter:)": {
+    "82": "The password must be at least 6 characters:)"
   }
 }
+
+
+
 
 
 

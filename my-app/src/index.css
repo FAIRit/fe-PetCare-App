@@ -112,17 +112,18 @@ opacity: 0.7;
 
 
 .loginpanel {
-width: 400px;
+width: 500px;
 height: 300px;
 border: 1px solid gray;
 align-items: center;
 margin: 0 auto;
 border-radius: 10px;
+margin-top:40px;
 }
 
 .loginform{
  position:relative;
- margin-top:100px;
+ margin-top:70px;
 }
 
 .ui.table {
@@ -168,4 +169,9 @@ display:flex;
 margin-left: 20px;
 margin-bottom:20px;
 width:70px;
+}
+
+.toolip{
+    margin-top:50px;
+    cursor: pointer;
 }

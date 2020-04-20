@@ -5,7 +5,7 @@ import { Translation } from 'react-i18next';
 import i18next from 'i18next';
 import En from '../Languages/Flags/en'
 import Pl from '../Languages/Flags/pl'
-
+import ReactTooltip from "react-tooltip";
 
 function handleClick(lang) {
   i18next.changeLanguage(lang)
@@ -34,8 +34,8 @@ class Login extends Component {
     e.preventDefault();
     fire.auth().signInWithEmailAndPassword(this.state.email, this.state.password).then((u) => {
     }).catch((error) => {
-     alert("Błędne hasło lub nazwa użytkownika")
-    });
+      alert("Something went wrong...");
+    })
   }
 
   signup(e) {
@@ -43,29 +43,32 @@ class Login extends Component {
     fire.auth().createUserWithEmailAndPassword(this.state.email, this.state.password).then((u) => {
     }).then((u) => { console.log(u) })
       .catch((error) => {
-        alert("Coś poszło nie tak...");
+        alert("Please add your e-mail and password");
       })
   }
 
   render() {
-    return (      <div>
-   
+    return (<div>
+
       <div className="loginpanel">   <div className="language">  <Button onClick={handleClickPL}><Pl /></Button>
-      <Button onClick={handleClickEN}><En /></Button></div>  <form className="loginform">
-                    <div className="login-data">
-            
+        <Button onClick={handleClickEN}><En /></Button></div>  <form className="loginform">
+
+          <div className="login-data">
+
             <Translation>
               {(t) => <label>{t('Adres e-mail.62')}: </label>
               }</Translation>
 
-            <Input size='mini' value={this.state.email} onChange={this.handleChange} type="email" name="email" className="loginInput" placeholder="admin@admin.pl"/>
+            <Input size='small' value={this.state.email} onChange={this.handleChange} type="email" name="email" className="loginInput" />
           </div>
           <div className="login-data">
             <Translation>
               {(t) => <label>{t('Hasło.61')}:  </label>}
             </Translation>
 
-            <Input size='mini' value={this.state.password} onChange={this.handleChange} type="password" name="password"  className="loginInput" placeholder="haslo123" />
+            <Input size='small' value={this.state.password} onChange={this.handleChange} type="password" name="password" className="loginInput" />
+
+
           </div>
 
           <Translation>
@@ -73,10 +76,20 @@ class Login extends Component {
 
           <Translation>
             {(t) => <Button onClick={this.signup} style={{ marginLeft: '25px' }}>{t('Zarejestruj.64')}</Button>}</Translation>
-        <br />          
-        </form>     </div>
+          <br />
+
+        </form> <div className="toolip"><a data-tip data-for='happyFace'>          <Translation>
+            {(t) => <p>{t('Potrzebujesz pomocy?.81')}</p>}</Translation> 
+            </a><ReactTooltip id='happyFace' type='error'>
+            <span><p>The password must be at least 6 characters :)</p>
+              <p>you can also log in to an account:</p>
+              <p>Login:  user@user.pl</p>
+              <p>  Password: haslo123</p>
+            </span>
+          </ReactTooltip></div>
+        </div>
       </div >
-    );
+      );
+    }
   }
-}
 export default Login; 

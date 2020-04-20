@@ -19,7 +19,7 @@ const Home = () => {
 
   return (
     <Router>
-      <Menu />
+          <Menu />
       <Switch>
         <Route path="/Leki">
           <Medicines />
