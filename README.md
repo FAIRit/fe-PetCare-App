@@ -57,7 +57,7 @@
  
 ![Screenshot_2020-04-17 React App(4)](https://user-images.githubusercontent.com/52631841/79598233-dce2bd00-80e3-11ea-912d-f547eb8049bd.png)
 
- <h2> How do I plan to develop PetCare App?</h2>
+ <h2> How do I plan to develop the PetCare App?</h2>
 I plan to expand my app with the specific search filters and to conent calendar with google calendar.
 I'm going to refine diagrams also :).
 
