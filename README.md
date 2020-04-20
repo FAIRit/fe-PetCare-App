@@ -59,7 +59,7 @@
 
  <h2> How do I plan to develop PetCare App?</h2>
 I plan to expand my app with the specific search filters and to conent calendar with google calendar.
-I'm gooing to refine diagrams also.
+I'm going to refine diagrams also :).
 
 <br/>
 
