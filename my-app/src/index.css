@@ -189,6 +189,11 @@ justify-content: flex-end;
 margin-right:5px;
 margin-top:3px;
 }
+.language{
+cursor: pointer;
+display: flex;
+justify-content: flex-end;  
+}
 
 .ui.modal.transition.visible.active {
 width: 600px;
@@ -199,7 +204,7 @@ border-radius:10px!important;
 
 .backButton{
 display: flex;
-justify-content: right;
+justify-content: flex-end;  
 margin-right:7px;
 cursor: pointer;
 }
@@ -209,12 +214,11 @@ margin-bottom:5px;
 cursor: pointer;
 display: flex;
 justify-content: center;
-margin-top: 37px;
+margin-top: 35px;
 }
-
+    
 .login-title{
 display: flex;
 justify-content: center;
 margin-left:40px;
 }
-

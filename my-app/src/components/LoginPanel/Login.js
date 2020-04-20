@@ -102,7 +102,8 @@ class Login extends Component {
           <Translation>
             {(t) => <Button onClick={this.signup} style={{ marginLeft: '2px' }}>{t('Zarejestruj.64')}</Button>}</Translation>
           <br />
-
+          <Translation>
+            {(t) => <div className="register"><a onClick={this.changeTitle}>{t('Nie masz jeszcze konta.83')}?</a></div>}</Translation>
         </form>
       </div>
     </div >
