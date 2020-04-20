@@ -5,5 +5,5 @@ import App from './App';
 import './components/Languages/i18next'
 
 
-ReactDOM.render(<Suspense fallback={(<div>Loading</div>)}>
+ReactDOM.render(<Suspense fallback={(<div className="ui active inline loader"></div>)}>
 <App /></Suspense>, document.getElementById('root'));
