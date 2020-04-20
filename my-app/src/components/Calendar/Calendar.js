@@ -136,7 +136,7 @@ export default class DemoApp extends React.Component {
             dateClick={this.handleDateClick}
           />
                
-        </div>
+        </div><br/><br/>
       </div>
     );
   }

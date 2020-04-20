@@ -2,6 +2,7 @@ import {
   LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer
 } from 'recharts';
 import React, { useState, useEffect } from "react";
+import {Suspense} from 'react';
 import { getData } from "../../services/diagrams/Urea";
 import Urea from './all-diagrams/Urea';
 import Eosinophils from './all-diagrams/Eosinophils';
@@ -14,7 +15,6 @@ import { useTranslation } from 'react-i18next';
 import { Card } from 'semantic-ui-react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleDoubleUp } from '@fortawesome/free-solid-svg-icons'
-
 
 
 const Rechart = () => {

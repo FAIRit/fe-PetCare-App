@@ -56,7 +56,7 @@ const Medicines = () => {
             />
         </div>
         <div className="doctors">
-            <AddData />  
+            <AddData /> 
     </div></div>
     );
 };
