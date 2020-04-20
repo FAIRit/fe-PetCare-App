@@ -68,10 +68,15 @@ button.page-link {
 cursor: pointer;
 }
 
+.react-hooks-paginator{
+    position:absolute;
+margin-left:50%;
+}
 .react-hooks-paginator .page-item.active .page-link{
 background-color: #e9e6e6!important;
 border-color:grey!important;
 color:darkslategrey!important;
+
 }
 
 .react-hooks-paginator .page-item:hover .page-link{
