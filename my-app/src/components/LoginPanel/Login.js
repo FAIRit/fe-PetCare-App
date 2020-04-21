@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Button, Input } from 'semantic-ui-react'
 import fire from '../Firebase/firebase'
 import { Translation } from 'react-i18next';
+import { withTranslation } from 'react-i18next';
 import i18next from 'i18next';
 import En from '../Languages/Flags/en'
 import Pl from '../Languages/Flags/pl'
@@ -33,6 +34,10 @@ class Login extends Component {
   changeTitle = () => {
     this.setState({ title: ' Sing up' });
   };
+
+   changeTitle({ t, i18n }) {
+    return <p>{t('my translated text')}</p>
+  }
 
   backToTitle = () => {
     this.setState({ title: " Log in" });

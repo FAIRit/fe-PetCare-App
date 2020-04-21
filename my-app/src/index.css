@@ -5,7 +5,11 @@ body {
     sans-serif;
     
     scroll-behavior: smooth;
-    }
+    background-image: url("./background3.jpg");
+    background-repeat: repeat-y;
+    background-position:right; 
+    
+}
     
     code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
