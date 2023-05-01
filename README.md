@@ -65,6 +65,7 @@ I'm going to refine diagrams also :).
 
 
  <h2> And... how you can contact with me?</h2>
-<p> It's my e-mail adress: nnowak91@gmail.com</p>
+<p> It's my e-mail adress: </p>
 <p> github: https://github.com/nnow991 </p>
-<p> and Linkedin: https://www.linkedin.com/in/natalia-nowak91 </p>
+<p> and Linkedin: </p>
+
